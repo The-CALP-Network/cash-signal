@@ -1,0 +1,402 @@
+{
+  "id": "southsudan",
+  "name": "South Sudan",
+  "iso3": "SSD",
+  "calp_region": "East and Southern Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "South Sudan Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://reliefweb.int/report/south-sudan/south-sudan-humanitarian-needs-and-response-plan-2026-december-2025",
+    "fts_plan_id": 1512,
+    "people_in_need": {
+      "value": 10000000,
+      "available": "yes",
+      "as_of": "2025",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "[HNRP Dec]"
+    },
+    "people_targeted": {
+      "value": 4300000,
+      "available": "yes",
+      "as_of": "2025",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "43% of those in need; 4.0 million prioritised. [HNRP Dec]"
+    },
+    "requirements_usd": {
+      "value": 1463046056,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s9",
+        "s2"
+      ],
+      "note": "Revised requirements per FTS API. HNRP states $1.5bn total and $1.04bn prioritised [s1]. [FTS API]"
+    },
+    "funded_usd": {
+      "value": 590844983,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Incoming funding total, FTS API. Earlier CALP-dashboard extract showed $507.9M (undated). [latest flow seen; API retrieved 2026-11-05]"
+    },
+    "funded_pct": {
+      "value": 40.4,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Derived: $590,844,983 funded over $1,463,046,056 requirements. [latest flow seen; API retrieved 2026-11-05]"
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 South Sudan plan found in search on 2026-11-05.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 52,
+      "available": "yes",
+      "as_of": "2025",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Share preferring cash over in-kind (ISNA 2025), as cited in HNRP p.22."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP gives no voucher percentage."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP gives no in-kind percentage; 52% is stated as cash versus in-kind."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported."
+    },
+    "survey_note": "Inter-Sectoral Needs Assessment (ISNA) 2025, cited in the HNRP; sample size and question wording not stated there. Underlying ISNA report not opened."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No South Sudan cost-efficiency figure found.",
+      "unit": ""
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No South Sudan cost-efficiency figure found.",
+      "unit": ""
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No South Sudan cost-efficiency figure found.",
+      "unit": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No South Sudan cost-efficiency figure found.",
+      "unit": ""
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 2.3,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s9",
+        "s1"
+      ],
+      "note": "Derived: FTS Multi-Purpose Cash requirement $33,539,527 over $1,463,046,056. HNRP states $30M, 2.9% of $1.04bn prioritised [s1]. Target 475,600 people, $140/HH/month for 3 months. [FTS API]",
+      "usd": 33539527
+    },
+    "sectoral_cash_pct": {
+      "value": 7.7,
+      "available": "yes",
+      "as_of": "2025",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Derived: $80M sectoral CVA (73% of CVA) over $1.04bn prioritised; target about 1.5M people. [HNRP Dec]",
+      "usd": 80000000
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP does not separate vouchers from sectoral CVA.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": 11,
+      "available": "yes",
+      "as_of": "2025",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "$110M CVA of $1.04bn prioritised; about 2M people targeted. Down from about $197M (11%) in 2025. [HNRP Dec]",
+      "usd": 110000000
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 2.7,
+      "usd": 15724265,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$590.8M). Shared-cluster view: US$16.7M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 46.9,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "FTS single-cluster (destination) view: US$15.7M of US$33.5M MPC requirement. Shared-cluster view would give US$16.7M (50%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated in the FTS extract.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated in the FTS extract.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "South Sudan Humanitarian Fund (SSHF)",
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No 2026 SSHF allocation total found; pfdata hub did not load and searches returned only 2024 items."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No SSHF cash breakdown found.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "yes",
+    "title": "Area-level Cash Feasibility Assessments (Aweil North, Gogrial West April 2025; Kuajok markets May 2025)",
+    "author": "REACH / South Sudan CWG",
+    "year": 2025,
+    "url": "https://repository.impact-initiatives.org/document/impact/b9377ac7/SSD_REACH_Factsheet_Aweil-North-Cash-Feasibility-Assessment_April-2025.pdf",
+    "source_ids": [
+      "s8",
+      "s5"
+    ],
+    "note": "Factsheet header dated May 2025. Location-specific, not national. Aweil North factsheet seen in search results only; Kuajok listed on CWG page."
+  },
+  "market_monitoring": {
+    "functional": "yes",
+    "system": "JMMI (CWG, led by REACH)",
+    "frequency": "monthly",
+    "last_published": "December 2025 (1-7 Dec) found",
+    "url": "https://reliefweb.int/report/south-sudan/south-sudan-joint-market-monitoring-initiative-jmmi-1-7-december-2025",
+    "source_ids": [
+      "s6",
+      "s1",
+      "s5"
+    ],
+    "note": "HNRP reports coverage fell from 85 markets (early 2023) to 67 (Nov 2025) and MEB rose 58% Jan-Oct 2025. Editions after December 2025 not checked."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "South Sudan Inter-Agency Cash Working Group",
+    "leads": [
+      "IOM",
+      "IRC",
+      "Mercy Corps",
+      "UNICEF",
+      "WFP",
+      "Save the Children"
+    ],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+    "source_ids": [
+      "s3",
+      "s4",
+      "s5",
+      "s7"
+    ],
+    "evidence_note": "Two undated CALP pages give conflicting co-leads; confirm. Meets monthly; Jan-Mar 2026 cash snapshot and monthly JMMI. CALP pages conflict: listing [s4] names IOM coordinator and co-leads above; CWG page [s3] names a CashCap coordinator (Ali Mansoor) with different co-leads. Neither is dated, so verify."
+  },
+  "ai_summary": {
+    "headline": "South Sudan MPCA is small (2.9% of prioritised needs) and slightly better funded than the plan, with a working CWG and JMMI.",
+    "narrative": "The 2026 HNRP puts CVA at $110M, 11% of $1.04bn prioritised requirements, with MPCA only $30M (2.9%) for 475,600 people at $140 per household per month [s1]. Sectoral cash is $80M, so 73% of CVA sits with clusters. Live FTS (5 November) shows the MPC line at $33.5M and 46.9% funded ($15.7M), against 40.4% for the plan [s9]. Total CVA fell from about $197M in 2025 [s1]. The ISNA 2025 found 52% of surveyed people preferred cash to in-kind [s1]. The CWG meets monthly and runs a monthly JMMI [s5][s6], but market coverage fell from 85 to 67 markets while the MEB rose 58% in 2025 [s1]. Inference: MPCA is positioned for rapid response to new shocks but is unlikely to scale without funding, and weakening market monitoring puts transfer-value reviews at risk. CWG leadership records conflict between sources [s3][s4].",
+    "barriers": [
+      "Plan only 40.4% funded; MPC line 46.9% funded ($15.7M of $33.5M) [s9]",
+      "Market monitoring coverage shrinking (85 to 67 markets) [s1]",
+      "MEB up 58% in 2025 pressures a fixed $140 transfer [s1]",
+      "No named social protection programme to link to [s1]"
+    ],
+    "opportunities": [
+      "52% cash preference (ISNA 2025) supports expanding MPCA beyond 27% of CVA [s1]",
+      "MPCA built into rapid response for new shocks [s1]"
+    ],
+    "data_gaps": [
+      "voucher and in-kind preference shares",
+      "ISNA sample and wording",
+      "cost efficiency (all four)",
+      "vouchers requirement",
+      "SSHF allocations and cash share",
+      "current CWG leads and CashCap",
+      "2027 plan status"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "South Sudan Humanitarian Needs and Response Plan 2026 (December 2025), PDF copy",
+      "publisher": "OCHA (hosted by Solidarity South Sudan)",
+      "url": "https://solidarityssudan.org/wp-content/uploads/2026/01/South-Sudan-2026-HNRP-1.pdf",
+      "date": "2025-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS South Sudan Humanitarian Needs and Response Plan 2026 (plan 1512)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1512/summary",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "South Sudan Cash Working Group (CALP CWG page)",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/groups-and-communities/east-and-southern-africa-cash-working-groups/south-sudan-cash-working-group/",
+      "date": "undated",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Cash Working Groups listing",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/?p=941",
+      "date": "undated",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "South Sudan Cash Working Group (response.reliefweb.int)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "South Sudan Joint Market Monitoring Initiative (JMMI), 1-7 December 2025",
+      "publisher": "South Sudan CWG / REACH / ReliefWeb",
+      "url": "https://reliefweb.int/report/south-sudan/south-sudan-joint-market-monitoring-initiative-jmmi-1-7-december-2025",
+      "date": "2025-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "South Sudan Cash Working Group: Cash and Voucher Snapshot January-March 2026",
+      "publisher": "South Sudan CWG",
+      "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group?page=0",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "FTS public API, plan 1512: plan, flow and funding-by-cluster endpoints",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1512&groupby=cluster",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "REACH Factsheet: Aweil North Cash Feasibility Assessment, April 2025",
+      "publisher": "REACH",
+      "url": "https://repository.impact-initiatives.org/document/impact/b9377ac7/SSD_REACH_Factsheet_Aweil-North-Cash-Feasibility-Assessment_April-2025.pdf",
+      "date": "2025-04",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

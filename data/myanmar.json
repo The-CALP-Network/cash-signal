@@ -1,0 +1,371 @@
+{
+  "id": "myanmar",
+  "name": "Myanmar",
+  "iso3": "MMR",
+  "calp_region": "Asia-Pacific",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Myanmar Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://humanitarianaction.info/plan/1505",
+    "fts_plan_id": 1505,
+    "people_in_need": {
+      "value": 16200000,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "HNRP Part 1: 16.2 million."
+    },
+    "people_targeted": {
+      "value": 4900000,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Down 27% from 2025; 2.6M (53%) prioritised."
+    },
+    "requirements_usd": {
+      "value": 889600798,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "FTS revised requirements."
+    },
+    "funded_usd": {
+      "value": 468077277,
+      "available": "yes",
+      "as_of": "2026-10-19",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "FTS incoming funding total. FTS API retrieved 2026-11-05; as_of is the latest flow date in the first 200 flows returned. Cluster totals exclude funding shared across clusters."
+    },
+    "funded_pct": {
+      "value": 52.6,
+      "available": "yes",
+      "as_of": "2026-10-19",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Calculated: FTS funding / revised requirements. OCHA Update 52 gave 43% at 13 Jul 2026."
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 Myanmar plan or timeline found in searches on 2026-11-05.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP text says only 'strong preference for cash'. The gDCF analysis reports MSNA 2025 shares of 84% (IDPs), 92% (returned IDPs), 88% (stateless) and 65% (other shock-affected) but I could not open the MSNA or verify them."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    },
+    "survey_note": "REACH MSNA 2025 is the likely source of the 84-92% cash preference reported by the gDCF analysis; unverified. Cash shares are by population group, not a single national figure."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "gDCF analysis cites $28 per person (down from $43) but the HNRP section fetched states no cost per person; unverified.",
+      "unit": ""
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "unit": ""
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "unit": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No in-kind comparator found.",
+      "unit": ""
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 9.6,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Calculated: FTS MPC cluster requirement / revised plan requirements.",
+      "usd": 85428554
+    },
+    "sectoral_cash_pct": {
+      "value": 21.5,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "$191M sectoral cash / $890M. Not visible in the HNRP section text fetched; figure from the gDCF analysis of the HNRP.",
+      "usd": 191000000
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Vouchers not separated.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": 31,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "$276M total cash programming. Not visible in the HNRP section text fetched; figure from the gDCF analysis of the HNRP.",
+      "usd": 276000000
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 12.5,
+      "usd": 58408549,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$468.1M). Shared-cluster view: US$112.6M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 68.4,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "FTS single-cluster (destination) view: US$58.4M of US$85.4M MPC requirement. Shared-cluster view would give US$112.6M (132%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated in FTS.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "Myanmar Humanitarian Fund",
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Fund appears in search results (annual reports to 2020 seen) but 2025/26 allocations were not found."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [],
+    "note": "No feasibility study found. Closest: Market Stoplight Tool (CMWG, Apr 2025, earthquake) listed on the CMWG page."
+  },
+  "market_monitoring": {
+    "functional": "partial",
+    "system": "WFP market price updates plus World Bank country-wide price monitoring feeding the CMWG MEB",
+    "frequency": "ad hoc",
+    "last_published": "2025-05",
+    "url": "https://themimu.info/emergencies/cmwg",
+    "source_ids": [
+      "s1",
+      "s6"
+    ],
+    "note": "Latest item on CMWG page is the Apr 2025 WFP update; newer products may exist elsewhere."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Cash and Markets Working Group (CMWG)",
+    "leads": [],
+    "cashcap_support": "unknown",
+    "url": "https://themimu.info/emergencies/cmwg",
+    "source_ids": [
+      "s6",
+      "s7",
+      "s1"
+    ],
+    "evidence_note": "National CMWG plus four sub-national groups; MEB technical note Nov 2024, guidance updated 2025, OCHA cash coordinator and sub-national coordinator posts. Chairs not named."
+  },
+  "ai_summary": {
+    "headline": "Myanmar has one of the larger MPC lines in the region at $85M, with cash share unusually high.",
+    "narrative": "The 2026 HNRP seeks $890M for 4.9M people, 27% fewer than 2025 [s2][s4]. MPC is about $85M, roughly 9.6% of the plan [s5]; the gDCF analysis puts total CVA near $276M, about 31% [s1]. The CMWG's provisional MPC transfer is MMK 360,000 per household per month, checked against inflation twice a year with the World Bank [s1]. FTS shows $468.1M received by late October 2026, about 53% of requirements [s5]. MPC has received $58.4M against its $85.4M line, 68%, and about 12% of all funding on FTS's single-cluster view ($112.6M, 132%, if shared-cluster flows are counted) [s5]; this appears unusual and likely reflects carry-over or tagging rather than surplus cash, so it needs checking in FTS. The HNRP states a strong cash preference, but I could not verify the MSNA percentages [s1]. A national CMWG with sub-national groups is active [s6][s7]. Gaps: chairs, cash feasibility, pooled fund allocations, cost efficiency and a current market monitoring product are not confirmed. Inference: CALP may add most by checking data quality and supporting deduplication.",
+    "barriers": [
+      "Kyat depreciation puts pressure on transfer value adequacy",
+      "3.5M people in hard-to-reach areas where markets are restricted (gDCF analysis)",
+      "Limited social protection to link MPC to",
+      "Market monitoring product on CMWG page last dated 2025"
+    ],
+    "opportunities": [
+      "Dedicated CVA section with new cash-only indicators and deduplication priority",
+      "Active CMWG with sub-national coordination capacity"
+    ],
+    "data_gaps": [
+      "verified modality preference",
+      "cost-efficiency",
+      "cash feasibility assessment",
+      "CMWG chairs and CashCap",
+      "pooled fund allocations and cash share",
+      "funded USD from FTS",
+      "2027 plan status",
+      "vouchers share"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Myanmar HNRP 2026 - CVA overview and multipurpose cash section (2.7)",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1505/document/myanmar-humanitarian-needs-and-response-plan-2026/article/27-cash-voucher-assistance-overview-and-multipurpose-cash-section-0",
+      "date": "2026-01-16",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "Myanmar HNRP 2026 - People targeted and people prioritized",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1505/document/myanmar-humanitarian-needs-and-response-plan-2026/article/22-people-targeted-and-people-prioritized",
+      "date": "2026-01-16",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Myanmar HNRP 2026 - Humanitarian needs and risks",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1505/document/myanmar-humanitarian-needs-and-response-plan-2026/article/12-humanitarian-needs-and-risks-0",
+      "date": "2026-01-16",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "OCHA Myanmar Humanitarian Update No. 52",
+      "publisher": "OCHA",
+      "url": "https://myanmar.un.org/sites/default/files/2026-07/OCHA%20Myanmar%20-%20Humanitarian%20Update%20No.%2052_final.pdf",
+      "date": "2026-07-13",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "FTS public API: plan 1505 metadata (revised requirements), flows and flows by cluster",
+      "publisher": "OCHA FTS (api.hpc.tools)",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1505&groupby=cluster",
+      "date": "2026-10-19",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "Cash and Markets Working Group - Myanmar",
+      "publisher": "MIMU",
+      "url": "https://themimu.info/emergencies/cmwg",
+      "date": "2025-06",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "SOW Subnational CMWG Coordinator Northwest Myanmar",
+      "publisher": "MIMU (job posting)",
+      "url": "https://www.themimu.info/sites/themimu.info/files/jobs/SOW-Subnational_CMWG_Coordinator_Northwest_Myanmar_VA-450425.pdf",
+      "date": "2025-05",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

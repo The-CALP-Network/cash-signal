@@ -1,0 +1,378 @@
+{
+  "id": "afghanistan",
+  "name": "Afghanistan",
+  "iso3": "AFG",
+  "calp_region": "Asia-Pacific",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Afghanistan Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://humanitarianaction.info/plan/1502",
+    "fts_plan_id": 1502,
+    "people_in_need": {
+      "value": 21900000,
+      "available": "yes",
+      "as_of": "2026-05-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Stated in plan evolution table."
+    },
+    "people_targeted": {
+      "value": 17500000,
+      "available": "yes",
+      "as_of": "2026-05-11",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Stated in plan evolution table."
+    },
+    "requirements_usd": {
+      "value": 1714181496,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "FTS revised requirements."
+    },
+    "funded_usd": {
+      "value": 559667488,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "FTS incoming funding total. FTS API retrieved 2026-11-05; as_of is the latest flow date in the first 200 flows returned. Cluster totals exclude funding shared across clusters."
+    },
+    "funded_pct": {
+      "value": 32.6,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Calculated: FTS funding / revised requirements."
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 Afghanistan plan or timeline found in searches on 2026-11-05.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 65,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "65% prefer cash or a combination of cash and in-kind; cash alone is not separated. Underlying survey not named in the HNRP text."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported separately in the HNRP; no REACH MSNA modality table found in search."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported separately."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported separately."
+    },
+    "survey_note": "HNRP 2026 Section 2.8 states 65% prefer cash or a cash/in-kind combination; survey name, year and sample not given. A REACH MSNA modality breakdown was not found."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No MPC-specific cost-efficiency metric found."
+    },
+    "sectoral_cash": {
+      "value": 55,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FSAC cash cost per beneficiary, 2026 planning figure (down from $77 in 2025). ES/NFI rose from $165 to $182.",
+      "unit": "USD per beneficiary (FSAC cash, planning)"
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "unit": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No in-kind comparator found.",
+      "unit": ""
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 0.9,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "Calculated: FTS MPC cluster requirement / revised plan requirements.",
+      "usd": 14709848
+    },
+    "sectoral_cash_pct": {
+      "value": 22.3,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Calculated: FSAC $262M + ES/NFI $111M + Protection $9.6M = $382.6M.",
+      "usd": 382600000
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Vouchers not separated in HNRP CVA figures.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": 23.2,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "HNRP says CVA budget is 'just under $400 million'; $397.6M and 23% come from the gDCF analysis of the HNRP.",
+      "usd": 397600000
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 3.4,
+      "usd": 19204278,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$559.7M). Shared-cluster view: US$26.9M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 130.6,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "FTS single-cluster (destination) view: US$19.2M of US$14.7M MPC requirement. Shared-cluster view would give US$26.9M (183%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash from sector funding.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated in FTS.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "Afghanistan Humanitarian Fund",
+    "cbpf_allocations_usd": {
+      "value": 73500000,
+      "available": "yes",
+      "as_of": "2025",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Eight targeted allocations in 2025."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "2025 annual report text does not break out multi-purpose cash; pfdata not opened.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [],
+    "note": "No cash feasibility or market functionality assessment found; HNRP only says markets are broadly functioning."
+  },
+  "market_monitoring": {
+    "functional": "yes",
+    "system": "WFP weekly market reports (posted on the CVWG page)",
+    "frequency": "weekly",
+    "last_published": "2026-04-17",
+    "url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+    "source_ids": [
+      "s4"
+    ],
+    "note": "Issues 289-291 posted 1-17 April 2026; page snapshot date not recorded, so later issues may exist."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Cash and Voucher Working Group (CVWG)",
+    "leads": [
+      "WFP (per 2020 posting)",
+      "NGO co-lead: DRC in 2020; IRC hosts a co-chair coordinator post (undated)"
+    ],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+    "source_ids": [
+      "s4",
+      "s6",
+      "s7"
+    ],
+    "evidence_note": "Active inter-cluster technical group on response.reliefweb.int; current leads not confirmed (job postings undated or from 2020)."
+  },
+  "ai_summary": {
+    "headline": "Cash is about 23% of a heavily underfunded plan, but almost all of it is sectoral; MPC is under 1%.",
+    "narrative": "The 2026 HNRP plans CVA of just under $400M for more than 10 million people, but MPC is only $15M for 688,300 people, under 4% of CVA [s1]. FSAC ($262M) and ES/NFI ($111M) dominate [s1]. The plan seeks $1.71bn for 17.5M targeted [s2]. FTS shows $559.7M received by late October 2026, about 33% [s3]. MPC has received $19.2M against its $14.7M requirement, 131% on FTS's single-cluster view ($26.9M on the shared-cluster view) [s3]; this likely reflects funding tagged to MPC beyond the planned line, so the small MPC plan line may understate donor appetite. 65% of people prefer cash or a cash/in-kind mix [s1]. The standard transfer is $170 per household, with a 20% top-up for female-headed and disability households [s1]. Weekly WFP market reports continue [s4]. Gaps are large: no MSNA modality split, no cost-efficiency comparison, no feasibility study, and no confirmed current CWG leads. Inference: MPC could be scaled within existing funding, and CALP messaging might focus on that.",
+    "barriers": [
+      "MPC is a very small share of CVA, so flexibility for households is limited",
+      "Plan about one-third funded by late October 2026, forcing prioritisation",
+      "Assistance is compressed to 1-3 months at $170 per household",
+      "No named social protection system to link cash to"
+    ],
+    "opportunities": [
+      "Differentiated transfer values (+20%) are a replicable design feature",
+      "Functioning weekly market reporting and active financial service providers"
+    ],
+    "data_gaps": [
+      "modality preference split by cash/vouchers/in-kind",
+      "cost-efficiency for MPC, vouchers and in-kind",
+      "cash feasibility assessment",
+      "current CWG leads and CashCap",
+      "pooled fund cash share",
+      "2027 plan status",
+      "vouchers share of requirements"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Humanitarian Needs and Response Plan Afghanistan 2026 - Cash and voucher assistance overview (Section 2.8)",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1502/document/humanitarian-needs-and-response-plan-afghanistan-2026/article/cash-and-voucher-assistance-overview",
+      "date": "2025-12-30",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "Afghanistan 2026 plan page: evolution of the humanitarian response",
+      "publisher": "OCHA (humanitarianaction.info)",
+      "url": "https://humanitarianaction.info/plan/1502",
+      "date": "2026-05-11",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "FTS public API: plan 1502 metadata (revised requirements), flows and flows by cluster",
+      "publisher": "OCHA FTS (api.hpc.tools)",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1502&groupby=cluster",
+      "date": "2026-10-28",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Cash Voucher Working Group - Afghanistan",
+      "publisher": "OCHA response.reliefweb.int",
+      "url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+      "date": "2026-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Afghanistan Humanitarian Fund 2025 Annual Report",
+      "publisher": "OCHA",
+      "url": "https://reliefweb.int/report/afghanistan/afghanistan-humanitarian-fund-2025-annual-report",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "Programme Policy Officer (Inter Agency CVWG Coordinator), hosted by WFP",
+      "publisher": "Impactpool (job posting)",
+      "url": "https://www.impactpool.org/jobs/653815",
+      "date": "2020-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "CVWG Co-chair Technical Coordinator (Afghan nationals only), IRC",
+      "publisher": "UNTalent (job posting)",
+      "url": "https://untalent.org/jobs/cash-and-voucher-working-group-cvwg-co-chair-technical-coordinator-afghan-nationals-only",
+      "date": "undated",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

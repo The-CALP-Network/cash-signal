@@ -1,0 +1,386 @@
+{
+  "id": "syria",
+  "name": "Syria",
+  "iso3": "SYR",
+  "calp_region": "MENA",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Syrian Arab Republic Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://humanitarianaction.info/plan/1518",
+    "fts_plan_id": 1518,
+    "people_in_need": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Exact figure not stated on pages opened; all 14 governorates have needs (HNRP part 1). Press cites 15.6m but not opened."
+    },
+    "people_targeted": {
+      "value": 8600000,
+      "available": "yes",
+      "as_of": "2026-04",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "8.6 million targeted; 4.3 million prioritised (rounded in source)."
+    },
+    "requirements_usd": {
+      "value": 2922184830,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Revised = original requirements (FTS plan 1518). [FTS as of  (latest flow date; queried 2026-11-05]"
+    },
+    "funded_usd": {
+      "value": 972155391,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Incoming funding to plan; FTS plan flows. [FTS as of  (latest flow date; queried 2026-11-05]"
+    },
+    "funded_pct": {
+      "value": 33.3,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s1",
+        "s9"
+      ],
+      "note": "Computed: funding received / revised requirements. [FTS as of  (latest flow date; queried 2026-11-05]"
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "Not checked beyond 2026 plan listing; no 2027 Syria plan seen in sources opened.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 85,
+      "available": "partial",
+      "as_of": "2026-04",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "Not a modality-choice survey: the HNRP reports cash-based assistance as the top priority need for 85% of households surveyed. Treat as priority-need evidence, not preference. Cash-based assistance is the top priority for 85% of households surveyed (priority, not a modality-choice question); survey not named."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not stated."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not stated; food was 64% of assistance received."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not stated."
+    },
+    "survey_note": "HNRP 2026 part 1 priority-need finding; underlying survey, sample and wording not identified. Treat as indicative only."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+    },
+    "sectoral_cash": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+    },
+    "vouchers": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+    },
+    "in_kind_food": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 6.3,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s2",
+        "s4"
+      ],
+      "note": "MPC requirement USD 183.4m / plan requirement USD 2.92bn (computed); HNRP text cites USD 183m, up 26% on 2025. [FTS requirements]",
+      "usd": 183380080
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not stated in sources opened.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP modality-by-cash table heading has no figures.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Total CVA requirement not stated in sources opened.",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 3.8,
+      "usd": 36642452,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$972.2M). Shared-cluster view: US$71.1M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 20.0,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS single-cluster (destination) view: US$36.6M of US$183.4M MPC requirement. Shared-cluster view would give US$71.1M (39%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not visible in FTS; only MPC is a separate sector.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not visible in FTS.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "Syria Humanitarian Fund",
+    "cbpf_allocations_usd": {
+      "value": 70000000,
+      "available": "partial",
+      "as_of": "2026-08-05",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "SHF 2026 First Standard Allocation USD 70m endorsed 5 Aug 2026; not the fund's full-year total."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Allocation by cluster not retrieved; cash mention not visible in excerpt.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "yes",
+    "title": "Cash and Voucher Assistance Feasibility Analysis for Syria",
+    "author": "CashCap with CWG North West Syria, CWG North East Syria and CWG HCT",
+    "year": 2025,
+    "url": "https://www.calpnetwork.org/publication/cash-and-voucher-assistance-feasibility-analysis-for-syria/",
+    "source_ids": [
+      "s6"
+    ],
+    "note": "Published 25 Feb 2025 after the change in Syria's situation; may need refresh."
+  },
+  "market_monitoring": {
+    "functional": "partial",
+    "system": "WFP VAM price monitoring and REACH, cited in HNRP; REACH NWS JMMI (archived site)",
+    "frequency": "",
+    "last_published": "HNRP cites January 2026 MEB movement (+6%); latest NWS JMMI found is Jan 2025",
+    "url": "https://humanitarianaction.info/plan/1518/document/syria-humanitarian-needs-and-response-plan-2026/article/27-cash-voucher-assistance-overview-and-multipurpose-cash-section-5",
+    "source_ids": [
+      "s4",
+      "s7"
+    ],
+    "note": "No recurring national product with a dated 2026 link found; S/MEB update pending CWG endorsement."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Cash Working Group (national, with subnational CWGs)",
+    "leads": [],
+    "cashcap_support": "unknown",
+    "url": "https://humanitarianaction.info/plan/1518/document/syria-humanitarian-needs-and-response-plan-2026/article/27-cash-voucher-assistance-overview-and-multipurpose-cash-section-5",
+    "source_ids": [
+      "s4",
+      "s6"
+    ],
+    "evidence_note": "HNRP names the CWG as main MPCA/GCT coordination body with subnational leads and inter-agency deduplication; leads not found; CashCap co-authored the 2025 feasibility analysis."
+  },
+  "ai_summary": {
+    "headline": "Syria asks for USD 183m of MPC, 6.3% of the plan, and is 20% funded against it.",
+    "narrative": "The 2026 HNRP targets 8.6 million people and requests USD 2.92bn; MPC is USD 183.4m, about 6.3%, up 26% on 2025 [s2][s3][s4]. MPCA aims to reach 1.6 million people, with provisional transfer values of USD 100 a month for regular and USD 150 for emergency assistance, pending an updated S/MEB [s4]. By late October the plan was 33% funded; MPC had received USD 36.6m, 20% of its requirement on FTS's single-cluster view (USD 71.1m, 39%, counting shared-cluster flows), so cash is funded worse than the plan average [s1][s2]. The HNRP reports cash as the top priority for 85% of households surveyed, though only 27% received any aid and food made up 64% of support [s5]. A CWG coordinates MPCA with deduplication in place [s4], and CashCap co-authored a 2025 feasibility analysis [s6]. Cost-efficiency, pooled-fund cash shares and CWG leadership were not found. The gap between stated priority and delivery appears to be the strongest advocacy angle, but that is inference.",
+    "barriers": [
+      "Plan 33% funded; coverage only 27% of households",
+      "Transfer values provisional until S/MEB is endorsed",
+      "Market monitoring products not clearly recurring in 2026",
+      "No cost-efficiency or pooled-fund cash data found"
+    ],
+    "opportunities": [
+      "Cash cited as top household priority (85%), well above its share of requirements",
+      "Feasibility analysis and CWG deduplication system provide a base for scale-up"
+    ],
+    "data_gaps": [
+      "people in need",
+      "modality preference survey detail",
+      "cost efficiency (all)",
+      "sectoral cash and voucher shares",
+      "pooled fund cash share",
+      "CWG leads and CashCap role"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Plan 1518 – Syria HNRP 2026 (FTS public API)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/plan/1518",
+      "date": "2026-08-03",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS requirements and funding by cluster, plan 1518",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1518&groupby=cluster",
+      "date": "2026-10-28",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Syria HNRP 2026: People targeted (at a glance)",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1518/document/syria-humanitarian-needs-and-response-plan-2026/article/glance-24",
+      "date": "2026-04-02",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Syria HNRP 2026 Part 2: Cash and voucher assistance overview and MPC section",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1518/document/syria-humanitarian-needs-and-response-plan-2026/article/27-cash-voucher-assistance-overview-and-multipurpose-cash-section-5",
+      "date": "2026-04-02",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Syria HNRP 2026 Part 1: Humanitarian needs and risks",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1518/document/syria-humanitarian-needs-and-response-plan-2026/article/12-humanitarian-needs-and-risks-6",
+      "date": "2026-04-02",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "Cash and Voucher Assistance Feasibility Analysis for Syria",
+      "publisher": "CALP Network / CashCap / Syria CWGs",
+      "url": "https://www.calpnetwork.org/publication/cash-and-voucher-assistance-feasibility-analysis-for-syria/",
+      "date": "2025-02-25",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "Cash Working Group Northwest Syria (archived; JMMI Jan 2025)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/turkiye-cross-border/cash-working-group-northwest-syria-nws",
+      "date": "2025-03-17",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "Syria Humanitarian Fund: First Standard Allocation 2026",
+      "publisher": "OCHA",
+      "url": "https://live.libnanews.com/event/ev-1785926125189-40df",
+      "date": "2026-08-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "FTS flows to plan 1518 (total incoming)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1518",
+      "date": "2026-10-28",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

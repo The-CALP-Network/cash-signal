@@ -1,0 +1,402 @@
+{
+  "id": "chad",
+  "name": "Chad",
+  "iso3": "TCD",
+  "calp_region": "West and Central Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Tchad Besoins Humanitaires et Plan de Réponse 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://reliefweb.int/country/tcd",
+    "fts_plan_id": 1501,
+    "people_in_need": {
+      "value": 4500000,
+      "available": "yes",
+      "as_of": "2026-02-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "HNRP published 5 Feb 2026; figure as transcribed in the gDCF HNRP cash analysis (16 Feb 2026), not re-opened in the plan PDF."
+    },
+    "people_targeted": {
+      "value": 3400000,
+      "available": "yes",
+      "as_of": "2026-02-05",
+      "source_ids": [
+        "s1",
+        "s7"
+      ],
+      "note": "Targeted 3.4M; prioritised 1.9M per HNRP analysis and SIPRI."
+    },
+    "requirements_usd": {
+      "value": 986069627,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS API; prioritised requirement USD 620.2M [s1]."
+    },
+    "funded_usd": {
+      "value": 443545769,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "FTS API plan-level total, retrieved 5 Nov 2026."
+    },
+    "funded_pct": {
+      "value": 45.0,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Computed: funded / requirements. Includes a large refugee response component (USD 539.9M requirement)."
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "Searched for a 2027 Chad HNRP or GHO 2027 launch; nothing found as of 5 Nov 2026.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located."
+    }
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched CALP, WFP and general sources for Chad cost-efficiency studies; none found.",
+      "unit": ""
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched CALP, WFP and general sources for Chad cost-efficiency studies; none found.",
+      "unit": ""
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched CALP, WFP and general sources for Chad cost-efficiency studies; none found.",
+      "unit": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched CALP, WFP and general sources for Chad cost-efficiency studies; none found.",
+      "unit": ""
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 0.18,
+      "available": "yes",
+      "as_of": "2026-02-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "MPCA (TEUM) USD 1.82M of USD 986.1M; down 68% from USD 5.7M in 2025 after 2025 MPCA went unfunded (per HNRP analysis). Target 33,444 people.",
+      "usd": 1821169
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP does not aggregate cash across clusters; Food Security uses USD 18 per person per month cash but cluster cash share is not costed.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not separately costed; agricultural input vouchers mentioned in transfer values only.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP states no aggregated CVA figure; MPCA is the only separate cash line [s1].",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 0.0,
+      "usd": 0,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$443.5M). Shared-cluster view: US$0.0M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 0.0,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "FTS single-cluster (destination) view: US$0.0M of US$1.8M MPC requirement. Shared-cluster view would give US$0.0M (0%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate vouchers.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": false,
+    "cbpf_name": "No standing CBPF found; USD 100M US-OCHA allocation (agreement Dec 2025)",
+    "cbpf_allocations_usd": {
+      "value": 100000000,
+      "available": "partial",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s5",
+        "s6"
+      ],
+      "note": "US-OCHA allocation, described as OCHA pooled fund funding by one CALP page and as an allocation, not a pooled fund, by another; implementation to Sep/Oct 2026."
+    },
+    "mpc_pct": {
+      "value": 4.5,
+      "available": "partial",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "MPCA USD 4.5M of the USD 100M allocation (computed).",
+      "usd": 4500000
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "USD 18.8M (18.8%) of the allocation is cash in total, mainly sector-specific; split between sectors and vouchers not given.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not separated from the USD 18.8M cash total.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "yes",
+    "title": "Feasibility assessment for the use of cash as humanitarian assistance modality for migrants in transit through Chad",
+    "author": "Croix-Rouge du Tchad",
+    "year": 2025,
+    "url": "https://cash-hub.org/resource/chad-red-cross-humanitarian-service-points",
+    "source_ids": [
+      "s8"
+    ],
+    "note": "Covers migrants in transit (Batha, Ouaddai) only; not a national study. Covers Humanitarian Service Points in Batha and Ouaddaï only; no national study found."
+  },
+  "market_monitoring": {
+    "functional": "unknown",
+    "system": "WFP price bulletin (last seen: June 2024); REACH/CWG product not found",
+    "frequency": "",
+    "last_published": "",
+    "url": "https://reliefweb.int/report/chad/chad-price-bulletin-june-2024",
+    "source_ids": [
+      "s10"
+    ],
+    "note": "Search showed a WFP price bulletin for June 2024 only; no product from the last 12 months confirmed. CWG reports a zone-based MEB revision [s4]."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Cash Working Group Tchad",
+    "leads": [
+      "Government (transition to MASSAH as permanent lead)",
+      "OCHA",
+      "Oxfam",
+      "Chad Red Cross"
+    ],
+    "cashcap_support": "unknown",
+    "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+    "source_ids": [
+      "s4",
+      "s9",
+      "s5"
+    ],
+    "evidence_note": "Government-led with active technical sub-groups, regular 3W dashboards and zone-based MEB revision [s4]; CALP is assessing the USD 100M allocation with the CWG [s5]; Oct 2024 minutes on ReliefWeb [s9]; CashCap not mentioned in sources."
+  },
+  "ai_summary": {
+    "headline": "Cash is almost absent from Chad's plan: MPCA is 0.2% of requirements and shows no funding in FTS.",
+    "narrative": "The 2026 HNRP asks for USD 986M and is about 45% funded, but most of that sits in the refugee response [s2][s3]. MPCA is the only separately costed cash line at USD 1.82M, 0.18% of the plan, after a 2025 MPCA component of USD 5.7M received nothing; the target fell from 104,800 to 33,444 people [s1]. FTS shows no funding to the MPC cluster [s3]. Yet H1 2025 reporting cited 46 partners delivering about USD 11.4M in cash to 228,230 people, which suggests the plan understates real cash activity [s1]. The sharpest recent signal is the USD 100M US-OCHA allocation, of which USD 18.8M is cash and USD 4.5M MPCA, now being assessed by CALP with the CWG [s5][s6]. The CWG is government-led with a leadership handover to MASSAH under way, and reports declining funding as its main challenge [s4]. There appears to be little recent evidence on modality preference, cost efficiency or markets.",
+    "barriers": [
+      "MPCA unfunded in 2025 and no funding visible in FTS for 2026 [s3]",
+      "No aggregated CVA figure in the HNRP, so cash is hard to track [s1]",
+      "CWG leadership transition to government not complete [s4]",
+      "No modality preference or cost-efficiency data found"
+    ],
+    "opportunities": [
+      "The CALP and CWG assessment of the USD 100M allocation can inform the next pooled allocation [s5]",
+      "Large sectoral cash footprint (food security USD 18 per person per month) could anchor a consolidated CVA figure [s1]"
+    ],
+    "data_gaps": [
+      "Modality preference",
+      "Cost efficiency (all modalities)",
+      "Recent market monitoring product",
+      "Sectoral cash and voucher shares",
+      "National cash feasibility study",
+      "Plan document not independently opened (figures via gDCF analysis)"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Chad 2026 HNRP (ReliefWeb country page, HNRP published 5 Feb 2026) as analysed in gDCF 2026 HNRP cash analysis, 16 Feb 2026",
+      "publisher": "OCHA via ReliefWeb",
+      "url": "https://reliefweb.int/country/tcd",
+      "date": "2026-02-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS public API: plan 1501 (Chad HNRP 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/plan/1501",
+      "date": "2026-02-25",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "FTS public API: plan 1501 requirements and funding by cluster",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1501&groupby=cluster",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Rapport Leads et Co-Leads CWG Afrique de l'Ouest et du Centre 2026",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "CALP rapid assessment of cash in the US-OCHA allocation to Chad",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/?p=631770",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "CALP resource listing: USD 100M US-OCHA allocation to Chad, USD 18.8M cash",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/ar/?p=218276",
+      "date": "2026-09",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "Chad humanitarian funding gaps fact sheet",
+      "publisher": "SIPRI",
+      "url": "https://www.sipri.org/sites/default/files/2026-08/fs_2608_chad_humanitarian_funding_gaps_fre_3.pdf",
+      "date": "2026-08",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "Feasibility assessment for the use of cash for migrants in transit through Chad",
+      "publisher": "Croix-Rouge du Tchad via Cash Hub",
+      "url": "https://cash-hub.org/resource/chad-red-cross-humanitarian-service-points",
+      "date": "2025",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "Tchad: Réunion Cash Working Group, compte-rendu (octobre 2024)",
+      "publisher": "ReliefWeb",
+      "url": "https://reliefweb.int/report/chad/tchad-reunion-cash-working-group-compte-rendu-octobre-2024-meeting-minutes",
+      "date": "2024-10",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "Chad price bulletin, June 2024",
+      "publisher": "WFP via ReliefWeb",
+      "url": "https://reliefweb.int/report/chad/chad-price-bulletin-june-2024",
+      "date": "2024-06",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

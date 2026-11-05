@@ -1,0 +1,377 @@
+{
+  "id": "niger",
+  "name": "Niger",
+  "iso3": "NER",
+  "calp_region": "West and Central Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Niger Besoins Humanitaires et Plan de Réponse 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://fts.unocha.org/plans/1513/summary",
+    "fts_plan_id": 1513,
+    "people_in_need": {
+      "value": 2600000,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "2.6m in 32 of 63 departments per humanitarianaction.info; Sida summary gives about 3m PIN, so figures conflict."
+    },
+    "people_targeted": {
+      "value": 1600000,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "1.6m per humanitarianaction.info; Sida summary says 2m targeted. Unreconciled."
+    },
+    "requirements_usd": {
+      "value": 675619589,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS total includes Refugee Response ($120.4m). humanitarianaction.info text cites $449m for the HNRP alone; basis of difference not confirmed. [FTS pull]"
+    },
+    "funded_usd": {
+      "value": 135295007,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS API live pull, retrieved 2026-11-05 (FTS 'as of' date not stated by API); includes $11.7m not assigned to a cluster. [FTS pull]"
+    },
+    "funded_pct": {
+      "value": 20.0,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Calculated: funded / requirements. Sida reported 9.8% secured as of its March 2026 summary. [FTS pull]"
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 plan found in sources checked; no dedicated search run.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No household-level preference survey found. No MSNA was run in 2025 (Sida). Only a 2020 key-informant study exists (see survey_note)."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "As above."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "As above."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "As above."
+    },
+    "survey_note": "REACH/MSCWG feasibility study, Tillabéri and Tahoua border areas, Feb-Mar 2020: 80% (Tillabéri) and 50% (Tahoua) of key informants said communities prefer in-kind, mainly to avoid market trips. Key-informant and focus-group based, not representative; not entered as a percentage. [s7]"
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "sectoral_cash": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "vouchers": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "in_kind_food": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 0.2,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS 'Transfert d'espèces à usages multiples' cluster requirement $1.256m of $675.6m. [FTS pull]",
+      "usd": 1256000
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated in FTS or in the HNRP text reviewed.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Total CVA requirement not found; Sida says partners will use MPC where feasible and cash restrictions are likely to continue.",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 0.0,
+      "usd": 14247,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$135.3M). Shared-cluster view: US$0.0M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 1.1,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS single-cluster (destination) view: US$0.0M of US$1.3M MPC requirement. Shared-cluster view would give US$0.0M (1%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate vouchers.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": false,
+    "cbpf_name": "No country-based pooled fund; West and Central Africa Regional Humanitarian Fund (FHRAOC) is used",
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Regional fund allocations to Niger not retrieved."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "yes",
+    "title": "Etude de faisabilité monétaire, Tillabéri et Tahoua",
+    "author": "REACH with the Multisectoral Cash Working Group",
+    "year": 2020,
+    "url": "https://repository.impact-initiatives.org/document/reach/91bf140a/REACH_NER_EtudeFaisabilitéMonétaire_TillabériTahoua_Juillet2020.pdf",
+    "source_ids": [
+      "s7"
+    ],
+    "note": "Border areas only, data Feb-Mar 2020; six years old and covers two regions."
+  },
+  "market_monitoring": {
+    "functional": "unknown",
+    "system": "REACH cash JMMI (Niger, 2022 factsheets seen)",
+    "frequency": "",
+    "last_published": "",
+    "url": "https://response.reliefweb.int/niger?page=0",
+    "source_ids": [
+      "s5",
+      "s6"
+    ],
+    "note": "No market-monitoring product from the last 12 months found; ReliefWeb Niger response page lists none. CWG minutes (May 2024) mention a MEB revision after a market study."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Cash Working Group Niger",
+    "leads": [],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/niger?page=0",
+    "source_ids": [
+      "s5",
+      "s6",
+      "s8"
+    ],
+    "evidence_note": "Reported in regional CWG minutes (May 2024: MEB revision, joint mission planned); 4W covers Jan-Dec 2025 (1.3m people, 17.3bn FCFA, about $31m). Leads not named; CALP listing shows WFP and OCHA contacts."
+  },
+  "ai_summary": {
+    "headline": "Niger's 2026 HNRP is 20% funded, with multi-purpose cash barely present: $1.3m requested, $14k received.",
+    "narrative": "Niger's 2026 HNRP asks for $675.6m on FTS and has received $135.3m, about 20% [s1][s2]. Multi-purpose cash is budgeted at $1.26m, 0.2% of requirements, and has received $14,247 [s1][s2]. Cash still moves at scale: the 2025 cash 4W records 1.3m people reached and 17.3bn FCFA, about $31m [s5], so most cash likely runs through sectoral lines that FTS does not separate. Sida reports restrictions on cash assistance are likely to continue in 2026 and that no MSNA was run in 2025 [s4]. Humanitarians must use escorts, and access is constrained [s6]. There is a CWG, which was revising the MEB in 2024 [s6], but I found no current leads, market monitoring or modality preference data. The only feasibility study is from 2020 and covers two regions [s7]. Requirements are also contested: the plan text cites $449m [s3] against $675.6m on FTS, which appears to include refugee response.",
+    "barriers": [
+      "Reported restrictions on cash assistance",
+      "No 2025 MSNA, so no current preference evidence",
+      "Escort requirements and insecurity limit access",
+      "MPC almost unfunded"
+    ],
+    "opportunities": [
+      "Existing CWG and 4W reporting give a base to build on",
+      "Sida notes partners expect to use MPC where feasible"
+    ],
+    "data_gaps": [
+      "Modality preference",
+      "Cost efficiency",
+      "CBPF/regional fund MPC share",
+      "Current market monitoring",
+      "Total CVA requirement",
+      "CWG leads and CashCap",
+      "Plan status of OCHA presence not confirmed"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "FTS public API: Niger Besoins Humanitaires et Plan de Réponse 2026 (plan 1513)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/plan/1513",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS public API: plan 1513 funding by cluster",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1513&groupby=cluster",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Niger 2026 plan overview",
+      "publisher": "humanitarianaction.info (OCHA)",
+      "url": "https://humanitarianaction.info/plan/1513/article/niger-4",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Niger Humanitarian Crisis Analysis 2026, short version",
+      "publisher": "Sida",
+      "url": "https://cdn.sida.se/app/uploads/2026/04/22144154/Niger-HCA-2026_Short_March-2026.pdf",
+      "date": "2026-03",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "ReliefWeb Response: Niger (includes cash transfer 4W Jan-Dec 2025)",
+      "publisher": "OCHA",
+      "url": "https://response.reliefweb.int/niger?page=0",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "Compte rendu CWG régional Afrique de l'Ouest et du Centre, 22 May 2024",
+      "publisher": "CALP Network",
+      "url": "https://calpnetwork.org/wp-content/uploads/2024/06/CR_CWG-Reg_220524.pdf",
+      "date": "2024-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "Etude de faisabilité monétaire Tillabéri-Tahoua",
+      "publisher": "REACH Initiative",
+      "url": "https://repository.impact-initiatives.org/document/reach/91bf140a/REACH_NER_EtudeFaisabilitéMonétaire_TillabériTahoua_Juillet2020.pdf",
+      "date": "2020-07",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "Groupes de travail sur les transferts monétaires",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/fr/community/cash-working-groups/",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

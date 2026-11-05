@@ -1,0 +1,448 @@
+{
+  "id": "sudan",
+  "name": "Sudan",
+  "iso3": "SDN",
+  "calp_region": "East and Southern Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Sudan Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://humanitarianaction.info/plan/1514/document/sudan-humanitarian-needs-and-response-plan-2026",
+    "fts_plan_id": 1514,
+    "people_in_need": {
+      "value": 33700000,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "33.7 million require assistance; HNRP text also says over 13 million in need fall outside plan scope."
+    },
+    "people_targeted": {
+      "value": 20400000,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Includes 14 million facing extreme conditions."
+    },
+    "requirements_usd": {
+      "value": 2866228593,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s16",
+        "s4"
+      ],
+      "note": "Revised requirements per FTS API; HNRP text says $2.9 billion incl. $526 million refugee response. [FTS API]"
+    },
+    "funded_usd": {
+      "value": 1342958757,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "s16"
+      ],
+      "note": "Incoming funding total, FTS API. Earlier CALP-dashboard extract showed $761M (undated). [latest flow seen; API retrieved 2026-11-05]"
+    },
+    "funded_pct": {
+      "value": 46.9,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "s16"
+      ],
+      "note": "Derived: $1,342,958,757 funded over $2,866,228,593 requirements. [latest flow seen; API retrieved 2026-11-05]"
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 Sudan plan or launch date found in search on 2026-11-05.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No quantified preference split found. HNRP s3 says over 90 per cent of affected households call cash the most dignified and responsive support (wording is not a forced-choice preference); CWG paper and landscape review give no split."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported."
+    },
+    "survey_note": "No MSNA modality-preference question found. HNRP 2026 community consultations ranked cash as top preferred type and modality [s3]; a 2026 IFPRI study of IDP households on intra-household preferences exists but was not read."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Sudan cost-efficiency figure found in HNRP, CWG paper or landscape review.",
+      "unit": ""
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Sudan cost-efficiency figure found in HNRP, CWG paper or landscape review.",
+      "unit": ""
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Sudan cost-efficiency figure found in HNRP, CWG paper or landscape review.",
+      "unit": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Sudan cost-efficiency figure found in HNRP, CWG paper or landscape review.",
+      "unit": ""
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 4.2,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3",
+        "s16"
+      ],
+      "note": "Derived: MPC requirement $121,347,117 over plan requirements $2,866,228,593 (FTS API; matches HNRP 2.4). The plan text does not state a percentage. [FTS API]",
+      "usd": 121347117
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP 2.4 gives no sectoral cash budget.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No voucher figure in HNRP 2.4.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP 2.4 gives no total CVA requirement or share.",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 7.3,
+      "usd": 98341936,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s16"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$1343.0M). Shared-cluster view: US$159.2M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 81.0,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s16"
+      ],
+      "note": "FTS single-cluster (destination) view: US$98.3M of US$121.3M MPC requirement. Shared-cluster view would give US$159.2M (131%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Sectoral cash not disaggregated in the FTS extract.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Vouchers not disaggregated in the FTS extract.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "Sudan Humanitarian Fund (SHF)",
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "SHF 2026 totals not retrievable: s13 gives no dollar totals and the pfdata hub did not load."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "s13 says the April 2026 reserve allocation includes multi-purpose cash in 84 hyper-prioritised locations, with no amounts.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "yes",
+    "title": "Cash and Voucher Assistance (CVA) Feasibility and Risk Analysis: Sudan",
+    "author": "Not stated on CALP page",
+    "year": 2021,
+    "url": "https://www.calpnetwork.org/?p=213727",
+    "source_ids": [
+      "s7",
+      "s6"
+    ],
+    "note": "Pre-war (June 2021) so dated; April 2026 landscape review says feasibility not assessed. No current CWG feasibility product found."
+  },
+  "market_monitoring": {
+    "functional": "yes",
+    "system": "REACH Sudan JMMI (guided by Sudan CWG, 11 agencies)",
+    "frequency": "monthly",
+    "last_published": "April 2026 (data 2-11 April)",
+    "url": "https://repository.impact-initiatives.org/document/impact/40aeca74/REACH_SDN_JMMI_Factsheet_2-11-April-2026.pdf",
+    "source_ids": [
+      "s8",
+      "s9"
+    ],
+    "note": "April 2026: 15 states, 64 localities, 1,591 KIIs; national MEB 540,675 SDG (+5% on Feb). Landscape review says market data are not linked to planning [s6]. Later editions may exist."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Sudan Cash Working Group",
+    "leads": [],
+    "cashcap_support": "unknown",
+    "url": "https://reliefweb.int/report/sudan/sudan-cash-working-group-coordination-structure",
+    "source_ids": [
+      "s15",
+      "s3",
+      "s5",
+      "s6",
+      "s10",
+      "s11"
+    ],
+    "evidence_note": "Endorses MPCA transfer value (360,000 SDG, about $150, 3 months) and guides JMMI. Leads not found; CashCap co-developed the April 2026 landscape review but its Sudan role is unstated. Collective Sudan (formerly Cash Consortium of Sudan, Mercy Corps/Prosper Global lead) runs joint FSP procurement and a common payment architecture."
+  },
+  "ai_summary": {
+    "headline": "MPC is 4% of a $2.9bn plan but about 81% funded; the wider cash story sits with the consortium.",
+    "narrative": "The 2026 HNRP seeks $2.9bn for 20.4 million of 33.7 million people in need [s1][s2]. MPC is $121.3M, about 4% of requirements, targeting 1.0M households at 360,000 SDG (about $150) a month for three months [s3]. Live FTS data (5 November) show MPC far better funded than the plan overall: about 81% against 46.9% [s16], though the pooled-fund attribution view gives a higher figure. Outside the HNRP, CCS (now Collective Sudan) delivers MPCA through 18-19 partners and handles FSP procurement and a common payment architecture [s6][s10][s11]. Coverage remains thin: in over 50 of 57 mapped localities MPCA is under 10% of food assistance, and about 95% of the affected population reportedly receives nothing [s14]. The CWG's June 2026 position paper argues for sustaining MPCA as funding tightens [s5]. The JMMI is monthly and shows the SDG depreciating 34% in two months [s8]. Inference: much of the cash volume sits in consortium and SHF channels that the HNRP figures understate.",
+    "barriers": [
+      "Bureaucratic and regulatory barriers delay cash programming [s5]",
+      "Currency depreciation (+34% in Feb-Apr 2026) erodes transfer value [s8]",
+      "Market and FSP data not linked to planning tools [s6]",
+      "No current feasibility assessment; the last is from 2021 [s7]"
+    ],
+    "opportunities": [
+      "Collective Sudan's shared FSP procurement and common payment system could serve as a platform for other actors [s10][s11]",
+      "Monthly JMMI and CWG-endorsed MPCA transfer value give an evidence base for advocacy [s3][s8]",
+      "SHF reserve allocation includes MPC [s13]"
+    ],
+    "data_gaps": [
+      "modality preference split",
+      "cost efficiency (all four)",
+      "sectoral cash and voucher requirements",
+      "total CVA share",
+      "CWG leads and CashCap",
+      "SHF cash allocations",
+      "2027 plan status"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Sudan Humanitarian Needs and Response Plan 2026 (summary)",
+      "publisher": "OCHA / ReliefWeb",
+      "url": "https://reliefweb.int/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-summary",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "Sudan HNRP 2026, Part 2: 2.3 Cost of response",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1514/document/sudan-humanitarian-needs-and-response-plan-2026/article/23-cost-response",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Sudan HNRP 2026, 2.4 Cash and voucher assistance overview and multi-purpose cash assistance",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1514/document/sudan-humanitarian-needs-and-response-plan-2026/article/24-cash-voucher-assistance-overview-and-multi-purpose-cash-assistance",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "FTS Sudan Humanitarian Needs and Response Plan 2026 (plan 1514)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1514/summary",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Investing in Cash: A Strategic Approach to Greater Humanitarian Impact (Sudan CWG position paper)",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/publication/investing-in-cash-a-strategic-approach-to-greater-humanitarian-impact/",
+      "date": "2026-06-11",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "Cash Landscape and Pathways Forward: Sudan Operational Cash Landscape Review",
+      "publisher": "CashCap, CALP, gDCF",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Cash-Landscape-and-Pathways-Forward_Cash-Landscape-Review_Sudan.pdf",
+      "date": "2026-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "Cash and Voucher Assistance (CVA) Feasibility and Risk Analysis: Sudan",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/?p=213727",
+      "date": "2021-06",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "REACH Sudan JMMI Factsheet, 2-11 April 2026",
+      "publisher": "REACH / Sudan CWG",
+      "url": "https://repository.impact-initiatives.org/document/impact/40aeca74/REACH_SDN_JMMI_Factsheet_2-11-April-2026.pdf",
+      "date": "2026-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "REACH Sudan JMMI Factsheet, 5-14 February 2026",
+      "publisher": "REACH / Sudan CWG",
+      "url": "https://repository.impact-initiatives.org/document/impact/63b7fa4d/REACH_SDN_JMMI_Factsheet_5-14-February-2026-V2-1.pdf",
+      "date": "2026-02",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "Short Term Assignment: CCS Procurement Manager, Sudan (job posting)",
+      "publisher": "Mercy Corps via UNTalent",
+      "url": "https://untalent.org/jobs/short-term-assignment-sta-ccs-procurement-manager-sudan",
+      "date": "undated",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s11",
+      "title": "Intent to bid MCK-SD-CCS-001-2025: Financial Service Providers to support cash and voucher",
+      "publisher": "Prosper Global (CCS lead agency)",
+      "url": "https://www.prosperglobal.org/tenders/intent-bid-ref-mck-sd-ccs-001-2025-financial-service-providers-support-cash-and-voucher",
+      "date": "2025-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s12",
+      "title": "Cash Consortium of Sudan briefing note",
+      "publisher": "NRC",
+      "url": "https://www.nrc.no/resources/briefing-notes/cash-consortium-of-sudan",
+      "date": "2024-07-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s13",
+      "title": "Sudan Humanitarian Fund (SHF) US award update, 5 April 2026",
+      "publisher": "OCHA / ReliefWeb",
+      "url": "https://reliefweb.int/report/sudan/sudan-humanitarian-fund-shf-us-award-update-5-april-2026",
+      "date": "2026-04-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s14",
+      "title": "Workshop Summary: Cash Landscape Review Sudan",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Workshop-Summary_Cash-Landscape-Review_Sudan.pdf",
+      "date": "2026-03-24",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s16",
+      "title": "FTS public API, plan 1514: plan, flow and funding-by-cluster endpoints",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1514&groupby=cluster",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s15",
+      "title": "Sudan Cash Working Group: Coordination Structure",
+      "publisher": "OCHA / ReliefWeb",
+      "url": "https://reliefweb.int/report/sudan/sudan-cash-working-group-coordination-structure",
+      "date": "undated",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

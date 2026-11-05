@@ -1,0 +1,375 @@
+{
+  "id": "nigeria",
+  "name": "Nigeria",
+  "iso3": "NGA",
+  "calp_region": "West and Central Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Nigeria Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://reliefweb.int/report/nigeria/nigeria-2026-humanitarian-needs-and-response-plan-january-2026",
+    "fts_plan_id": 1508,
+    "people_in_need": {
+      "value": 5900000,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "5.9m in Borno, Adamawa and Yobe (down from 7.8m in 2025) per humanitarianaction.info."
+    },
+    "people_targeted": {
+      "value": 2500000,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "2.5m in the BAY states."
+    },
+    "requirements_usd": {
+      "value": 516399423,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1",
+        "s3"
+      ],
+      "note": "$516.4m on FTS and in the plan overview. The gDCF analysis quotes $910m, which matches the 2025 plan; treat that figure as wrong. [FTS pull]"
+    },
+    "funded_usd": {
+      "value": 367725856,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS API live pull, retrieved 2026-11-05 (FTS 'as of' date not stated by API); includes $136.2m not assigned to a cluster. An earlier CALP FTS snapshot showed $240.6m (46.6%). [FTS pull]"
+    },
+    "funded_pct": {
+      "value": 71.2,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Calculated: funded / requirements. Sensitive to the unassigned $136m; earlier snapshot 46.6%. [FTS pull]"
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 plan found in sources checked; no dedicated search run.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
+    },
+    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified)."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "sectoral_cash": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "vouchers": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "in_kind_food": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS 2026 plan has no Multi-Purpose Cash requirement line. gDCF analysis quotes $15m (1.65% of its $910m base) but that matches the 2025 plan text, so it is unverified for 2026.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated. gDCF analysis cites $240m sector-specific CVA, unverified and based on the $910m figure.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "gDCF analysis cites $255m (28%) of a $910m plan; denominator conflicts with FTS ($516.4m), so not recorded. HNRP text not opened.",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 1.8,
+      "usd": 6707044,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "MPC-tagged funding US$6.7M received although the plan has no MPC requirement line. Share of all funding received (US$367.7M)."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS shows no MPC requirement for 2026, so coverage cannot be calculated."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate vouchers.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "Nigeria Humanitarian Fund",
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "2026 allocation data not retrieved (CBPF data hub not reachable by API)."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [],
+    "note": "None located; the MEB-aligned transfer value is reported in the 2025 plan ($118/HH/month)."
+  },
+  "market_monitoring": {
+    "functional": "yes",
+    "system": "Nigeria JMMI (CWG with FACT Foundation; earlier iMMAP co-lead)",
+    "frequency": "ad hoc",
+    "last_published": "2026-03 (December 2025 round)",
+    "url": "https://reliefweb.int/report/nigeria/nigeria-joint-market-monitoring-initiative-jmmi-december-2025",
+    "source_ids": [
+      "s5"
+    ],
+    "note": "Dec 2025 round (data 15-20 Dec, 15 LGAs in BAY); a May 2025 round also published. Fixed schedule not stated."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Nigeria Cash Working Group (national, Abuja) and North-East sub-national CWG",
+    "leads": [
+      "OCHA",
+      "Federal Ministry of Humanitarian Affairs, Disaster Management and Social Development (national)",
+      "Catholic Relief Services (north-east)"
+    ],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/nigeria/cash-working-group",
+    "source_ids": [
+      "s4",
+      "s5",
+      "s7"
+    ],
+    "evidence_note": "Leads taken from the 2025 HNRP text; not confirmed for 2026. Leads from 2025 HNRP text; NE ToR June 2024, 132 members, JMMI Dec 2025, CVA infographic Aug 2025 (39 partners, 26 LGAs, Q1 2025)."
+  },
+  "ai_summary": {
+    "headline": "Nigeria has a mature cash architecture, but MPC is small and the plan's headline cash figures need correcting.",
+    "narrative": "The 2026 HNRP seeks $516.4m for 2.5m people in the BAY states, and FTS shows $367.7m received as of this pull, about 71% [s1][s2]. Over a third of that is not assigned to a cluster, so coverage is likely overstated for sector analysis. Multi-Purpose Cash has received $6.7m, 1.8% of funding, but FTS carries no 2026 MPC requirement, so coverage cannot be judged [s2]. The gDCF analysis quotes $255m CVA and $15m MPC against a $910m plan; the denominator is the 2025 figure, so those numbers should be treated as unverified. Coordination is strong: a national CWG co-led by OCHA and the federal ministry, a north-east group co-chaired with CRS, 132 members, and a JMMI with a round in December 2025 [s4][s5][s7]. The national CVA policy and social registry give a social-protection route [s4]. Preference evidence is dated: GTS found people generally favour vouchers over unrestricted cash in Borno and Yobe in 2023 [s6].",
+    "barriers": [
+      "FTS carries no 2026 MPC requirement",
+      "Large unassigned funding blurs sector tracking",
+      "Preference evidence is from 2023 and favours vouchers over unrestricted cash",
+      "Gap between gDCF figures and FTS"
+    ],
+    "opportunities": [
+      "National CVA policy and social registry",
+      "Functional CWG, JMMI and 4W reporting"
+    ],
+    "data_gaps": [
+      "2026 MPC requirement",
+      "Total CVA requirement",
+      "Cost efficiency",
+      "Pooled fund allocations",
+      "Current modality preference percentages",
+      "CashCap",
+      "Cash feasibility study"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "FTS public API: Nigeria Humanitarian Needs and Response Plan 2026 (plan 1508)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/plan/1508",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS public API: plan 1508 funding by cluster",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1508&groupby=cluster",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Nigeria 2026 plan overview",
+      "publisher": "humanitarianaction.info (OCHA)",
+      "url": "https://humanitarianaction.info/plan/1508/article/nigeria-4",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Nigeria 2025 HNRP: Multipurpose cash and CVA overview (CWG structure, transfer value)",
+      "publisher": "humanitarianaction.info (OCHA)",
+      "url": "https://humanitarianaction.info/plan/1274/document/nigeria-2025-humanitarian-needs-and-response-plan/article/28-multipurpose-cash-and-cash-and-voucher-assistance-overview",
+      "date": "2025",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Nigeria JMMI, December 2025",
+      "publisher": "OCHA / Nigeria CWG / FACT",
+      "url": "https://reliefweb.int/report/nigeria/nigeria-joint-market-monitoring-initiative-jmmi-december-2025",
+      "date": "2026-03",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "Ground Truth Solutions Nigeria Cash Barometer, April 2024",
+      "publisher": "Ground Truth Solutions",
+      "url": "https://library.alnap.org/system/files/content/resource/files/main/GTS_Nigeria_CashBarometer_April2024_EN.pdf",
+      "date": "2024-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "North-East Nigeria: Cash and Voucher Assistance, 20 August 2025",
+      "publisher": "OCHA",
+      "url": "https://reliefweb.int/report/nigeria/north-east-nigeria-cash-and-voucher-assistance-20-august-2025",
+      "date": "2025-08",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "Northeast Nigeria CWG Terms of Reference, June 2024",
+      "publisher": "OCHA / CWG",
+      "url": "https://reliefweb.int/report/nigeria/northeast-nigeria-cash-working-group-terms-reference-june-2024",
+      "date": "2024-06",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

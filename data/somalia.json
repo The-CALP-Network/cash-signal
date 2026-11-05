@@ -1,0 +1,420 @@
+{
+  "id": "somalia",
+  "name": "Somalia",
+  "iso3": "SOM",
+  "calp_region": "East and Southern Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Somalia Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://fts.unocha.org/plans/1516/summary",
+    "fts_plan_id": 1516,
+    "people_in_need": {
+      "value": 4800000,
+      "available": "yes",
+      "as_of": "2026-01",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "20% lower than 2025; OCHA says this reflects a stricter needs definition, not improved conditions."
+    },
+    "people_targeted": {
+      "value": 2400000,
+      "available": "yes",
+      "as_of": "2026-01",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "1.6M prioritised in the most severe conditions across 21 districts."
+    },
+    "requirements_usd": {
+      "value": 852000000,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS plan 1516 revised requirements; unchanged from the original."
+    },
+    "funded_usd": {
+      "value": 302480905,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS flow total as retrieved via API on 2026-11-05; the CALP FTS extract held locally is an older snapshot (USD 176.5M)."
+    },
+    "funded_pct": {
+      "value": 35.5,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Computed: 302,480,905 / 852,000,000."
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 Somalia plan or planning announcement found in a web search on 2026-11-05.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 78,
+      "available": "partial",
+      "as_of": "2025-09",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "REACH MSNA 2025: share of households with priority needs naming cash as preferred modality (multiple answers; shares do not sum to 100). [/10]"
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Vouchers not reported as a separate option in the MSNA 2025 factsheet text retrieved."
+    },
+    "in_kind_pct": {
+      "value": 78,
+      "available": "partial",
+      "as_of": "2025-09",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Same question; in-kind also 78%, so cash and in-kind are tied. [/10]"
+    },
+    "other_pct": {
+      "value": 20,
+      "available": "partial",
+      "as_of": "2025-09",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Services (20%); multiple answers allowed. [/10]"
+    },
+    "survey_note": "REACH MSNA, 20 Sep-15 Oct 2025, face-to-face; factsheet gives n=6,988 in one place and 6,326 in another. Question wording not in the factsheet. Earlier MSNA 2024 (n=12,233) ranked in-kind food 68%, mobile-money cash 38%, physical cash 33%."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Somalia-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
+      "unit": ""
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Somalia-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
+      "unit": ""
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Somalia-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
+      "unit": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Somalia-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
+      "unit": ""
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 11.4,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "MPC cluster USD 97M of USD 852M (verified in FTS cluster requirements). Up from USD 60.6M in 2025 per CALP FTS extract.",
+      "usd": 97000000
+    },
+    "sectoral_cash_pct": {
+      "value": 31.5,
+      "available": "partial",
+      "as_of": "2026-01",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "USD 268.5M sectoral CVA per HNRP Section 2.6 as reported by gDCF analysis (8 Feb 2026); HNRP text not opened directly.",
+      "usd": 268500000
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP reports CVA as MPCA plus sectoral; vouchers are not split out."
+    },
+    "total_cva_pct": {
+      "value": 42.9,
+      "available": "partial",
+      "as_of": "2026-01",
+      "source_ids": [
+        "s5"
+      ],
+      "note": "USD 365.5M total CVA per gDCF analysis of HNRP Section 2.6; MPCA is 27% of it. HNRP text not opened directly.",
+      "usd": 365500000
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 11.6,
+      "usd": 35086246,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$302.5M). Shared-cluster view: US$35.1M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 36.2,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS single-cluster (destination) view: US$35.1M of US$97.0M MPC requirement. Shared-cluster view would give US$35.1M (36%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash from cluster funding."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate vouchers from cluster funding."
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "Somalia Humanitarian Fund",
+    "cbpf_allocations_usd": {
+      "value": 22998382,
+      "available": "partial",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "2026 project budgets to date (46 projects; standard allocation 1 approx USD 21M plus a famine-prevention reserve). Year not closed."
+    },
+    "mpc_pct": {
+      "value": 0,
+      "available": "partial",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s6"
+      ],
+      "note": "No 2026 or 2025 SHF project is tagged to a Multi-Purpose Cash cluster; 2026 split is WASH 31%, food security 27%, health 18%, nutrition 16%, protection 7%.",
+      "usd": 0
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "CBPF data tags clusters, not modality; cash inside sector projects cannot be identified."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "CBPF data tags clusters, not modality."
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [],
+    "note": "No stand-alone feasibility study found; CWG hosts an MEB gap analysis (Sep 2024) and a 2026 MPCA-as-primary-response framework."
+  },
+  "market_monitoring": {
+    "functional": "yes",
+    "system": "FSNAU/FEWS NET weekly price monitoring of 71 markets; REACH JMMI (quarterly)",
+    "frequency": "monthly",
+    "last_published": "2026-05 (cost of minimum basket file); REACH JMMI last found Apr 2025",
+    "url": "https://fsnau.org/sectors/markets",
+    "source_ids": [
+      "s12"
+    ],
+    "note": "FSNAU page lists monthly market updates and a May 2026 minimum basket file, but no posting date. JMMI quarterly factsheets found only to April 2025; REACH products for the last 12 months not confirmed."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Somalia Cash Working Group",
+    "leads": [
+      "WFP (co-lead)",
+      "Concern Worldwide (co-lead)",
+      "OCHA (non-programmatic co-chair)"
+    ],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/somalia/somalia-cash-working-group",
+    "source_ids": [
+      "s9",
+      "s10",
+      "s11",
+      "s14"
+    ],
+    "evidence_note": "Co-lead organisations inferred from named individuals on an undated CALP page; confirm. Monthly meetings plus ad hoc; MEB gap analysis (2024), CVA dashboards 2024-25, CWG framework on MPCA as primary response (16 Feb 2026). Co-lead names are from an undated CALP page; an OCHA P4 cash coordinator vacancy cites the OCHA co-chair role."
+  },
+  "ai_summary": {
+    "headline": "Somalia has made MPCA the first-line modality on paper, but only about a third of the USD 97M is funded.",
+    "narrative": "Cash is unusually prominent in the 2026 plan. MPC is a dedicated USD 97M line (11.4% of the USD 852M appeal) and, per the gDCF reading of the HNRP, total CVA is USD 365.5M, 43% of requirements [s1][s5]. The Humanitarian Coordinator calls MPCA the first-line response modality and the CWG issued a framework in February 2026 making it the default for households with multiple needs [s2][s11]. Funding does not yet match the ambition: the plan is 35.5% funded and MPC has received USD 35.1M, 36.2% of its line [s1]. The pooled fund shows no MPC-tagged projects in 2025 or 2026, so MPC relies on bilateral donors [s6]. Household preference looks split rather than cash-dominant: 78% named cash and 78% in-kind in the 2025 MSNA [s7]. Market monitoring appears to be in place through FSNAU/FEWS NET [s12]. The CWG is co-led by WFP and Concern with an OCHA co-chair role [s9][s14]; no cash feasibility study was found.",
+    "barriers": [
+      "MPC funding is 36% of its line, so the first-line modality may not be deliverable at scale",
+      "Pooled fund allocations carry no MPC cluster tag",
+      "Cash and in-kind are tied in stated preference, which supports mixed responses",
+      "Cluster sections of the HNRP are reported to vary in CVA depth [s5]"
+    ],
+    "opportunities": [
+      "HC-level endorsement of MPCA gives CALP a clear advocacy hook for pooled-fund and bilateral funding",
+      "MPCA exit pathway to the Baxnaano safety net links humanitarian cash to national systems [s5]"
+    ],
+    "data_gaps": [
+      "cost efficiency",
+      "cash feasibility study",
+      "voucher share of requirements",
+      "sectoral cash share of funding and pooled funds",
+      "CashCap deployment",
+      "2027 plan status"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "FTS public API: Somalia HNRP 2026 (plan 1516) requirements and funding by cluster",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1516&groupby=cluster",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "Somalia 2026 HNRP at a glance",
+      "publisher": "OCHA / ReliefWeb",
+      "url": "https://reliefweb.int/report/somalia/somalia-2026-humanitarian-needs-and-response-plan-hnrp-glance",
+      "date": "2026-01",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Humanitarian partners seek US$852 million to assist 2.4 million people in 2026",
+      "publisher": "OCHA / ReliefWeb",
+      "url": "https://reliefweb.int/report/somalia/humanitarian-partners-seek-us852-million-assist-24-million-people-2026",
+      "date": "2026-01-26",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Global Humanitarian Overview 2026 at a glance",
+      "publisher": "OCHA",
+      "url": "https://www.developmentaid.org/api/frontend/cms/file/2025/12/GHO2026_At_a_glance_EN.pdf",
+      "date": "2025-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Somalia HNRP 2026, Section 2.6 (figures as analysed in the gDCF 2026 HNRP cash analysis, 8 Feb 2026; HNRP page not retrievable by the fetch tool)",
+      "publisher": "OCHA / ReliefWeb",
+      "url": "https://reliefweb.int/report/somalia/somalia-humanitarian-needs-and-response-plan-2026-january-2026",
+      "date": "2026-01-27",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "CBPF Data API, ProjectSummary for Somalia Humanitarian Fund, 2025 and 2026",
+      "publisher": "OCHA CBPF",
+      "url": "https://cbpfapi.unocha.org/vo2/odata/ProjectSummary",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "REACH Somalia MSNA factsheet, October 2025",
+      "publisher": "REACH / IMPACT Initiatives",
+      "url": "https://repository.impact-initiatives.org/document/impact/00c7f860/REACH_SOM_Factsheet_MSNA_October-2025.pdf",
+      "date": "2025-10",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "Somalia Cash Working Group",
+      "publisher": "CALP Network",
+      "url": "https://calpnetwork.org/?p=16093",
+      "date": "",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "Somalia Cash Working Group",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/somalia/somalia-cash-working-group",
+      "date": "2026-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s11",
+      "title": "Somalia CWG Framework: Integrated MPCA as Primary Response",
+      "publisher": "Somalia CWG / OCHA",
+      "url": "https://reliefweb.int/report/somalia/somalia-cwg-framework-integrated-mpca-primary-response-16-february-2026",
+      "date": "2026-02-16",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s12",
+      "title": "FSNAU Sectors / Markets",
+      "publisher": "FSNAU (FAO) / FEWS NET",
+      "url": "https://fsnau.org/sectors/markets",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s14",
+      "title": "OCHA Cash Coordinator P4, Mogadishu (vacancy)",
+      "publisher": "CANADEM / OCHA",
+      "url": "https://portal.canadem.ca/careers/57869-CANADEM-General-Portal/jobs/16768648-OCHA-Cash-Coordinator-P4-Mogadishu-Somalia",
+      "date": "",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

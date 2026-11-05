@@ -1,0 +1,378 @@
+{
+  "id": "mali",
+  "name": "Mali",
+  "iso3": "MLI",
+  "calp_region": "West and Central Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Mali Besoins Humanitaires et Plan de Réponse 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://reliefweb.int/report/mali/mali-plan-de-reponse-humanitaire-2026-janvier-2026",
+    "fts_plan_id": 1511,
+    "people_in_need": {
+      "value": 5100000,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "About 5.1m (20% of population), down about 24% on 2025 on a stricter methodology."
+    },
+    "people_targeted": {
+      "value": 3800000,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "3.8m; hyper-prioritised 1.5m-2m ($329.2m-$392.8m)."
+    },
+    "requirements_usd": {
+      "value": 577866412,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS $577.9m; humanitarianaction.info text cites $551m. Basis of difference not confirmed. [FTS pull]"
+    },
+    "funded_usd": {
+      "value": 162135390,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS API live pull, retrieved 2026-11-05 (FTS 'as of' date not stated by API); includes $16.2m not assigned to a cluster. [FTS pull]"
+    },
+    "funded_pct": {
+      "value": 28.1,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "Calculated: funded / requirements. [FTS pull]"
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 plan found in sources checked; no dedicated search run.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 90,
+      "available": "partial",
+      "as_of": "2025",
+      "source_ids": [
+        "s7"
+      ],
+      "note": "Reported as CWG feasibility study (Jan 2025) result in the gDCF analysis of the HNRP; HNRP and study not opened by this agent. Verify before use. [Jan]"
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported in the secondary summary."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported; gDCF notes women tend to prefer in-kind."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported."
+    },
+    "survey_note": "90% cash preference relayed from gDCF 2026 analysis (cites CWG study Jan 2025; sample and wording unknown). Not independently confirmed; the only feasibility study opened (Plan International, Aug 2022) gives no preference percentages."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "sectoral_cash": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "vouchers": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    },
+    "in_kind_food": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 5.3,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS 'Transfert d'espèces à usages multiples' requirement $30.7m of $577.9m. [FTS pull]",
+      "usd": 30718088
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Clusters reportedly commit 6% of budgets to cash (gDCF analysis, unverified) but this is not costed or aggregated.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Total CVA not aggregated beyond MPC in the plan, per gDCF analysis; HNRP text not opened.",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 3.4,
+      "usd": 5528916,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$162.1M). Shared-cluster view: US$5.5M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 18.0,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS single-cluster (destination) view: US$5.5M of US$30.7M MPC requirement. Shared-cluster view would give US$5.5M (18%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate vouchers.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": false,
+    "cbpf_name": "No country-based pooled fund identified; West and Central Africa Regional Humanitarian Fund (FHRAOC) allocates in Mali",
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Regional fund allocations to Mali not retrieved."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "yes",
+    "title": "Cash and Voucher Assistance in Mali: CVA feasibility study key findings",
+    "author": "Plan International",
+    "year": 2022,
+    "url": "https://www.calpnetwork.org/es/publication/cash-and-voucher-assistance-in-mali-cva-feasibility-study-key-findings/",
+    "source_ids": [
+      "s5"
+    ],
+    "note": "Aug 2022; Gao, Ménaka, Mopti, Ségou, Timbuktu; 225 traders, 785 FGD participants. A CWG study of Jan 2025 is cited by gDCF but was not located."
+  },
+  "market_monitoring": {
+    "functional": "partial",
+    "system": "REACH ICSM (Initiative Conjointe de Suivi des Marchés)",
+    "frequency": "",
+    "last_published": "2025-12",
+    "url": "https://repository.impact-initiatives.org/document/impact/acc88152/REACH_ICSM_Decembre2025.pdf",
+    "source_ids": [
+      "s6",
+      "s4"
+    ],
+    "note": "Dec 2025 round: 21 markets, 1,140 traders, 33 items. Frequency not stated. CWG minutes (May 2024) flag only 145 of 445 markets monitored and big gaps in the north."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Cash Working Group Mali",
+    "leads": [],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
+    "source_ids": [
+      "s4",
+      "s8"
+    ],
+    "evidence_note": "Hosts a cash transfer dashboard; May 2024 minutes: post-distribution tool for MPC finalised, advocacy workshops planned. Leads not named in sources."
+  },
+  "ai_summary": {
+    "headline": "Mali budgets 5.3% of its plan for MPC and has funded 18% of that line, while cash preference data is unverified.",
+    "narrative": "Mali's 2026 HNRP requires $577.9m on FTS and has received $162.1m, about 28% [s1][s2]. The Multi-Purpose Cash line asks for $30.7m, 5.3% of requirements, and has received $5.5m, or 18% of the line [s1][s2]. That is a lower coverage rate than the plan overall, which suggests MPC is being squeezed rather than protected. The gDCF analysis reports a 90% cash preference, nationally standardised transfer value and 6% cluster cash commitments, but I could not open the HNRP or the study behind them, so these remain unverified [s7]. Coordination exists through a CWG with a dashboard and a finalised post-distribution monitoring tool [s8], yet market monitoring is thin: only 145 of 445 markets were monitored in 2024, with large gaps in the north [s4], although a December 2025 joint monitoring round covered 21 markets [s6]. Total CVA across clusters is likely larger than the MPC line but is not aggregated.",
+    "barriers": [
+      "MPC coverage (18%) is below overall plan coverage (28%)",
+      "Total CVA not aggregated",
+      "Market monitoring gaps in the north",
+      "Preference evidence unverified"
+    ],
+    "opportunities": [
+      "Existing CWG tools and ICSM monitoring",
+      "Cluster commitments to cash could be tracked"
+    ],
+    "data_gaps": [
+      "Verified modality preference",
+      "Cost efficiency",
+      "Pooled fund MPC share",
+      "Total CVA requirement",
+      "CWG leads and CashCap",
+      "Current feasibility study",
+      "ICSM frequency"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "FTS public API: Mali Besoins Humanitaires et Plan de Réponse 2026 (plan 1511)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/plan/1511",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS public API: plan 1511 funding by cluster",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1511&groupby=cluster",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Mali 2026 plan overview",
+      "publisher": "humanitarianaction.info (OCHA)",
+      "url": "https://humanitarianaction.info/plan/1511/article/mali-4",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Compte rendu CWG régional Afrique de l'Ouest et du Centre, 22 May 2024",
+      "publisher": "CALP Network",
+      "url": "https://calpnetwork.org/wp-content/uploads/2024/06/CR_CWG-Reg_220524.pdf",
+      "date": "2024-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Cash and Voucher Assistance in Mali: CVA feasibility study key findings",
+      "publisher": "Plan International (via CALP)",
+      "url": "https://www.calpnetwork.org/es/publication/cash-and-voucher-assistance-in-mali-cva-feasibility-study-key-findings/",
+      "date": "2022-09",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "REACH ICSM Mali, December 2025 factsheet",
+      "publisher": "REACH Initiative",
+      "url": "https://repository.impact-initiatives.org/document/impact/acc88152/REACH_ICSM_Decembre2025.pdf",
+      "date": "2025-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "Mali Plan de Réponse Humanitaire 2026 (ReliefWeb; page not opened, figures relayed via gDCF analysis)",
+      "publisher": "OCHA",
+      "url": "https://reliefweb.int/report/mali/mali-plan-de-reponse-humanitaire-2026-janvier-2026",
+      "date": "2026-01",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "Cash Working Group Mali",
+      "publisher": "ReliefWeb Response (OCHA)",
+      "url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
+      "date": "2025",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

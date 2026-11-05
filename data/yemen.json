@@ -1,0 +1,373 @@
+{
+  "id": "yemen",
+  "name": "Yemen",
+  "iso3": "YEM",
+  "calp_region": "MENA",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Yemen Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://humanitarianaction.info/plan/1520",
+    "fts_plan_id": 1520,
+    "people_in_need": {
+      "value": 22300000,
+      "available": "yes",
+      "as_of": "2026-03",
+      "source_ids": [
+        "s4"
+      ],
+      "note": "22.3 million per ReliefWeb release (18 Mar 2026); OCHA page says 'more than 22 million'."
+    },
+    "people_targeted": {
+      "value": 12000000,
+      "available": "yes",
+      "as_of": "2026-03",
+      "source_ids": [
+        "s3",
+        "s4"
+      ],
+      "note": "12 million targeted; 9.4 million prioritised by severity."
+    },
+    "requirements_usd": {
+      "value": 2162563336,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Revised = original requirements (FTS plan 1520). [FTS as of  (latest flow date; queried 2026-11-05]"
+    },
+    "funded_usd": {
+      "value": 506107036,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Incoming funding to plan; FTS plan flows. [FTS as of  (latest flow date; queried 2026-11-05]"
+    },
+    "funded_pct": {
+      "value": 23.4,
+      "available": "yes",
+      "as_of": "2026-10-28",
+      "source_ids": [
+        "s1",
+        "s9"
+      ],
+      "note": "Computed: funding received / revised requirements. [FTS as of  (latest flow date; queried 2026-11-05]"
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "Not checked beyond 2026 plan listing; no 2027 Yemen plan seen in sources opened.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No modality-preference survey with figures found; REACH MeoC June 2025 and CMWG products not opened."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "As above."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "As above."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "As above."
+    },
+    "survey_note": "Not found in sources checked."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+    },
+    "sectoral_cash": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+    },
+    "vouchers": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+    },
+    "in_kind_food": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 5.5,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Multipurpose Cash sector requirement USD 119.9m / plan requirement USD 2.16bn (computed). [FTS requirements]",
+      "usd": 119881746
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS lists no separate sectoral cash line; sector cash not disaggregated in sources opened.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated in FTS sectors; HNRP CVA annex not opened.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Total CVA requirement not stated in sources opened.",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 7.1,
+      "usd": 35723129,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$506.1M). Shared-cluster view: US$38.5M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 29.8,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS single-cluster (destination) view: US$35.7M of US$119.9M MPC requirement. Shared-cluster view would give US$38.5M (32%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not visible in FTS; only MPC is a separate sector.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not visible in FTS.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "Yemen Humanitarian Fund",
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Existence evidenced by FTS flow to Yemen Humanitarian Fund; 2026 allocation total not retrieved (CBPF API endpoints did not return data)."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Allocation by cluster not retrieved.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not retrieved.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [],
+    "note": "No recent feasibility assessment found; CMWG page lists none."
+  },
+  "market_monitoring": {
+    "functional": "yes",
+    "system": "REACH Joint Market Monitoring Initiative (JMMI), reported to CMWG",
+    "frequency": "monthly",
+    "last_published": "2026-02 round (data 22 Feb-3 Mar 2026), presented to CMWG 7 Apr 2026",
+    "url": "https://repository.impact-initiatives.org/document/impact/b3e4f382/REACH-Joint-Market-Monitoring-Initiative-JMMI_Preliminary-findings-of-February-2026-4.pdf",
+    "source_ids": [
+      "s7"
+    ],
+    "note": "Covers Government of Yemen-controlled areas only (9 governorates, 74 markets); later rounds not checked."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Cash and Markets Working Group (CMWG)",
+    "leads": [],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/yemen/cash-and-market",
+    "source_ids": [
+      "s5",
+      "s6"
+    ],
+    "evidence_note": "Leads not named on page; MPCA snapshot (Jul-Oct 2025) posted 14 Dec 2025. A Yemen Donor Cash Forum exists with specific technical assistance, CashCap and CALP, FCDO-funded (24 Mar 2026); the consultancy link is not stated in the source."
+  },
+  "ai_summary": {
+    "headline": "Yemen's MPC ask is modest at 5.5% of requirements and only a third funded, in a plan 23% funded overall.",
+    "narrative": "The 2026 HNRP seeks USD 2.16bn for 12 million people, with MPC at USD 119.9m, about 5.5% of requirements [s2]. By late October the plan had received USD 506m, 23% of requirements, while MPC had received USD 35.7m, 30% of its own requirement on FTS's single-cluster view (USD 38.5m, 32%, counting shared flows) [s1][s2]. MPC therefore fares somewhat better than the plan average, though from a small base. A functioning Cash and Markets Working Group publishes MPCA snapshots, and REACH runs a monthly JMMI, although only for government-controlled areas [s5][s7]. A Yemen Donor Cash Forum is operating with CashCap and CALP support funded by FCDO [s6]. We found no published cost-efficiency, modality-preference or recent feasibility data, and no breakdown of voucher or sectoral cash. It appears likely that these gaps, not funding alone, limit the case for scaling cash, but this is inference. Pooled-fund cash shares could not be retrieved.",
+    "barriers": [
+      "Plan only 23% funded; MPC at 30% of its requirement",
+      "Market monitoring covers government-controlled areas only",
+      "No public cost-efficiency or modality-preference evidence found",
+      "CMWG leadership and CashCap role not confirmed"
+    ],
+    "opportunities": [
+      "Yemen Donor Cash Forum with CALP/CashCap support under the Common Donor Approach",
+      "Established monthly JMMI and MPCA snapshots to build on"
+    ],
+    "data_gaps": [
+      "modality preference",
+      "cost efficiency (all)",
+      "sectoral cash and voucher shares",
+      "pooled fund allocations by cluster",
+      "cash feasibility",
+      "CMWG leads"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Plan 1520 – Yemen HNRP 2026 (FTS public API)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/plan/1520",
+      "date": "2026-04-17",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS requirements and funding by cluster, plan 1520",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1520&groupby=cluster",
+      "date": "2026-10-28",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Yemen Humanitarian Needs and Response Plan 2026 (March 2026)",
+      "publisher": "OCHA Yemen / UN Yemen",
+      "url": "https://yemen.un.org/en/312711-ocha-yemen-yemen-humanitarian-needs-and-response-plan-2026-march-2026",
+      "date": "2026-03",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Yemen humanitarian crisis deepens: aid agencies appeal for US$2.16 billion",
+      "publisher": "ReliefWeb / OCHA",
+      "url": "https://reliefweb.int/report/yemen/yemen-humanitarian-crisis-deepens-aid-agencies-appeal-us216-billion-assist-millions-2026-enar",
+      "date": "2026-03-18",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Cash and Market (Yemen)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/yemen/cash-and-market",
+      "date": "2025-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "Workshop report: local actor consultations on the Common Donor Approach in Yemen",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/fr/publication/workshop-report-local-actor-consultations-on-the-common-donor-approach-in-yemen/",
+      "date": "2026-03-24",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "REACH JMMI Yemen, preliminary findings February 2026",
+      "publisher": "REACH / Impact Initiatives",
+      "url": "https://repository.impact-initiatives.org/document/impact/b3e4f382/REACH-Joint-Market-Monitoring-Initiative-JMMI_Preliminary-findings-of-February-2026-4.pdf",
+      "date": "2026-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "FTS flows to plan 1520 (total incoming)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1520",
+      "date": "2026-10-28",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

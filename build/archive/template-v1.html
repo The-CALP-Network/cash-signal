@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cash Signal</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* Layout: CALP precedent. Banner, light-red header with 4px red rule, sticky white sidebar, pale-blue main with white cards. */
+  :root {
+    --red: #CA2128;
+    --dark-blue: #065B82;
+    --dark-blue-hover: #054a6a;
+    --teal: #00B0BF;
+    --mid-blue: #0089C0;
+    --yellow: #FDB913;
+    --grey: #879FAD;          /* borders, hatch, non-text marks */
+    --grey-text: #5A7080;     /* small metadata text: darker shade of the brand grey for 4.5:1 contrast */
+    --light-grey: #E8EAED;
+    --pale-blue: #F3F7F9;
+    --red-tint: #F7E4DB;
+    --teal-tint: #D6EAED;
+    --black: #1a1a1a;
+    --white: #ffffff;
+    --sidebar-w: 292px;
+    --font: 'Roboto', Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { color-scheme: light; }
+  body { font-family: var(--font); font-size: 15px; line-height: 1.45; color: var(--black); background: var(--pale-blue); text-align: left; }
+  a { color: var(--dark-blue); font-weight: 500; text-decoration: none; }
+  a:hover, a:focus-visible { text-decoration: underline; }
+  button, select, input { font-family: var(--font); }
+  :focus-visible { outline: 3px solid var(--mid-blue); outline-offset: 2px; }
+  em, i { font-style: normal; }
+  h1, h2, h3, h4 { font-weight: 700; text-transform: none; letter-spacing: normal; text-wrap: balance; }
+
+  /* Banner */
+  .ai-banner { background: var(--yellow); color: var(--black); padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); font-size: 14px; font-weight: 500; display: flex; align-items: flex-start; gap: 12px; border-bottom: 3px solid #e0a000; }
+  .ai-banner .banner-text { flex: 1; min-width: 0; }
+  .ai-banner .banner-summary { display: none; flex: 1; font-weight: 700; }
+  .ai-banner.collapsed .banner-text { display: none; }
+  .ai-banner.collapsed .banner-summary { display: block; }
+  .ai-banner button { flex-shrink: 0; background: rgba(0,0,0,0.15); border: none; color: var(--black); font-size: 13px; font-weight: 700; cursor: pointer; border-radius: 3px; padding: 4px 10px; line-height: 1.2; }
+  .ai-banner button:hover { background: rgba(0,0,0,0.25); }
+
+  /* Header */
+  .header { background: var(--red-tint); border-bottom: 4px solid var(--red); padding: 16px max(16px, env(safe-area-inset-right, 0px)) 16px max(16px, env(safe-area-inset-left, 0px)); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .header h1 { font-size: 36px; line-height: 1.1; color: var(--red); }
+  .header .subtitle { color: var(--dark-blue); font-size: 15px; font-weight: 500; margin-top: 4px; }
+  .header-right { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .meta { font-size: 13px; color: var(--grey-text); }
+  .btn-red { background: var(--red); color: var(--white); border: none; padding: 8px 16px; font-size: 14px; font-weight: 700; cursor: pointer; border-radius: 2px; }
+  .btn-red:hover { background: #a51a20; }
+
+  /* Layout */
+  .layout { display: flex; align-items: flex-start; }
+  .sidebar { width: var(--sidebar-w); flex-shrink: 0; background: var(--white); border-right: 2px solid var(--light-grey); position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+  .sidebar-head { background: var(--red); color: var(--white); padding: 10px 16px; font-size: 15px; font-weight: 700; }
+  .region-label { background: var(--dark-blue); color: var(--white); padding: 8px 16px; font-size: 14px; font-weight: 700; position: sticky; top: 0; z-index: 2; }
+  .nav-item { display: block; padding: 9px 16px; border-bottom: 1px solid var(--light-grey); color: var(--dark-blue); border-left: 3px solid transparent; font-weight: 500; text-decoration: none; }
+  .nav-item:hover { background: var(--pale-blue); text-decoration: none; }
+  .nav-item.active { background: #EAF4F8; border-left-color: var(--red); }
+  .nav-name { font-size: 15px; font-weight: 700; color: var(--dark-blue); }
+  .nav-meta { font-size: 12px; color: var(--grey-text); font-weight: 400; margin-top: 1px; }
+  .nav-badges { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
+  .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 1px 6px; border-radius: 2px; line-height: 1.4; white-space: nowrap; }
+  .badge.draft { background: var(--light-grey); color: #3d4f5b; }
+  .badge.reviewed { background: var(--teal); color: var(--black); }
+  .badge.count { background: var(--white); color: var(--dark-blue); border: 1px solid var(--grey); }
+  .badge.ai { background: var(--light-grey); color: #3d4f5b; }
+  .nav-select-wrap { display: none; padding: 12px max(16px, env(safe-area-inset-left, 0px)); background: var(--white); border-bottom: 2px solid var(--light-grey); }
+  .nav-select-wrap label { display: block; font-size: 13px; font-weight: 500; color: var(--grey-text); margin-bottom: 4px; }
+  .nav-select-wrap select { width: 100%; font-size: 15px; padding: 8px 10px; border: 1.5px solid var(--grey); border-radius: 2px; background: var(--white); color: var(--black); }
+
+  .main { flex: 1; min-width: 0; padding: 20px 24px 32px; }
+  .section-title { font-size: 22px; color: var(--red); margin: 28px 0 6px; padding-bottom: 8px; border-bottom: 2px solid var(--light-grey); }
+  .section-title:first-child { margin-top: 0; }
+  .section-lede { color: var(--grey-text); font-size: 14px; margin-bottom: 14px; max-width: 80ch; }
+
+  /* Stat cards */
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 8px; }
+  .stat-card { background: var(--white); padding: 14px 16px; border-left: 4px solid var(--dark-blue); min-width: 0; }
+  .stat-card.red { border-left-color: var(--red); }
+  .stat-card.teal { border-left-color: var(--teal); }
+  .stat-card.na { border-left-color: var(--grey); background: var(--white); }
+  .stat-label { font-size: 13px; font-weight: 500; color: var(--grey-text); margin-bottom: 4px; }
+  .stat-value { font-size: 28px; font-weight: 700; color: var(--dark-blue); line-height: 1.1; overflow-wrap: anywhere; }
+  .stat-card.red .stat-value { color: var(--red); }
+  .stat-card.na .stat-value { color: var(--grey-text); }
+  .stat-sub { font-size: 13px; color: var(--grey-text); margin-top: 4px; }
+
+  /* Cards */
+  .card { background: var(--white); padding: 16px 18px; min-width: 0; }
+  .card.top-blue { border-top: 4px solid var(--dark-blue); }
+  .card.left-teal { border-left: 4px solid var(--teal); }
+  .card.left-red { border-left: 4px solid var(--red); }
+  .card h3 { font-size: 17px; font-weight: 500; color: var(--dark-blue); margin-bottom: 10px; }
+  .card p { max-width: 80ch; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; }
+
+  /* Signal matrix */
+  .matrix-wrap { overflow-x: auto; background: var(--white); border: 1px solid var(--light-grey); }
+  table.matrix { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 1040px; font-size: 14px; }
+  .matrix thead th { background: var(--dark-blue); color: var(--white); text-align: left; vertical-align: bottom; padding: 0; font-weight: 700; position: sticky; top: 0; z-index: 1; border-right: 1px solid rgba(255,255,255,0.18); }
+  .matrix thead th:last-child { border-right: none; }
+  .sort-btn { all: unset; box-sizing: border-box; display: block; width: 100%; padding: 9px 8px; cursor: pointer; font-family: var(--font); font-size: 13px; font-weight: 700; line-height: 1.25; color: var(--white); }
+  .sort-btn:hover { background: var(--dark-blue-hover); }
+  .sort-btn:focus-visible { outline: 3px solid var(--yellow); outline-offset: -3px; }
+  .sort-btn::after { content: ' \21C5'; color: rgba(255,255,255,0.65); font-weight: 400; }
+  th.sorted-asc .sort-btn::after { content: ' \2191'; color: var(--white); font-weight: 700; }
+  th.sorted-desc .sort-btn::after { content: ' \2193'; color: var(--white); font-weight: 700; }
+  .matrix th.col-country { position: sticky; left: 0; z-index: 2; min-width: 140px; max-width: 140px; }
+  .matrix thead th.col-country { z-index: 3; }
+  .matrix tbody th.col-country { background: var(--white); border-right: 2px solid var(--light-grey); border-bottom: 1px solid var(--light-grey); padding: 7px 10px; vertical-align: top; }
+  .matrix tbody td { padding: 7px 8px; border-bottom: 1px solid var(--light-grey); vertical-align: top; min-width: 88px; }
+  .matrix tbody tr.row:hover td { filter: brightness(0.97); cursor: pointer; }
+  .matrix tr.band th { background: #E6EFF3; color: var(--dark-blue); text-align: left; padding: 6px 10px; font-size: 14px; font-weight: 700; border-bottom: 1px solid var(--light-grey); position: sticky; left: 0; }
+  .c-name { font-weight: 700; color: var(--dark-blue); font-size: 14px; display: block; }
+  .c-region { font-size: 12px; color: var(--grey-text); font-weight: 400; display: block; }
+  .cell-val { font-weight: 700; font-size: 15px; color: var(--black); display: block; line-height: 1.25; }
+  .cell-sub { font-size: 12px; color: #44596a; display: block; line-height: 1.3; margin-top: 1px; }
+  td.partial { box-shadow: inset 4px 0 0 var(--yellow); }
+  td.na { background: repeating-linear-gradient(45deg, var(--white) 0 6px, var(--light-grey) 6px 7px); }
+  td.na .cell-val { color: var(--grey-text); font-weight: 500; font-size: 13px; }
+  td.none { background: var(--pale-blue); }
+  td.none .cell-val { color: var(--grey-text); font-weight: 500; font-size: 13px; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 0 5px; border-radius: 2px; line-height: 1.4; }
+  .tag.partial { background: var(--yellow); color: var(--black); }
+  .tag.over { background: var(--dark-blue); color: var(--white); }
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: #44596a; margin-top: 10px; align-items: center; }
+  .legend .sw { display: inline-block; width: 18px; height: 14px; vertical-align: -2px; margin-right: 6px; border: 1px solid var(--grey); }
+  .sw.hatch { background: repeating-linear-gradient(45deg, var(--white) 0 4px, var(--light-grey) 4px 5px); }
+  .sw.amber { border-left: 4px solid var(--yellow); background: var(--white); }
+  .sw.tealtint { background: rgba(0,176,191,0.32); }
+  .sw.blue { background: var(--dark-blue); border-color: var(--dark-blue); }
+  .sw.teal { background: var(--teal); border-color: var(--teal); }
+  .sw.part { background: repeating-linear-gradient(45deg, var(--dark-blue) 0 3px, var(--white) 3px 6px); border-color: var(--dark-blue); }
+
+  /* Bar charts (CSS) */
+  .chart-card { background: var(--white); padding: 16px 18px; }
+  .chart-card h3 { font-size: 17px; font-weight: 500; color: var(--dark-blue); }
+  .chart-card .sub { font-size: 13px; color: var(--grey-text); margin: 2px 0 12px; max-width: 80ch; }
+  .chart { display: grid; grid-template-columns: minmax(96px, 190px) 1fr; column-gap: 12px; }
+  .chart-axis { display: contents; }
+  .chart-axis .spacer { height: 20px; }
+  .chart-axis .ticks { position: relative; height: 20px; margin-right: 96px; font-size: 12px; color: var(--grey-text); }
+  .chart-axis .ticks span { position: absolute; top: 0; transform: translateX(-50%); }
+  .chart-axis .ticks span:first-child { transform: none; }
+  .chart-axis .ticks span:last-child { transform: translateX(-100%); }
+  .c-row { display: contents; }
+  .c-row .lab { padding: 5px 0; font-size: 14px; font-weight: 500; line-height: 1.25; align-self: center; min-width: 0; overflow-wrap: anywhere; }
+  .c-row .lab small { display: block; font-size: 12px; color: var(--grey-text); font-weight: 400; }
+  .c-row .plot { position: relative; margin-right: 96px; padding: 5px 0; border-right: 1px solid var(--light-grey); background-image: linear-gradient(90deg, var(--light-grey) 1px, transparent 1px); background-size: 25% 100%; background-repeat: repeat-x; }
+  .plot.n .plot-inner { }
+  .bar-line { display: flex; align-items: center; height: 16px; margin: 2px 0; white-space: nowrap; }
+  .bar-line .bar { height: 14px; border-radius: 0 4px 4px 0; flex-shrink: 0; min-width: 2px; }
+  .bar-line .bar.blue { background: var(--dark-blue); }
+  .bar-line .bar.teal { background: var(--teal); }
+  .bar-line .bar.yes { background: var(--dark-blue); border-radius: 0; }
+  .bar-line .bar.part { background: repeating-linear-gradient(45deg, var(--dark-blue) 0 3px, var(--white) 3px 6px); border: 1px solid var(--dark-blue); border-left: none; border-radius: 0 4px 4px 0; }
+  .bar-line .bar.yes + .bar.part { margin-left: 2px; }
+  .bar-line .val { font-size: 13px; font-weight: 700; margin-left: 6px; color: var(--black); }
+  .bar-line .val small { font-weight: 400; color: #44596a; font-size: 12px; margin-left: 4px; }
+  .nocomp { margin-top: 14px; font-size: 14px; padding: 10px 14px; background: var(--pale-blue); border-left: 4px solid var(--grey); max-width: 90ch; }
+  .nocomp strong { font-weight: 700; }
+
+  /* Country page */
+  .title-bar { background: var(--white); padding: 16px 18px; margin-bottom: 14px; border-left: 4px solid var(--red); }
+  .title-bar h2 { font-size: 32px; color: var(--red); line-height: 1.1; }
+  .title-bar .t-meta { margin-top: 6px; font-size: 14px; color: #3d4f5b; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+  .title-bar .t-review { margin-top: 6px; font-size: 13px; color: var(--grey-text); }
+  .stack { display: flex; flex-direction: column; gap: 16px; }
+  .ai-card { background: var(--white); border-left: 4px solid var(--teal); padding: 16px 18px; }
+  .ai-card .ai-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .ai-card h3 { font-size: 17px; font-weight: 500; color: var(--dark-blue); margin: 0; }
+  .ai-card .headline { font-size: 18px; font-weight: 700; color: var(--black); margin-bottom: 8px; max-width: 70ch; }
+  .ai-card .narr { max-width: 80ch; margin-bottom: 14px; }
+  .cite { font-size: 12px; font-weight: 700; color: var(--dark-blue); padding: 0 1px; }
+  .lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 14px; }
+  .lists h4 { font-size: 14px; font-weight: 700; color: var(--dark-blue); margin-bottom: 4px; }
+  .lists ul { padding-left: 18px; font-size: 14px; }
+  .lists li { margin-bottom: 3px; }
+  .panel { background: var(--white); border-top: 4px solid var(--dark-blue); padding: 14px 16px; min-width: 0; }
+  .panel h3 { font-size: 17px; font-weight: 500; color: var(--dark-blue); margin-bottom: 6px; }
+  .panel .p-note { font-size: 13px; color: var(--grey-text); margin-bottom: 6px; }
+  .ind-row { padding: 9px 0 9px 10px; border-bottom: 1px solid var(--light-grey); border-left: 3px solid transparent; margin-left: -10px; }
+  .ind-row:last-child { border-bottom: none; }
+  .ind-row.partial { border-left-color: var(--yellow); }
+  .ind-top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  .ind-label { font-size: 14px; font-weight: 500; }
+  .ind-val { font-size: 17px; font-weight: 700; color: var(--dark-blue); text-align: right; overflow-wrap: anywhere; }
+  .ind-row.na .ind-val { color: var(--grey-text); font-size: 14px; font-weight: 500; padding: 0 8px; background: repeating-linear-gradient(45deg, var(--white) 0 6px, var(--light-grey) 6px 7px); }
+  .ind-meta { font-size: 12px; color: #44596a; margin-top: 2px; display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: center; }
+  .ind-meta a { font-size: 12px; }
+  .ind-note { font-size: 13px; color: var(--grey-text); margin-top: 3px; }
+  .ind-extra { font-size: 13px; color: #33454f; margin-top: 3px; }
+  .minibar { height: 6px; background: var(--light-grey); border-radius: 2px; margin-top: 5px; overflow: hidden; }
+  .minibar > span { display: block; height: 100%; background: var(--dark-blue); }
+  .minibar.teal > span { background: var(--teal); }
+  .panel.sys { border-top-color: var(--red); }
+  .rep-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px 24px; }
+  .rep-field h4 { font-size: 14px; font-weight: 700; color: var(--dark-blue); margin-bottom: 2px; }
+  .rep-field p { font-size: 14px; }
+  .rep-field p.placeholder { color: var(--grey-text); }
+  .sources ol { list-style: none; }
+  .src { display: grid; grid-template-columns: 36px 1fr; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--light-grey); scroll-margin-top: 16px; }
+  .src:last-child { border-bottom: none; }
+  .src .sid { font-weight: 700; color: var(--dark-blue); font-size: 14px; }
+  .src .st { font-size: 14px; font-weight: 500; }
+  .src .sm { font-size: 13px; color: #44596a; }
+  .src .su { font-size: 12px; color: var(--grey-text); overflow-wrap: anywhere; }
+  .src.flash { background: #FFF3CC; }
+
+  .footer { margin-top: 32px; font-size: 12px; color: var(--grey-text); max-width: 100ch; border-top: 2px solid var(--light-grey); padding-top: 12px; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .nav-select-wrap { display: block; }
+    .main { padding: 16px max(16px, env(safe-area-inset-right, 0px)) 28px max(16px, env(safe-area-inset-left, 0px)); }
+    .header h1 { font-size: 30px; }
+  }
+  @media (max-width: 520px) {
+    .stat-cards { grid-template-columns: 1fr 1fr; }
+    .stat-value { font-size: 23px; }
+    .title-bar h2 { font-size: 27px; }
+    .chart { grid-template-columns: minmax(84px, 120px) 1fr; column-gap: 8px; }
+    .chart-axis .ticks, .c-row .plot { margin-right: 104px; }
+    .bar-line .val small { margin-left: 0; }
+    .bar-line .val small .dt { display: none; }
+  }
+
+  /* Print */
+  @media print {
+    body { background: var(--white); font-size: 12px; }
+    .ai-banner, .sidebar, .nav-select-wrap, .no-print { display: none !important; }
+    .header { padding: 8px 0; }
+    .layout { display: block; }
+    .main { padding: 8px 0; }
+    .matrix-wrap { overflow: visible; }
+    table.matrix { min-width: 0; font-size: 11px; }
+    .matrix thead th, .matrix th.col-country, .matrix tr.band th { position: static; }
+    .card, .panel, .ai-card, .stat-card, .chart-card, .title-bar { break-inside: avoid; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ai-banner" id="aiBanner" role="note">
+  <span class="banner-text">Data in this dashboard was collected by an AI assistant (Claude) on 5 November 2026 from public sources and has not yet been verified by CALP staff. Every figure links to its source. Country summaries are AI drafts awaiting review by CALP regional representatives.</span>
+  <span class="banner-summary">Data notice: AI-collected, not yet verified by CALP staff. Select Show to read.</span>
+  <button type="button" id="bannerToggle" aria-expanded="true" aria-label="Hide this notice">Hide &#9650;</button>
+</div>
+
+<header class="header">
+  <div>
+    <h1>Cash Signal</h1>
+    <div class="subtitle">Cash-related indicators across humanitarian responses &middot; CALP Network</div>
+  </div>
+  <div class="header-right">
+    <div class="meta" id="headerMeta"></div>
+    <button type="button" class="btn-red no-print" id="printBtn" aria-label="Print this page">Print</button>
+  </div>
+</header>
+
+<div class="nav-select-wrap">
+  <label for="navSelect">Go to</label>
+  <select id="navSelect"></select>
+</div>
+
+<div class="layout">
+  <nav class="sidebar" id="sidebar" aria-label="Countries"></nav>
+  <main class="main" id="main" tabindex="-1"></main>
+</div>
+
+<noscript><p style="padding:16px">Cash Signal needs JavaScript to display its charts and tables.</p></noscript>
+
+<script>
+// ============================================================
+// CASH SIGNAL DATA — edit this block to update the dashboard.
+// One object per country. Schema: see schema.json.
+// Regional reps: fill the rep_notes fields for your countries.
+// ============================================================
+__CASH_SIGNAL_OBJECT__
+// ============================================================
+// END OF DATA BLOCK — everything below is rendering code.
+// ============================================================
+
+(function () {
+'use strict';
+
+/* ---------- helpers ---------- */
+function esc(s) {
+  return String(s === null || s === undefined ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : ''; }
+var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtDate(s) {
+  if (!s) return '';
+  s = String(s);
+  var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+  if (m) return parseInt(m[3], 10) + ' ' + MONTHS[parseInt(m[2], 10) - 1] + ' ' + m[1];
+  m = /^(\d{4})-(\d{2})$/.exec(s);
+  if (m) return MONTHS[parseInt(m[2], 10) - 1] + ' ' + m[1];
+  if (s.length <= 12) return s;
+  /* some as_of fields carry prose: show the first date found, keep the full text in tooltips */
+  m = /(\d{4})-(\d{2})-(\d{2})/.exec(s);
+  if (m) return parseInt(m[3], 10) + ' ' + MONTHS[parseInt(m[2], 10) - 1] + ' ' + m[1];
+  m = /[A-Z][a-z]{2} \d{4}/.exec(s);
+  if (m) return m[0];
+  m = /\d{4}(-\d{2})?/.exec(s);
+  return m ? fmtDate(m[0]) : s;
+}
+function num1(v) { return Number(v).toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); }
+function fmtPct(v) { return num1(v) + '%'; }
+function fmtUsdM(v) { return 'US$' + num1(v / 1e6) + 'M'; }
+function fmtNum(v) { return Number(v).toLocaleString('en-US', { maximumFractionDigits: 2 }); }
+function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
+function getPath(o, p) { return p.split('.').reduce(function (a, k) { return a == null ? a : a[k]; }, o); }
+function has(d) { return d && d.available !== 'no' && d.value !== null && d.value !== undefined; }
+
+var D = CASH_SIGNAL;
+var REGION_ORDER = ['East and Southern Africa', 'West and Central Africa', 'MENA', 'Asia-Pacific'];
+var countries = D.countries.slice().sort(function (a, b) {
+  var ra = REGION_ORDER.indexOf(a.calp_region), rb = REGION_ORDER.indexOf(b.calp_region);
+  if (ra < 0) ra = 99; if (rb < 0) rb = 99;
+  return ra - rb || a.calp_region.localeCompare(b.calp_region) || a.name.localeCompare(b.name);
+});
+var byId = {};
+countries.forEach(function (c) { byId[c.id] = c; });
+var regions = [];
+countries.forEach(function (c) { if (regions.indexOf(c.calp_region) < 0) regions.push(c.calp_region); });
+
+function isReviewed(c) { return !!(c.rep_notes && c.rep_notes.reviewed_by); }
+
+/* ---------- indicator model: six groups mirroring the Excel ---------- */
+function P(key, label, path, o) { return Object.assign({ key: key, label: label, path: path, kind: 'pct', tone: 'blue' }, o || {}); }
+var GROUPS = [
+  { id: 'modality', title: 'Modality preference', short: 'Preference', note: function (c) { return c.modality_preference.survey_note; }, rows: [
+    P('pref_cash', 'Prefer cash', 'modality_preference.cash_pct', { tone: 'mpc' }),
+    P('pref_vouchers', 'Prefer vouchers', 'modality_preference.vouchers_pct'),
+    P('pref_inkind', 'Prefer in-kind', 'modality_preference.in_kind_pct'),
+    P('pref_other', 'Prefer other', 'modality_preference.other_pct') ] },
+  { id: 'cost', title: 'Cost efficiency', short: 'Cost efficiency', rows: [
+    P('ce_mpc', 'Multi-purpose cash', 'cost_efficiency.mpc', { kind: 'cost', tone: 'mpc' }),
+    P('ce_sect', 'Sectoral cash', 'cost_efficiency.sectoral_cash', { kind: 'cost' }),
+    P('ce_vouch', 'Vouchers', 'cost_efficiency.vouchers', { kind: 'cost' }),
+    P('ce_food', 'In-kind food', 'cost_efficiency.in_kind_food', { kind: 'cost' }) ] },
+  { id: 'req', title: 'Plan requirements (% of planned response)', short: 'Plan requirements', rows: [
+    P('rq_mpc', 'MPC as % of plan requirements', 'hnrp_requirements.mpc_pct', { tone: 'mpc' }),
+    P('rq_sect', 'Sectoral cash as % of plan requirements', 'hnrp_requirements.sectoral_cash_pct'),
+    P('rq_vouch', 'Vouchers as % of plan requirements', 'hnrp_requirements.vouchers_pct'),
+    P('rq_cva', 'Total CVA as % of plan requirements', 'hnrp_requirements.total_cva_pct') ] },
+  { id: 'fund', title: 'Overall funding (% of funded response)', short: 'Funding received', rows: [
+    P('fd_mpc', 'MPC as % of funding received', 'overall_funding.mpc_pct', { tone: 'mpc' }),
+    P('fd_mpcreq', 'MPC funding received as % of MPC requirement', 'overall_funding.mpc_funded_pct_of_mpc_req', { tone: 'mpc' }),
+    P('fd_sect', 'Sectoral cash as % of funding received', 'overall_funding.sectoral_cash_pct'),
+    P('fd_vouch', 'Vouchers as % of funding received', 'overall_funding.vouchers_pct') ] },
+  { id: 'cbpf', title: 'OCHA pooled funds (CBPF)', short: 'CBPF', rows: [
+    P('pf_alloc', 'Allocations', 'pooled_funds.cbpf_allocations_usd', { kind: 'usd' }),
+    P('pf_mpc', 'MPC as % of allocations', 'pooled_funds.mpc_pct', { tone: 'mpc' }),
+    P('pf_sect', 'Sectoral cash as % of allocations', 'pooled_funds.sectoral_cash_pct'),
+    P('pf_vouch', 'Vouchers as % of allocations', 'pooled_funds.vouchers_pct') ] },
+  { id: 'sys', title: 'Systems', short: 'Systems', rows: [
+    { key: 'sy_feas', label: 'Cash feasibility study', kind: 'sys', fn: 'feas' },
+    { key: 'sy_mkt', label: 'Market monitoring', kind: 'sys', fn: 'mkt' },
+    { key: 'sy_cwg', label: 'Cash working group (CWG)', kind: 'sys', fn: 'cwg' },
+    { key: 'sy_27', label: '2027 plan status', kind: 'sys', fn: 'p27' } ] }
+];
+var ALL_SPECS = [];
+GROUPS.forEach(function (g) { g.rows.forEach(function (r) { r.group = g; ALL_SPECS.push(r); }); });
+
+/* Normalised row model: { avail: yes|partial|no, main, over, pct, asof, sids, note, extra[], tone } */
+function model(c, spec) {
+  if (spec.kind === 'sys') return sysModel(c, spec.fn);
+  var d = getPath(c, spec.path) || {};
+  var m = { avail: d.available || 'no', asof: d.as_of || '', sids: d.source_ids || [], note: d.note || '', tone: spec.tone, extra: [], d: d };
+  if (!has(d)) { m.avail = 'no'; m.main = 'n/a'; return m; }
+  if (spec.kind === 'pct') {
+    m.main = fmtPct(d.value); m.pct = d.value; m.over = d.value > 100;
+    if (d.usd !== null && d.usd !== undefined) m.sub = fmtUsdM(d.usd);
+  } else if (spec.kind === 'usd') {
+    m.main = fmtUsdM(d.value);
+  } else if (spec.kind === 'cost') {
+    m.main = fmtNum(d.value); m.unit = d.unit || '';
+  }
+  return m;
+}
+function sysModel(c, fn) {
+  var m = { avail: 'no', main: 'n/a', asof: '', sids: [], note: '', extra: [], tone: 'blue' };
+  if (fn === 'feas') {
+    var f = c.cash_feasibility || {};
+    m.sids = f.source_ids || []; m.note = f.note || ''; m.asof = f.year ? String(f.year) : '';
+    if (f.exists === 'yes') {
+      m.avail = 'yes'; m.main = 'Yes';
+      m.extra.push({ text: [f.title, f.author].filter(Boolean).join(' · '), url: f.url });
+    } else if (f.exists === 'no') { m.avail = 'yes'; m.main = 'None exists'; }
+  } else if (fn === 'mkt') {
+    var k = c.market_monitoring || {};
+    m.sids = k.source_ids || []; m.note = k.note || ''; m.asof = k.last_published || '';
+    if (k.functional === 'yes' || k.functional === 'partial' || k.functional === 'no') {
+      m.avail = k.functional === 'partial' ? 'partial' : 'yes'; m.main = cap(k.functional);
+      var bits = [k.system, k.frequency ? 'frequency: ' + k.frequency : '', k.last_published ? 'last published ' + fmtDate(k.last_published) : ''].filter(Boolean).join(' · ');
+      if (bits) m.extra.push({ text: bits, url: k.url });
+    }
+  } else if (fn === 'cwg') {
+    var w = c.cwg || {};
+    m.sids = w.source_ids || []; m.note = w.evidence_note || '';
+    if (w.exists === 'yes' || w.exists === 'no') {
+      m.avail = 'yes'; m.main = cap(w.exists);
+      if (w.name) m.extra.push({ text: w.name, url: w.url });
+      if (w.leads && w.leads.length) m.extra.push({ text: 'Leads: ' + w.leads.join('; ') });
+      m.extra.push({ text: 'CashCap support: ' + (w.cashcap_support || 'unknown') });
+    }
+  } else if (fn === 'p27') {
+    var p = c.plan_2027 || {};
+    m.sids = p.source_ids || []; m.note = p.note || '';
+    if (p.status && p.status !== 'unknown') { m.avail = 'yes'; m.main = cap(p.status); }
+  }
+  return m;
+}
+function countAvail(c) {
+  return ALL_SPECS.filter(function (s) { return model(c, s).avail !== 'no'; }).length;
+}
+var TOTAL_SPECS = ALL_SPECS.length;
+
+/* ---------- source links ---------- */
+function srcOf(c, sid) { for (var i = 0; i < c.sources.length; i++) if (c.sources[i].id === sid) return c.sources[i]; return null; }
+function srcLinks(c, sids) {
+  return (sids || []).map(function (sid) {
+    var s = srcOf(c, sid); if (!s) return '';
+    var u = safeUrl(s.url);
+    var label = esc(s.publisher || s.title || sid);
+    return (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener" title="' + esc(s.title) + '">' + label + '</a>' : label) +
+      ' <a class="cite" href="#sources" data-src="' + esc(sid) + '" data-c="' + esc(c.id) + '" aria-label="Show source ' + esc(sid) + ' in the sources list">' + esc(sid) + '</a>';
+  }).filter(Boolean).join('<span aria-hidden="true">,</span> ');
+}
+function citeText(c, text) {
+  return esc(text).replace(/\[(s\d+)\]/g, function (m, sid) {
+    return srcOf(c, sid) ? '<a class="cite" href="#sources" data-src="' + sid + '" data-c="' + esc(c.id) + '" aria-label="Show source ' + sid + ' in the sources list">[' + sid + ']</a>' : m;
+  });
+}
+
+/* ---------- matrix columns ---------- */
+function numCell(spec, tint) {
+  return function (c) {
+    var m = model(c, spec);
+    if (m.avail === 'no') return { cls: 'na', val: 'n/a', sub: '', key: null, title: m.note };
+    var sub = [fmtDate(m.asof)];
+    if (m.avail === 'partial') sub.push('<span class="tag partial">partial</span>');
+    if (m.over) sub.push('<span class="tag over">over 100%</span>');
+    return { cls: m.avail === 'partial' ? 'partial' : '', val: m.main, sub: sub.filter(Boolean).join(' · '), key: m.pct, pct: Math.min(m.pct, 100), tint: tint, title: m.note };
+  };
+}
+function sysCell(fn, subFn) {
+  return function (c) {
+    var m = sysModel(c, fn);
+    if (m.avail === 'no') return { cls: 'na', val: 'n/a', sub: '', key: null, title: m.note };
+    var sub = subFn ? subFn(c, m) : '';
+    if (m.avail === 'partial') sub = ['<span class="tag partial">partial</span>', sub].filter(Boolean).join(' · ');
+    var rank = m.main === 'Yes' ? 3 : m.main === 'Partial' ? 2 : 1;
+    return { cls: m.avail === 'partial' ? 'partial' : (m.main === 'No' || m.main === 'None exists' ? 'none' : ''), val: m.main, sub: sub, key: rank, title: m.note };
+  };
+}
+var spec = {}; ALL_SPECS.forEach(function (s) { spec[s.key] = s; });
+var COLS = [
+  { id: 'funded', label: 'Plan funded %', tip: 'Share of the plan\'s revised requirements funded (FTS).', get: function (c) {
+      var d = c.plan.funded_pct; if (!has(d)) return { cls: 'na', val: 'n/a', key: null, title: d.note };
+      return { cls: d.available === 'partial' ? 'partial' : '', val: fmtPct(d.value), sub: [fmtDate(d.as_of), d.available === 'partial' ? '<span class="tag partial">partial</span>' : ''].filter(Boolean).join(' · '), key: d.value, pct: Math.min(d.value, 100), tint: '6,91,130', title: d.note }; } },
+  { id: 'mpcreq', label: 'MPC % of plan requirements', tip: 'Multi-purpose cash requirements as a share of total plan requirements.', get: numCell(spec.rq_mpc, '0,176,191') },
+  { id: 'cvareq', label: 'Total CVA % of requirements', tip: 'All cash and voucher assistance as a share of total plan requirements.', get: numCell(spec.rq_cva, '0,176,191') },
+  { id: 'mpcfund', label: 'MPC funding received % of MPC requirement', tip: 'FTS funding tagged to MPC divided by the MPC requirement. Values above 100% are reported as found.', get: numCell(spec.fd_mpcreq, '0,176,191') },
+  { id: 'pref', label: 'Preference for cash %', tip: 'Share of surveyed population preferring cash. Surveys differ in year, geography and wording.', get: numCell(spec.pref_cash, '0,176,191') },
+  { id: 'ce', label: 'Cost-efficiency (MPC) available?', tip: 'Whether an MPC cost-efficiency metric was found.', get: function (c) {
+      var m = model(c, spec.ce_mpc); if (m.avail === 'no') return { cls: 'na', val: 'n/a', key: null, title: m.note };
+      return { cls: m.avail === 'partial' ? 'partial' : '', val: 'Yes', sub: [m.main + ' ' + (m.unit || ''), m.avail === 'partial' ? '<span class="tag partial">partial</span>' : ''].join(' '), key: 3, title: m.note }; } },
+  { id: 'cbpf', label: 'CBPF MPC %', tip: 'Share of country-based pooled fund allocations that is MPC.', get: function (c) {
+      var r = numCell(spec.pf_mpc, '0,176,191')(c);
+      if (r.cls === 'na' && c.pooled_funds && c.pooled_funds.cbpf_exists === false) return { cls: 'none', val: 'No CBPF', sub: '', key: null, title: c.pooled_funds.cbpf_name };
+      return r; } },
+  { id: 'feas', label: 'Cash feasibility study', tip: 'Whether a cash feasibility study was found.', get: sysCell('feas', function (c, m) { return m.asof; }) },
+  { id: 'mkt', label: 'Market monitoring', tip: 'Whether regular market monitoring is functioning.', get: sysCell('mkt', function (c) { return c.market_monitoring.frequency || ''; }) },
+  { id: 'cwg', label: 'CWG (+CashCap)', tip: 'Cash working group exists; CashCap support status.', get: sysCell('cwg', function (c) { return 'CashCap: ' + (c.cwg.cashcap_support || 'unknown'); }) }
+];
+var sortState = { col: null, dir: 1 };
+
+function matrixHTML() {
+  var rows = countries.map(function (c) { return { c: c, cells: COLS.map(function (col) { return col.get(c); }) }; });
+  var maxes = COLS.map(function (col, i) {
+    var mx = 0; rows.forEach(function (r) { var p = r.cells[i].pct; if (p !== undefined && p > mx) mx = p; }); return mx || 1; });
+  if (sortState.col !== null) {
+    var i = sortState.col, dir = sortState.dir;
+    rows.sort(function (a, b) {
+      var ka = a.cells[i].key, kb = b.cells[i].key;
+      if (ka === null || ka === undefined) return (kb === null || kb === undefined) ? a.c.name.localeCompare(b.c.name) : 1;
+      if (kb === null || kb === undefined) return -1;
+      return (ka - kb) * dir || a.c.name.localeCompare(b.c.name);
+    });
+  }
+  var h = '<table class="matrix"><caption class="sr-only" style="position:absolute;left:-9999px">Signal matrix: cash indicators by country</caption><thead><tr><th scope="col" class="col-country' + (sortState.col === 'name' ? (sortState.dir > 0 ? ' sorted-asc' : ' sorted-desc') : '') + '" aria-sort="' + (sortState.col === 'name' ? (sortState.dir > 0 ? 'ascending' : 'descending') : 'none') + '"><button type="button" class="sort-btn" data-sort="name">Country</button></th>';
+  COLS.forEach(function (col, i) {
+    var on = sortState.col === i;
+    h += '<th scope="col" class="' + (on ? (sortState.dir > 0 ? 'sorted-asc' : 'sorted-desc') : '') + '" aria-sort="' + (on ? (sortState.dir > 0 ? 'ascending' : 'descending') : 'none') + '"><button type="button" class="sort-btn" data-sort="' + i + '" title="' + esc(col.tip) + '">' + esc(col.label) + '</button></th>';
+  });
+  h += '</tr></thead><tbody>';
+  if (sortState.col === 'name') rows.sort(function (a, b) { return sortState.dir * a.c.name.localeCompare(b.c.name); });
+  var grouped = sortState.col === null, lastRegion = null;
+  rows.forEach(function (r) {
+    var c = r.c;
+    if (grouped && c.calp_region !== lastRegion) {
+      lastRegion = c.calp_region;
+      h += '<tr class="band"><th scope="colgroup" colspan="' + (COLS.length + 1) + '">' + esc(lastRegion) + '</th></tr>';
+    }
+    h += '<tr class="row" data-go="' + esc(c.id) + '"><th scope="row" class="col-country" style="text-align:left;font-weight:400"><a class="c-name" href="#' + esc(c.id) + '">' + esc(c.name) + '</a><span class="c-region">' + esc(c.plan.type) + ' ' + esc(c.plan.year) + (grouped ? '' : ' · ' + esc(c.calp_region)) + '</span></th>';
+    r.cells.forEach(function (cell, i) {
+      var style = '';
+      if (cell.tint && cell.pct !== undefined) style = ' style="background-color:rgba(' + cell.tint + ',' + (0.07 + 0.33 * cell.pct / maxes[i]).toFixed(3) + ')"';
+      h += '<td class="' + esc(cell.cls || '') + '"' + style + (cell.title ? ' title="' + esc(cell.title) + '"' : '') + '><span class="cell-val">' + esc(cell.val) + '</span>' + (cell.sub ? '<span class="cell-sub">' + cell.sub + '</span>' : '') + '</td>';
+    });
+    h += '</tr>';
+  });
+  return h + '</tbody></table>';
+}
+
+/* ---------- charts ---------- */
+function ticks(maxv, step, fmt) {
+  var h = '<div class="chart-axis"><div class="spacer"></div><div class="ticks" aria-hidden="true">';
+  for (var v = 0; v <= maxv; v += step) h += '<span style="left:' + (v / maxv * 100) + '%">' + fmt(v) + '</span>';
+  return h + '</div></div>';
+}
+function prefChartHTML() {
+  var both = [], missing = [];
+  countries.forEach(function (c) {
+    var p = c.modality_preference.cash_pct, r = c.hnrp_requirements.mpc_pct;
+    if (has(p) && has(r)) both.push({ c: c, p: p, r: r }); else missing.push({ c: c, p: p, r: r });
+  });
+  both.sort(function (a, b) { return b.p.value - a.p.value; });
+  var h = '<div class="chart-card"><h3>Preference vs provision</h3><p class="sub">Share of surveyed people preferring cash, against multi-purpose cash as a share of plan requirements. Survey year, geography and wording differ by country; read the note on each country page.</p>';
+  h += '<div class="legend" style="margin:0 0 10px"><span><span class="sw blue"></span>Prefer cash (% of surveyed population)</span><span><span class="sw teal"></span>MPC (% of plan requirements)</span><span><span class="tag partial">partial</span> figure carries a caveat</span></div>';
+  h += '<div class="chart" role="img" aria-label="Paired bars comparing preference for cash with MPC share of plan requirements for ' + both.length + ' countries. Values are printed on each bar.">' + ticks(100, 25, function (v) { return v + '%'; });
+  both.forEach(function (x) {
+    h += '<div class="c-row"><div class="lab"><a href="#' + esc(x.c.id) + '">' + esc(x.c.name) + '</a></div><div class="plot">' +
+      '<div class="bar-line" title="' + esc(x.p.note) + '"><span class="bar blue" style="width:' + Math.min(x.p.value, 100) + '%"></span><span class="val">' + fmtPct(x.p.value) + '<small><span class="dt">' + esc(fmtDate(x.p.as_of)) + '</span>' + (x.p.available === 'partial' ? ' <span class="tag partial">partial</span>' : '') + '</small></span></div>' +
+      '<div class="bar-line" title="' + esc(x.r.note) + '"><span class="bar teal" style="width:' + Math.min(x.r.value, 100) + '%"></span><span class="val">' + fmtPct(x.r.value) + '<small><span class="dt">' + esc(fmtDate(x.r.as_of)) + '</span></small></span></div></div></div>';
+  });
+  h += '</div>';
+  if (missing.length) {
+    h += '<div class="nocomp"><strong>No comparable data (' + missing.length + ').</strong> ' + missing.map(function (x) {
+      var why = !has(x.p) && !has(x.r) ? 'neither figure' : !has(x.p) ? 'no preference figure' : 'no MPC line in plan';
+      return '<a href="#' + esc(x.c.id) + '">' + esc(x.c.name) + '</a> (' + why + ')';
+    }).join(', ') + '.</div>';
+  }
+  return h + '</div>';
+}
+function availChartHTML() {
+  var N = countries.length;
+  var rows = ALL_SPECS.map(function (s, i) {
+    var yes = 0, part = 0;
+    countries.forEach(function (c) { var a = model(c, s).avail; if (a === 'yes') yes++; else if (a === 'partial') part++; });
+    return { s: s, yes: yes, part: part, tot: yes + part, i: i };
+  }).sort(function (a, b) { return b.tot - a.tot || b.yes - a.yes || a.i - b.i; });
+  var h = '<div class="chart-card"><h3>Data availability by indicator</h3><p class="sub">How many of the ' + N + ' responses have a figure or finding for each indicator. Short bars are what the sector does not yet know.</p>';
+  h += '<div class="legend" style="margin:0 0 10px"><span><span class="sw blue"></span>Found</span><span><span class="sw part"></span>Found with a caveat (partial)</span></div>';
+  h += '<div class="chart" role="img" aria-label="Horizontal bars showing how many of ' + N + ' countries have each of ' + rows.length + ' indicators. Counts are printed on each bar.">' + ticks(N, N >= 12 ? 5 : 1, String);
+  rows.forEach(function (r) {
+    h += '<div class="c-row"><div class="lab">' + esc(r.s.label) + '<small>' + esc(r.s.group.short) + '</small></div><div class="plot" style="padding:7px 0"><div class="bar-line">' +
+      (r.yes ? '<span class="bar yes" style="width:' + (r.yes / N * 100) + '%"></span>' : '') +
+      (r.part ? '<span class="bar part" style="width:' + (r.part / N * 100) + '%"></span>' : '') +
+      '<span class="val">' + r.tot + ' of ' + N + (r.part ? '<small>' + r.part + ' partial</small>' : '') + '</span></div></div></div>';
+  });
+  return h + '</div></div>';
+}
+
+/* ---------- overview ---------- */
+function statCard(cls, label, value, sub) {
+  return '<div class="stat-card ' + cls + '"><div class="stat-label">' + esc(label) + '</div><div class="stat-value">' + esc(value) + '</div><div class="stat-sub">' + esc(sub) + '</div></div>';
+}
+function overviewHTML() {
+  var N = countries.length;
+  var got = 0; countries.forEach(function (c) { got += countAvail(c); });
+  var total = N * TOTAL_SPECS;
+  var pub = countries.filter(function (c) { return c.plan.status === 'published' && Number(c.plan.year) === 2026; }).length;
+  var cc = countries.filter(function (c) { return c.cwg && c.cwg.exists === 'yes' && c.cwg.cashcap_support === 'yes'; });
+  var ccUnknown = countries.filter(function (c) { return c.cwg && c.cwg.exists === 'yes' && c.cwg.cashcap_support === 'unknown'; }).length;
+  var h = '<h2 class="section-title">Overview</h2><div class="stat-cards">' +
+    statCard('', 'Countries covered', String(N), regions.length + ' CALP regions') +
+    statCard('teal', 'Indicators available overall', got + ' of ' + total, fmtPct(got / total * 100) + ' of ' + TOTAL_SPECS + ' indicators in ' + N + ' countries') +
+    statCard('', 'Countries with a published 2026 plan', String(pub), 'of ' + N) +
+    statCard('red', 'Countries with a CWG supported by CashCap', String(cc.length), 'of ' + N + (ccUnknown ? '; not confirmed in ' + ccUnknown : '')) +
+    '</div>';
+  h += '<h2 class="section-title">Signal matrix</h2><p class="section-lede">One row per response, one column per headline indicator. A hatched n/a cell means we looked and found nothing. Select a column heading to sort; select a country to open its page.</p>';
+  h += '<div class="matrix-wrap" id="matrixWrap" tabindex="0" role="region" aria-label="Signal matrix, scrolls horizontally">' + matrixHTML() + '</div>';
+  h += '<div class="legend"><span><span class="sw hatch"></span>n/a: not found</span><span><span class="sw amber"></span>Partial: figure with a caveat</span><span><span class="sw tealtint"></span>Darker tint is a higher value in that column</span><span><span class="tag over">over 100%</span> printed value is above 100%</span><span>Small grey text is the as-of date</span></div>';
+  h += '<h2 class="section-title">What people want, what plans fund</h2>' + prefChartHTML();
+  h += '<h2 class="section-title">What the sector does not know</h2>' + availChartHTML();
+  h += '<div class="card-grid" style="margin-top:24px">' +
+    '<div class="card top-blue"><h3>How to read this</h3><div class="stack" style="gap:8px">' +
+    '<p>A signal is one cash-related indicator for one response, with its date and source.</p>' +
+    '<p>n/a is a finding. It means the figure was looked for in public sources and not found.</p>' +
+    '<p>Country summaries are AI drafts. They are not CALP positions until a regional representative has reviewed them.</p>' +
+    '<p>Representatives\' notes appear on each country page once they are added to the data block.</p></div></div>' +
+    '<div class="card top-blue"><h3>Methodology</h3><div class="stack" style="gap:8px">' +
+    '<p>FTS figures were pulled from the FTS public API on 5 Nov 2026 using the destination-cluster view of the "Multipurpose Cash" sector.</p>' +
+    '<p>The as-of date is the latest flow date seen and may be a lower bound. Plan requirements are revised requirements.</p>' +
+    '<p>MPC funding above 100% of the MPC requirement is reported as found and may reflect FTS tagging or carry-over.</p>' +
+    '<p>Modality-preference surveys vary in year, geography and question wording. They are not comparable across countries without reading the note.</p></div></div></div>';
+  return h;
+}
+
+/* ---------- country page ---------- */
+function rowHTML(c, spec) {
+  var m = model(c, spec);
+  var cls = 'ind-row' + (m.avail === 'no' ? ' na' : m.avail === 'partial' ? ' partial' : '');
+  var val = m.avail === 'no' ? 'n/a' : esc(m.main) + (m.unit ? ' <span style="font-size:12px;font-weight:400;color:#44596a">' + esc(m.unit) + '</span>' : '');
+  var h = '<div class="' + cls + '"><div class="ind-top"><span class="ind-label">' + esc(spec.label) + '</span><span class="ind-val">' + val + '</span></div>';
+  if (m.pct !== undefined) h += '<div class="minibar ' + (m.tone === 'mpc' ? 'teal' : '') + '" aria-hidden="true"><span style="width:' + Math.min(m.pct, 100) + '%"></span></div>';
+  var meta = [];
+  if (m.avail !== 'no' && m.asof) meta.push('as of ' + esc(fmtDate(m.asof)));
+  if (m.sub) meta.push(esc(m.sub));
+  if (m.avail === 'partial') meta.push('<span class="tag partial">partial</span>');
+  if (m.over) meta.push('<span class="tag over">over 100%</span>');
+  var sl = srcLinks(c, m.sids);
+  if (sl) meta.push('Source: ' + sl);
+  if (meta.length) h += '<div class="ind-meta">' + meta.join('<span aria-hidden="true">&middot;</span>') + '</div>';
+  m.extra.forEach(function (e) {
+    var u = safeUrl(e.url);
+    h += '<div class="ind-extra">' + (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(e.text) + '</a>' : esc(e.text)) + '</div>';
+  });
+  if (m.note) h += '<div class="ind-note">' + esc(m.note) + '</div>';
+  return h + '</div>';
+}
+function panelHTML(c, g) {
+  var h = '<section class="panel' + (g.id === 'sys' ? ' sys' : '') + '" aria-labelledby="p-' + g.id + '"><h3 id="p-' + g.id + '">' + esc(g.title) + '</h3>';
+  if (g.note && g.note(c)) h += '<div class="p-note">' + esc(g.note(c)) + '</div>';
+  if (g.id === 'cbpf') {
+    var pf = c.pooled_funds || {};
+    h += '<div class="p-note">' + esc(pf.cbpf_exists ? 'Fund: ' + (pf.cbpf_name || 'name not recorded') : 'No country-based pooled fund. ' + (pf.cbpf_name || '')) + '</div>';
+  }
+  g.rows.forEach(function (r) { h += rowHTML(c, r); });
+  return h + '</section>';
+}
+function cStat(cls, label, d, main, sub) {
+  var na = !has(d);
+  return '<div class="stat-card ' + (na ? 'na' : cls) + '"><div class="stat-label">' + esc(label) + '</div><div class="stat-value">' + (na ? 'n/a' : esc(main)) + '</div><div class="stat-sub">' + (na ? esc('Not found') : sub) + '</div></div>';
+}
+function countryHTML(c) {
+  var pl = c.plan, u = safeUrl(pl.url);
+  var rn = c.rep_notes || {}, reviewed = isReviewed(c);
+  var h = '<div class="title-bar"><h2>' + esc(c.name) + '</h2><div class="t-meta"><span>' + esc(c.calp_region) + '</span><span>' + (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(pl.name) + '</a>' : esc(pl.name)) + '</span><span>' + esc(pl.type) + ' ' + esc(pl.year) + ' &middot; ' + esc(pl.status) + '</span></div>' +
+    '<div class="t-review">' + (reviewed ? 'Reviewed by ' + esc(rn.reviewed_by) + (rn.reviewed_date ? ' on ' + esc(fmtDate(rn.reviewed_date)) : '') : 'Last researched ' + esc(fmtDate(c.last_researched)) + ' &middot; AI, unreviewed') + '</div></div>';
+  var rq = pl.requirements_usd, fp = pl.funded_pct;
+  var mp = c.hnrp_requirements.mpc_pct, mf = c.overall_funding.mpc_funded_pct_of_mpc_req, pr = c.modality_preference.cash_pct;
+  h += '<div class="stat-cards">' +
+    cStat('', 'Plan requirements', rq, has(rq) ? fmtUsdM(rq.value) : '', has(fp) ? esc(fmtPct(fp.value)) + ' funded &middot; as of ' + esc(fmtDate(fp.as_of)) : 'as of ' + esc(fmtDate(rq.as_of))) +
+    cStat('teal', 'MPC % of plan requirements', mp, has(mp) ? fmtPct(mp.value) : '', has(mp) ? (mp.usd != null ? esc(fmtUsdM(mp.usd)) + ' &middot; ' : '') + 'as of ' + esc(fmtDate(mp.as_of)) : '') +
+    cStat('teal', 'MPC funding received, % of MPC requirement', mf, has(mf) ? fmtPct(mf.value) : '', has(mf) ? (mf.value > 100 ? '<span class="tag over">over 100%</span> ' : '') + 'as of ' + esc(fmtDate(mf.as_of)) : '') +
+    cStat('red', 'Preference for cash', pr, has(pr) ? fmtPct(pr.value) : '', has(pr) ? (pr.available === 'partial' ? '<span class="tag partial">partial</span> ' : '') + esc(fmtDate(pr.as_of)) : '') +
+    '</div>';
+  var ai = c.ai_summary || {};
+  h += '<div class="stack" style="margin-top:16px"><section class="ai-card" aria-labelledby="ai-h"><div class="ai-head"><span class="badge ai">AI</span><h3 id="ai-h">AI summary &mdash; ' + (reviewed ? 'reviewed by ' + esc(rn.reviewed_by) : 'draft, not yet reviewed') + '</h3></div>' +
+    '<p class="headline">' + esc(ai.headline) + '</p><p class="narr">' + citeText(c, ai.narrative) + '</p><div class="lists">' +
+    [['Barriers', ai.barriers], ['Opportunities', ai.opportunities], ['Data gaps', ai.data_gaps]].map(function (x) {
+      return '<div><h4>' + x[0] + '</h4><ul>' + (x[1] || []).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>'; }).join('') +
+    '</div></section>';
+  h += '<h2 class="section-title" style="margin-top:12px">Indicators</h2><div class="card-grid">';
+  GROUPS.forEach(function (g) { if (g.id !== 'sys') h += panelHTML(c, g); });
+  h += '</div>' + panelHTML(c, GROUPS[GROUPS.length - 1]);
+  var F = [['key_messages', 'Key messages'], ['barriers', 'Barriers'], ['cwg_maturity', 'CWG maturity'], ['leadership_buy_in', 'Leadership buy-in'], ['calp_priority', 'CALP priority']];
+  h += '<section class="card left-red" aria-labelledby="rep-h"><h3 id="rep-h">Regional representative notes</h3><div class="rep-grid">' + F.map(function (f) {
+    var t = rn[f[0]];
+    return '<div class="rep-field"><h4>' + f[1] + '</h4>' + (t ? '<p>' + esc(t) + '</p>' : '<p class="placeholder">To be completed by the regional representative. Edit rep_notes.' + f[0] + ' in the data block.</p>') + '</div>'; }).join('') +
+    '<div class="rep-field"><h4>Reviewed by</h4>' + (reviewed ? '<p>' + esc(rn.reviewed_by) + (rn.reviewed_date ? ', ' + esc(fmtDate(rn.reviewed_date)) : '') + '</p>' : '<p class="placeholder">Not yet reviewed. Edit rep_notes.reviewed_by and rep_notes.reviewed_date in the data block.</p>') + '</div></div></section>';
+  h += '<section class="card sources" aria-labelledby="src-h"><h3 id="src-h">Sources</h3><ol>' + c.sources.map(function (s) {
+    var su = safeUrl(s.url);
+    return '<li class="src" id="src-' + esc(c.id) + '-' + esc(s.id) + '"><span class="sid">' + esc(s.id) + '</span><span><span class="st">' + (su ? '<a href="' + esc(su) + '" target="_blank" rel="noopener">' + esc(s.title) + '</a>' : esc(s.title)) + '</span><span class="sm" style="display:block">' + esc(s.publisher) + ' &middot; ' + esc(s.date ? fmtDate(s.date) : 'undated') + '</span><span class="su">' + esc(s.url) + '</span></span></li>'; }).join('') + '</ol></section></div>';
+  return h;
+}
+
+/* ---------- navigation ---------- */
+function navHTML(cur) {
+  var h = '<div class="sidebar-head">Cash Signal</div><a class="nav-item' + (cur === 'overview' ? ' active' : '') + '" href="#overview"' + (cur === 'overview' ? ' aria-current="page"' : '') + '><div class="nav-name">Overview</div><div class="nav-meta">Signal matrix and charts</div></a>';
+  regions.forEach(function (r) {
+    h += '<div class="region-label">' + esc(r) + '</div>';
+    countries.filter(function (c) { return c.calp_region === r; }).forEach(function (c) {
+      h += '<a class="nav-item' + (cur === c.id ? ' active' : '') + '" href="#' + esc(c.id) + '"' + (cur === c.id ? ' aria-current="page"' : '') + '><div class="nav-name">' + esc(c.name) + '</div><div class="nav-meta">' + esc(c.plan.type) + ' ' + esc(c.plan.year) + '</div><div class="nav-badges">' +
+        (isReviewed(c) ? '<span class="badge reviewed">Reviewed</span>' : '<span class="badge draft">AI draft</span>') +
+        '<span class="badge count" title="Indicators with data">' + countAvail(c) + '/' + TOTAL_SPECS + '</span></div></a>';
+    });
+  });
+  return h;
+}
+function selectHTML(cur) {
+  var h = '<option value="overview"' + (cur === 'overview' ? ' selected' : '') + '>Overview</option>';
+  regions.forEach(function (r) {
+    h += '<optgroup label="' + esc(r) + '">' + countries.filter(function (c) { return c.calp_region === r; }).map(function (c) {
+      return '<option value="' + esc(c.id) + '"' + (cur === c.id ? ' selected' : '') + '>' + esc(c.name) + ' (' + countAvail(c) + '/' + TOTAL_SPECS + ')</option>'; }).join('') + '</optgroup>';
+  });
+  return h;
+}
+function show(id) {
+  var c = byId[id];
+  var cur = c ? c.id : 'overview';
+  var main = document.getElementById('main');
+  main.innerHTML = (c ? countryHTML(c) : overviewHTML()) +
+    '<div class="footer">CALP Network &middot; Cash Signal &middot; data collected 5 November 2026 &middot; Indicator set from CALP\'s cash advocacy data points. To update: edit the CASH SIGNAL DATA block in this file or re-run build.py with updated JSON.</div>';
+  document.getElementById('sidebar').innerHTML = navHTML(cur);
+  document.getElementById('navSelect').innerHTML = selectHTML(cur);
+  document.title = c ? c.name + ' · Cash Signal' : 'Cash Signal';
+  window.scrollTo(0, 0);
+}
+function route() {
+  var h = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+  if (h === 'sources') return;
+  show(byId[h] ? h : 'overview');
+}
+
+/* ---------- events ---------- */
+document.addEventListener('click', function (e) {
+  var t = e.target;
+  var cite = t.closest && t.closest('a[data-src]');
+  if (cite) {
+    e.preventDefault();
+    var el = document.getElementById('src-' + cite.getAttribute('data-c') + '-' + cite.getAttribute('data-src'));
+    if (el) { el.scrollIntoView({ block: 'center' }); el.classList.add('flash'); setTimeout(function () { el.classList.remove('flash'); }, 1800); }
+    return;
+  }
+  var sb = t.closest && t.closest('button[data-sort]');
+  if (sb) {
+    var v = sb.getAttribute('data-sort'); v = v === 'name' ? 'name' : parseInt(v, 10);
+    if (sortState.col === v) { if (sortState.dir === 1) sortState.dir = -1; else { sortState.col = null; sortState.dir = 1; } }
+    else { sortState.col = v; sortState.dir = (v === 'name') ? 1 : -1; }
+    var wrap = document.getElementById('matrixWrap'), sl = wrap.scrollLeft;
+    wrap.innerHTML = matrixHTML(); wrap.scrollLeft = sl;
+    var again = wrap.querySelector('button[data-sort="' + v + '"]'); if (again) again.focus();
+    return;
+  }
+  var row = t.closest && t.closest('tr[data-go]');
+  if (row && !(t.closest('a'))) { location.hash = row.getAttribute('data-go'); }
+});
+document.getElementById('navSelect').addEventListener('change', function (e) { location.hash = e.target.value; });
+window.addEventListener('hashchange', route);
+document.getElementById('printBtn').addEventListener('click', function () { window.print(); });
+var banner = document.getElementById('aiBanner'), bt = document.getElementById('bannerToggle');
+bt.addEventListener('click', function () {
+  var c = banner.classList.toggle('collapsed');
+  bt.textContent = c ? 'Show ▼' : 'Hide ▲';
+  bt.setAttribute('aria-expanded', c ? 'false' : 'true');
+  bt.setAttribute('aria-label', c ? 'Show this notice' : 'Hide this notice');
+});
+document.getElementById('headerMeta').textContent = 'Data collected ' + fmtDate(D.generated) + ' · ' + countries.length + ' countries';
+route();
+})();
+</script>
+</body>
+</html>

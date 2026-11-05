@@ -1,0 +1,413 @@
+{
+  "id": "drc",
+  "name": "DRC",
+  "iso3": "COD",
+  "calp_region": "West and Central Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://reliefweb.int/report/democratic-republic-congo/facing-critical-funding-gap-humanitarian-community-drc-forced-strictly-prioritize-its-response-2026",
+    "fts_plan_id": 1509,
+    "people_in_need": {
+      "value": 14900000,
+      "available": "yes",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Launch figure; down from 21.2M in 2025, attributed by OCHA to a revised methodology."
+    },
+    "people_targeted": {
+      "value": 7300000,
+      "available": "yes",
+      "as_of": "2026-01-28",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Prioritised population at launch (2025 prioritised: 11M)."
+    },
+    "requirements_usd": {
+      "value": 2132641156,
+      "available": "yes",
+      "as_of": "2026-07-22",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Revised requirements (v2.1); original January requirement was USD 1,403,721,718."
+    },
+    "funded_usd": {
+      "value": 1142419532,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "FTS API plan-level total, retrieved 5 Nov 2026 (includes USD 1.7M pledges separately)."
+    },
+    "funded_pct": {
+      "value": 53.6,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2",
+        "s3"
+      ],
+      "note": "Computed: funded / revised requirements. UN News reported 49% on 9 Sep 2026 [s9]."
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "Searched for a 2027 HNRP or GHO 2027 launch for DRC; nothing found as of 5 Nov 2026.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 70,
+      "available": "partial",
+      "as_of": "2022-08",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "South Kivu and Tanganyika only; multiple answers allowed, so shares sum above 100. Cash (physical) 70%; mobile money 9% listed separately."
+    },
+    "vouchers_pct": {
+      "value": 7,
+      "available": "partial",
+      "as_of": "2022-08",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "As above."
+    },
+    "in_kind_pct": {
+      "value": 59,
+      "available": "partial",
+      "as_of": "2022-08",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "In-kind food 59%; in-kind non-food 30%."
+    },
+    "other_pct": {
+      "value": 18,
+      "available": "partial",
+      "as_of": "2022-08",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Services 18%."
+    },
+    "survey_note": "REACH MSNA AAP factsheet, South Kivu and Tanganyika, data June-Aug 2022 (published Sep 2022), N=974 aid-receiving households of 9,889 surveyed; multi-response. No national or 2025 modality preference figure found: REACH 2025 North Kivu key-informant factsheet [s11] is indicative only and its preference chart was not legible."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched CALP, ALNAP and general sources for DRC cost-efficiency studies; none found with a comparable metric.",
+      "unit": ""
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched CALP, ALNAP and general sources for DRC cost-efficiency studies; none found with a comparable metric.",
+      "unit": ""
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched CALP, ALNAP and general sources for DRC cost-efficiency studies; none found with a comparable metric.",
+      "unit": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Searched CALP, ALNAP and general sources for DRC cost-efficiency studies; none found with a comparable metric.",
+      "unit": ""
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 5.18,
+      "available": "yes",
+      "as_of": "2026-07-22",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "MPC (TEUM) cluster revised requirement USD 110.5M of USD 2,132.6M. At the January original it was USD 99.8M of 1,403.7M (7.1%).",
+      "usd": 110528619
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not separately costed in the FTS cluster table; cash sits inside sector budgets.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not separately costed in the FTS cluster table.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No aggregated CVA figure found; only MPC is a separate line.",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 1.4,
+      "usd": 16297373,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$1142.4M). Shared-cluster view: US$52.4M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 14.7,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "FTS single-cluster (destination) view: US$16.3M of US$110.5M MPC requirement. Shared-cluster view would give US$52.4M (47%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate vouchers.",
+      "usd": null
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "DRC Humanitarian Fund",
+    "cbpf_allocations_usd": {
+      "value": 225000000,
+      "available": "partial",
+      "as_of": "2026-09-09",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "Additional US contribution announced Sep 2026, not the annual allocation total; UN News also cites USD 40.5M CERF and USD 36M other donors."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Cluster split of 2026 allocations not found (CBPF data hub not retrievable).",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Only qualitative: USD 142M tranche meant to maintain cash transfers where conditions allow [s9]; a USD 10M FAO allocation includes some unconditional cash [s10].",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [],
+    "note": "No DRC-wide cash feasibility assessment found in searches of CALP and ReliefWeb."
+  },
+  "market_monitoring": {
+    "functional": "partial",
+    "system": "REACH ICSM (Initiative conjointe de suivi des marchés), with REACH technical support to the CWG",
+    "frequency": "",
+    "last_published": "",
+    "url": "https://response.reliefweb.int/democratic-republic-congo/cash-working-group",
+    "source_ids": [
+      "s4",
+      "s7"
+    ],
+    "note": "CWG page lists the ICSM and CALP report credits REACH with market monitoring support; I could not confirm a product published in the last 12 months."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Cash Working Group (national plus provincial groups: Ituri, North Kivu, South Kivu, Tanganyika)",
+    "leads": [
+      "OCHA (non-programmatic)",
+      "GiveDirectly (programmatic)",
+      "REACH (technical support)"
+    ],
+    "cashcap_support": "yes",
+    "url": "https://response.reliefweb.int/democratic-republic-congo/cash-working-group",
+    "source_ids": [
+      "s4",
+      "s5",
+      "s7",
+      "s6"
+    ],
+    "evidence_note": "CashCap (NORCAP) programmatic co-chair post in Goma, 12 months from April 2026, reporting to GiveDirectly [s5]; four provincial groups, MEB and transfer-value harmonisation under way [s4]; latest 4W on ReliefWeb page is Dec 2024 [s7]. Congo Cash Consortium (DRC-led, with GiveDirectly) operates in Masisi [s6]."
+  },
+  "ai_summary": {
+    "headline": "MPC is the one cash line that kept its 2026 budget, and it is about half funded.",
+    "narrative": "The 2026 HNRP sought USD 1.4bn at launch for 7.3M prioritised people [s1]; requirements were later revised to USD 2.13bn and FTS shows about 54% funded [s2][s3]. Multi-purpose cash is a separate cluster at USD 110.5M, 5.2% of the revised plan (7.1% at launch), with USD 16.3M received on FTS's single-cluster view, about 15% of its requirement (USD 52.4M, 47%, if shared-cluster flows are counted) [s3]. The CWG reports MPC was the only sector to keep its 2026 budget [s4]. Coordination looks relatively strong: OCHA and GiveDirectly co-lead, with a CashCap co-chair deployed from April 2026 and four provincial groups [s4][s5]. Cash delivery in the east is also run through a DRC-led consortium including GiveDirectly in Masisi [s6]. Evidence on preferences is old and subnational: in South Kivu and Tanganyika in 2022, 70% of households named cash among preferred modalities [s8]. Pooled fund top-ups in September 2026 were partly earmarked to keep cash transfers going [s9]; the MPC share is not visible. This appears to be a plan where cash is protected but where evidence on cost efficiency and feasibility is thin.",
+    "barriers": [
+      "Ongoing conflict and access limits in the east, and funding gap of roughly USD 1bn on the revised plan [s9]",
+      "No recent national modality preference data found",
+      "Sectoral cash and vouchers not visible in FTS, so total CVA share is unknown",
+      "Two inconsistent FTS cluster views make MPC funding hard to state precisely"
+    ],
+    "opportunities": [
+      "CashCap co-chair and GiveDirectly programmatic lead give the CWG capacity to push MEB harmonisation",
+      "Pooled fund top-ups with a cash-maintenance intent could be tracked as MPC share by cluster"
+    ],
+    "data_gaps": [
+      "Cost efficiency (all modalities)",
+      "National modality preference",
+      "Cash feasibility study",
+      "CBPF allocations by cluster",
+      "Confirmed recent market monitoring product",
+      "Sectoral cash and voucher shares"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Facing critical funding gap, humanitarian community in DRC forced to strictly prioritize its response in 2026",
+      "publisher": "OCHA via ReliefWeb",
+      "url": "https://reliefweb.int/report/democratic-republic-congo/facing-critical-funding-gap-humanitarian-community-drc-forced-strictly-prioritize-its-response-2026",
+      "date": "2026-01-28",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS public API: plan 1509 (DRC HNRP 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/plan/1509",
+      "date": "2026-07-22",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "FTS public API: plan 1509 requirements and funding by cluster",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1509&groupby=cluster",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Rapport Leads et Co-Leads CWG Afrique de l'Ouest et du Centre 2026",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "DRC CWG Programmatic Co-Chair (CashCap) vacancy, NORCAP, Goma",
+      "publisher": "NORCAP via NGO Jobs in Africa",
+      "url": "https://ngojobsinafrica.com/job/drc-cwg-programmatic-co-chair-cashcap/",
+      "date": "2026-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "Congo Cash Consortium: localizing humanitarian aid through digital inclusion",
+      "publisher": "fundsforNGOs",
+      "url": "https://news.fundsforngos.org/2026/06/04/congo-cash-consortium-localizing-humanitarian-aid-through-digital-inclusion/",
+      "date": "2026-06-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "Cash Working Group - DRC",
+      "publisher": "OCHA Humanitarian Response (response.reliefweb.int)",
+      "url": "https://response.reliefweb.int/democratic-republic-congo/cash-working-group",
+      "date": "2025",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "Factsheet MSNA AAP Sud-Kivu et Tanganyika",
+      "publisher": "REACH Initiative",
+      "url": "https://repository.impact-initiatives.org/document/reach/c0448450/REACH_DRC2204_Factsheet_MSNA_AAP_Sud-Kivu-Tanganyika_septembre2022_Final.pdf",
+      "date": "2022-09",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "Congo-Kinshasa: les besoins explosent, les financements peinent à suivre",
+      "publisher": "UN News via allAfrica",
+      "url": "https://fr.allafrica.com/stories/202609100140.html",
+      "date": "2026-09-09",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "DRC Humanitarian Fund allocates USD 10M to FAO",
+      "publisher": "fundsforNGOs",
+      "url": "https://news.fundsforngos.org/2026/05/12/drc-humanitarian-fund-allocates-10m-to-fao-for-east-africa-relief/",
+      "date": "2026-05-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s11",
+      "title": "REACH RDC Factsheet MSNA key informants North Kivu 2025",
+      "publisher": "REACH Initiative",
+      "url": "https://repository.impact-initiatives.org/document/impact/ffa2dcda/REACH-RDC-Factsheet-MSNA-KI-NK-2025.pdf",
+      "date": "2025-09",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cash Signal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<style>
+/* Layout: white brand bar + red rule -> browser-style tab strip on a warm off-white ground -> white sheet holding the active tab.
+   One idea per panel, 40-56px between sections. CALP brand colours; Roboto only. */
+:root {
+  --ground: #F7F7F5;
+  --paper: #FFFFFF;
+  --line: #E3E3DF;
+  --track: #EFEFEB;
+  --ink: #1A1A1A;
+  --ink2: #45453F;
+  --muted: #66665F;
+  --red: #CA2128;
+  --blue: #065B82;
+  --blue-tint: #F3F7F9;
+  --midblue: #0089C0;
+  --teal: #00B0BF;
+  --teal-ink: #006F7B;
+  --grey: #879FAD;
+  --dot-green: #2E7D4F;
+  --dot-amber: #E8A33D;
+  --dot-red: #B03030;
+  --dot-grey: #A8A8A0;
+  --amber-ink: #7A4F00;
+  --amber-bg: #FDF1D6;
+  --font: Roboto, Arial, -apple-system, 'Segoe UI', sans-serif;
+  --gutter: clamp(16px, 3.2vw, 40px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--font); font-size: 15px; line-height: 1.55; text-align: left; }
+h1, h2, h3, h4, p, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+button { font: inherit; color: inherit; }
+a { color: var(--blue); text-decoration: none; }
+a.cl { color: var(--ink); font-weight: 500; }
+a.cl:hover { color: var(--red); }
+a:hover { text-decoration: underline; color: var(--blue); }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.sr-only { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.wrap { max-width: 1260px; margin: 0 auto; padding-inline: var(--gutter); }
+small { font-size: 13px; }
+
+/* ---------- brand bar ---------- */
+.brandbar { background: var(--paper); border-bottom: 3px solid var(--red); }
+.brandbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; padding-block: 22px; }
+.brand { display: flex; align-items: baseline; gap: 10px 18px; flex-wrap: wrap; min-width: 0; }
+.brand .org { font-size: 14px; font-weight: 700; color: var(--red); }
+.brand .name { font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--ink); }
+.brand .tag { font-size: 15px; color: var(--ink2); }
+.stamps { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.stamp { font-size: 13px; font-weight: 500; color: var(--blue); background: var(--blue-tint); padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+.stamp.ai { color: var(--ink2); background: var(--track); font-weight: 400; }
+
+/* ---------- browser-style tabs ---------- */
+.tabs-outer { position: relative; margin-top: 28px; }
+.tabs-scroll { overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; }
+.tabs-scroll::-webkit-scrollbar { display: none; }
+.tablist { display: flex; align-items: flex-end; gap: 4px; min-width: max-content; padding-top: 6px; }
+.tab { position: relative; flex: none; margin-bottom: -1px; padding: 12px 12px 13px; background: transparent; border: 1px solid transparent; border-top: 3px solid transparent; border-bottom: 0; border-radius: 8px 8px 0 0; color: var(--ink2); font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; line-height: 1.3; }
+.tab .dot { width: 8px; height: 8px; margin-right: 7px; vertical-align: 1px; }
+.tablist { gap: 2px; }
+.tab:hover { background: rgba(255,255,255,.65); color: var(--ink); }
+.tab[aria-selected="true"] { background: var(--paper); color: var(--ink); font-weight: 700; border-color: var(--line); border-top-color: var(--red); padding-bottom: 14px; z-index: 2; }
+.tabs-fade { display: block; transition: opacity .15s; position: absolute; right: 0; top: 0; bottom: 0; width: 36px; pointer-events: none; background: linear-gradient(to right, rgba(247,247,245,0), var(--ground)); }
+
+/* ---------- the white sheet ---------- */
+.sheet { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.sheet > .wrap { padding-block: 56px 72px; }
+.tabpanel > * + * { margin-top: 56px; }
+.tabpanel:focus { outline: none; }
+
+/* ---------- type ---------- */
+.h-sec { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.h-sec h2 { font-size: 24px; font-weight: 700; line-height: 1.25; color: var(--blue); }
+.mark { display: inline-flex; gap: 3px; flex: none; }
+.mark i { width: 7px; height: 7px; display: block; }
+.mark i:first-child { background: var(--red); }
+.mark i:last-child { background: var(--blue); }
+.lede { font-size: 16px; color: var(--ink2); max-width: 72ch; margin-bottom: 28px; }
+.label { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .8px; color: var(--ink2); }
+.num-lg { font-size: 38px; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+.nums { font-variant-numeric: tabular-nums; }
+
+/* ---------- panels ---------- */
+.panel { background: var(--paper); border: 1px solid var(--line); padding: 28px; min-width: 0; }
+.panel > h3, .panel-h h3 { font-size: 18px; font-weight: 700; line-height: 1.3; color: var(--ink); }
+.panel .sub { font-size: 14px; color: var(--muted); margin-top: 6px; max-width: 78ch; }
+.panel-h { margin-bottom: 24px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.grid-2-1 { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.stack > * + * { margin-top: 24px; }
+
+/* ---------- hero ---------- */
+.hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px 56px; align-items: end; }
+.hero h1 { font-size: clamp(48px, 7vw, 80px); line-height: 1; font-weight: 700; color: var(--red); margin-bottom: 20px; }
+.hero p { font-size: 20px; line-height: 1.5; color: var(--ink2); max-width: 36em; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.facts > div { background: var(--paper); padding: 22px 20px; }
+.facts b { display: block; white-space: nowrap; font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--blue); font-variant-numeric: tabular-nums; }
+.facts span { display: block; margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--ink2); }
+
+/* ---------- bars ---------- */
+.lb li + li { margin-top: 18px; }
+.lb .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 15px; }
+.lb .top a { color: var(--ink); font-weight: 500; }
+.lb .top a:hover { color: var(--blue); }
+.lb .top b { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lb .bt { height: 10px; background: var(--track); margin-top: 7px; position: relative; }
+.bt { position: relative; background: var(--track); }
+.duo .bt { background: linear-gradient(to right, var(--line) 1px, transparent 1px) 0 0 / 25% 100%, var(--track); }
+.fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--blue); border-radius: 0 2px 2px 0; }
+.fill.teal { background: var(--teal); }
+.fill.mid { background: var(--midblue); }
+.fill.gry { background: var(--grey); }
+.fill.cap::after { content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 9px; background: repeating-linear-gradient(135deg, rgba(255,255,255,.95) 0 2px, transparent 2px 4px); }
+.brow { display: grid; grid-template-columns: 150px minmax(0, 1fr) 128px; gap: 16px; align-items: center; padding-block: 7px; }
+.brow .bl { font-size: 15px; font-weight: 500; min-width: 0; }
+.brow .bl a { color: var(--ink); }
+.brow .bl a:hover { color: var(--blue); }
+.brow .bt { height: 14px; position: relative; background: linear-gradient(to right, var(--line) 1px, transparent 1px) 0 0 / 25% 100%; border-right: 1px solid var(--line); }
+.brow .bv { font-size: 15px; font-variant-numeric: tabular-nums; line-height: 1.3; }
+.brow .bv b { font-weight: 700; }
+.bv small { color: var(--muted); margin-left: 6px; }
+.axis { display: grid; grid-template-columns: 150px minmax(0, 1fr) 128px; gap: 16px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; margin-bottom: 4px; }
+.axis .scale { display: flex; justify-content: space-between; }
+.duo { padding-block: 10px; }
+.duo .bt { height: 12px; }
+.duo .line + .line { margin-top: 5px; }
+.duo .line { display: grid; grid-template-columns: minmax(0, 1fr) 128px; gap: 16px; align-items: center; }
+.duo-row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; align-items: center; border-top: 1px solid var(--line); }
+.duo-row:first-of-type { border-top: 0; }
+.duo-row .bl { font-size: 15px; font-weight: 500; }
+.duo-row .bl a { color: var(--ink); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13.5px; color: var(--ink2); margin-bottom: 20px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.sw { width: 14px; height: 14px; display: inline-block; flex: none; }
+.sw.blue { background: var(--blue); } .sw.teal { background: var(--teal); } .sw.mid { background: var(--midblue); } .sw.gry { background: var(--grey); }
+.none-line { font-size: 14px; color: var(--muted); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+.none-line b { font-weight: 500; color: var(--ink2); }
+.none-line a { color: var(--ink2); }
+.none-line a:hover { color: var(--blue); }
+
+/* tags & dots */
+.tagp { display: inline-block; font-size: 12px; font-weight: 500; line-height: 1.5; padding: 0 6px; border-radius: 2px; vertical-align: 1px; white-space: nowrap; }
+.tagp.partial { color: var(--amber-ink); background: var(--amber-bg); }
+.tagp.over { color: var(--blue); background: var(--blue-tint); }
+.tagp.ai { color: var(--ink2); background: var(--track); }
+.tagp.ok { color: var(--blue); background: var(--blue-tint); }
+.dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; flex: none; }
+.dot.g { background: var(--dot-green); } .dot.a { background: var(--dot-amber); } .dot.r { background: var(--dot-red); } .dot.n { background: transparent; border: 2px solid var(--dot-grey); }
+
+/* controls */
+.panel-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px 24px; flex-wrap: wrap; margin-bottom: 24px; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); background: var(--paper); }
+.seg button { border: 0; background: transparent; padding: 8px 14px; font-size: 14px; cursor: pointer; color: var(--ink2); }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button:hover { background: var(--ground); }
+.seg button[aria-pressed="true"] { background: var(--blue-tint); color: var(--blue); font-weight: 700; box-shadow: inset 0 -2px 0 var(--red); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { border: 1px solid var(--line); background: var(--paper); padding: 7px 14px; border-radius: 999px; font-size: 14px; cursor: pointer; color: var(--ink2); }
+.chip:hover { border-color: var(--blue); color: var(--blue); }
+.chip[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: #fff; font-weight: 500; }
+.region { margin-bottom: 22px; }
+.region .label { display: block; margin-bottom: 10px; }
+
+/* tables */
+.tbl-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th { text-align: left; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .8px; color: var(--ink2); padding: 0 16px 14px 0; border-bottom: 1px solid var(--ink); vertical-align: bottom; }
+td { padding: 18px 16px 18px 0; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 14.5px; }
+td.cn { font-weight: 700; white-space: nowrap; }
+td.cn a { color: var(--ink); }
+td.cn a:hover { color: var(--blue); }
+.cell { display: flex; gap: 10px; align-items: flex-start; }
+.cell .dot { margin-top: 5px; }
+.cell .t { min-width: 0; }
+.cell .t b { font-weight: 500; display: block; }
+.cell .t span { display: block; font-size: 13px; color: var(--muted); line-height: 1.4; }
+.sys td { min-width: 190px; }
+.sys td.cn { min-width: 120px; }
+
+/* matrix */
+.matrix th { font-size: 12px; padding: 12px 12px 12px 12px; background: var(--paper); border-bottom: 1px solid var(--ink); position: sticky; top: 0; }
+.matrix th .sort { background: none; border: 0; padding: 0; font: inherit; text-transform: inherit; letter-spacing: inherit; color: inherit; cursor: pointer; text-align: left; }
+.matrix th .sort::after { content: " \21C5"; color: var(--grey); text-transform: none; }
+.matrix th[aria-sort="ascending"] .sort::after { content: " \25B2"; color: var(--red); }
+.matrix th[aria-sort="descending"] .sort::after { content: " \25BC"; color: var(--red); }
+.matrix td { padding: 12px; font-size: 14px; white-space: nowrap; }
+.matrix td .v { font-weight: 700; display: block; font-variant-numeric: tabular-nums; }
+.matrix td .s { display: block; font-size: 12.5px; color: var(--muted); font-weight: 400; }
+.matrix td.na { background: repeating-linear-gradient(135deg, var(--paper) 0 6px, var(--track) 6px 7px); }
+.matrix td.na .v { color: var(--muted); font-weight: 400; }
+.matrix tr.go { cursor: pointer; }
+.matrix tr.go:hover td:not(.na) { background-color: var(--ground); }
+.matrix tr.band td { padding: 22px 12px 8px; font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .8px; color: var(--ink2); border-bottom: 1px solid var(--line); }
+.matrix td.cn { padding-left: 0; }
+.matrix td.cn small { display: block; font-weight: 400; color: var(--muted); }
+
+/* ---------- country page ---------- */
+.ctitle { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px 32px; flex-wrap: wrap; }
+.ctitle h2 { font-size: clamp(32px, 4.4vw, 44px); line-height: 1.1; font-weight: 700; color: var(--blue); }
+.ctitle .meta { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 10px; font-size: 14.5px; color: var(--ink2); }
+.quality { display: inline-flex; align-items: center; gap: 10px; font-size: 14.5px; font-weight: 500; color: var(--ink2); cursor: help; padding: 8px 14px; border: 1px solid var(--line); }
+.statstrip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.stat { background: var(--paper); border: 1px solid var(--line); padding: 22px 24px; min-width: 0; }
+.stat .num-lg { margin-top: 10px; color: var(--ink); font-size: 32px; }
+.stat .num-lg.na { color: var(--muted); font-weight: 400; }
+.stat .note { font-size: 13.5px; color: var(--ink2); margin-top: 4px; }
+.sumhead { font-size: 18px; font-weight: 700; line-height: 1.4; margin: 14px 0 12px; }
+.narr { font-size: 15.5px; line-height: 1.65; max-width: 68ch; }
+.cite { font-size: 12.5px; font-weight: 700; color: var(--blue); }
+.lists { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.lists h4 { font-size: 14px; font-weight: 700; color: var(--blue); margin-bottom: 10px; }
+.lists li { font-size: 14px; line-height: 1.5; color: var(--ink2); padding-left: 14px; position: relative; }
+.lists li + li { margin-top: 8px; }
+.lists li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; background: var(--grey); }
+.seelist li { display: flex; gap: 14px; align-items: flex-start; }
+.seelist li + li { margin-top: 18px; }
+.seelist .dot { margin-top: 5px; }
+.seelist b { display: block; font-size: 15px; font-weight: 500; }
+.seelist span.d { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+.kvgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.kvp h3 { font-size: 16px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+.kv { padding-block: 14px; border-top: 1px solid var(--line); }
+.kv .row1 { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.kv .k { font-size: 14.5px; color: var(--ink); }
+.kv .v { font-size: 15.5px; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.kv .v.na { color: var(--muted); font-weight: 400; font-size: 14px; }
+.kv .m { font-size: 13px; color: var(--muted); margin-top: 3px; }
+.kv .m a { color: var(--blue); }
+.kv .n { font-size: 13px; color: var(--muted); margin-top: 3px; line-height: 1.45; }
+.kv .x { font-size: 13.5px; color: var(--ink2); margin-top: 3px; }
+.repgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+.rep { padding-block: 14px; border-top: 1px solid var(--line); }
+.rep .rk { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: .8px; color: var(--ink2); }
+.rep .rv { font-size: 14.5px; margin-top: 4px; }
+.rep .rv.ph { color: var(--muted); }
+.callout { background: var(--blue-tint); border: 1px solid var(--line); border-top: 3px solid var(--blue); padding: 24px 28px; }
+.callout h3 { font-size: 18px; font-weight: 700; }
+.callout p { margin-top: 8px; font-size: 15px; line-height: 1.6; max-width: 80ch; }
+.srcs li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 8px; padding-block: 10px; border-top: 1px solid var(--line); font-size: 14px; }
+.srcs li.flash { background: var(--amber-bg); }
+.srcs .sid { font-weight: 700; color: var(--blue); }
+.srcs .su { display: block; font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+.srcs .sm { color: var(--muted); font-size: 13px; }
+
+/* method */
+.method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.method h3 { font-size: 18px; font-weight: 700; color: var(--blue); margin-bottom: 14px; }
+.method li { font-size: 14.5px; line-height: 1.55; color: var(--ink2); padding-left: 16px; position: relative; }
+.method li + li { margin-top: 12px; }
+.method li::before { content: ""; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; background: var(--red); }
+.method li.first { color: var(--ink); font-weight: 500; }
+.method code { font-family: Roboto, Arial, sans-serif; font-weight: 500; background: var(--ground); padding: 0 4px; }
+
+.colophon { margin-top: 0; padding-block: 28px 56px; font-size: 13.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 960px) {
+  .hero, .grid3, .grid-2-1, .method, .grid2, .kvgrid { grid-template-columns: minmax(0, 1fr); }
+  .statstrip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lists { grid-template-columns: minmax(0, 1fr); }
+  .brand .tag { display: none; }
+}
+@media (max-width: 640px) {
+  .sheet > .wrap { padding-block: 36px 48px; }
+  .tabpanel > * + * { margin-top: 40px; }
+  .panel { padding: 20px 18px; }
+  .tab { padding: 11px 12px 12px; }
+  .brand .name { font-size: 26px; }
+  .stamps { gap: 8px; }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .facts > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 12px; align-items: center; padding: 16px; }
+  .facts span { margin-top: 0; }
+  .facts b { font-size: 26px; }
+  .hero p { font-size: 18px; }
+  .brow, .axis { grid-template-columns: minmax(0, 1fr) 96px; gap: 4px 12px; }
+  .brow .bl { grid-column: 1 / -1; }
+  .brow .bt { grid-column: 1; }
+  .brow .bv { grid-column: 2; font-size: 14px; }
+  .brow .bv small { display: block; margin-left: 0; }
+  .axis .sp { display: none; }
+  .axis .scale { grid-column: 1; }
+  .duo-row { grid-template-columns: minmax(0, 1fr); gap: 4px; padding-top: 14px; }
+  .duo .line { grid-template-columns: minmax(0, 1fr) 96px; gap: 12px; }
+  .statstrip { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .repgrid { grid-template-columns: minmax(0, 1fr); }
+  .num-lg { font-size: 32px; }
+  .seg button { padding: 8px 10px; font-size: 13.5px; }
+  .modrow { grid-template-columns: minmax(0, 1fr) !important; }
+}
+.modrow { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 12px 28px; padding-block: 18px; border-top: 1px solid var(--line); align-items: start; }
+.modrow:first-of-type { border-top: 0; padding-top: 4px; }
+.modrow .mn { font-size: 15px; font-weight: 700; }
+.modrow .mn small { display: block; font-weight: 400; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+.mb { display: grid; grid-template-columns: 64px minmax(0, 1fr) 52px; gap: 12px; align-items: center; padding-block: 3px; font-size: 13.5px; }
+.mb .bt { height: 10px; background: var(--track); position: relative; }
+.mb .mv { font-weight: 700; font-variant-numeric: tabular-nums; }
+.mb .ml { color: var(--ink2); }
+
+
+/* ---------- v3: country tabs ---------- */
+.ctab { max-width: 1180px; }
+.ctab > * + * { margin-top: 56px; }
+.ctab .lede { margin-bottom: 0; }
+.ctab .h-sec { margin-bottom: 10px; }
+.chead { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px 40px; flex-wrap: wrap; }
+.chead h1 { font-size: clamp(40px, 5.6vw, 60px); line-height: 1.05; font-weight: 700; color: var(--red); }
+.chead .meta { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 14px; font-size: 15px; color: var(--ink2); }
+.chead .cright { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; font-size: 13.5px; color: var(--muted); }
+.glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 28px; }
+.glance > div { background: var(--paper); padding: 24px; min-width: 0; }
+.glance .gv { margin-top: 10px; font-size: 34px; font-weight: 700; line-height: 1.1; color: var(--blue); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.glance .gv.na { color: var(--muted); font-weight: 400; }
+.glance .gn { margin-top: 8px; font-size: 14px; line-height: 1.45; color: var(--ink2); }
+.readgrid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 32px 64px; align-items: start; margin-top: 28px; }
+.readgrid .head { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 18px; }
+.readgrid .narr { font-size: 17px; line-height: 1.6; max-width: 66ch; }
+.rlists h4 { font-size: 14px; font-weight: 700; color: var(--blue); margin-bottom: 10px; }
+.rlists > div + div { margin-top: 28px; }
+.rlists li { font-size: 14.5px; line-height: 1.5; color: var(--ink2); padding-left: 14px; position: relative; }
+.rlists li + li { margin-top: 8px; }
+.rlists li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; background: var(--grey); }
+.rlists .none { color: var(--muted); padding-left: 0; }
+.rlists .none::before { display: none; }
+.cells { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 28px; }
+.scell { background: var(--paper); border: 1px solid var(--line); padding: 24px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.scell .sval { font-size: 34px; font-weight: 700; line-height: 1.15; color: var(--blue); font-variant-numeric: tabular-nums; margin-top: 6px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; overflow-wrap: anywhere; }
+.scell .sval.teal { color: var(--teal-ink); }
+.scell .sval.na { color: var(--muted); font-weight: 400; }
+.scell .sval.sm { font-size: 24px; gap: 4px 10px; }
+.scell .sval .dot { margin-top: 2px; }
+.scell .unit { font-size: 14.5px; color: var(--ink2); min-height: 1.5em; }
+.scell .asof { font-size: 13.5px; color: var(--muted); }
+.scell .src { font-size: 13.5px; }
+.scell .x { font-size: 13.5px; color: var(--ink2); line-height: 1.45; }
+.scell .cnote { font-size: 14px; color: var(--muted); line-height: 1.5; margin-top: 6px; }
+.gline { margin-top: 20px; font-size: 14.5px; color: var(--ink2); max-width: 80ch; }
+.gline b { font-weight: 500; color: var(--ink); }
+.ctab .repgrid { margin-top: 24px; }
+.ctab .srcs { margin-top: 20px; }
+.nextline { padding-top: 24px; border-top: 1px solid var(--line); font-size: 15px; color: var(--muted); }
+.nextline a { font-weight: 500; color: var(--blue); }
+.asec { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+.asec > div:first-child .lede { margin-bottom: 0; }
+@media (max-width: 960px) {
+  .glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .readgrid { grid-template-columns: minmax(0, 1fr); }
+  .chead .cright { align-items: flex-start; }
+}
+@media (max-width: 640px) {
+  .ctab > * + * { margin-top: 44px; }
+  .glance { grid-template-columns: minmax(0, 1fr); }
+  .glance > div { padding: 20px; }
+  .scell { padding: 20px; }
+  .cells { gap: 16px; }
+}
+
+/* ---------- print ---------- */
+@media print {
+  body, .sheet, .panel, .stat { background: #fff; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .tabs-outer, .seg, .chips, .noprint { display: none !important; }
+  .sheet > .wrap { padding-block: 16px; }
+  .panel, .stat, .callout, .kv, .rep, tr { break-inside: avoid; }
+  .tbl-wrap { overflow: visible; }
+  .matrix td, .matrix th { padding: 6px; font-size: 11px; }
+}
+</style>
+</head>
+<body>
+
+<header class="brandbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="org">CALP Network</span>
+      <span class="name">Cash Signal</span>
+      <span class="tag">cash-related indicators across humanitarian responses</span>
+    </div>
+    <div class="stamps">
+      <span class="stamp" id="stampDate">Data collected 5 Nov 2026</span>
+      <span class="stamp ai">AI-collected · unreviewed</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap tabs-outer">
+  <div class="tabs-scroll" id="tabsScroll">
+    <div class="tablist" role="tablist" aria-label="Cash Signal sections" id="tablist"></div>
+  </div>
+  <div class="tabs-fade" id="tabsFade" aria-hidden="true"></div>
+</div>
+
+<main class="sheet">
+  <div class="wrap" id="panels"></div>
+</main>
+
+<footer class="wrap colophon">
+  <span>CALP Network · Cash Signal · data collected 5 November 2026 · indicator set from CALP's cash advocacy data points</span>
+  <span>AI-collected, unreviewed. Every figure links to its source on the country tab.</span>
+</footer>
+
+<script>
+// ============================================================
+// CASH SIGNAL DATA — edit this block to update the dashboard.
+// One object per country. Schema: see schema.json.
+// Regional reps: fill the rep_notes fields for your countries.
+// ============================================================
+__CASH_SIGNAL_OBJECT__
+// ============================================================
+// END OF DATA BLOCK — everything below is rendering code.
+// ============================================================
+
+(function () {
+'use strict';
+
+/* ---------- helpers ---------- */
+function esc(s) {
+  return String(s === null || s === undefined ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : ''; }
+var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function fmtDate(s) {
+  if (!s) return '';
+  s = String(s);
+  var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+  if (m) return parseInt(m[3], 10) + ' ' + MONTHS[parseInt(m[2], 10) - 1] + ' ' + m[1];
+  m = /^(\d{4})-(\d{2})$/.exec(s);
+  if (m) return MONTHS[parseInt(m[2], 10) - 1] + ' ' + m[1];
+  if (s.length <= 12) return s;
+  m = /(\d{4})-(\d{2})-(\d{2})/.exec(s);
+  if (m) return parseInt(m[3], 10) + ' ' + MONTHS[parseInt(m[2], 10) - 1] + ' ' + m[1];
+  m = /[A-Z][a-z]{2} \d{4}/.exec(s);
+  if (m) return m[0];
+  m = /\d{4}(-\d{2})?/.exec(s);
+  return m ? fmtDate(m[0]) : s;
+}
+function yearOf(s) { var m = /\d{4}/.exec(String(s || '')); return m ? m[0] : ''; }
+function num1(v) { return Number(v).toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); }
+function fmtPct(v) { return num1(v) + '%'; }
+function fmtUsdM(v) { return 'US$' + num1(v / 1e6) + 'M'; }
+function fmtNum(v) { return Number(v).toLocaleString('en-US', { maximumFractionDigits: 2 }); }
+function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
+function getPath(o, p) { return p.split('.').reduce(function (a, k) { return a == null ? a : a[k]; }, o); }
+function has(d) { return d && d.available !== 'no' && d.value !== null && d.value !== undefined; }
+function median(a) { a = a.slice().sort(function (x, y) { return x - y; }); var n = a.length; return n ? (n % 2 ? a[(n - 1) / 2] : (a[n / 2 - 1] + a[n / 2]) / 2) : null; }
+function clip(s, n) { s = String(s || ''); return s.length > n ? s.slice(0, n - 1).replace(/[\s,;.(]+\S*$/, '') + '…' : s; }
+
+var D = CASH_SIGNAL;
+var REGION_ORDER = ['East and Southern Africa', 'West and Central Africa', 'MENA', 'Asia-Pacific'];
+var countries = D.countries.slice().sort(function (a, b) {
+  var ra = REGION_ORDER.indexOf(a.calp_region), rb = REGION_ORDER.indexOf(b.calp_region);
+  if (ra < 0) ra = 99; if (rb < 0) rb = 99;
+  return ra - rb || a.calp_region.localeCompare(b.calp_region) || a.name.localeCompare(b.name);
+});
+var N = countries.length;
+var byId = {};
+countries.forEach(function (c) { byId[c.id] = c; });
+var regions = [];
+countries.forEach(function (c) { if (regions.indexOf(c.calp_region) < 0) regions.push(c.calp_region); });
+var SHORT = { opt: 'Gaza' }, SLUG = { opt: 'gaza', southsudan: 'south-sudan' }, bySlug = {};
+countries.forEach(function (c) { c.short = SHORT[c.id] || c.name; c.slug = SLUG[c.id] || c.id; bySlug[c.slug] = c; });
+var tabCountries = countries.slice().sort(function (a, b) { return a.short.localeCompare(b.short); });
+function isReviewed(c) { return !!(c.rep_notes && c.rep_notes.reviewed_by); }
+
+/* ---------- indicator model: six groups mirroring the Excel ---------- */
+function P(key, label, path, o) { return Object.assign({ key: key, label: label, path: path, kind: 'pct' }, o || {}); }
+var GROUPS = [
+  { id: 'modality', title: 'Modality preference', short: 'Preference', rows: [
+    P('pref_cash', 'Prefer cash', 'modality_preference.cash_pct'),
+    P('pref_vouchers', 'Prefer vouchers', 'modality_preference.vouchers_pct'),
+    P('pref_inkind', 'Prefer in-kind', 'modality_preference.in_kind_pct'),
+    P('pref_other', 'Prefer other', 'modality_preference.other_pct') ] },
+  { id: 'cost', title: 'Cost efficiency', short: 'Cost efficiency', rows: [
+    P('ce_mpc', 'Multi-purpose cash', 'cost_efficiency.mpc', { kind: 'cost' }),
+    P('ce_sect', 'Sectoral cash', 'cost_efficiency.sectoral_cash', { kind: 'cost' }),
+    P('ce_vouch', 'Vouchers', 'cost_efficiency.vouchers', { kind: 'cost' }),
+    P('ce_food', 'In-kind food', 'cost_efficiency.in_kind_food', { kind: 'cost' }) ] },
+  { id: 'req', title: 'Plan requirements (% of planned response)', short: 'Plan requirements', rows: [
+    P('rq_mpc', 'MPC as % of plan requirements', 'hnrp_requirements.mpc_pct'),
+    P('rq_sect', 'Sectoral cash as % of plan requirements', 'hnrp_requirements.sectoral_cash_pct'),
+    P('rq_vouch', 'Vouchers as % of plan requirements', 'hnrp_requirements.vouchers_pct'),
+    P('rq_cva', 'Total CVA as % of plan requirements', 'hnrp_requirements.total_cva_pct') ] },
+  { id: 'fund', title: 'Overall funding (% of funded response)', short: 'Funding received', rows: [
+    P('fd_mpc', 'MPC as % of funding received', 'overall_funding.mpc_pct'),
+    P('fd_mpcreq', 'MPC funding received as % of MPC requirement', 'overall_funding.mpc_funded_pct_of_mpc_req'),
+    P('fd_sect', 'Sectoral cash as % of funding received', 'overall_funding.sectoral_cash_pct'),
+    P('fd_vouch', 'Vouchers as % of funding received', 'overall_funding.vouchers_pct') ] },
+  { id: 'cbpf', title: 'OCHA pooled funds (CBPF)', short: 'CBPF', rows: [
+    P('pf_alloc', 'Allocations', 'pooled_funds.cbpf_allocations_usd', { kind: 'usd' }),
+    P('pf_mpc', 'MPC as % of allocations', 'pooled_funds.mpc_pct'),
+    P('pf_sect', 'Sectoral cash as % of allocations', 'pooled_funds.sectoral_cash_pct'),
+    P('pf_vouch', 'Vouchers as % of allocations', 'pooled_funds.vouchers_pct') ] },
+  { id: 'sys', title: 'Systems', short: 'Systems', rows: [
+    { key: 'sy_feas', label: 'Cash feasibility study', kind: 'sys', fn: 'feas' },
+    { key: 'sy_mkt', label: 'Market monitoring', kind: 'sys', fn: 'mkt' },
+    { key: 'sy_cwg', label: 'Cash working group (CWG)', kind: 'sys', fn: 'cwg' },
+    { key: 'sy_27', label: '2027 plan status', kind: 'sys', fn: 'p27' } ] }
+];
+var ALL_SPECS = [], spec = {};
+GROUPS.forEach(function (g) { g.rows.forEach(function (r) { r.group = g; ALL_SPECS.push(r); spec[r.key] = r; }); });
+var TOTAL_SPECS = ALL_SPECS.length;
+
+function model(c, sp) {
+  if (sp.kind === 'sys') return sysModel(c, sp.fn);
+  var d = getPath(c, sp.path) || {};
+  var m = { avail: d.available || 'no', asof: d.as_of || '', sids: d.source_ids || [], note: d.note || '', extra: [], d: d };
+  if (!has(d)) { m.avail = 'no'; m.main = 'n/a'; return m; }
+  if (sp.kind === 'pct') {
+    m.main = fmtPct(d.value); m.pct = d.value; m.over = d.value > 100;
+    if (d.usd !== null && d.usd !== undefined) m.sub = fmtUsdM(d.usd);
+  } else if (sp.kind === 'usd') { m.main = fmtUsdM(d.value); }
+  else if (sp.kind === 'cost') { m.main = fmtNum(d.value); m.unit = d.unit || ''; }
+  return m;
+}
+function sysModel(c, fn) {
+  var m = { avail: 'no', main: 'n/a', asof: '', sids: [], note: '', extra: [], state: 'unknown', short: '', detail: '' };
+  if (fn === 'feas') {
+    var f = c.cash_feasibility || {};
+    m.sids = f.source_ids || []; m.note = f.note || ''; m.asof = f.year ? String(f.year) : '';
+    if (f.exists === 'yes') {
+      m.avail = 'yes'; m.main = 'Yes'; m.state = 'g'; m.short = f.year ? 'Study, ' + f.year : 'Study found';
+      m.detail = clip(f.title, 70);
+      m.extra.push({ text: [f.title, f.author, f.year].filter(Boolean).join(' · '), url: f.url });
+    } else if (f.exists === 'no') { m.avail = 'yes'; m.main = 'None exists'; m.state = 'r'; m.short = 'None found'; m.detail = clip(f.note, 80); }
+    else { m.short = 'Unknown'; m.detail = clip(f.note, 80); }
+  } else if (fn === 'mkt') {
+    var k = c.market_monitoring || {};
+    m.sids = k.source_ids || []; m.note = k.note || ''; m.asof = k.last_published || '';
+    if (k.functional === 'yes' || k.functional === 'partial' || k.functional === 'no') {
+      m.avail = k.functional === 'partial' ? 'partial' : 'yes'; m.main = cap(k.functional);
+      m.state = k.functional === 'yes' ? 'g' : k.functional === 'partial' ? 'a' : 'r';
+      m.short = k.functional === 'yes' ? 'Functional' : k.functional === 'partial' ? 'Partial' : 'None';
+      m.detail = [clip(k.system, 60), k.frequency].filter(Boolean).join(' · ');
+      var bits = [k.system, k.frequency ? 'frequency: ' + k.frequency : '', k.last_published ? 'last published ' + fmtDate(k.last_published) : ''].filter(Boolean).join(' · ');
+      if (bits) m.extra.push({ text: bits, url: k.url });
+    } else { m.short = 'Unknown'; m.detail = clip(k.note, 80); }
+  } else if (fn === 'cwg') {
+    var w = c.cwg || {};
+    m.sids = w.source_ids || []; m.note = w.evidence_note || '';
+    if (w.exists === 'yes' || w.exists === 'no') {
+      m.avail = 'yes'; m.main = cap(w.exists); m.state = w.exists === 'yes' ? 'g' : 'r';
+      m.short = w.exists === 'yes' ? 'CWG active' : 'No CWG';
+      m.detail = [w.leads && w.leads.length ? 'Leads: ' + clip(w.leads.join(', '), 50) : '', 'CashCap: ' + (w.cashcap_support || 'unknown')].filter(Boolean).join(' · ');
+      if (w.name) m.extra.push({ text: w.name, url: w.url });
+      if (w.leads && w.leads.length) m.extra.push({ text: 'Leads: ' + w.leads.join('; ') });
+      m.extra.push({ text: 'CashCap support: ' + (w.cashcap_support || 'unknown') });
+    } else { m.short = 'Unknown'; m.detail = 'CashCap: ' + (w.cashcap_support || 'unknown'); }
+  } else if (fn === 'p27') {
+    var p = c.plan_2027 || {};
+    m.sids = p.source_ids || []; m.note = p.note || '';
+    if (p.status && p.status !== 'unknown') {
+      m.avail = 'yes'; m.main = cap(p.status); m.state = p.status === 'published' ? 'g' : 'a'; m.short = cap(p.status); m.detail = clip(p.note, 80);
+    } else { m.short = 'Unknown'; m.detail = clip(p.note, 80); }
+  }
+  return m;
+}
+function countAvail(c) { return ALL_SPECS.filter(function (s) { return model(c, s).avail !== 'no'; }).length; }
+function groupAvail(c, g) { return g.rows.filter(function (s) { return model(c, s).avail !== 'no'; }).length; }
+function quality(c) {
+  var n = countAvail(c);
+  return { n: n, key: n >= 12 ? 'g' : n >= 7 ? 'a' : 'r', word: n >= 12 ? 'green' : n >= 7 ? 'amber' : 'red' };
+}
+var QUALITY_RULE = 'Source quality rule: green when 12 or more of ' + TOTAL_SPECS + ' indicators were found, amber for 7 to 11, red for 6 or fewer. Partial figures count as found.';
+
+/* ---------- source links ---------- */
+function srcOf(c, sid) { for (var i = 0; i < c.sources.length; i++) if (c.sources[i].id === sid) return c.sources[i]; return null; }
+function srcLinks(c, sids) {
+  return (sids || []).map(function (sid) {
+    var s = srcOf(c, sid); if (!s) return '';
+    var u = safeUrl(s.url), label = esc(s.publisher || s.title || sid);
+    return (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener" title="' + esc(s.title) + '">' + label + '</a>' : label) +
+      ' <a class="cite" href="#" data-src="' + esc(sid) + '" data-c="' + esc(c.id) + '" aria-label="Show source ' + esc(sid) + ' in the sources list">' + esc(sid) + '</a>';
+  }).filter(Boolean).join(', ');
+}
+function citeText(c, text) {
+  return esc(text).replace(/\[(s\d+)\]/g, function (m, sid) {
+    return srcOf(c, sid) ? '<a class="cite" href="#" data-src="' + sid + '" data-c="' + esc(c.id) + '" aria-label="Show source ' + sid + ' in the sources list">[' + sid + ']</a>' : m;
+  });
+}
+
+/* ---------- small renderers ---------- */
+function secHead(title, lede) {
+  return '<div><div class="h-sec"><span class="mark" aria-hidden="true"><i></i><i></i></span><h2>' + esc(title) + '</h2></div>' + (lede ? '<p class="lede">' + lede + '</p>' : '') + '</div>';
+}
+function cLink(c) { return '<a class="cl" href="#' + esc(c.slug) + '">' + esc(c.name) + '</a>'; }
+function leaderboard(title, sub, rows, fillCls, fixedMax) {
+  var mx = 0; rows.forEach(function (r) { if (r.w > mx) mx = r.w; }); mx = fixedMax || mx || 1;
+  var h = '<section class="panel"><div class="panel-h"><h3>' + esc(title) + '</h3><p class="sub">' + sub + '</p></div><ol class="lb">';
+  rows.forEach(function (r) {
+    h += '<li><div class="top">' + cLink(r.c) + '<b>' + esc(r.val) + '</b></div><div class="bt" title="' + esc(r.title || '') + '"><span class="fill ' + (fillCls || '') + '" style="width:' + (r.w / mx * 100).toFixed(1) + '%"></span></div></li>';
+  });
+  if (!rows.length) h += '<li class="muted">No country has the data for this view.</li>';
+  return h + '</ol></section>';
+}
+function noneLine(label, list) {
+  if (!list.length) return '';
+  return '<p class="none-line"><b>' + esc(label) + ' (' + list.length + ').</b> ' + list.join(', ') + '.</p>';
+}
+
+/* ================= TAB: Overview ================= */
+function overviewHTML() {
+  var got = 0; countries.forEach(function (c) { got += countAvail(c); });
+  var total = N * TOTAL_SPECS;
+  var fundedVals = countries.filter(function (c) { return has(c.overall_funding.mpc_funded_pct_of_mpc_req); }).map(function (c) { return c.overall_funding.mpc_funded_pct_of_mpc_req.value; });
+  var med = median(fundedVals);
+
+  var h = '<section class="hero"><div><h1>Cash Signal</h1><p>Where cash sits in ' + N + ' humanitarian responses: what plans ask for, what gets funded, what people say they want, and what nobody has measured yet.</p></div>' +
+    '<div class="facts" aria-label="Headline facts">' +
+    '<div><b>' + N + '</b><span>countries covered</span></div>' +
+    '<div><b>' + got + ' of ' + total + '</b><span>indicators found (' + Math.round(got / total * 100) + '%)</span></div>' +
+    '<div><b>' + (med === null ? 'n/a' : fmtPct(med)) + '</b><span>MPC funded vs MPC requirement, median of ' + fundedVals.length + ' countries with data</span></div>' +
+    '</div></section>';
+
+  /* leaderboards */
+  var fwd = countries.filter(function (c) { return has(c.hnrp_requirements.mpc_pct); }).map(function (c) { var v = c.hnrp_requirements.mpc_pct.value; return { c: c, w: v, val: fmtPct(v), title: c.hnrp_requirements.mpc_pct.note }; })
+    .sort(function (a, b) { return b.w - a.w; }).slice(0, 5);
+  var gap = countries.filter(function (c) { return has(c.modality_preference.cash_pct) && has(c.hnrp_requirements.mpc_pct); }).map(function (c) {
+    var p = c.modality_preference.cash_pct.value, r = c.hnrp_requirements.mpc_pct.value, g = p - r;
+    return { c: c, w: g, val: '+' + num1(g) + ' pts', title: 'Prefer cash ' + fmtPct(p) + ' minus MPC ' + fmtPct(r) + ' of plan requirements'}; })
+    .sort(function (a, b) { return b.w - a.w; }).slice(0, 5);
+  var least = countries.map(function (c) { var n = countAvail(c); return { c: c, w: n, val: n + ' of ' + TOTAL_SPECS, title: '' }; })
+    .sort(function (a, b) { return a.w - b.w || a.c.name.localeCompare(b.c.name); }).slice(0, 5);
+  h += '<div class="grid3">' +
+    leaderboard('Most cash-forward plans', 'Multi-purpose cash as a share of the plan’s total requirements. Top five of ' + countries.filter(function (c) { return has(c.hnrp_requirements.mpc_pct); }).length + ' countries with a figure.', fwd, 'teal') +
+    leaderboard('Biggest gap between preference and provision', 'Share preferring cash minus MPC share of plan requirements, in percentage points. Only countries with both figures.', gap, '') +
+    leaderboard('Least known', 'Countries with the fewest of ' + TOTAL_SPECS + ' indicators found. A short bar is a gap in what the sector can see.', least, 'gry', TOTAL_SPECS) +
+    '</div>';
+
+  /* preference vs provision */
+  h += '<div>' + secHead('Preference and provision', 'People who say they want cash, set against how much of the plan asks for it.') + prefChartHTML() + '</div>';
+
+  /* what the sector does not know */
+  h += '<div>' + secHead('What the sector does not know', 'The five indicators found in the fewest responses.') + availPanelHTML() + '</div>';
+  return h;
+}
+function prefChartHTML() {
+  var both = [], missing = [];
+  countries.forEach(function (c) {
+    var p = c.modality_preference.cash_pct, r = c.hnrp_requirements.mpc_pct;
+    if (has(p) && has(r)) both.push({ c: c, p: p, r: r }); else missing.push({ c: c, p: p, r: r });
+  });
+  both.sort(function (a, b) { return b.p.value - a.p.value; });
+  var h = '<section class="panel"><div class="panel-h"><h3>Preference vs provision</h3><p class="sub">Share of surveyed people preferring cash, against multi-purpose cash as a share of plan requirements. Survey year, geography and wording differ by country, so read the note on each country tab.</p></div>';
+  h += '<div class="legend"><span><i class="sw blue"></i>Prefer cash (% of surveyed people)</span><span><i class="sw teal"></i>MPC (% of plan requirements)</span><span><span class="tagp partial">partial</span> figure carries a caveat</span></div>';
+  h += '<div role="img" aria-label="Paired bars comparing preference for cash with MPC share of plan requirements for ' + both.length + ' countries. Values are printed beside each bar.">';
+  both.forEach(function (x) {
+    h += '<div class="duo-row"><div class="bl">' + cLink(x.c) + '</div><div class="duo">' +
+      '<div class="line"><div class="bt" title="' + esc(x.p.note) + '"><span class="fill" style="width:' + Math.min(x.p.value, 100) + '%"></span></div><div class="bv"><b>' + fmtPct(x.p.value) + '</b><small>' + esc(yearOf(x.p.as_of)) + '</small> ' + (x.p.available === 'partial' ? '<span class="tagp partial">partial</span>' : '') + '</div></div>' +
+      '<div class="line"><div class="bt" title="' + esc(x.r.note) + '"><span class="fill teal" style="width:' + Math.min(x.r.value, 100) + '%"></span></div><div class="bv"><b>' + fmtPct(x.r.value) + '</b><small>' + esc(yearOf(x.r.as_of)) + '</small></div></div></div></div>';
+  });
+  h += '</div>';
+  h += noneLine('No comparable data', missing.map(function (x) {
+    var why = !has(x.p) && !has(x.r) ? 'neither figure' : !has(x.p) ? 'no preference figure' : 'no MPC line in plan';
+    return cLink(x.c) + ' (' + why + ')';
+  }));
+  return h + '</section>';
+}
+function availRows() {
+  return ALL_SPECS.map(function (s, i) {
+    var yes = 0, part = 0;
+    countries.forEach(function (c) { var a = model(c, s).avail; if (a === 'yes') yes++; else if (a === 'partial') part++; });
+    return { s: s, yes: yes, part: part, tot: yes + part, i: i };
+  }).sort(function (a, b) { return a.tot - b.tot || a.yes - b.yes || a.i - b.i; });
+}
+function availPanelHTML() {
+  var rows = availRows().slice(0, 5);
+  var h = '<section class="panel"><div class="panel-h"><h3>Emptiest indicators</h3><p class="sub">How many of the ' + N + ' responses have a figure or finding. Short bars are what the sector does not yet know. <a href="#method" data-tab="method">How we looked</a></p></div>';
+  h += '<div class="legend"><span><i class="sw blue"></i>Found</span><span><i class="sw gry"></i>Found with a caveat (partial)</span></div>';
+  h += '<div role="img" aria-label="Bars showing how many of ' + N + ' countries have each of the five emptiest indicators. Counts are printed.">';
+  rows.forEach(function (r) {
+    h += '<div class="brow"><div class="bl">' + esc(r.s.label) + '<small class="muted" style="display:block;font-weight:400">' + esc(r.s.group.short) + '</small></div><div class="bt">' +
+      (r.yes ? '<span class="fill" style="width:' + (r.yes / N * 100) + '%"></span>' : '') +
+      (r.part ? '<span class="fill gry" style="left:' + (r.yes / N * 100) + '%;width:' + (r.part / N * 100) + '%;border-radius:0 2px 2px 0"></span>' : '') +
+      '</div><div class="bv"><b>' + r.tot + ' of ' + N + '</b>' + (r.part ? '<small>' + r.part + ' partial</small>' : '') + '</div></div>';
+  });
+  return h + '</div></section>';
+}
+
+/* ================= TAB: Plans & funding ================= */
+var PLAN_PANELS = [
+  { id: 'req', title: 'HNRP requirements', sub: 'How much of each plan’s financial requirements is planned as cash or vouchers.', metrics: [
+    { k: 'rq_mpc', label: 'MPC % of requirements', d: 'Multi-purpose cash requirement as a share of total plan requirements.' },
+    { k: 'rq_cva', label: 'Total CVA %', d: 'All cash and voucher assistance as a share of total plan requirements.' },
+    { k: 'rq_sect', label: 'Sectoral cash %', d: 'Sectoral cash as a share of total plan requirements.' },
+    { k: 'rq_vouch', label: 'Vouchers %', d: 'Vouchers as a share of total plan requirements.' } ] },
+  { id: 'fund', title: 'Overall funding', sub: 'How much of the funding received (FTS) reached cash and voucher lines.', metrics: [
+    { k: 'fd_mpcreq', label: 'MPC funded vs MPC requirement', d: 'FTS funding tagged to MPC divided by the MPC requirement. Over 100% is reported as found.' },
+    { k: 'fd_mpc', label: 'MPC % of funding', d: 'MPC as a share of all funding received against the plan.' },
+    { k: 'fd_sect', label: 'Sectoral cash %', d: 'Sectoral cash as a share of funding received.' },
+    { k: 'fd_vouch', label: 'Vouchers %', d: 'Vouchers as a share of funding received.' } ] },
+  { id: 'cbpf', title: 'OCHA and CBPF funding', sub: 'How much of each country-based pooled fund’s allocations went to cash and vouchers.', metrics: [
+    { k: 'pf_mpc', label: 'MPC % of allocations', d: 'MPC as a share of pooled-fund allocations.' },
+    { k: 'pf_sect', label: 'Sectoral cash %', d: 'Sectoral cash as a share of pooled-fund allocations.' },
+    { k: 'pf_vouch', label: 'Vouchers %', d: 'Vouchers as a share of pooled-fund allocations.' } ] }
+];
+var planSel = {};
+PLAN_PANELS.forEach(function (p) { planSel[p.id] = p.metrics[0].k; });
+function niceMax(v) { var steps = [5, 10, 20, 25, 40, 50, 75, 100]; for (var i = 0; i < steps.length; i++) if (v <= steps[i]) return steps[i]; return 100; }
+function planBody(pp) {
+  var mk = planSel[pp.id], met = pp.metrics.filter(function (m) { return m.k === mk; })[0], sp = spec[mk];
+  var rows = [], none = [];
+  countries.forEach(function (c) {
+    var m = model(c, sp);
+    if (m.avail === 'no') {
+      if (pp.id === 'cbpf' && c.pooled_funds && c.pooled_funds.cbpf_exists === false) none.push(cLink(c) + ' (no pooled fund)');
+      else none.push(cLink(c));
+    } else rows.push({ c: c, m: m });
+  });
+  rows.sort(function (a, b) { return b.m.pct - a.m.pct || a.c.name.localeCompare(b.c.name); });
+  var mx = 0, anyOver = false; rows.forEach(function (r) { if (r.m.pct > mx) mx = r.m.pct; if (r.m.over) anyOver = true; });
+  var axisMax = anyOver ? 100 : niceMax(mx || 5);
+  var h = '<p class="sub" style="margin:-8px 0 20px">' + esc(met.d) + ' Bars run from 0 to ' + axisMax + '%' + (anyOver ? '; longer values are capped and marked' : '') + '.</p>';
+  h += '<div class="axis" aria-hidden="true"><span class="sp"></span><span class="scale"><span>0%</span><span>' + axisMax / 2 + '%</span><span>' + axisMax + '%</span></span><span class="sp"></span></div>';
+  h += '<div role="img" aria-label="Bars of ' + esc(met.label) + ' for ' + rows.length + ' countries, sorted high to low. Values are printed.">';
+  rows.forEach(function (r) {
+    var w = Math.min(r.m.pct / axisMax * 100, 100), capped = r.m.pct > axisMax;
+    h += '<div class="brow"><div class="bl">' + cLink(r.c) + '</div><div class="bt" title="' + esc(r.m.note) + '"><span class="fill' + (sp.key.indexOf('mpc') > -1 || sp.key === 'rq_cva' ? ' teal' : '') + (capped ? ' cap' : '') + '" style="width:' + w.toFixed(1) + '%"></span></div>' +
+      '<div class="bv"><b>' + fmtPct(r.m.pct) + '</b><small>' + esc(yearOf(r.m.asof)) + '</small>' + (r.m.avail === 'partial' ? ' <span class="tagp partial">partial</span>' : '') + (r.m.over ? ' <span class="tagp over">over 100%</span>' : '') + '</div></div>';
+  });
+  h += '</div>';
+  if (!rows.length) h += '<p class="muted">No country has this figure.</p>';
+  h += noneLine('No figure', none);
+  return h;
+}
+function plansHTML() {
+  var h = secHead('Plans and funding', 'What each plan asks for, what funding arrived, and what the pooled funds allocated. Countries without a figure are listed under each chart and never drawn as zero.');
+  PLAN_PANELS.forEach(function (pp) {
+    h += '<section class="panel" id="pp-' + pp.id + '"><div class="panel-top"><div><h3 style="font-size:20px;font-weight:700">' + esc(pp.title) + '</h3><p class="sub">' + esc(pp.sub) + '</p></div>' +
+      '<div class="seg" role="group" aria-label="Metric for ' + esc(pp.title) + '">' + pp.metrics.map(function (m) {
+        return '<button type="button" data-pp="' + pp.id + '" data-k="' + m.k + '" aria-pressed="' + (planSel[pp.id] === m.k) + '">' + esc(m.label) + '</button>'; }).join('') + '</div></div>' +
+      '<div class="ppbody">' + planBody(pp) + '</div></section>';
+  });
+  return h;
+}
+
+/* ================= TAB: What people want ================= */
+var MODS = [
+  { k: 'cash_pct', l: 'Cash', cls: '' }, { k: 'vouchers_pct', l: 'Vouchers', cls: 'mid' },
+  { k: 'in_kind_pct', l: 'In-kind', cls: 'gry' }, { k: 'other_pct', l: 'Other', cls: 'gry' } ];
+function prefHTML() {
+  var rows = [], none = [];
+  countries.forEach(function (c) {
+    var mp = c.modality_preference, got = MODS.filter(function (m) { return has(mp[m.k]); });
+    if (!got.length) none.push(cLink(c)); else rows.push({ c: c, mp: mp, got: got });
+  });
+  rows.sort(function (a, b) { var av = has(a.mp.cash_pct) ? a.mp.cash_pct.value : -1, bv = has(b.mp.cash_pct) ? b.mp.cash_pct.value : -1; return bv - av || a.c.name.localeCompare(b.c.name); });
+  var h = secHead('What people want', 'What affected people say they prefer, from the surveys the plans cite.');
+  h += '<section class="panel"><div class="panel-h"><h3>Preferred modality by country</h3><p class="sub">Share of surveyed people naming each modality. Many surveys allow more than one answer, so bars need not add up to 100%. Survey, year and wording differ, so compare with care.</p></div>';
+  h += '<div class="legend"><span><i class="sw blue"></i>Cash</span><span><i class="sw mid"></i>Vouchers</span><span><i class="sw gry"></i>In-kind and other</span><span><span class="tagp partial">partial</span> figure carries a caveat</span></div>';
+  rows.forEach(function (r) {
+    var anyPartial = r.got.some(function (m) { return r.mp[m.k].available === 'partial'; });
+    var yr = yearOf(r.mp.cash_pct.as_of || (r.got[0] && r.mp[r.got[0].k].as_of));
+    h += '<div class="modrow"><div class="mn">' + cLink(r.c) + (anyPartial ? ' <span class="tagp partial">partial</span>' : '') + '<small title="' + esc(r.mp.survey_note) + '">' + esc(clip(String(r.mp.survey_note || '').split(/\.\s/)[0].replace(/\.$/, ''), 120)) + (yr ? ' (' + esc(yr) + ')' : '') + '</small></div><div role="img" aria-label="Preference bars for ' + esc(r.c.name) + '">';
+    r.got.forEach(function (m) {
+      var d = r.mp[m.k];
+      h += '<div class="mb" title="' + esc(d.note) + '"><span class="ml">' + m.l + '</span><span class="bt"><span class="fill ' + m.cls + '" style="width:' + Math.min(d.value, 100) + '%"></span></span><span class="mv">' + fmtPct(d.value).replace('.0%', '%') + '</span></div>';
+    });
+    h += '</div></div>';
+  });
+  h += noneLine('No sourced split', none);
+  h += '</section>';
+
+  /* cost efficiency */
+  var found = [];
+  countries.forEach(function (c) {
+    [['ce_mpc'], ['ce_sect'], ['ce_vouch'], ['ce_food']].forEach(function (k) {
+      var m = model(c, spec[k[0]]);
+      if (m.avail !== 'no') found.push({ c: c, sp: spec[k[0]], m: m });
+    });
+  });
+  var mpcCount = countries.filter(function (c) { return model(c, spec.ce_mpc).avail !== 'no'; }).length;
+  h += '<section class="panel"><div class="panel-h"><h3>Cost efficiency</h3></div>';
+  h += '<p style="font-size:22px;font-weight:700;line-height:1.35;max-width:34em">' + (mpcCount === 0 ? 'No country has a sourced cost-efficiency figure for multi-purpose cash.' : mpcCount + ' of ' + N + ' countries have a sourced cost-efficiency figure for multi-purpose cash.') + '</p>';
+  if (found.length) {
+    h += '<p class="sub" style="margin-top:16px">What does exist is partial and not comparable:</p><ul style="margin-top:12px">';
+    found.forEach(function (f) {
+      h += '<li style="padding-block:10px;border-top:1px solid var(--line);font-size:15px"><b style="font-weight:500">' + cLink(f.c) + ' · ' + esc(f.sp.label) + ':</b> ' + esc(f.m.main) + ' ' + esc(f.m.unit || '') + ' <span class="tagp partial">' + esc(f.m.avail === 'partial' ? 'partial' : 'found') + '</span> <span class="muted">' + esc(clip(f.m.note, 140)) + '</span></li>';
+    });
+    h += '</ul>';
+  }
+  h += '<p class="sub" style="margin-top:20px">CALP looked in each plan, cash working group output and agency report for a cost-transfer ratio, cost per beneficiary or similar for MPC, sectoral cash, vouchers and in-kind food. The notes on each country page record what was searched.</p></section>';
+  return h;
+}
+
+/* ================= TAB: Systems ================= */
+function sysCellHTML(m) {
+  var dot = m.state === 'g' ? 'g' : m.state === 'a' ? 'a' : m.state === 'r' ? 'r' : 'n';
+  return '<div class="cell" title="' + esc(m.note) + '"><span class="dot ' + dot + '" aria-hidden="true"></span><div class="t"><b>' + esc(m.short) + '</b>' + (m.detail ? '<span>' + esc(m.detail) + '</span>' : '') + '</div></div>';
+}
+function systemsHTML() {
+  var h = secHead('Systems', 'The structures that make cash work in a response: a feasibility study, market monitoring, a cash working group with CashCap support, and a 2027 plan.');
+  h += '<section class="panel"><div class="legend"><span><i class="dot g"></i>Yes</span><span><i class="dot a"></i>Partial or in preparation</span><span><i class="dot n"></i>Unknown</span><span><i class="dot r"></i>No</span><span class="muted">Each dot is paired with a word. Hover a cell for the full note.</span></div><div class="tbl-wrap"><table class="sys"><thead><tr><th scope="col">Country</th><th scope="col">Cash feasibility study</th><th scope="col">Market monitoring</th><th scope="col">CWG and CashCap</th><th scope="col">2027 plan</th></tr></thead><tbody>';
+  countries.forEach(function (c) {
+    h += '<tr><td class="cn"><a href="#' + esc(c.slug) + '">' + esc(c.name) + '</a><br><small class="muted" style="font-weight:400">' + esc(c.calp_region) + '</small></td>' +
+      ['feas', 'mkt', 'cwg', 'p27'].map(function (f) { return '<td>' + sysCellHTML(sysModel(c, f)) + '</td>'; }).join('') + '</tr>';
+  });
+  return h + '</tbody></table></div></section>';
+}
+
+/* ================= COUNTRY TABS (v3) ================= */
+var GROUP_SUB = {
+  modality: 'What affected people say they want. The strongest argument for cash is that people ask for it.',
+  cost: 'What each modality costs to deliver. Without a sourced figure, the efficiency case for cash rests on assertion.',
+  req: 'How much of the plan is budgeted as cash or vouchers. This is intent, before any money arrives.',
+  fund: 'How much of the money received reached cash and vouchers. Set against requirements, it shows whether the intent was funded.',
+  cbpf: 'How much of the OCHA country-based pooled fund went to cash. These funds are flexible money that donors can steer.',
+  sys: 'The structures that let cash scale: a feasibility study, market monitoring, a working group and a place in next year’s plan. A gap here slows every programme.'
+};
+var CELLS = {
+  pref_cash: ['Prefer cash', 'of surveyed people'], pref_vouchers: ['Prefer vouchers', 'of surveyed people'],
+  pref_inkind: ['Prefer in-kind', 'of surveyed people'], pref_other: ['Prefer other', 'of surveyed people'],
+  ce_mpc: ['Multi-purpose cash', ''], ce_sect: ['Sectoral cash', ''], ce_vouch: ['Vouchers', ''], ce_food: ['In-kind food', ''],
+  rq_mpc: ['MPC', 'of plan requirements'], rq_sect: ['Sectoral cash', 'of plan requirements'],
+  rq_vouch: ['Vouchers', 'of plan requirements'], rq_cva: ['Total CVA', 'of plan requirements'],
+  fd_mpc: ['MPC', 'of funding received'], fd_mpcreq: ['MPC funded', 'of the MPC requirement'],
+  fd_sect: ['Sectoral cash', 'of funding received'], fd_vouch: ['Vouchers', 'of funding received'],
+  pf_alloc: ['Allocations', 'to the pooled fund'], pf_mpc: ['MPC', 'of allocations'],
+  pf_sect: ['Sectoral cash', 'of allocations'], pf_vouch: ['Vouchers', 'of allocations']
+};
+function srcShort(c, sids) { return srcLinks(c, (sids || []).slice(0, 2)); }
+function cellHTML(c, sp) {
+  var m = model(c, sp), na = m.avail === 'no', h;
+  if (sp.kind === 'sys') {
+    var dot = m.state === 'g' ? 'g' : m.state === 'a' ? 'a' : m.state === 'r' ? 'r' : 'n';
+    var word = na && m.state === 'unknown' ? 'Unknown' : m.main;
+    h = '<div class="scell"><div class="label">' + esc(sp.label) + '</div><div class="sval sm' + (dot === 'n' ? ' na' : '') + '"><span class="dot ' + dot + '" aria-hidden="true"></span><span>' + esc(word) + '</span></div>';
+    m.extra.forEach(function (x) { var u = safeUrl(x.url); h += '<div class="x">' + (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(x.text) + '</a>' : esc(x.text)) + '</div>'; });
+    if (m.asof && sp.key === 'sy_mkt') h += '<div class="asof">last published ' + esc(fmtDate(m.asof)) + '</div>';
+    var sl0 = srcShort(c, m.sids); if (sl0) h += '<div class="src">' + sl0 + '</div>';
+    h += '<div class="cnote">' + esc(m.note || 'No detail found in the sources searched.') + '</div>';
+    return h + '</div>';
+  }
+  var meta = CELLS[sp.key] || [sp.label, ''];
+  var mpc = /_mpc/.test(sp.key);
+  var unit = na ? meta[1] : (m.unit ? m.unit : meta[1]);
+  if (!na && m.sub) unit = (unit ? unit + ' · ' : '') + m.sub;
+  var tags = (m.avail === 'partial' ? '<span class="tagp partial">partial</span>' : '') + (m.over ? '<span class="tagp over">over 100%</span>' : '');
+  h = '<div class="scell"><div class="label">' + esc(meta[0]) + '</div><div class="sval' + (na ? ' na' : mpc ? ' teal' : '') + '"><span>' + esc(m.main) + '</span>' + (na ? '' : tags) + '</div>' +
+    '<div class="unit">' + esc(unit) + '</div>' +
+    '<div class="asof">' + (m.asof ? 'as of ' + esc(fmtDate(m.asof)) : (na ? 'not found' : '')) + '</div>';
+  var sl = srcShort(c, m.sids); if (sl) h += '<div class="src">' + sl + '</div>';
+  if (m.note) h += '<div class="cnote">' + esc(m.note) + '</div>';
+  else if (na) h += '<div class="cnote">No figure found in the sources searched.</div>';
+  return h + '</div>';
+}
+function groupSection(c, g) {
+  var h = '<section aria-label="' + esc(g.title) + '">' + secHead(g.title, GROUP_SUB[g.id]);
+  var cells = g.rows.map(function (sp) { return cellHTML(c, sp); }).join('');
+  if (g.id === 'cbpf') {
+    if (c.pooled_funds && c.pooled_funds.cbpf_exists === false) {
+      return h + '<p class="gline">There is no country-based pooled fund in this response, so there is nothing to report here.</p></section>';
+    }
+    h += '<p class="gline"><b>Fund:</b> ' + esc((c.pooled_funds && c.pooled_funds.cbpf_name) || 'name not recorded') + '</p>';
+  }
+  h += '<div class="cells">' + cells + '</div>';
+  if (g.id === 'modality' && c.modality_preference.survey_note) h += '<p class="gline"><b>Survey:</b> ' + esc(c.modality_preference.survey_note) + '</p>';
+  if (g.id === 'cost' && g.rows.every(function (sp) { return model(c, sp).avail === 'no'; })) h += '<p class="gline">No cost-efficiency figure was found for this response.</p>';
+  return h + '</section>';
+}
+function glanceCell(label, value, note, na) {
+  return '<div><div class="label">' + esc(label) + '</div><div class="gv' + (na ? ' na' : '') + '">' + esc(value) + '</div><div class="gn">' + note + '</div></div>';
+}
+function countryTabHTML(c, idx) {
+  var q = quality(c), pl = c.plan, s = c.ai_summary || {};
+  var planLink = safeUrl(pl.url) ? '<a href="' + esc(pl.url) + '" target="_blank" rel="noopener">' + esc(pl.name) + '</a>' : esc(pl.name || 'No plan');
+  var rev = isReviewed(c);
+  var h = '<div class="ctab">';
+  h += '<header class="chead"><div><h1>' + esc(c.name) + '</h1><div class="meta"><span>' + esc(c.calp_region) + '</span><span>' + planLink + '</span><span>' + esc(pl.type) + ' ' + esc(pl.year) + ', ' + esc(pl.status) + '</span></div></div>' +
+    '<div class="cright"><span class="quality" tabindex="0" title="' + esc(QUALITY_RULE) + '"><span class="dot ' + q.key + '" aria-hidden="true"></span>Source quality: ' + q.word + ' · ' + q.n + ' of ' + TOTAL_SPECS + ' found</span>' +
+    '<span>' + (rev ? 'Reviewed by ' + esc(c.rep_notes.reviewed_by) + (c.rep_notes.reviewed_date ? ', ' + esc(fmtDate(c.rep_notes.reviewed_date)) : '') : 'AI draft, unreviewed ' + esc(fmtDate(c.last_researched || D.generated))) + '</span></div></header>';
+
+  /* at a glance */
+  var rq = pl.requirements_usd, fp = pl.funded_pct, mr = c.hnrp_requirements.mpc_pct, mf = c.overall_funding.mpc_funded_pct_of_mpc_req, pf = c.modality_preference.cash_pct;
+  h += '<section aria-label="At a glance">' + secHead('At a glance') + '<div class="glance">' +
+    glanceCell('Plan requirements', has(rq) ? fmtUsdM(rq.value) : 'n/a', has(rq) ? (has(fp) ? fmtPct(fp.value) + ' funded' + (fp.as_of ? ', as of ' + esc(fmtDate(fp.as_of)) : '') : 'Funded share not found') : 'Plan requirements not found', !has(rq)) +
+    glanceCell('MPC % of requirements', has(mr) ? fmtPct(mr.value) : 'n/a', has(mr) ? 'as of ' + esc(fmtDate(mr.as_of)) : 'No MPC line found in the plan', !has(mr)) +
+    glanceCell('MPC funded vs MPC requirement', has(mf) ? fmtPct(mf.value) : 'n/a', has(mf) ? 'as of ' + esc(fmtDate(mf.as_of)) + (mf.value > 100 ? ' <span class="tagp over">over 100%</span>' : '') : 'Not found', !has(mf)) +
+    glanceCell('Preference for cash', has(pf) ? fmtPct(pf.value) : 'n/a', has(pf) ? esc(fmtDate(pf.as_of)) + (pf.available === 'partial' ? ' <span class="tagp partial">partial</span>' : '') : 'No quantified preference found', !has(pf)) +
+    '</div></section>';
+
+  /* the read */
+  function list(t, arr) { return '<div><h4>' + t + '</h4><ul>' + ((arr && arr.length) ? arr.map(function (i) { return '<li>' + citeText(c, i) + '</li>'; }).join('') : '<li class="none">None recorded.</li>') + '</ul></div>'; }
+  h += '<section aria-label="The read">' + secHead('The read', rev ? 'Reviewed by ' + esc(c.rep_notes.reviewed_by) + '. Drawn from the sources below.' : 'AI draft from the sources below; a regional representative has not yet reviewed it.') +
+    '<div class="readgrid"><div><p class="head">' + citeText(c, s.headline) + '</p><p class="narr">' + citeText(c, s.narrative) + '</p></div>' +
+    '<div class="rlists">' + list('Barriers', s.barriers) + list('Opportunities', s.opportunities) + list('Data gaps', s.data_gaps) + '</div></div></section>';
+
+  /* indicator groups */
+  GROUPS.forEach(function (g) { h += groupSection(c, g); });
+
+  /* rep notes */
+  var rn = c.rep_notes || {};
+  var RF = [['key_messages', 'Key messages'], ['barriers', 'Barriers'], ['cwg_maturity', 'CWG maturity'], ['leadership_buy_in', 'Leadership buy-in'], ['calp_priority', 'CALP priority'], ['reviewed_by', 'Reviewed by']];
+  h += '<section aria-label="Regional representative notes">' + secHead('Regional representative notes', 'For CALP’s regional representative to complete.') + '<div class="repgrid">' +
+    RF.map(function (f) {
+      var v = rn[f[0]];
+      if (f[0] === 'reviewed_by' && v && rn.reviewed_date) v = v + ', ' + fmtDate(rn.reviewed_date);
+      return '<div class="rep"><div class="rk">' + f[1] + '</div><div class="rv' + (v ? '' : ' ph') + '">' + (v ? esc(v) : 'To be completed by the regional representative. Edit rep_notes.' + f[0] + ' in the data block.') + '</div></div>'; }).join('') +
+    '</div></section>';
+
+  /* sources */
+  h += '<section aria-label="Sources">' + secHead('Sources') + '<ol class="srcs">' + c.sources.map(function (s) {
+    var u = safeUrl(s.url);
+    return '<li id="src-' + esc(c.id) + '-' + esc(s.id) + '"><span class="sid">' + esc(s.id) + '</span><span>' + (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(s.title) + '</a>' : esc(s.title)) +
+      ' <span class="sm">' + esc(s.publisher) + ' · ' + esc(s.date ? fmtDate(s.date) : 'undated') + '</span><span class="su">' + esc(s.url) + '</span></span></li>'; }).join('') + '</ol></section>';
+
+  /* next */
+  var nx = tabCountries[idx + 1];
+  h += '<p class="nextline">Next: ' + (nx ? '<a href="#' + esc(nx.slug) + '">' + esc(nx.short) + ' →</a>' : '<a href="#method">Method →</a>') + '</p>';
+  return h + '</div>';
+}
+
+/* ================= TAB: Across countries ================= */
+function acrossHTML() {
+  return overviewHTML() +
+    '<div class="asec">' + plansHTML() + '</div>' +
+    '<div class="asec">' + prefHTML() + '</div>' +
+    '<div class="asec">' + systemsHTML() + '</div>' +
+    '<div class="asec">' + matrixTab() + '</div>';
+}
+
+/* ================= TAB: Full matrix ================= */
+function numCell(sp, tint) {
+  return function (c) {
+    var m = model(c, sp);
+    if (m.avail === 'no') return { cls: 'na', val: 'n/a', sub: '', key: null, title: m.note };
+    var sub = [fmtDate(m.asof)];
+    if (m.avail === 'partial') sub.push('<span class="tagp partial">partial</span>');
+    if (m.over) sub.push('<span class="tagp over">over 100%</span>');
+    return { val: m.main, sub: sub.filter(Boolean).join(' '), key: m.pct, pct: Math.min(m.pct, 100), tint: tint, title: m.note };
+  };
+}
+function sysCell(fn, subFn) {
+  return function (c) {
+    var m = sysModel(c, fn);
+    if (m.avail === 'no') return { cls: 'na', val: 'n/a', sub: '', key: null, title: m.note };
+    var sub = subFn ? subFn(c, m) : '';
+    if (m.avail === 'partial') sub = ['<span class="tagp partial">partial</span>', sub].filter(Boolean).join(' ');
+    return { val: m.main, sub: sub, key: m.main === 'Yes' ? 3 : m.main === 'Partial' ? 2 : 1, title: m.note };
+  };
+}
+var T = '0,176,191';
+var COLS = [
+  { label: 'Plan funded %', tip: 'Share of the plan’s revised requirements funded (FTS).', get: function (c) {
+      var d = c.plan.funded_pct; if (!has(d)) return { cls: 'na', val: 'n/a', key: null, title: d.note };
+      return { val: fmtPct(d.value), sub: [esc(fmtDate(d.as_of)), d.available === 'partial' ? '<span class="tagp partial">partial</span>' : ''].filter(Boolean).join(' '), key: d.value, title: d.note }; } },
+  { label: 'MPC % of plan requirements', tip: 'Multi-purpose cash requirements as a share of total plan requirements.', get: numCell(spec.rq_mpc, T) },
+  { label: 'Total CVA % of requirements', tip: 'All cash and voucher assistance as a share of total plan requirements.', get: numCell(spec.rq_cva, T) },
+  { label: 'MPC funded % of MPC requirement', tip: 'FTS funding tagged to MPC divided by the MPC requirement. Over 100% is reported as found.', get: numCell(spec.fd_mpcreq, T) },
+  { label: 'Prefer cash %', tip: 'Share of surveyed people preferring cash. Surveys differ in year, geography and wording.', get: numCell(spec.pref_cash, T) },
+  { label: 'MPC cost-efficiency', tip: 'Whether an MPC cost-efficiency metric was found.', get: function (c) {
+      var m = model(c, spec.ce_mpc); if (m.avail === 'no') return { cls: 'na', val: 'n/a', key: null, title: m.note };
+      return { val: 'Yes', sub: esc(m.main + ' ' + (m.unit || '')), key: 3, title: m.note }; } },
+  { label: 'CBPF MPC %', tip: 'Share of country-based pooled fund allocations that is MPC.', get: function (c) {
+      var r = numCell(spec.pf_mpc, T)(c);
+      if (r.cls === 'na' && c.pooled_funds && c.pooled_funds.cbpf_exists === false) return { val: 'No CBPF', sub: '', key: null, title: c.pooled_funds.cbpf_name }; return r; } },
+  { label: 'Feasibility study', tip: 'Whether a cash feasibility study was found.', get: sysCell('feas', function (c, m) { return esc(m.asof); }) },
+  { label: 'Market monitoring', tip: 'Whether regular market monitoring is functioning.', get: sysCell('mkt', function (c) { return esc(c.market_monitoring.frequency || ''); }) },
+  { label: 'CWG and CashCap', tip: 'Cash working group exists; CashCap support status.', get: sysCell('cwg', function (c) { return 'CashCap: ' + esc(c.cwg.cashcap_support || 'unknown'); }) }
+];
+var sortState = { col: null, dir: 1 };
+function matrixHTML() {
+  var rows = countries.map(function (c) { return { c: c, cells: COLS.map(function (col) { return col.get(c); }) }; });
+  var maxes = COLS.map(function (col, i) { var mx = 0; rows.forEach(function (r) { var p = r.cells[i].pct; if (p !== undefined && p > mx) mx = p; }); return mx || 1; });
+  if (sortState.col !== null && sortState.col !== 'name') {
+    var i = sortState.col, dir = sortState.dir;
+    rows.sort(function (a, b) {
+      var ka = a.cells[i].key, kb = b.cells[i].key;
+      if (ka === null || ka === undefined) return (kb === null || kb === undefined) ? a.c.name.localeCompare(b.c.name) : 1;
+      if (kb === null || kb === undefined) return -1;
+      return (ka - kb) * dir || a.c.name.localeCompare(b.c.name);
+    });
+  } else if (sortState.col === 'name') rows.sort(function (a, b) { return sortState.dir * a.c.name.localeCompare(b.c.name); });
+  function aria(on) { return on ? (sortState.dir > 0 ? 'ascending' : 'descending') : 'none'; }
+  var h = '<table class="matrix"><caption class="sr-only">Signal matrix: cash indicators by country</caption><thead><tr><th scope="col" aria-sort="' + aria(sortState.col === 'name') + '"><button type="button" class="sort" data-sort="name">Country</button></th>';
+  COLS.forEach(function (col, i) { h += '<th scope="col" aria-sort="' + aria(sortState.col === i) + '"><button type="button" class="sort" data-sort="' + i + '" title="' + esc(col.tip) + '">' + esc(col.label) + '</button></th>'; });
+  h += '</tr></thead><tbody>';
+  var grouped = sortState.col === null, last = null;
+  rows.forEach(function (r) {
+    var c = r.c;
+    if (grouped && c.calp_region !== last) { last = c.calp_region; h += '<tr class="band"><td colspan="' + (COLS.length + 1) + '">' + esc(last) + '</td></tr>'; }
+    h += '<tr class="go" data-go="' + esc(c.slug) + '"><th scope="row" class="cn" style="text-transform:none;letter-spacing:0;font-size:14.5px;color:var(--ink);padding:12px 12px 12px 0;border-bottom:1px solid var(--line);position:static;font-weight:700"><a href="#' + esc(c.slug) + '" style="color:var(--ink)">' + esc(c.name) + '</a><small style="font-weight:400;color:var(--muted);display:block;font-size:12.5px;text-transform:none">' + esc(c.plan.type) + ' ' + esc(c.plan.year) + '</small></th>';
+    r.cells.forEach(function (cell, i) {
+      var style = '';
+      if (cell.tint && cell.pct !== undefined) style = ' style="background-color:rgba(' + cell.tint + ',' + (0.06 + 0.26 * cell.pct / maxes[i]).toFixed(3) + ')"';
+      h += '<td class="' + esc(cell.cls || '') + '"' + style + (cell.title ? ' title="' + esc(cell.title) + '"' : '') + '><span class="v">' + esc(cell.val) + '</span>' + (cell.sub ? '<span class="s">' + cell.sub + '</span>' : '') + '</td>';
+    });
+    h += '</tr>';
+  });
+  return h + '</tbody></table>';
+}
+function matrixTab() {
+  return secHead('Everything on one screen', 'The full signal matrix. Use a country tab for the readable version.') +
+    '<section class="panel"><div class="legend"><span><i class="sw" style="background:repeating-linear-gradient(135deg,#fff 0 3px,#CFCFC8 3px 4px);border:1px solid var(--line)"></i>n/a: looked, not found</span><span><i class="sw" style="background:rgba(0,176,191,.3)"></i>Teal tint: higher value in MPC and cash columns</span><span><span class="tagp partial">partial</span> figure with a caveat</span><span class="muted">Select a heading to sort, a row to open the country.</span></div><div class="tbl-wrap" id="matrixWrap">' + matrixHTML() + '</div></section>';
+}
+
+/* ================= TAB: Method ================= */
+function methodHTML() {
+  var groupsList = GROUPS.map(function (g) { return g.title.replace(/ \(.*\)/, '').toLowerCase().replace('ocha', 'OCHA'); }).join(', ');
+  return secHead('Method', 'What is counted, what to be careful about, and how to keep this page current.') +
+    '<div class="method">' +
+    '<section class="panel"><h3>What is counted</h3><ul>' +
+      '<li class="first">Data in this page was collected by an AI assistant (Claude) on 5 November 2026 from public sources and has not been verified by CALP staff. Country summaries are AI drafts awaiting review by regional representatives.</li>' +
+      '<li>' + TOTAL_SPECS + ' indicators per country in six groups: ' + esc(groupsList) + '. ' + N + ' countries, ' + (N * TOTAL_SPECS) + ' indicator slots.</li>' +
+      '<li>Each slot is found, found with a caveat (partial) or not found. Not found is a finding, shown as n/a with a note on what was searched.</li>' +
+      '<li>Every figure carries an as-of date, a note and a link to its source. Plan requirements are revised requirements.</li></ul></section>' +
+    '<section class="panel"><h3>Cautions</h3><ul>' +
+      '<li>FTS figures were pulled from the FTS public API on 5 Nov 2026 using the destination-cluster view of the Multipurpose Cash sector. Cluster views can differ from plan-level views.</li>' +
+      '<li>As-of dates show the latest flow date seen and may be lower bounds.</li>' +
+      '<li>MPC funding above 100% of the MPC requirement is reported as found. It may reflect FTS tagging or carry-over.</li>' +
+      '<li>Preference surveys differ in year, geography, sample and question wording. Do not compare them across countries without reading the note.</li>' +
+      '<li>AI summaries are drafts. Check them against the linked sources.</li></ul></section>' +
+    '<section class="panel"><h3>How to update</h3><ul>' +
+      '<li>Edit the CASH SIGNAL DATA block near the top of the script in this file, or update the JSON files and re-run <code>python3 -I build.py</code>.</li>' +
+      '<li>Regional representatives fill the <code>rep_notes</code> fields for their countries. Setting <code>reviewed_by</code> switches the draft label to Reviewed.</li>' +
+      '<li>Add new countries as new JSON files. Nothing in the page is written per country.</li></ul></section>' +
+    '</div>';
+}
+
+/* ================= tabs, routing ================= */
+var TABS = [{ id: 'all', label: 'Across countries', render: acrossHTML }]
+  .concat(tabCountries.map(function (c, i) { return { id: c.slug, label: c.short, c: c, render: function () { return countryTabHTML(c, i); } }; }))
+  .concat([{ id: 'method', label: 'Method', render: methodHTML }]);
+var tablist = document.getElementById('tablist'), panels = document.getElementById('panels');
+TABS.forEach(function (t) {
+  var b = document.createElement('button');
+  b.type = 'button'; b.className = 'tab'; b.id = 'tab-' + t.id; b.setAttribute('role', 'tab'); b.setAttribute('aria-controls', 'panel-' + t.id); b.setAttribute('aria-selected', 'false'); b.tabIndex = -1;
+  if (t.c) {
+    var q = quality(t.c);
+    b.innerHTML = '<span class="dot ' + q.key + '" aria-hidden="true"></span>' + esc(t.label);
+    b.setAttribute('aria-label', t.label + ', source quality ' + q.word);
+    b.title = t.c.name + ': ' + q.n + ' of ' + TOTAL_SPECS + ' indicators found (' + q.word + ')';
+  } else b.textContent = t.label;
+  b.addEventListener('click', function () { go(t.id); });
+  tablist.appendChild(b);
+  var p = document.createElement('div');
+  p.className = 'tabpanel'; p.id = 'panel-' + t.id; p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', 'tab-' + t.id); p.tabIndex = 0; p.hidden = true;
+  panels.appendChild(p);
+});
+tablist.addEventListener('keydown', function (e) {
+  var keys = { ArrowRight: 1, ArrowLeft: -1, Home: 'h', End: 'e' };
+  if (!(e.key in keys)) return;
+  var i = TABS.map(function (t) { return t.id; }).indexOf(curTab), k = keys[e.key];
+  var n = k === 'h' ? 0 : k === 'e' ? TABS.length - 1 : (i + k + TABS.length) % TABS.length;
+  e.preventDefault(); go(TABS[n].id); document.getElementById('tab-' + TABS[n].id).focus();
+});
+var curTab = null;
+function go(tab) {
+  var h = '#' + tab;
+  if (location.hash === h) { activate(tab); } else { location.hash = h; }
+}
+function activate(tab) {
+  if (!TABS.some(function (t) { return t.id === tab; })) tab = 'all';
+  TABS.forEach(function (t) {
+    var on = t.id === tab, b = document.getElementById('tab-' + t.id), p = document.getElementById('panel-' + t.id);
+    b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; p.hidden = !on;
+    if (on) { p.innerHTML = t.render(); }
+  });
+  var changed = curTab !== tab; curTab = tab;
+  var cur = TABS.filter(function (t) { return t.id === tab; })[0];
+  document.title = (cur.c ? cur.c.name : cur.label) + ' · Cash Signal';
+  var tb = document.getElementById('tab-' + tab);
+  var sc = document.getElementById('tabsScroll');
+  if (tb && sc.scrollWidth > sc.clientWidth) sc.scrollLeft = Math.max(0, tb.offsetLeft - 48);
+  if (changed) window.scrollTo(0, 0);
+  fade();
+}
+function route() { activate(decodeURIComponent((location.hash || '').replace(/^#/, '')) || 'all'); }
+function fade() {
+  var sc = document.getElementById('tabsScroll'), f = document.getElementById('tabsFade');
+  f.style.opacity = sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 4 ? '0' : '1';
+}
+document.getElementById('tabsScroll').addEventListener('scroll', fade);
+window.addEventListener('resize', fade);
+
+
+document.addEventListener('click', function (e) {
+  var t = e.target; if (!t.closest) return;
+  var cite = t.closest('a[data-src]');
+  if (cite) {
+    e.preventDefault();
+    var el = document.getElementById('src-' + cite.getAttribute('data-c') + '-' + cite.getAttribute('data-src'));
+    if (el) { el.scrollIntoView({ block: 'center' }); el.classList.add('flash'); setTimeout(function () { el.classList.remove('flash'); }, 1800); }
+    return;
+  }
+  var tl = t.closest('a[data-tab]');
+  if (tl) { e.preventDefault(); go(tl.getAttribute('data-tab')); return; }
+  var pp = t.closest('button[data-pp]');
+  if (pp) {
+    var id = pp.getAttribute('data-pp'); planSel[id] = pp.getAttribute('data-k');
+    var panel = document.getElementById('pp-' + id), def = PLAN_PANELS.filter(function (x) { return x.id === id; })[0];
+    panel.querySelector('.ppbody').innerHTML = planBody(def);
+    panel.querySelectorAll('button[data-pp]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-k') === planSel[id] ? 'true' : 'false'); });
+    return;
+  }
+  var sb = t.closest('button[data-sort]');
+  if (sb) {
+    var v = sb.getAttribute('data-sort'); v = v === 'name' ? 'name' : parseInt(v, 10);
+    if (sortState.col === v) { if (sortState.dir === 1) sortState.dir = -1; else { sortState.col = null; sortState.dir = 1; } }
+    else { sortState.col = v; sortState.dir = (v === 'name') ? 1 : -1; }
+    var wrap = document.getElementById('matrixWrap'), sl = wrap.scrollLeft;
+    wrap.innerHTML = matrixHTML(); wrap.scrollLeft = sl;
+    var again = wrap.querySelector('button[data-sort="' + v + '"]'); if (again) again.focus();
+    return;
+  }
+  var row = t.closest('tr[data-go]');
+  if (row && !t.closest('a')) go(row.getAttribute('data-go'));
+});
+window.addEventListener('hashchange', route);
+document.getElementById('stampDate').textContent = 'Data collected ' + fmtDate(D.generated);
+route();
+})();
+</script>
+</body>
+</html>

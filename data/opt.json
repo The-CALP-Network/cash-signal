@@ -1,0 +1,404 @@
+{
+  "id": "opt",
+  "name": "Gaza (oPt)",
+  "iso3": "PSE",
+  "calp_region": "MENA",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Escalation of Hostilities in the OPT Flash Appeal 2026",
+    "type": "Flash Appeal",
+    "year": 2026,
+    "status": "published",
+    "url": "https://www.un.org/unispal/wp-content/uploads/2025/12/OPT_Flash_Appeal_2026_EN_FINAL.pdf",
+    "fts_plan_id": 1510,
+    "people_in_need": {
+      "value": 3620000,
+      "available": "yes",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "oPt total; Gaza 2.10M, West Bank 1.52M. Gaza figures are used elsewhere in this record where stated."
+    },
+    "people_targeted": {
+      "value": 2970000,
+      "available": "yes",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "oPt total; Gaza 2.10M, West Bank 0.87M."
+    },
+    "requirements_usd": {
+      "value": 4064305808,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS; Gaza $3.72B, West Bank $351.2M [s1]."
+    },
+    "funded_usd": {
+      "value": 1465447470,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS flows total at query date. OCHA monitoring reported $1.62B funded (39.9%) for August 2026 [s3]; the two sources differ and were not reconciled."
+    },
+    "funded_pct": {
+      "value": 36.1,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "Computed from FTS figures; OCHA monitoring Aug 2026 gives 39.9% [s3]."
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 oPt plan or planning announcement found in search.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 75,
+      "available": "partial",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Flash Appeal states 75 to 84 per cent prefer unrestricted cash; low end recorded. Flash Appeal states 75 to 84 per cent of surveyed households prefer unrestricted cash; underlying survey not named. 75 is the low end of the range."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported."
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported."
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported."
+    },
+    "survey_note": "Range 75-84% preferring unrestricted cash, cited on p.41 of the 2026 Flash Appeal; survey name, year and sample not given."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Looked in Flash Appeal, CWG and WFP reports; no ratio published."
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 14.6,
+      "available": "yes",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s1",
+        "s2"
+      ],
+      "note": "MPC $592.6M of $4,064.3M (computed); Gaza MPC $579.1M, 1.15M people, 210,000 households; West Bank $13.5M.",
+      "usd": 592625000
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Plan has sectoral cash in food security, nutrition, shelter and protection, but no cash-specific budget is stated.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No total CVA figure in the plan; only the MPC line is costed separately.",
+      "usd": null
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 3.2,
+      "usd": 46413981,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "MPC funding (single-cluster view) as share of all funding received (US$1465.4M). Shared-cluster view: US$48.1M."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 7.8,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s2"
+      ],
+      "note": "FTS single-cluster (destination) view: US$46.4M of US$592.6M MPC requirement. Shared-cluster view would give US$48.1M (8%). FTS API pull 5 Nov 2026."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash within clusters."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not disaggregated in FTS."
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "oPt Humanitarian Fund (oPt HF)",
+    "cbpf_allocations_usd": {
+      "value": 58700000,
+      "available": "partial",
+      "as_of": "2026-08",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Value is ongoing project portfolio (77 projects), not allocations; 2026 allocation so far $3M, second allocation of $45M in processing."
+    },
+    "mpc_pct": {
+      "value": 16.2,
+      "available": "partial",
+      "as_of": "2026-08",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "MPC about $9.5M of $58.7M ongoing portfolio (Gaza $8.5M + West Bank $1.0M, read from dashboard chart; computed).",
+      "usd": 9500000
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [
+      "s1"
+    ],
+    "note": "Flash Appeal plans one Cash Feasibility Study in 2026 and says assessments show cash is feasible, but names no study; none found."
+  },
+  "market_monitoring": {
+    "functional": "partial",
+    "system": "UNICEF Gaza Strip Cash Assistance and Market Monitoring Bulletin; JMMI and Localised JRAM planned in Flash Appeal",
+    "frequency": "",
+    "last_published": "2026-06",
+    "url": "https://www.unicef.org/sop/reports/gaza-strip-cash-assistance-and-market-monitoring-bulletin",
+    "source_ids": [
+      "s10",
+      "s1"
+    ],
+    "note": "June 2026 bulletin found; cadence not stated. Two JMMI rounds are planned but no published oPt JMMI was found."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Palestine (oPt) Cash Working Group (national, Gaza and West Bank)",
+    "leads": [
+      "Action Against Hunger Spain (national)",
+      "OCHA",
+      "UNRWA and WFP (Gaza co-lead)"
+    ],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/palestine/palestine-cash-working-group",
+    "source_ids": [
+      "s9",
+      "s3",
+      "s4"
+    ],
+    "evidence_note": "Reports monthly unique MPC reach (Aug 2026 monitoring); agreed NIS 1,250 MEB-aligned transfer; shared deduplication system; West Bank MPCA group met May 2026."
+  },
+  "ai_summary": {
+    "headline": "Gaza has a large MPC line but only 8% of it is funded, while WFP cash is being cut.",
+    "narrative": "Gaza's cash response rests on a large MPC line: $592.6m of the $4.06bn flash appeal (14.6%), with 1.15m people in Gaza targeted for NIS 1,250 per round, in two cycles of three rounds [s1]. Funding is the constraint. FTS shows $46.4m received for MPC, about 8% of the requirement, against 36% for the plan overall [s2]. The Cash Working Group reports transfers set to the MEB value and roughly 100,000 households reached in February [s4][s5]. Sectoral cash appears to be rationed instead: WFP said in July it would keep full transfers for the most vulnerable and reduce them for others [s6], and in October it cut cash for 75,000 families [s7]. With 1.4m people acutely food insecure [s11] and Gaza need put at 2.1m [s1], targeting likely amounts to triage within near-universal need. We found no source saying WFP's transfer falls short of the MEB. Cited surveys show 75 to 84% prefer unrestricted cash [s1].",
+    "barriers": [
+      "MPC only 8% funded against 36% for the plan",
+      "WFP cash cut for 75,000 families; transfers reduced for less vulnerable households (Oct 2026)",
+      "Near-universal need forces triage; MEB-level transfers cannot reach everyone",
+      "Crossing closures and thin non-food supply complicate modality choices"
+    ],
+    "opportunities": [
+      "Established CWG with a harmonised MEB-aligned transfer value and shared deduplication",
+      "Cash-out commissions fell to 12% by Dec 2025; pooled fund runs MPC projects"
+    ],
+    "data_gaps": [
+      "cost efficiency (all four metrics)",
+      "modality preference survey details and non-cash shares",
+      "sectoral cash and voucher requirements and funding",
+      "cash feasibility study",
+      "recurring market monitor with cadence",
+      "WFP transfer value versus MEB"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Escalation of Hostilities in the OPT Flash Appeal 2026",
+      "publisher": "OCHA",
+      "url": "https://www.un.org/unispal/wp-content/uploads/2025/12/OPT_Flash_Appeal_2026_EN_FINAL.pdf",
+      "date": "2025-12-16",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "FTS flows by cluster, OPT Flash Appeal 2026 (plan 1510)",
+      "publisher": "OCHA FTS API",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1510&groupby=cluster",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "OPT 2026 Flash Appeal Response Monitoring, August 2026",
+      "publisher": "OCHA oPt",
+      "url": "https://www.ochaopt.org/sites/default/files/202608_OPT_Flash_Appeal_Response_Monitoring.pdf",
+      "date": "2026-08",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Humanitarian Situation Update #349, Gaza Strip",
+      "publisher": "OCHA oPt",
+      "url": "https://www.ochaopt.org/content/humanitarian-situation-update-349-gaza-strip",
+      "date": "2025-12-18",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Humanitarian Situation Report, 6 March 2026",
+      "publisher": "OCHA oPt",
+      "url": "https://www.ochaopt.org/content/humanitarian-situation-report-6-march-2026",
+      "date": "2026-03-06",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "oPt: WFP Palestine Emergency Response External Situation Report #93, 24 July 2026",
+      "publisher": "WFP (via Live Libnanews summary)",
+      "url": "https://live.libnanews.com/event/ev-1784886693507-f07c",
+      "date": "2026-07-24",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "World Food Programme cuts Gaza food aid as funding dries up",
+      "publisher": "Reuters (via BusinessDay)",
+      "url": "https://www.businessday.co.za/world/middle-east/2026-10-19-world-food-programme-cuts-gaza-food-aid-as-funding-dries-up/",
+      "date": "2026-10-19",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "OPT Humanitarian Fund Dashboard, August 2026",
+      "publisher": "OCHA oPt HF",
+      "url": "https://www.ochaopt.org/sites/default/files/opt_humanitarian_pooled_fund_dashboard_August2026.pdf",
+      "date": "2026-08",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "Palestine Cash Working Group",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/palestine/palestine-cash-working-group",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "Gaza Strip Cash Assistance and Market Monitoring Bulletin (June 2026)",
+      "publisher": "UNICEF State of Palestine",
+      "url": "https://www.unicef.org/sop/reports/gaza-strip-cash-assistance-and-market-monitoring-bulletin",
+      "date": "2026-06",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s11",
+      "title": "oPt: WFP Palestine Emergency Response External Situation Report #94, 10 August 2026",
+      "publisher": "WFP (via Live Libnanews summary)",
+      "url": "https://live.libnanews.com/event/ev-1786365429095-2b1e",
+      "date": "2026-08-10",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

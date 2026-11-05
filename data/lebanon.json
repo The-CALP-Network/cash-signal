@@ -1,0 +1,432 @@
+{
+  "id": "lebanon",
+  "name": "Lebanon",
+  "iso3": "LBN",
+  "calp_region": "MENA",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Lebanon Response Plan 2026 (LRP), with Flash Appeal (Mar-Aug 2026) and LRP Addendum (Sep-Dec 2026)",
+    "type": "Other",
+    "year": 2026,
+    "status": "published",
+    "url": "https://lebanon.un.org/en/node/309523",
+    "fts_plan_id": 1568,
+    "people_in_need": {
+      "value": 2990000,
+      "available": "yes",
+      "as_of": "2026-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "LRP 2026 headline; the Flash Appeal alone cites 1.4M in need and 1.4M targeted [s2]. Cash sector PiN is 2.44M [s5]."
+    },
+    "people_targeted": {
+      "value": 1500000,
+      "available": "yes",
+      "as_of": "2026-02",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "LRP 2026 headline. MPCA-specific target 998,253 people [s4]."
+    },
+    "requirements_usd": {
+      "value": 1620530000,
+      "available": "yes",
+      "as_of": "2026-09-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "LRP appeal only. Flash Appeal (FTS plan 1568) $639.9M and LRP Addendum $385.9M are separate. No LRP plan in FTS (only the regional 3RP, id 1528); fts_plan_id is the Flash Appeal."
+    },
+    "funded_usd": {
+      "value": 431450000,
+      "available": "yes",
+      "as_of": "2026-09-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "LRP received Jan-Sep 2026 (partner-reported); $625.96M incl. $194.5M carry-over. FTS shows Flash Appeal funded $348.6M of $639.9M [s6]."
+    },
+    "funded_pct": {
+      "value": 27,
+      "available": "yes",
+      "as_of": "2026-09-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "Received alone; 39% incl. carry-over. Flash Appeal 40% (43% incl. carry-over); Addendum 17% [s3]."
+    }
+  },
+  "plan_2027": {
+    "status": "in preparation",
+    "note": "CWG 2026 workplan schedules an MPC chapter and CVA overview for LRP 2027 (Q3). No published 2027 plan found. The 2026 Flash Appeal was not renewed after August; an Addendum covers Sep-Dec.",
+    "source_ids": [
+      "s8",
+      "s12"
+    ]
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 75,
+      "available": "partial",
+      "as_of": "2022",
+      "source_ids": [
+        "s10"
+      ],
+      "note": "REACH MSNA 2022 AAP: physical cash most preferred. Multiple response, so shares do not sum to 100. Older than 2025 VASyR/MSNA rounds, which were not checked."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported separately in the MSNA 2022 AAP factsheet."
+    },
+    "in_kind_pct": {
+      "value": 24,
+      "available": "partial",
+      "as_of": "2022",
+      "source_ids": [
+        "s10"
+      ],
+      "note": "REACH MSNA 2022 AAP, multiple response."
+    },
+    "other_pct": {
+      "value": 14,
+      "available": "partial",
+      "as_of": "2022",
+      "source_ids": [
+        "s10"
+      ],
+      "note": "Services such as healthcare or education; multiple response."
+    },
+    "survey_note": "REACH Lebanon MSNA 2022, accountability to affected populations component; sample size not captured. LRP strategy states CVA is the preferred modality of recipients but gives no figure [s4]."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Looked in CWG sitrep and LRP CWG strategy; cash is called cost-effective but no ratio is published."
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found."
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": 18.5,
+      "available": "yes",
+      "as_of": "2026-02",
+      "source_ids": [
+        "s4",
+        "s3"
+      ],
+      "note": "MPCA (recurrent, emergency, seasonal) $300.5M of $1,620.5M LRP appeal. CWG sector appeal is $321.5M (19.8%); Flash Appeal MPCA $134M (20.9% of $639.9M); Addendum $104M.",
+      "usd": 300469250
+    },
+    "sectoral_cash_pct": {
+      "value": 17.7,
+      "available": "partial",
+      "as_of": "2026-02",
+      "source_ids": [
+        "s4",
+        "s3"
+      ],
+      "note": "All direct CVA other than MPCA ($286.3M), incl. livelihoods cash $115.9M, food cash/vouchers $97.5M, protection $37.8M, rent $26.7M, WASH $8.3M. Computed from CVA overview table.",
+      "usd": 286301250
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Food vouchers are combined with cash for food ($97.5M) in the CVA overview; not separable.",
+      "usd": null
+    },
+    "total_cva_pct": {
+      "value": 36.2,
+      "available": "yes",
+      "as_of": "2026-02",
+      "source_ids": [
+        "s4",
+        "s3"
+      ],
+      "note": "Direct CVA $586.8M against the $1,620.5M appeal; computed. CVA overview is from the Feb 2026 strategy, before the March escalation.",
+      "usd": 586770500
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": 18.2,
+      "available": "partial",
+      "as_of": "2026-09-30",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "CWG sector received $136.9M of $750.6M received across LRP, Flash Appeal and Addendum (partner-reported, summed by us; overlap between instruments not ruled out). FTS Flash Appeal only: MPCA $50.9M of $348.6M = 14.6% [s6].",
+      "usd": 136910000
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": 24.5,
+      "available": "partial",
+      "as_of": "2026-09-30",
+      "source_ids": [
+        "s3",
+        "s5"
+      ],
+      "note": "Blends LRP, Flash Appeal and Addendum CWG-sector lines (US$136.9M of US$559.5M). LRP-only basis, matching the plan requirements shown: US$32.1M of US$321.5M = 10%. Received $136.9M against $559.5M combined CWG sector appeals (LRP $321.5M + FA $134M + Addendum $104M). By instrument: LRP 10%, FA 42-43%, Addendum 46%. Partners disbursed more than they reported receiving ($100.7M regular + $76.5M FA), so funding is likely under-reported [s5]. FTS: FA MPCA 38% funded [s6]."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Sector funding is reported by sector, not by modality; sectoral cash is not separable."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not separable in sector reporting."
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": true,
+    "cbpf_name": "Lebanon Humanitarian Fund (LHF)",
+    "cbpf_allocations_usd": {
+      "value": 15000000,
+      "available": "partial",
+      "as_of": "2026-03",
+      "source_ids": [
+        "s11"
+      ],
+      "note": "2026 second reserve allocation only; other 2026 LHF/CERF allocations not found."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Allocation sectors listed are shelter and site management, food security, WASH, health and nutrition, protection; no MPC share stated.",
+      "usd": null
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported.",
+      "usd": null
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not reported.",
+      "usd": null
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [
+      "s4"
+    ],
+    "note": "LRP CWG strategy says market functionality assessments show markets and FSPs can support CVA, but cites no named feasibility study."
+  },
+  "market_monitoring": {
+    "functional": "partial",
+    "system": "WFP RAM market updates and CWG economic/market update (WFP RAM, MEB/SMEB)",
+    "frequency": "ad hoc",
+    "last_published": "2026-08-27",
+    "url": "https://data.unhcr.org/en/documents/details/123970",
+    "source_ids": [
+      "s7",
+      "s13"
+    ],
+    "note": "WFP RAM presented the market outlook, SMEB (~$550) and MEB (~$700) to the CWG on 27 Aug 2026; WFP RAM market update 11 Mar 2026. No fixed-cadence public product confirmed."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Lebanon Cash Working Group (merged with the Basic Assistance sector under LRP 2026)",
+    "leads": [
+      "UNHCR",
+      "World Vision International",
+      "Ministry of Social Affairs (MoSA)"
+    ],
+    "cashcap_support": "unknown",
+    "url": "https://data.unhcr.org/en/working-group/15",
+    "source_ids": [
+      "s7",
+      "s8",
+      "s9"
+    ],
+    "evidence_note": "Minutes Mar, Jul and Aug 2026 (60+ organisations attending, incl. CashCap and CALP); 2026 strategy and workplan; Q1 and Q3 at-a-glance dashboards; FSP mapping 2026."
+  },
+  "ai_summary": {
+    "headline": "Cash is about a third of the LRP, but regular MPCA funding is thin and transfers sit far below the MEB.",
+    "narrative": "Cash in Lebanon sits across three funding instruments, not one plan. The Lebanon Response Plan (LRP, $1.62bn, 2.99m in need) stays the primary framework [s1]; a Flash Appeal ran March to August ($639.9m) and an LRP Addendum covers September to December ($385.9m) [s2][s3]. Cash Working Group sector requirements are $321.5m (LRP), $134m (Flash Appeal) and $104m (Addendum) [s3]. Planned direct CVA is $586.8m, 36% of the LRP, with MPCA 51% of it [s4]. Partners report only 10% of the LRP cash appeal received, but they disbursed $100.7m in regular and $76.5m in emergency cash, so reporting likely understates delivery [s5]. The Flash Appeal reached 1.66m people, 228% of target, mostly through single instalments [s5]. Displaced Syrian households receive up to $145 a month against an MEB of about $700 for five people [s4][s7]; this appears to be a deliberate trade of depth for coverage. An LRP 2027 cash chapter is in preparation [s8].",
+    "barriers": [
+      "Regular LRP cash only 10% funded on partner reporting (likely under-reported)",
+      "Transfers (up to $145 a month) far below the MEB (about $700 for five)",
+      "Three overlapping instruments and no LRP in FTS make tracking hard",
+      "Social protection coverage limited: AMAN assists about 800,000 Lebanese, roughly half of those in poverty"
+    ],
+    "opportunities": [
+      "Shock-responsive alignment with MoSA and AMAN, with MoSA as CWG co-lead",
+      "Addendum MPCA already 46% funded; common delivery via FSP mapping can lower costs"
+    ],
+    "data_gaps": [
+      "cost efficiency (all four metrics)",
+      "recent modality preference and vouchers share",
+      "sectoral cash and voucher funding share",
+      "pooled fund MPC share",
+      "named cash feasibility study",
+      "fixed-cadence market monitor"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Lebanon Response Plan 2026",
+      "publisher": "UN Lebanon / OCHA / RCO / UNDP / UNHCR",
+      "url": "https://lebanon.un.org/en/node/309523",
+      "date": "2026-02-02",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s2",
+      "title": "Lebanon Revised Flash Appeal March-August 2026",
+      "publisher": "OCHA",
+      "url": "https://unsco.unmissions.org/sites/default/files/2026-06/LebanonFA2026extension_EN_new.pdf",
+      "date": "2026-06",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "LRP, Flash Appeal and Addendum 2026: January to September Funding Update (as of 30 Sep 2026)",
+      "publisher": "Lebanon Response Plan partners / UNHCR portal",
+      "url": "https://data.unhcr.org/en/documents/download/124737",
+      "date": "2026-11-03",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Lebanon Response Plan 2026: Multipurpose Cash and Cash & Voucher Assistance (CWG strategy)",
+      "publisher": "Lebanon Cash Working Group",
+      "url": "https://data.unhcr.org/en/documents/download/120958",
+      "date": "2026-02-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Lebanon Response Plan: Cash Working Group Q3 2026 at a Glance",
+      "publisher": "Lebanon Cash Working Group",
+      "url": "https://data.unhcr.org/en/documents/download/124726",
+      "date": "2026-11-02",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "FTS flows by cluster, Lebanon Flash Appeal 2026 (plan 1568)",
+      "publisher": "OCHA FTS API",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1568&groupby=cluster",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s7",
+      "title": "Lebanon Cash Working Group Minutes of Meeting, 27 Aug 2026",
+      "publisher": "Lebanon Cash Working Group",
+      "url": "https://data.unhcr.org/en/documents/details/123970",
+      "date": "2026-09-07",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "LRP Cash Working Group Annual Work Plan 2026",
+      "publisher": "Lebanon Cash Working Group",
+      "url": "https://data.unhcr.org/en/documents/download/121185",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "Cash Working Group - Lebanon",
+      "publisher": "UNHCR operational data portal",
+      "url": "https://data.unhcr.org/en/working-group/15",
+      "date": "2026-11-02",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "REACH Lebanon MSNA Factsheet: Accountability to Affected Populations",
+      "publisher": "REACH / IMPACT Initiatives",
+      "url": "https://repository.impact-initiatives.org/document/impact/aacd26d9/REACH_LBN_MSNA_Factsheet_AAP.pdf",
+      "date": "2022",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s11",
+      "title": "Lebanon Humanitarian Fund (LHF) 2026 Second Reserve Allocation, March 2026",
+      "publisher": "OCHA",
+      "url": "https://reliefweb.int/report/lebanon/lebanon-humanitarian-fund-lhf-2026-second-reserve-allocation-march-2026",
+      "date": "2026-03",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s12",
+      "title": "End of UN flash humanitarian appeal: the crisis is not over in Lebanon, official laments",
+      "publisher": "L'Orient-Le Jour",
+      "url": "https://today.lorientlejour.com/article/1546562/end-of-uns-flash-humanitarian-appeal-the-crisis-is-not-over-in-lebanon-official-laments.html",
+      "date": "2026-09",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s13",
+      "title": "WFP RAM Food Security Analysis - Lebanon Market Update: Early Market Impact of the Conflict Escalation (11 March 2026)",
+      "publisher": "WFP RAM",
+      "url": "https://live.libnanews.com/event/ev-1773624444097-82bd",
+      "date": "2026-03-11",
+      "accessed": "2026-11-05"
+    }
+  ]
+}

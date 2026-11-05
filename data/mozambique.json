@@ -1,0 +1,370 @@
+{
+  "id": "mozambique",
+  "name": "Mozambique",
+  "iso3": "MOZ",
+  "calp_region": "East and Southern Africa",
+  "last_researched": "2026-11-05",
+  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "plan": {
+    "name": "Mozambique Humanitarian Needs and Response Plan 2026",
+    "type": "HNRP",
+    "year": 2026,
+    "status": "published",
+    "url": "https://fts.unocha.org/plans/1506/summary",
+    "fts_plan_id": 1506,
+    "people_in_need": {
+      "value": 1600000,
+      "available": "yes",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "GHO 2026 at a glance; HNRP launched 8 Dec 2025, issued 29 Dec 2025. Floods addendum (Jan 2026) separately cites 0.7M in need."
+    },
+    "people_targeted": {
+      "value": 1100000,
+      "available": "yes",
+      "as_of": "2025-12",
+      "source_ids": [
+        "s3"
+      ],
+      "note": "GHO figure; 919,500 are hyper-prioritised (USD 265.3M). Floods addendum targets a further 0.6M."
+    },
+    "requirements_usd": {
+      "value": 534342584,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS revised requirements. Original 347.6M; the rise appears to include the USD 187M Jan-Jun 2026 floods addendum."
+    },
+    "funded_usd": {
+      "value": 230057858,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "FTS flow total via API on 2026-11-05; CALP FTS extract held locally is an older snapshot (USD 149.2M)."
+    },
+    "funded_pct": {
+      "value": 43.1,
+      "available": "yes",
+      "as_of": "2026-11-05",
+      "source_ids": [
+        "s1"
+      ],
+      "note": "Computed: 230,057,858 / 534,342,584. Against the original USD 347.6M the plan is not comparable."
+    }
+  },
+  "plan_2027": {
+    "status": "unknown",
+    "note": "No 2027 Mozambique plan or planning announcement found in a web search on 2026-11-05.",
+    "source_ids": []
+  },
+  "modality_preference": {
+    "cash_pct": {
+      "value": 69,
+      "available": "partial",
+      "as_of": "2024-06",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "REACH-IOM MSNI bulletin (Nov 2024), top-3 preferred modality; label pairing is inferred from scrambled PDF text, verify before use. [/08]"
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Vouchers not reported in the bulletin's top-3 preferred modalities."
+    },
+    "in_kind_pct": {
+      "value": 65,
+      "available": "partial",
+      "as_of": "2024-06",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "In-kind (food); same caveat on pairing; multiple answers appear allowed (sum exceeds 100). [/08]"
+    },
+    "other_pct": {
+      "value": 21,
+      "available": "partial",
+      "as_of": "2024-06",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Construction/rehabilitation of infrastructure. [/08]"
+    },
+    "survey_note": "REACH/IOM-DTM MSNI, 25,369 households, 72 districts, 26 Jun-9 Aug 2024; findings described as indicative. Not specific to the 2026 crisis geography (Cabo Delgado, Nampula)."
+  },
+  "cost_efficiency": {
+    "mpc": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Mozambique-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
+      "unit": ""
+    },
+    "sectoral_cash": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Mozambique-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
+      "unit": ""
+    },
+    "vouchers": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Mozambique-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
+      "unit": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No Mozambique-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
+      "unit": ""
+    }
+  },
+  "hnrp_requirements": {
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No MPC cluster or sector line in the 2026 plan; HNRP text only says MPC is promoted to improve efficiency."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP page retrieved gives no sectoral cash requirement."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "HNRP page retrieved gives no voucher requirement."
+    },
+    "total_cva_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No CVA total in the plan pages retrieved; full HNRP PDF not read."
+    }
+  },
+  "overall_funding": {
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS 2026 plan shows no Multi Purpose Cash cluster; cluster funding only. A CALP FTS extract shows USD 4.4M MPC-tagged flows, not reproducible from the plan cluster view."
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No MPC requirement exists in the plan to measure against."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate sectoral cash."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "FTS does not disaggregate vouchers."
+    }
+  },
+  "pooled_funds": {
+    "cbpf_exists": false,
+    "cbpf_name": "",
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No country-based pooled fund; CBPF data returns no Mozambique projects. CERF rapid responses were made in 2025-26 (floods, storms, displacement) but amounts and modality not captured."
+    },
+    "mpc_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No CBPF."
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No CBPF."
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No CBPF."
+    }
+  },
+  "cash_feasibility": {
+    "exists": "unknown",
+    "title": "",
+    "author": "",
+    "year": null,
+    "url": "",
+    "source_ids": [],
+    "note": "No feasibility or market functionality study found. Save the Children Cash Plus review (2024) notes cash was feasible and preferred in its pilots but is not a CWG feasibility study."
+  },
+  "market_monitoring": {
+    "functional": "partial",
+    "system": "WFP Mozambique Food Price Bulletin (RAM unit); FEWS NET price bulletin",
+    "frequency": "quarterly",
+    "last_published": "2025-Q2 (WFP bulletin, April-June 2025)",
+    "url": "https://docs.wfp.org/api/documents/WFP-0000167790/download",
+    "source_ids": [
+      "s9"
+    ],
+    "note": "Quarterly WFP bulletin covers markets in all districts, but the latest found is Q2 2025, over 12 months old. Latest FEWS NET price bulletin listed on ReliefWeb is July 2024."
+  },
+  "cwg": {
+    "exists": "yes",
+    "name": "Mozambique Cash and Voucher Working Group (Maputo, with Beira sub-group)",
+    "leads": [],
+    "cashcap_support": "unknown",
+    "url": "https://response.reliefweb.int/mozambique/mozambique-cash-and-voucher-working-groups-maputo-and-beira",
+    "source_ids": [
+      "s10",
+      "s11"
+    ],
+    "evidence_note": "National group active since 2017, supported by the Southern Africa regional technical CWG; leads and meeting frequency not stated. Monthly partner cash overviews published through Dec 2025 (26 partners, USD 27.9M, 904,000 people)."
+  },
+  "ai_summary": {
+    "headline": "Mozambique has a large, mostly voucher-based cash response but no MPC line, no pooled fund and a thinly documented CWG.",
+    "narrative": "Cash is delivered at scale but sits inside sector programming. Partners reported USD 27.9M and 904,000 people reached with cash in 2025, across 26 partners, mostly paper vouchers (67%), with mobile money 19% and e-vouchers 14% [s11]. The 2026 plan is USD 534.3M after a floods addendum and is 43.1% funded [s1], but it carries no Multi Purpose Cash cluster line and the HNRP only says MPC is promoted for efficiency [s4]. There is no country-based pooled fund, so the only humanitarian pooled money is CERF [s6]. Stated preference looks cash-leaning (about 69% physical cash against 65% in-kind in a 2024 national survey), but the label pairing in that source is uncertain and it is not specific to the northern response [s8]. The Maputo CWG exists, though leads and activity level were not found [s10]. Market monitoring appears to lapse: the latest WFP bulletin found is Q2 2025 [s9]. No cost-efficiency or feasibility evidence was located.",
+    "barriers": [
+      "No MPC requirement line in the plan, so MPC funding cannot be tracked in FTS",
+      "No country-based pooled fund to channel flexible cash money",
+      "Voucher-heavy delivery (paper vouchers 67%) limits flexibility compared with unrestricted cash",
+      "Market monitoring outputs found are over 12 months old",
+      "CWG leadership and capacity are undocumented publicly"
+    ],
+    "opportunities": [
+      "2025 experience points to expanding into MPC in emergencies, and 24-26 partners already deliver cash [s11]",
+      "Voucher approaches are aligned with national systems, offering a social protection entry point"
+    ],
+    "data_gaps": [
+      "MPC requirement and funding",
+      "cost efficiency",
+      "cash feasibility study",
+      "CWG leads and CashCap",
+      "current preference survey for the northern response",
+      "2027 plan status"
+    ],
+    "generated": "2026-11-05",
+    "model": "claude-sonnet-5-5",
+    "status": "AI draft — not yet reviewed"
+  },
+  "rep_notes": {
+    "key_messages": "",
+    "barriers": "",
+    "cwg_maturity": "",
+    "leadership_buy_in": "",
+    "calp_priority": "",
+    "reviewed_by": "",
+    "reviewed_date": ""
+  },
+  "sources": [
+    {
+      "id": "s1",
+      "title": "FTS public API: Mozambique HNRP 2026 (plan 1506) requirements and funding by cluster",
+      "publisher": "OCHA FTS",
+      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1506&groupby=cluster",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s3",
+      "title": "Global Humanitarian Overview 2026 at a glance",
+      "publisher": "OCHA",
+      "url": "https://www.developmentaid.org/api/frontend/cms/file/2025/12/GHO2026_At_a_glance_EN.pdf",
+      "date": "2025-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s4",
+      "title": "Mozambique HNRP 2026 overview (humanitarianaction.info)",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1506/article/mozambique-4",
+      "date": "2025-12",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s5",
+      "title": "Mozambique HNRP Floods Addendum, January-June 2026",
+      "publisher": "OCHA",
+      "url": "https://fscluster.org/sites/default/files/2026-01/20260123_MOZAMBIQUE_HNRP_FLOODS_ADDENDUM_ENG.pdf",
+      "date": "2026-01-23",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s6",
+      "title": "CBPF Data API, ProjectSummary and AllocationTypes for Mozambique (no pooled fund projects; CERF only)",
+      "publisher": "OCHA CBPF",
+      "url": "https://cbpfapi.unocha.org/vo2/odata/ProjectSummary",
+      "date": "2026-11-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "REACH Mozambique MSNI Bulletin, November 2024",
+      "publisher": "REACH / IMPACT Initiatives",
+      "url": "https://repository.impact-initiatives.org/document/impact/53f393a8/REACH_MOZ_MSNI-Bulletin_Nov2024.pdf",
+      "date": "2024-11",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "WFP Mozambique Food Price Bulletin, 2nd Quarter 2025",
+      "publisher": "WFP RAM Unit",
+      "url": "https://docs.wfp.org/api/documents/WFP-0000167790/download",
+      "date": "2025",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "Mozambique Cash and Voucher Working Groups (Maputo and Beira)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/mozambique/mozambique-cash-and-voucher-working-groups-maputo-and-beira",
+      "date": "",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s11",
+      "title": "Mozambique 2025 Humanitarian Response: Cash Assistance Overview, 31 December 2025",
+      "publisher": "OCHA / ReliefWeb",
+      "url": "https://reliefweb.int/report/mozambique/mozambique-2025-humanitarian-response-cash-assistance-overview-31-december-2025-enpt",
+      "date": "2025-12-31",
+      "accessed": "2026-11-05"
+    }
+  ]
+}
