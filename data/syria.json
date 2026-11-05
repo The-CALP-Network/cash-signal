@@ -68,7 +68,8 @@
       "available": "partial",
       "as_of": "2026-04",
       "source_ids": [
-        "s5"
+        "s5",
+        "s10"
       ],
       "note": "Not a modality-choice survey: the HNRP reports cash-based assistance as the top priority need for 85% of households surveyed. Treat as priority-need evidence, not preference. Cash-based assistance is the top priority for 85% of households surveyed (priority, not a modality-choice question); survey not named."
     },
@@ -93,7 +94,7 @@
       "source_ids": [],
       "note": "Not stated."
     },
-    "survey_note": "HNRP 2026 part 1 priority-need finding; underlying survey, sample and wording not identified. Treat as indicative only."
+    "survey_note": "HNRP 2026 part 1 priority-need finding; underlying survey, sample and wording not identified. Treat as indicative only. HNRP 2026: 85% of respondents cite cash-based assistance as their top priority (food assistance is 64% of support received); livelihoods/employment support 58%."
   },
   "cost_efficiency": {
     "mpc": {
@@ -380,6 +381,14 @@
       "publisher": "OCHA FTS",
       "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1518",
       "date": "2026-10-28",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "Syria HNRP 2026 (cash-based assistance top priority, 85%)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/syrian-arab-republic/syrian-arab-republic-2026-humanitarian-needs-and-response-plan-april-2026-enar",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

@@ -70,9 +70,10 @@
       "available": "partial",
       "as_of": "2025",
       "source_ids": [
-        "s7"
+        "s7",
+        "s9"
       ],
-      "note": "Reported as CWG feasibility study (Jan 2025) result in the gDCF analysis of the HNRP; HNRP and study not opened by this agent. Verify before use. [Jan]"
+      "note": "Reported as CWG feasibility study (Jan 2025) result in the gDCF analysis of the HNRP; HNRP and study not opened by this agent. Verify before use. [Jan] HNRP 2026 confirms the direction (large majority prefer cash) without a figure."
     },
     "vouchers_pct": {
       "value": null,
@@ -95,7 +96,7 @@
       "source_ids": [],
       "note": "Not reported."
     },
-    "survey_note": "90% cash preference relayed from gDCF 2026 analysis (cites CWG study Jan 2025; sample and wording unknown). Not independently confirmed; the only feasibility study opened (Plan International, Aug 2022) gives no preference percentages."
+    "survey_note": "90% cash preference relayed from gDCF 2026 analysis (cites CWG study Jan 2025; sample and wording unknown). Not independently confirmed; the only feasibility study opened (Plan International, Aug 2022) gives no preference percentages. HNRP 2026 (qualitative): a large majority of communities expressed a preference for cash transfers; men clearly prefer cash while a significant share of women prefer in-kind, citing limited control over cash use within the household. No percentage in the plan."
   },
   "cost_efficiency": {
     "mpc": {
@@ -372,6 +373,14 @@
       "publisher": "ReliefWeb Response (OCHA)",
       "url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
       "date": "2025",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "Mali HNRP 2026 (community preferences, qualitative)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/mali/mali-besoins-humanitaires-et-plan-de-reponse-2026",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

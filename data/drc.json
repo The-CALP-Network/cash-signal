@@ -72,7 +72,7 @@
       "source_ids": [
         "s8"
       ],
-      "note": "South Kivu and Tanganyika only; multiple answers allowed, so shares sum above 100. Cash (physical) 70%; mobile money 9% listed separately."
+      "note": "South Kivu and Tanganyika only; multiple answers allowed, so shares sum above 100. Cash (physical) 70%; mobile money 9% listed separately. HNRP 2026 cites 83% preferring cash in Minova (GTS)."
     },
     "vouchers_pct": {
       "value": 7,
@@ -101,7 +101,7 @@
       ],
       "note": "Services 18%."
     },
-    "survey_note": "REACH MSNA AAP factsheet, South Kivu and Tanganyika, data June-Aug 2022 (published Sep 2022), N=974 aid-receiving households of 9,889 surveyed; multi-response. No national or 2025 modality preference figure found: REACH 2025 North Kivu key-informant factsheet [s11] is indicative only and its preference chart was not legible."
+    "survey_note": "REACH MSNA AAP factsheet, South Kivu and Tanganyika, data June-Aug 2022 (published Sep 2022), N=974 aid-receiving households of 9,889 surveyed; multi-response. No national or 2025 modality preference figure found: REACH 2025 North Kivu key-informant factsheet [s11] is indicative only and its preference chart was not legible. HNRP 2026 (GTS, Minova): 83% of respondents preferred cash transfers over other aid, followed by food and water (43%); single locality, not national."
   },
   "cost_efficiency": {
     "mpc": {
@@ -407,6 +407,14 @@
       "publisher": "REACH Initiative",
       "url": "https://repository.impact-initiatives.org/document/impact/ffa2dcda/REACH-RDC-Factsheet-MSNA-KI-NK-2025.pdf",
       "date": "2025-09",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s12",
+      "title": "DRC HNRP 2026 (modality preference, Minova GTS finding)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/democratic-republic-congo/republique-democratique-du-congo-besoins-humanitaire-et-plan-de-reponse-2026-janvier-2026",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

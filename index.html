@@ -409,6 +409,55 @@ td.cn a:hover { color: var(--blue); }
   .cells { gap: 16px; }
 }
 
+/* ---------- v5: section panels ----------
+   Page stays on the ground colour. Each section is a rounded pale-blue panel; stat cells are white cards on it.
+   The AI read is teal-tinted, the regional representative notes red-tinted. */
+:root { --panel-tint: #E8F0F5; --teal-tint: #D6EAED; --red-tint: #FBF1EC; --track-on-tint: #D3DFE7; --panel-pad: 32px; --panel-gap: 40px; }
+.sheet { background: var(--ground); border-bottom: 0; }
+.sheet > .wrap { padding-block: 40px 72px; }
+.tab[aria-selected="true"] { background: var(--ground); }
+.tabpanel > * + *, .ctab > * + *, .ttab > * + * { margin-top: var(--panel-gap); }
+
+.panel, .ctab > section, .tsec, .tabpanel > div:has(> div > .h-sec) {
+  background: var(--panel-tint); border: 0; border-radius: 16px; box-shadow: none; padding: var(--panel-pad); min-width: 0;
+  --track: var(--track-on-tint);
+}
+.ctab > section[aria-label="The read"] { background: var(--teal-tint); --track: #C6DEE2; }
+.ctab > section[aria-label="Regional representative notes"] { background: var(--red-tint); --track: #F2E3DC; }
+.tsec > .panel, .tabpanel > div:has(> div > .h-sec) > .panel { background: none; border-radius: 0; padding: 0; margin-top: 28px; }
+.tsec { display: block; }
+.tsec > .panel { margin-top: 24px; }
+
+/* white cards on the tint */
+.glance { gap: 16px; background: none; border: 0; }
+.glance > div, .scell, .stat { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; }
+.facts { border-radius: 10px; overflow: hidden; }
+
+/* theme tabs: each country row is its own panel */
+.crows { display: flex; flex-direction: column; gap: 24px; }
+.crow { background: var(--panel-tint); border-radius: 16px; padding: var(--panel-pad); --track: var(--track-on-tint); }
+.crow + .crow { margin-top: 0; padding-top: var(--panel-pad); border-top: 0; }
+
+/* matrix cells that were paper-coloured to match a white panel */
+.matrix th { background: var(--panel-tint); }
+.matrix td.na { background: repeating-linear-gradient(135deg, var(--panel-tint) 0 6px, #CFDCE5 6px 7px); }
+.matrix tr.go:hover td:not(.na) { background-color: var(--paper); }
+.method code { background: var(--paper); }
+.seg button:hover { background: var(--paper); }
+.srcs li:first-child { border-top: 0; }
+
+/* gap between the three side-by-side panels */
+.grid3, .method { gap: var(--panel-gap); }
+@media (max-width: 960px) { .glance { gap: 16px; } }
+@media (max-width: 640px) {
+  :root { --panel-pad: 24px; }
+  .panel { padding: var(--panel-pad); }
+  .tabpanel > * + *, .ctab > * + *, .ttab > * + * { margin-top: var(--panel-gap); }
+  .glance { grid-template-columns: minmax(0, 1fr); }
+  .glance > div { padding: 20px; }
+  .crows { gap: 24px; }
+}
+
 /* ---------- print ---------- */
 @media print {
   body, .sheet, .panel, .stat { background: #fff; }
@@ -538,13 +587,13 @@ const CASH_SIGNAL = {
    },
    "modality_preference": {
     "cash_pct": {
-     "value": 65,
-     "available": "partial",
+     "value": 27,
+     "available": "yes",
      "as_of": "2026",
      "source_ids": [
-      "s1"
+      "s8"
      ],
-     "note": "65% prefer cash or a combination of cash and in-kind; cash alone is not separated. Underlying survey not named in the HNRP text."
+     "note": "HNRP 2026 community feedback exercises: 27% preferred cash alone; 38% a combination of cash and in-kind (recorded under Other). Survey name and sample not given."
     },
     "vouchers_pct": {
      "value": null,
@@ -561,13 +610,15 @@ const CASH_SIGNAL = {
      "note": "Not reported separately."
     },
     "other_pct": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Not reported separately."
+     "value": 38,
+     "available": "yes",
+     "as_of": "2026",
+     "source_ids": [
+      "s8"
+     ],
+     "note": "Combination of cash and in-kind assistance (HNRP 2026 feedback exercises). Earlier \"65% cash or mix\" was these two figures combined."
     },
-    "survey_note": "HNRP 2026 Section 2.8 states 65% prefer cash or a cash/in-kind combination; survey name, year and sample not given. A REACH MSNA modality breakdown was not found."
+    "survey_note": "HNRP 2026 Section 2.8 states 65% prefer cash or a cash/in-kind combination; survey name, year and sample not given. A REACH MSNA modality breakdown was not found. HNRP 2026: 27% cash alone, 38% cash + in-kind combination (65% combined); in-kind-only share not stated."
    },
    "cost_efficiency": {
     "mpc": {
@@ -846,6 +897,14 @@ const CASH_SIGNAL = {
      "url": "https://untalent.org/jobs/cash-and-voucher-working-group-cvwg-co-chair-technical-coordinator-afghan-nationals-only",
      "date": "undated",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s8",
+     "title": "Afghanistan HNRP 2026 (community feedback: modality preference)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://www.unocha.org/publications/report/afghanistan/afghanistan-humanitarian-needs-and-response-plan-2026-december-2025-endarips",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -922,7 +981,7 @@ const CASH_SIGNAL = {
      "available": "no",
      "as_of": "",
      "source_ids": [],
-     "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located."
+     "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located. HNRP 2026 reports a strong qualitative preference for cash (host/IDP) but no figure."
     },
     "vouchers_pct": {
      "value": null,
@@ -944,7 +1003,8 @@ const CASH_SIGNAL = {
      "as_of": "",
      "source_ids": [],
      "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located."
-    }
+    },
+    "survey_note": "HNRP 2026 (qualitative): perception survey shows a strong preference for cash among host communities and IDPs where markets are accessible; newly arrived refugees and returnees prefer food, NFI, WASH kits and shelter; women favour regular predictable cash, men agricultural inputs. No percentages given."
    },
    "cost_efficiency": {
     "mpc": {
@@ -1248,6 +1308,14 @@ const CASH_SIGNAL = {
      "url": "https://reliefweb.int/report/chad/chad-price-bulletin-june-2024",
      "date": "2024-06",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s11",
+     "title": "Chad HNRP 2026 (perception survey: modality preference, qualitative)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://www.unocha.org/chad",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -1325,7 +1393,7 @@ const CASH_SIGNAL = {
      "source_ids": [
       "s8"
      ],
-     "note": "South Kivu and Tanganyika only; multiple answers allowed, so shares sum above 100. Cash (physical) 70%; mobile money 9% listed separately."
+     "note": "South Kivu and Tanganyika only; multiple answers allowed, so shares sum above 100. Cash (physical) 70%; mobile money 9% listed separately. HNRP 2026 cites 83% preferring cash in Minova (GTS)."
     },
     "vouchers_pct": {
      "value": 7,
@@ -1354,7 +1422,7 @@ const CASH_SIGNAL = {
      ],
      "note": "Services 18%."
     },
-    "survey_note": "REACH MSNA AAP factsheet, South Kivu and Tanganyika, data June-Aug 2022 (published Sep 2022), N=974 aid-receiving households of 9,889 surveyed; multi-response. No national or 2025 modality preference figure found: REACH 2025 North Kivu key-informant factsheet [s11] is indicative only and its preference chart was not legible."
+    "survey_note": "REACH MSNA AAP factsheet, South Kivu and Tanganyika, data June-Aug 2022 (published Sep 2022), N=974 aid-receiving households of 9,889 surveyed; multi-response. No national or 2025 modality preference figure found: REACH 2025 North Kivu key-informant factsheet [s11] is indicative only and its preference chart was not legible. HNRP 2026 (GTS, Minova): 83% of respondents preferred cash transfers over other aid, followed by food and water (43%); single locality, not national."
    },
    "cost_efficiency": {
     "mpc": {
@@ -1660,6 +1728,14 @@ const CASH_SIGNAL = {
      "publisher": "REACH Initiative",
      "url": "https://repository.impact-initiatives.org/document/impact/ffa2dcda/REACH-RDC-Factsheet-MSNA-KI-NK-2025.pdf",
      "date": "2025-09",
+     "accessed": "2026-11-05"
+    },
+    {
+     "id": "s12",
+     "title": "DRC HNRP 2026 (modality preference, Minova GTS finding)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/democratic-republic-congo/republique-democratique-du-congo-besoins-humanitaire-et-plan-de-reponse-2026-janvier-2026",
+     "date": "2026",
      "accessed": "2026-11-05"
     }
    ]
@@ -2572,9 +2648,10 @@ const CASH_SIGNAL = {
      "available": "partial",
      "as_of": "2025",
      "source_ids": [
-      "s7"
+      "s7",
+      "s9"
      ],
-     "note": "Reported as CWG feasibility study (Jan 2025) result in the gDCF analysis of the HNRP; HNRP and study not opened by this agent. Verify before use. [Jan]"
+     "note": "Reported as CWG feasibility study (Jan 2025) result in the gDCF analysis of the HNRP; HNRP and study not opened by this agent. Verify before use. [Jan] HNRP 2026 confirms the direction (large majority prefer cash) without a figure."
     },
     "vouchers_pct": {
      "value": null,
@@ -2597,7 +2674,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "Not reported."
     },
-    "survey_note": "90% cash preference relayed from gDCF 2026 analysis (cites CWG study Jan 2025; sample and wording unknown). Not independently confirmed; the only feasibility study opened (Plan International, Aug 2022) gives no preference percentages."
+    "survey_note": "90% cash preference relayed from gDCF 2026 analysis (cites CWG study Jan 2025; sample and wording unknown). Not independently confirmed; the only feasibility study opened (Plan International, Aug 2022) gives no preference percentages. HNRP 2026 (qualitative): a large majority of communities expressed a preference for cash transfers; men clearly prefer cash while a significant share of women prefer in-kind, citing limited control over cash use within the household. No percentage in the plan."
    },
    "cost_efficiency": {
     "mpc": {
@@ -2875,6 +2952,14 @@ const CASH_SIGNAL = {
      "url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
      "date": "2025",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s9",
+     "title": "Mali HNRP 2026 (community preferences, qualitative)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/mali/mali-besoins-humanitaires-et-plan-de-reponse-2026",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -2978,7 +3063,7 @@ const CASH_SIGNAL = {
      ],
      "note": "Construction/rehabilitation of infrastructure. [/08]"
     },
-    "survey_note": "REACH/IOM-DTM MSNI, 25,369 households, 72 districts, 26 Jun-9 Aug 2024; findings described as indicative. Not specific to the 2026 crisis geography (Cabo Delgado, Nampula)."
+    "survey_note": "REACH/IOM-DTM MSNI, 25,369 households, 72 districts, 26 Jun-9 Aug 2024; findings described as indicative. Not specific to the 2026 crisis geography (Cabo Delgado, Nampula). HNRP 2026 gives no preference figure; states that 2025 advocacy positioned CVA as a preferred response modality reflecting community demand for flexibility and dignity (policy statement, not survey data)."
    },
    "cost_efficiency": {
     "mpc": {
@@ -3245,6 +3330,14 @@ const CASH_SIGNAL = {
      "url": "https://reliefweb.int/report/mozambique/mozambique-2025-humanitarian-response-cash-assistance-overview-31-december-2025-enpt",
      "date": "2025-12-31",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s12",
+     "title": "Mozambique HNRP 2026 (CVA positioned as preferred modality)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/mozambique/mozambique-humanitarian-needs-and-response-plan-humanitarian-programme-cycle-2026-issued-29-december-2025-enpt",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -3342,7 +3435,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "Not found."
     },
-    "survey_note": "REACH MSNA 2025 is the likely source of the 84-92% cash preference reported by the gDCF analysis; unverified. Cash shares are by population group, not a single national figure."
+    "survey_note": "REACH MSNA 2025 is the likely source of the 84-92% cash preference reported by the gDCF analysis; unverified. Cash shares are by population group, not a single national figure. HNRP 2026 p.32 has a community-feedback data graphic (Wai Hmya Par platform, >30,000 cases, Q3 2025): most feedback requested assistance, particularly cash and food; figure not extracted. In-kind remains essential where inflation or market access limits cash."
    },
    "cost_efficiency": {
     "mpc": {
@@ -3616,6 +3709,14 @@ const CASH_SIGNAL = {
      "url": "https://www.themimu.info/sites/themimu.info/files/jobs/SOW-Subnational_CMWG_Coordinator_Northwest_Myanmar_VA-450425.pdf",
      "date": "2025-05",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s8",
+     "title": "Myanmar HNRP 2026 (community feedback, p.32 graphic)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/myanmar/myanmar-humanitarian-needs-and-response-plan-2026-enmy",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -3714,7 +3815,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "As above."
     },
-    "survey_note": "REACH/MSCWG feasibility study, Tillabéri and Tahoua border areas, Feb-Mar 2020: 80% (Tillabéri) and 50% (Tahoua) of key informants said communities prefer in-kind, mainly to avoid market trips. Key-informant and focus-group based, not representative; not entered as a percentage. [s7]"
+    "survey_note": "REACH/MSCWG feasibility study, Tillabéri and Tahoua border areas, Feb-Mar 2020: 80% (Tillabéri) and 50% (Tahoua) of key informants said communities prefer in-kind, mainly to avoid market trips. Key-informant and focus-group based, not representative; not entered as a percentage. [s7] HNRP 2026 consultations (5 regions, 28 departments, 57 communes; FGDs and KIIs) rank priority needs, not modalities: food assistance 35.2%, financial support/credit/cash transfers 12.3%. Communities favour combined food + cash responses. Not a modality-preference figure."
    },
    "cost_efficiency": {
     "mpc": {
@@ -3993,6 +4094,14 @@ const CASH_SIGNAL = {
      "url": "https://www.calpnetwork.org/fr/community/cash-working-groups/",
      "date": "2026",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s9",
+     "title": "Niger HNRP 2026 (community consultations: priority needs)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/niger/niger-besoins-humanitaires-et-plan-de-reponse-fevrier-2026",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -4065,11 +4174,13 @@ const CASH_SIGNAL = {
    },
    "modality_preference": {
     "cash_pct": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
+     "value": 92,
+     "available": "partial",
+     "as_of": "2026",
+     "source_ids": [
+      "s9"
+     ],
+     "note": "HNRP 2026: 92% of beneficiaries surveyed express a clear preference for cash (appears to be post-distribution monitoring of cash recipients, so not a population-wide preference); 85% satisfied with cash. Same passage: in-kind 48% of distribution activities, vouchers 7% of response (delivery shares, not preferences)."
     },
     "vouchers_pct": {
      "value": null,
@@ -4092,7 +4203,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
     },
-    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified)."
+    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified). HNRP 2026: 92% of surveyed beneficiaries prefer cash (likely PDM of cash recipients; sample not stated). GTS Cash Barometer 2024 (Borno, Yobe) found people generally prefer vouchers to unrestricted cash — the two findings conflict and come from different populations."
    },
    "cost_efficiency": {
     "mpc": {
@@ -4287,9 +4398,9 @@ const CASH_SIGNAL = {
      "Total CVA requirement",
      "Cost efficiency",
      "Pooled fund allocations",
-     "Current modality preference percentages",
      "CashCap",
-     "Cash feasibility study"
+     "Cash feasibility study",
+     "population-wide modality preference (HNRP's 92% is from a beneficiary PDM)"
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
@@ -4367,6 +4478,14 @@ const CASH_SIGNAL = {
      "publisher": "OCHA / CWG",
      "url": "https://reliefweb.int/report/nigeria/northeast-nigeria-cash-working-group-terms-reference-june-2024",
      "date": "2024-06",
+     "accessed": "2026-11-05"
+    },
+    {
+     "id": "s9",
+     "title": "Nigeria HNRP 2026 (beneficiary surveys: modality preference)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/nigeria/nigeria-2026-humanitarian-needs-and-response-plan-january-2026",
+     "date": "2026",
      "accessed": "2026-11-05"
     }
    ]
@@ -4473,7 +4592,7 @@ const CASH_SIGNAL = {
      ],
      "note": "Services (20%); multiple answers allowed. [/10]"
     },
-    "survey_note": "REACH MSNA, 20 Sep-15 Oct 2025, face-to-face; factsheet gives n=6,988 in one place and 6,326 in another. Question wording not in the factsheet. Earlier MSNA 2024 (n=12,233) ranked in-kind food 68%, mobile-money cash 38%, physical cash 33%."
+    "survey_note": "REACH MSNA, 20 Sep-15 Oct 2025, face-to-face; factsheet gives n=6,988 in one place and 6,326 in another. Question wording not in the factsheet. Earlier MSNA 2024 (n=12,233) ranked in-kind food 68%, mobile-money cash 38%, physical cash 33%. HNRP 2026 p.14 (qualitative): consultations by GTS, Loop and the CEA Taskforce confirm cash remains the preferred modality, particularly for women-, older-person- and child-headed households, persons with disabilities and IDPs. No figure in the plan."
    },
    "cost_efficiency": {
     "mpc": {
@@ -4788,6 +4907,14 @@ const CASH_SIGNAL = {
      "url": "https://portal.canadem.ca/careers/57869-CANADEM-General-Portal/jobs/16768648-OCHA-Cash-Coordinator-P4-Mogadishu-Somalia",
      "date": "",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s15",
+     "title": "Somalia HNRP 2026 p.14 (consultations: cash preferred modality)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/somalia/somalia-humanitarian-needs-and-response-plan-2026",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -4863,7 +4990,8 @@ const CASH_SIGNAL = {
      "available": "yes",
      "as_of": "2025",
      "source_ids": [
-      "s1"
+      "s1",
+      "s10"
      ],
      "note": "Share preferring cash over in-kind (ISNA 2025), as cited in HNRP p.22."
     },
@@ -4888,7 +5016,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "Not reported."
     },
-    "survey_note": "Inter-Sectoral Needs Assessment (ISNA) 2025, cited in the HNRP; sample size and question wording not stated there. Underlying ISNA report not opened."
+    "survey_note": "Inter-Sectoral Needs Assessment (ISNA) 2025, cited in the HNRP; sample size and question wording not stated there. Underlying ISNA report not opened. HNRP 2026 (ReliefWeb edition) restates the ISNA 2025 figure: 52% preferred cash over in-kind."
    },
    "cost_efficiency": {
     "mpc": {
@@ -5190,6 +5318,14 @@ const CASH_SIGNAL = {
      "url": "https://repository.impact-initiatives.org/document/impact/b9377ac7/SSD_REACH_Factsheet_Aweil-North-Cash-Feasibility-Assessment_April-2025.pdf",
      "date": "2025-04",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s10",
+     "title": "South Sudan HNRP 2026 (ISNA 2025 modality preference)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/south-sudan/south-sudan-humanitarian-needs-and-response-plan-2026-january-2026",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -5262,11 +5398,13 @@ const CASH_SIGNAL = {
    },
    "modality_preference": {
     "cash_pct": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No quantified preference split found. HNRP s3 says over 90 per cent of affected households call cash the most dignified and responsive support (wording is not a forced-choice preference); CWG paper and landscape review give no split."
+     "value": 90,
+     "available": "partial",
+     "as_of": "2026",
+     "source_ids": [
+      "s17"
+     ],
+     "note": "HNRP 2026: over 90% of affected households identify cash as the most dignified and responsive form of support; community consultations placed cash as top preferred type and modality. Not a forced-choice modality question; underlying survey not named."
     },
     "vouchers_pct": {
      "value": null,
@@ -5289,7 +5427,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "Not reported."
     },
-    "survey_note": "No MSNA modality-preference question found. HNRP 2026 community consultations ranked cash as top preferred type and modality [s3]; a 2026 IFPRI study of IDP households on intra-household preferences exists but was not read."
+    "survey_note": "No MSNA modality-preference question found. HNRP 2026 community consultations ranked cash as top preferred type and modality [s3]; a 2026 IFPRI study of IDP households on intra-household preferences exists but was not read. HNRP 2026: cash top preferred modality in consultations; over 90% call cash the most dignified and responsive support (recorded as partial)."
    },
    "cost_efficiency": {
     "mpc": {
@@ -5489,13 +5627,13 @@ const CASH_SIGNAL = {
      "SHF reserve allocation includes MPC [s13]"
     ],
     "data_gaps": [
-     "modality preference split",
      "cost efficiency (all four)",
      "sectoral cash and voucher requirements",
      "total CVA share",
      "CWG leads and CashCap",
      "SHF cash allocations",
-     "2027 plan status"
+     "2027 plan status",
+     "modality preference: only a 'most dignified' figure (>90%), no forced-choice split"
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
@@ -5638,6 +5776,14 @@ const CASH_SIGNAL = {
      "url": "https://reliefweb.int/report/sudan/sudan-cash-working-group-coordination-structure",
      "date": "undated",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s17",
+     "title": "Sudan HNRP 2026 (community consultations: cash most dignified)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-april-2026-enar",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -5711,7 +5857,8 @@ const CASH_SIGNAL = {
      "available": "partial",
      "as_of": "2026-04",
      "source_ids": [
-      "s5"
+      "s5",
+      "s10"
      ],
      "note": "Not a modality-choice survey: the HNRP reports cash-based assistance as the top priority need for 85% of households surveyed. Treat as priority-need evidence, not preference. Cash-based assistance is the top priority for 85% of households surveyed (priority, not a modality-choice question); survey not named."
     },
@@ -5736,7 +5883,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "Not stated."
     },
-    "survey_note": "HNRP 2026 part 1 priority-need finding; underlying survey, sample and wording not identified. Treat as indicative only."
+    "survey_note": "HNRP 2026 part 1 priority-need finding; underlying survey, sample and wording not identified. Treat as indicative only. HNRP 2026: 85% of respondents cite cash-based assistance as their top priority (food assistance is 64% of support received); livelihoods/employment support 58%."
    },
    "cost_efficiency": {
     "mpc": {
@@ -6024,6 +6171,14 @@ const CASH_SIGNAL = {
      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1518",
      "date": "2026-10-28",
      "accessed": "2026-11-05"
+    },
+    {
+     "id": "s10",
+     "title": "Syria HNRP 2026 (cash-based assistance top priority, 85%)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://reliefweb.int/report/syrian-arab-republic/syrian-arab-republic-2026-humanitarian-needs-and-response-plan-april-2026-enar",
+     "date": "2026",
+     "accessed": "2026-11-05"
     }
    ]
   },
@@ -6100,7 +6255,7 @@ const CASH_SIGNAL = {
      "available": "no",
      "as_of": "",
      "source_ids": [],
-     "note": "No modality-preference survey with figures found; REACH MeoC June 2025 and CMWG products not opened."
+     "note": "No preference figure in the HNRP 2026 or other sources checked; CVA described as a central planned modality only."
     },
     "vouchers_pct": {
      "value": null,
@@ -6123,7 +6278,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "As above."
     },
-    "survey_note": "Not found in sources checked."
+    "survey_note": "Not found in sources checked. HNRP 2026 contains no modality-preference data; CVA is planned as a central modality with MPCA as a core intersectoral modality. Communities do not appear to have been consulted on modality beyond PDMs."
    },
    "cost_efficiency": {
     "mpc": {
@@ -6396,6 +6551,14 @@ const CASH_SIGNAL = {
      "publisher": "OCHA FTS",
      "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1520",
      "date": "2026-10-28",
+     "accessed": "2026-11-05"
+    },
+    {
+     "id": "s10",
+     "title": "Yemen HNRP 2026 (CVA central modality; no preference data)",
+     "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+     "url": "https://www.unocha.org/publications/report/yemen/yemen-humanitarian-needs-and-response-plan-2026-march-2026",
+     "date": "2026",
      "accessed": "2026-11-05"
     }
    ]

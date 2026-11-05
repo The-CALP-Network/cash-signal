@@ -71,7 +71,7 @@
       "available": "no",
       "as_of": "",
       "source_ids": [],
-      "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located."
+      "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located. HNRP 2026 reports a strong qualitative preference for cash (host/IDP) but no figure."
     },
     "vouchers_pct": {
       "value": null,
@@ -93,7 +93,8 @@
       "as_of": "",
       "source_ids": [],
       "note": "Searched REACH MSNA, WFP and CWG sources for a Chad modality preference figure; none located."
-    }
+    },
+    "survey_note": "HNRP 2026 (qualitative): perception survey shows a strong preference for cash among host communities and IDPs where markets are accessible; newly arrived refugees and returnees prefer food, NFI, WASH kits and shelter; women favour regular predictable cash, men agricultural inputs. No percentages given."
   },
   "cost_efficiency": {
     "mpc": {
@@ -396,6 +397,14 @@
       "publisher": "WFP via ReliefWeb",
       "url": "https://reliefweb.int/report/chad/chad-price-bulletin-june-2024",
       "date": "2024-06",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s11",
+      "title": "Chad HNRP 2026 (perception survey: modality preference, qualitative)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://www.unocha.org/chad",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

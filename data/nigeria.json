@@ -67,11 +67,13 @@
   },
   "modality_preference": {
     "cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
+      "value": 92,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s9"
+      ],
+      "note": "HNRP 2026: 92% of beneficiaries surveyed express a clear preference for cash (appears to be post-distribution monitoring of cash recipients, so not a population-wide preference); 85% satisfied with cash. Same passage: in-kind 48% of distribution activities, vouchers 7% of response (delivery shares, not preferences)."
     },
     "vouchers_pct": {
       "value": null,
@@ -94,7 +96,7 @@
       "source_ids": [],
       "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
     },
-    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified)."
+    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified). HNRP 2026: 92% of surveyed beneficiaries prefer cash (likely PDM of cash recipients; sample not stated). GTS Cash Barometer 2024 (Borno, Yobe) found people generally prefer vouchers to unrestricted cash — the two findings conflict and come from different populations."
   },
   "cost_efficiency": {
     "mpc": {
@@ -289,9 +291,9 @@
       "Total CVA requirement",
       "Cost efficiency",
       "Pooled fund allocations",
-      "Current modality preference percentages",
       "CashCap",
-      "Cash feasibility study"
+      "Cash feasibility study",
+      "population-wide modality preference (HNRP's 92% is from a beneficiary PDM)"
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
@@ -369,6 +371,14 @@
       "publisher": "OCHA / CWG",
       "url": "https://reliefweb.int/report/nigeria/northeast-nigeria-cash-working-group-terms-reference-june-2024",
       "date": "2024-06",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "Nigeria HNRP 2026 (beneficiary surveys: modality preference)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/nigeria/nigeria-2026-humanitarian-needs-and-response-plan-january-2026",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

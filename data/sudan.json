@@ -67,11 +67,13 @@
   },
   "modality_preference": {
     "cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "No quantified preference split found. HNRP s3 says over 90 per cent of affected households call cash the most dignified and responsive support (wording is not a forced-choice preference); CWG paper and landscape review give no split."
+      "value": 90,
+      "available": "partial",
+      "as_of": "2026",
+      "source_ids": [
+        "s17"
+      ],
+      "note": "HNRP 2026: over 90% of affected households identify cash as the most dignified and responsive form of support; community consultations placed cash as top preferred type and modality. Not a forced-choice modality question; underlying survey not named."
     },
     "vouchers_pct": {
       "value": null,
@@ -94,7 +96,7 @@
       "source_ids": [],
       "note": "Not reported."
     },
-    "survey_note": "No MSNA modality-preference question found. HNRP 2026 community consultations ranked cash as top preferred type and modality [s3]; a 2026 IFPRI study of IDP households on intra-household preferences exists but was not read."
+    "survey_note": "No MSNA modality-preference question found. HNRP 2026 community consultations ranked cash as top preferred type and modality [s3]; a 2026 IFPRI study of IDP households on intra-household preferences exists but was not read. HNRP 2026: cash top preferred modality in consultations; over 90% call cash the most dignified and responsive support (recorded as partial)."
   },
   "cost_efficiency": {
     "mpc": {
@@ -294,13 +296,13 @@
       "SHF reserve allocation includes MPC [s13]"
     ],
     "data_gaps": [
-      "modality preference split",
       "cost efficiency (all four)",
       "sectoral cash and voucher requirements",
       "total CVA share",
       "CWG leads and CashCap",
       "SHF cash allocations",
-      "2027 plan status"
+      "2027 plan status",
+      "modality preference: only a 'most dignified' figure (>90%), no forced-choice split"
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
@@ -442,6 +444,14 @@
       "publisher": "OCHA / ReliefWeb",
       "url": "https://reliefweb.int/report/sudan/sudan-cash-working-group-coordination-structure",
       "date": "undated",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s17",
+      "title": "Sudan HNRP 2026 (community consultations: cash most dignified)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/sudan/sudan-humanitarian-needs-and-response-plan-2026-april-2026-enar",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

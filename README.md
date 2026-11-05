@@ -14,7 +14,7 @@ build/build.py        injects data/*.json into the template -> index.html
 build/archive/        earlier templates (v1 sidebar, v2 themed tabs, v3 country tabs)
 schema/schema.json    the country record format
 schema/validate.py    checks a country file (run before every rebuild)
-docs/                 research brief, method and the independent spot-check report
+docs/                 research brief, spot-check report, and the HNRP 2026 modality-preference review (xlsx)
 ```
 
 ## Updating the data

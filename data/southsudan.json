@@ -70,7 +70,8 @@
       "available": "yes",
       "as_of": "2025",
       "source_ids": [
-        "s1"
+        "s1",
+        "s10"
       ],
       "note": "Share preferring cash over in-kind (ISNA 2025), as cited in HNRP p.22."
     },
@@ -95,7 +96,7 @@
       "source_ids": [],
       "note": "Not reported."
     },
-    "survey_note": "Inter-Sectoral Needs Assessment (ISNA) 2025, cited in the HNRP; sample size and question wording not stated there. Underlying ISNA report not opened."
+    "survey_note": "Inter-Sectoral Needs Assessment (ISNA) 2025, cited in the HNRP; sample size and question wording not stated there. Underlying ISNA report not opened. HNRP 2026 (ReliefWeb edition) restates the ISNA 2025 figure: 52% preferred cash over in-kind."
   },
   "cost_efficiency": {
     "mpc": {
@@ -396,6 +397,14 @@
       "publisher": "REACH",
       "url": "https://repository.impact-initiatives.org/document/impact/b9377ac7/SSD_REACH_Factsheet_Aweil-North-Cash-Feasibility-Assessment_April-2025.pdf",
       "date": "2025-04",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "South Sudan HNRP 2026 (ISNA 2025 modality preference)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/south-sudan/south-sudan-humanitarian-needs-and-response-plan-2026-january-2026",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

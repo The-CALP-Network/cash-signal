@@ -65,13 +65,13 @@
   },
   "modality_preference": {
     "cash_pct": {
-      "value": 65,
-      "available": "partial",
+      "value": 27,
+      "available": "yes",
       "as_of": "2026",
       "source_ids": [
-        "s1"
+        "s8"
       ],
-      "note": "65% prefer cash or a combination of cash and in-kind; cash alone is not separated. Underlying survey not named in the HNRP text."
+      "note": "HNRP 2026 community feedback exercises: 27% preferred cash alone; 38% a combination of cash and in-kind (recorded under Other). Survey name and sample not given."
     },
     "vouchers_pct": {
       "value": null,
@@ -88,13 +88,15 @@
       "note": "Not reported separately."
     },
     "other_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not reported separately."
+      "value": 38,
+      "available": "yes",
+      "as_of": "2026",
+      "source_ids": [
+        "s8"
+      ],
+      "note": "Combination of cash and in-kind assistance (HNRP 2026 feedback exercises). Earlier \"65% cash or mix\" was these two figures combined."
     },
-    "survey_note": "HNRP 2026 Section 2.8 states 65% prefer cash or a cash/in-kind combination; survey name, year and sample not given. A REACH MSNA modality breakdown was not found."
+    "survey_note": "HNRP 2026 Section 2.8 states 65% prefer cash or a cash/in-kind combination; survey name, year and sample not given. A REACH MSNA modality breakdown was not found. HNRP 2026: 27% cash alone, 38% cash + in-kind combination (65% combined); in-kind-only share not stated."
   },
   "cost_efficiency": {
     "mpc": {
@@ -372,6 +374,14 @@
       "publisher": "UNTalent (job posting)",
       "url": "https://untalent.org/jobs/cash-and-voucher-working-group-cvwg-co-chair-technical-coordinator-afghan-nationals-only",
       "date": "undated",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "Afghanistan HNRP 2026 (community feedback: modality preference)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://www.unocha.org/publications/report/afghanistan/afghanistan-humanitarian-needs-and-response-plan-2026-december-2025-endarips",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

@@ -100,7 +100,7 @@
       ],
       "note": "Services (20%); multiple answers allowed. [/10]"
     },
-    "survey_note": "REACH MSNA, 20 Sep-15 Oct 2025, face-to-face; factsheet gives n=6,988 in one place and 6,326 in another. Question wording not in the factsheet. Earlier MSNA 2024 (n=12,233) ranked in-kind food 68%, mobile-money cash 38%, physical cash 33%."
+    "survey_note": "REACH MSNA, 20 Sep-15 Oct 2025, face-to-face; factsheet gives n=6,988 in one place and 6,326 in another. Question wording not in the factsheet. Earlier MSNA 2024 (n=12,233) ranked in-kind food 68%, mobile-money cash 38%, physical cash 33%. HNRP 2026 p.14 (qualitative): consultations by GTS, Loop and the CEA Taskforce confirm cash remains the preferred modality, particularly for women-, older-person- and child-headed households, persons with disabilities and IDPs. No figure in the plan."
   },
   "cost_efficiency": {
     "mpc": {
@@ -414,6 +414,14 @@
       "publisher": "CANADEM / OCHA",
       "url": "https://portal.canadem.ca/careers/57869-CANADEM-General-Portal/jobs/16768648-OCHA-Cash-Coordinator-P4-Mogadishu-Somalia",
       "date": "",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s15",
+      "title": "Somalia HNRP 2026 p.14 (consultations: cash preferred modality)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/somalia/somalia-humanitarian-needs-and-response-plan-2026",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

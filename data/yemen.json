@@ -71,7 +71,7 @@
       "available": "no",
       "as_of": "",
       "source_ids": [],
-      "note": "No modality-preference survey with figures found; REACH MeoC June 2025 and CMWG products not opened."
+      "note": "No preference figure in the HNRP 2026 or other sources checked; CVA described as a central planned modality only."
     },
     "vouchers_pct": {
       "value": null,
@@ -94,7 +94,7 @@
       "source_ids": [],
       "note": "As above."
     },
-    "survey_note": "Not found in sources checked."
+    "survey_note": "Not found in sources checked. HNRP 2026 contains no modality-preference data; CVA is planned as a central modality with MPCA as a core intersectoral modality. Communities do not appear to have been consulted on modality beyond PDMs."
   },
   "cost_efficiency": {
     "mpc": {
@@ -367,6 +367,14 @@
       "publisher": "OCHA FTS",
       "url": "https://api.hpc.tools/v1/public/fts/flow?planId=1520",
       "date": "2026-10-28",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s10",
+      "title": "Yemen HNRP 2026 (CVA central modality; no preference data)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://www.unocha.org/publications/report/yemen/yemen-humanitarian-needs-and-response-plan-2026-march-2026",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

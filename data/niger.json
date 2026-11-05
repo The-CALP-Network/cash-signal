@@ -93,7 +93,7 @@
       "source_ids": [],
       "note": "As above."
     },
-    "survey_note": "REACH/MSCWG feasibility study, Tillabéri and Tahoua border areas, Feb-Mar 2020: 80% (Tillabéri) and 50% (Tahoua) of key informants said communities prefer in-kind, mainly to avoid market trips. Key-informant and focus-group based, not representative; not entered as a percentage. [s7]"
+    "survey_note": "REACH/MSCWG feasibility study, Tillabéri and Tahoua border areas, Feb-Mar 2020: 80% (Tillabéri) and 50% (Tahoua) of key informants said communities prefer in-kind, mainly to avoid market trips. Key-informant and focus-group based, not representative; not entered as a percentage. [s7] HNRP 2026 consultations (5 regions, 28 departments, 57 communes; FGDs and KIIs) rank priority needs, not modalities: food assistance 35.2%, financial support/credit/cash transfers 12.3%. Communities favour combined food + cash responses. Not a modality-preference figure."
   },
   "cost_efficiency": {
     "mpc": {
@@ -370,6 +370,14 @@
       "title": "Groupes de travail sur les transferts monétaires",
       "publisher": "CALP Network",
       "url": "https://www.calpnetwork.org/fr/community/cash-working-groups/",
+      "date": "2026",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s9",
+      "title": "Niger HNRP 2026 (community consultations: priority needs)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/niger/niger-besoins-humanitaires-et-plan-de-reponse-fevrier-2026",
       "date": "2026",
       "accessed": "2026-11-05"
     }

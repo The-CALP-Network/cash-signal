@@ -92,7 +92,7 @@
       "source_ids": [],
       "note": "Not found."
     },
-    "survey_note": "REACH MSNA 2025 is the likely source of the 84-92% cash preference reported by the gDCF analysis; unverified. Cash shares are by population group, not a single national figure."
+    "survey_note": "REACH MSNA 2025 is the likely source of the 84-92% cash preference reported by the gDCF analysis; unverified. Cash shares are by population group, not a single national figure. HNRP 2026 p.32 has a community-feedback data graphic (Wai Hmya Par platform, >30,000 cases, Q3 2025): most feedback requested assistance, particularly cash and food; figure not extracted. In-kind remains essential where inflation or market access limits cash."
   },
   "cost_efficiency": {
     "mpc": {
@@ -365,6 +365,14 @@
       "publisher": "MIMU (job posting)",
       "url": "https://www.themimu.info/sites/themimu.info/files/jobs/SOW-Subnational_CMWG_Coordinator_Northwest_Myanmar_VA-450425.pdf",
       "date": "2025-05",
+      "accessed": "2026-11-05"
+    },
+    {
+      "id": "s8",
+      "title": "Myanmar HNRP 2026 (community feedback, p.32 graphic)",
+      "publisher": "OCHA (via CALP HNRP 2026 modality-preference review (Nov 2026))",
+      "url": "https://reliefweb.int/report/myanmar/myanmar-humanitarian-needs-and-response-plan-2026-enmy",
+      "date": "2026",
       "accessed": "2026-11-05"
     }
   ]

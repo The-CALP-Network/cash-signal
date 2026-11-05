@@ -409,6 +409,55 @@ td.cn a:hover { color: var(--blue); }
   .cells { gap: 16px; }
 }
 
+/* ---------- v5: section panels ----------
+   Page stays on the ground colour. Each section is a rounded pale-blue panel; stat cells are white cards on it.
+   The AI read is teal-tinted, the regional representative notes red-tinted. */
+:root { --panel-tint: #E8F0F5; --teal-tint: #D6EAED; --red-tint: #FBF1EC; --track-on-tint: #D3DFE7; --panel-pad: 32px; --panel-gap: 40px; }
+.sheet { background: var(--ground); border-bottom: 0; }
+.sheet > .wrap { padding-block: 40px 72px; }
+.tab[aria-selected="true"] { background: var(--ground); }
+.tabpanel > * + *, .ctab > * + *, .ttab > * + * { margin-top: var(--panel-gap); }
+
+.panel, .ctab > section, .tsec, .tabpanel > div:has(> div > .h-sec) {
+  background: var(--panel-tint); border: 0; border-radius: 16px; box-shadow: none; padding: var(--panel-pad); min-width: 0;
+  --track: var(--track-on-tint);
+}
+.ctab > section[aria-label="The read"] { background: var(--teal-tint); --track: #C6DEE2; }
+.ctab > section[aria-label="Regional representative notes"] { background: var(--red-tint); --track: #F2E3DC; }
+.tsec > .panel, .tabpanel > div:has(> div > .h-sec) > .panel { background: none; border-radius: 0; padding: 0; margin-top: 28px; }
+.tsec { display: block; }
+.tsec > .panel { margin-top: 24px; }
+
+/* white cards on the tint */
+.glance { gap: 16px; background: none; border: 0; }
+.glance > div, .scell, .stat { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; }
+.facts { border-radius: 10px; overflow: hidden; }
+
+/* theme tabs: each country row is its own panel */
+.crows { display: flex; flex-direction: column; gap: 24px; }
+.crow { background: var(--panel-tint); border-radius: 16px; padding: var(--panel-pad); --track: var(--track-on-tint); }
+.crow + .crow { margin-top: 0; padding-top: var(--panel-pad); border-top: 0; }
+
+/* matrix cells that were paper-coloured to match a white panel */
+.matrix th { background: var(--panel-tint); }
+.matrix td.na { background: repeating-linear-gradient(135deg, var(--panel-tint) 0 6px, #CFDCE5 6px 7px); }
+.matrix tr.go:hover td:not(.na) { background-color: var(--paper); }
+.method code { background: var(--paper); }
+.seg button:hover { background: var(--paper); }
+.srcs li:first-child { border-top: 0; }
+
+/* gap between the three side-by-side panels */
+.grid3, .method { gap: var(--panel-gap); }
+@media (max-width: 960px) { .glance { gap: 16px; } }
+@media (max-width: 640px) {
+  :root { --panel-pad: 24px; }
+  .panel { padding: var(--panel-pad); }
+  .tabpanel > * + *, .ctab > * + *, .ttab > * + * { margin-top: var(--panel-gap); }
+  .glance { grid-template-columns: minmax(0, 1fr); }
+  .glance > div { padding: 20px; }
+  .crows { gap: 24px; }
+}
+
 /* ---------- print ---------- */
 @media print {
   body, .sheet, .panel, .stat { background: #fff; }
