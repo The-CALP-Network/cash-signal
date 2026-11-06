@@ -7,7 +7,7 @@ CALP Network's "dashboard of dashboards": cash-related indicators for 15 humanit
 ## Layout
 
 ```
-index.html            the dashboard (generated — do not edit by hand)
+index.html            the dashboard (generated: do not edit by hand)
 data/<country>.json   one record per country; every figure carries a source id
 data/fts/<id>.json    scripted FTS pull per plan (build/fts_pull.py)
 data/rw/<id>.json     scripted read of each CWG page on ReliefWeb Response (build/rw_cwg_pull.py)
@@ -29,13 +29,13 @@ docs/                 research brief, spot-check reports, and the HNRP 2026 moda
 - **Country search** and a draggable, scrollable tab strip with arrows. Press `/` to focus the search.
 - **At a glance**: plan requirements, MPC share and funding, preference for cash, sectoral and total CVA funded (FTS), CVA delivered (in-country), and the coordination label (OCHA / UNHCR / both / neither).
 - Indicator groups: modality preference, cost efficiency, plan requirements, overall funding, OCHA pooled funds, systems, **cash volumes**, **local leadership** (IASC MPC scaling plan objective 4, indicators 4.1 and 4.2).
-- **CWG pulse (trial)**: what the group's public page shows — last update, dashboard currency (within 3 months or not), minutes, chair organisations by actor type.
+- **CWG pulse (trial)**: what the group's public page shows: last update, dashboard currency (within 3 months or not), minutes, chair organisations by actor type.
 - **Financial service providers** named in public sources, with hot-linked logos where the provider publishes one.
 - **Caveat callouts** on every visual that rests on uneven data, and a full **Method** tab: sources, indicator definitions, known data-quality issues (computed from the data), update process, change log.
 
 ## Updating the data
 
-1. Edit `data/<country>.json`. Every datum is `{value, available: yes|partial|no, as_of, source_ids, note}`; `source_ids` point at entries in that file's `sources[]`. Leave `value` null and set `available: "no"` when nothing was found — say in `note` what was looked for.
+1. Edit `data/<country>.json`. Every datum is `{value, available: yes|partial|no, as_of, source_ids, note}`; `source_ids` point at entries in that file's `sources[]`. Leave `value` null and set `available: "no"` when nothing was found: say in `note` what was looked for.
 2. FTS figures: `python3 -I build/fts_pull.py` then `python3 -I build/merge_v2.py`. CWG pages: `python3 -I build/rw_cwg_pull.py`, edit `data/rw/overrides.json` if chairs or dashboards changed, then merge. The merge only fills v1 cells that are still empty and refreshes the v2 blocks.
 3. Regional representatives fill the `rep_notes` block (key messages, barriers, CWG maturity, leadership buy-in, CALP priority, reviewed_by, reviewed_date). Once `reviewed_by` is set the country shows as Reviewed.
 4. Validate and rebuild:

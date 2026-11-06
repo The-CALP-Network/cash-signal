@@ -7,12 +7,12 @@ merge_v2.py does that so every derived figure keeps its source id, as-of date an
 What is computed per plan (incoming flows only, i.e. money entering the plan; FTS "single" view):
   total_funding            all incoming funding (matches the FTS plan summary)
   mpc_cluster_funding      flows whose destination cluster is Multi-Purpose Cash (single-cluster / destination view)
-  ctp_funding              flows whose FTS "method" is "Cash transfer programming (CTP)" — the modality tag donors set
+  ctp_funding              flows whose FTS "method" is "Cash transfer programming (CTP)": the modality tag donors set
   ctp_in_mpc               CTP-tagged flows inside the MPC cluster
   sectoral_cva_funding     CTP-tagged flows outside the MPC cluster = sectoral CVA as FTS can see it
-  cva_funding              MPC cluster OR CTP tag (union) — the widest defensible "cash" figure
+  cva_funding              MPC cluster OR CTP tag (union): the widest defensible "cash" figure
   local_actor shares       destination organisation level "Local and National Non-State Actors" or
-                           "National and Sub-National State Actors" (recipient country only) — first-level recipients only
+                           "National and Sub-National State Actors" (recipient country only): first-level recipients only
   cbpf (internal flows)    the country-based pooled fund's onward grants inside the plan: MPC share and local-actor share
 
 Run: python3 -I build/fts_pull.py            (needs network access to api.hpc.tools)

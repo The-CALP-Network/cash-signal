@@ -5,7 +5,7 @@
   "iso3": "AFG",
   "calp_region": "Asia-Pacific | MENA | East and Southern Africa | West and Central Africa",
   "last_researched": "2026-11-05",
-  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "researched_by": "claude-sonnet (AI): unreviewed",
   "plan": {
     "name": "Afghanistan Humanitarian Needs and Response Plan 2026",
     "type": "HNRP | HRP | Flash Appeal | RRP | Other | None",
@@ -271,7 +271,7 @@
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
   },
   "rep_notes": {
     "_comment": "For CALP regional representatives. Leave all empty.",

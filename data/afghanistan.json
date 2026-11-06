@@ -4,7 +4,7 @@
   "iso3": "AFG",
   "calp_region": "Asia-Pacific",
   "last_researched": "2026-11-06",
-  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "researched_by": "claude-sonnet (AI), unreviewed",
   "plan": {
     "name": "Afghanistan Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -314,7 +314,7 @@
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
   },
   "rep_notes": {
     "key_messages": "",

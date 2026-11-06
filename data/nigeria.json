@@ -4,7 +4,7 @@
   "iso3": "NGA",
   "calp_region": "West and Central Africa",
   "last_researched": "2026-11-06",
-  "researched_by": "claude-sonnet (AI) — unreviewed",
+  "researched_by": "claude-sonnet (AI), unreviewed",
   "plan": {
     "name": "Nigeria Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -96,7 +96,7 @@
       "source_ids": [],
       "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
     },
-    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified). HNRP 2026: 92% of surveyed beneficiaries prefer cash (likely PDM of cash recipients; sample not stated). GTS Cash Barometer 2024 (Borno, Yobe) found people generally prefer vouchers to unrestricted cash — the two findings conflict and come from different populations."
+    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified). HNRP 2026: 92% of surveyed beneficiaries prefer cash (likely PDM of cash recipients; sample not stated). GTS Cash Barometer 2024 (Borno, Yobe) found people generally prefer vouchers to unrestricted cash; the two findings conflict and come from different populations."
   },
   "cost_efficiency": {
     "mpc": {
@@ -305,7 +305,7 @@
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
   },
   "rep_notes": {
     "key_messages": "",

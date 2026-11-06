@@ -93,4 +93,4 @@ if errs:
     print(f"{len(errs)} problem(s):"); [print(" -", e) for e in errs]; sys.exit(1)
 yes = sum(1 for g,ks in COUNTED.items() for k in ks if d[g][k]["available"]!="no")
 tot = sum(len(ks) for ks in COUNTED.values())
-print(f"OK — {d['name']}: {yes}/{tot} indicators available, {len(src_ids)} sources")
+print(f"OK: {d['name']}: {yes}/{tot} indicators available, {len(src_ids)} sources")

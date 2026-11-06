@@ -57,7 +57,10 @@ small { font-size: 13px; }
 .brand .name { font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--ink); }
 .brand .tag { font-size: 15px; color: var(--ink2); }
 .stamps { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.brandbar .intro { flex: 1 1 100%; order: 3; margin-top: 4px; max-width: 96ch; font-size: 15px; line-height: 1.5; color: var(--ink2); }
 .stamp { font-size: 13px; font-weight: 500; color: var(--blue); background: var(--blue-tint); padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+.stamp.btn-method { color: #fff; background: var(--red); border: 1px solid var(--red); font-weight: 700; }
+.stamp.btn-method:hover { background: #a81a20; border-color: #a81a20; color: #fff; text-decoration: none; }
 .stamp.ai { color: var(--ink2); background: var(--track); font-weight: 400; }
 
 /* ---------- browser-style tabs ---------- */
@@ -537,9 +540,11 @@ td.cn a:hover { color: var(--blue); }
       <span class="name">Cash Signal</span>
       <span class="tag">cash-related indicators across humanitarian responses</span>
     </div>
+    <p class="intro">Cash Signal is a living snapshot of cash and voucher assistance across our fifteen priority responses: funding, plan requirements, modality preference, coordination capacity, pulled from FTS and other sources into one place. It tells us where cash is winning, where it’s stalled, and where the sector should focus, and it’s honest about what we don’t know.</p>
     <div class="stamps">
       <span class="stamp" id="stampDate">Data collected 5 Nov 2026</span>
       <span class="stamp ai">AI-collected · unreviewed</span>
+      <a class="stamp btn-method" href="#method" data-tab="method">Methodology &amp; sources</a>
     </div>
   </div>
 </header>
@@ -577,7 +582,7 @@ td.cn a:hover { color: var(--blue); }
 
 <script>
 // ============================================================
-// CASH SIGNAL DATA — edit this block to update the dashboard.
+// CASH SIGNAL DATA: edit this block to update the dashboard.
 // One object per country. Schema: see schema.json.
 // Regional reps: fill the rep_notes fields for your countries.
 // ============================================================
@@ -591,7 +596,7 @@ const CASH_SIGNAL = {
    "iso3": "AFG",
    "calp_region": "Asia-Pacific",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Afghanistan Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -901,7 +906,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -1360,7 +1365,7 @@ const CASH_SIGNAL = {
    "iso3": "TCD",
    "calp_region": "West and Central Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Tchad Besoins Humanitaires et Plan de Réponse 2026",
     "type": "HNRP",
@@ -1665,7 +1670,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -2186,7 +2191,7 @@ const CASH_SIGNAL = {
    "iso3": "COD",
    "calp_region": "West and Central Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026",
     "type": "HNRP",
@@ -2497,7 +2502,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -3048,7 +3053,7 @@ const CASH_SIGNAL = {
    "iso3": "PSE",
    "calp_region": "MENA",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Escalation of Hostilities in the OPT Flash Appeal 2026",
     "type": "Flash Appeal",
@@ -3349,7 +3354,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -3837,7 +3842,7 @@ const CASH_SIGNAL = {
    "iso3": "LBN",
    "calp_region": "MENA",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Lebanon Response Plan 2026 (LRP), with Flash Appeal (Mar-Aug 2026) and LRP Addendum (Sep-Dec 2026)",
     "type": "Other",
@@ -4152,7 +4157,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -4650,7 +4655,7 @@ const CASH_SIGNAL = {
    "iso3": "MLI",
    "calp_region": "West and Central Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Mali Besoins Humanitaires et Plan de Réponse 2026",
     "type": "HNRP",
@@ -4947,7 +4952,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -5360,7 +5365,7 @@ const CASH_SIGNAL = {
    "iso3": "MOZ",
    "calp_region": "East and Southern Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Mozambique Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -5641,7 +5646,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -6026,7 +6031,7 @@ const CASH_SIGNAL = {
    "iso3": "MMR",
    "calp_region": "Asia-Pacific",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Myanmar Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -6329,7 +6334,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -6743,7 +6748,7 @@ const CASH_SIGNAL = {
    "iso3": "NER",
    "calp_region": "West and Central Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Niger Besoins Humanitaires et Plan de Réponse 2026",
     "type": "HNRP",
@@ -7038,7 +7043,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -7443,7 +7448,7 @@ const CASH_SIGNAL = {
    "iso3": "NGA",
    "calp_region": "West and Central Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Nigeria Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -7535,7 +7540,7 @@ const CASH_SIGNAL = {
      "source_ids": [],
      "note": "No usable percentage located. The GTS Cash Barometer (Apr 2024) chart values were not extractable from the text."
     },
-    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified). HNRP 2026: 92% of surveyed beneficiaries prefer cash (likely PDM of cash recipients; sample not stated). GTS Cash Barometer 2024 (Borno, Yobe) found people generally prefer vouchers to unrestricted cash — the two findings conflict and come from different populations."
+    "survey_note": "Ground Truth Solutions Cash Barometer, Apr 2024: face-to-face survey of 1,952 people (Borno 1,268, Yobe 684), 18 Oct-2 Nov 2023; text says people generally prefer vouchers to unrestricted cash; 42% (Borno) and 17% (Yobe) favoured mixed food and cash. Adamawa excluded. [s6] 2026 HNRP foreword reportedly says communities prefer cash (via gDCF analysis; not verified). HNRP 2026: 92% of surveyed beneficiaries prefer cash (likely PDM of cash recipients; sample not stated). GTS Cash Barometer 2024 (Borno, Yobe) found people generally prefer vouchers to unrestricted cash; the two findings conflict and come from different populations."
    },
    "cost_efficiency": {
     "mpc": {
@@ -7744,7 +7749,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -8172,7 +8177,7 @@ const CASH_SIGNAL = {
    "iso3": "SOM",
    "calp_region": "East and Southern Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Somalia Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -8482,7 +8487,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -8964,7 +8969,7 @@ const CASH_SIGNAL = {
    "iso3": "SSD",
    "calp_region": "East and Southern Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "South Sudan Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -9283,7 +9288,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -9772,7 +9777,7 @@ const CASH_SIGNAL = {
    "iso3": "SDN",
    "calp_region": "East and Southern Africa",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Sudan Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -10082,7 +10087,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -10687,7 +10692,7 @@ const CASH_SIGNAL = {
    "iso3": "SYR",
    "calp_region": "MENA",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Syrian Arab Republic Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -10988,7 +10993,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -11412,7 +11417,7 @@ const CASH_SIGNAL = {
    "iso3": "YEM",
    "calp_region": "MENA",
    "last_researched": "2026-11-06",
-   "researched_by": "claude-sonnet (AI) — unreviewed",
+   "researched_by": "claude-sonnet (AI), unreviewed",
    "plan": {
     "name": "Yemen Humanitarian Needs and Response Plan 2026",
     "type": "HNRP",
@@ -11709,7 +11714,7 @@ const CASH_SIGNAL = {
     ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
-    "status": "AI draft — not yet reviewed"
+    "status": "AI draft, not yet reviewed"
    },
    "rep_notes": {
     "key_messages": "",
@@ -12173,7 +12178,7 @@ const CASH_SIGNAL = {
  ]
 };
 // ============================================================
-// END OF DATA BLOCK — everything below is rendering code.
+// END OF DATA BLOCK: everything below is rendering code.
 // ============================================================
 
 (function () {
@@ -12804,7 +12809,7 @@ function chairChips(chairs, compact) {
   if (!chairs || !chairs.length) return '<span class="muted">No chair organisations published.</span>';
   return '<div class="chips' + (compact ? ' compact' : '') + '">' + chairs.map(function (x) {
     var t = x.actor_type || 'Other', cls = (t === 'NNGO' || t === 'Government' || t === 'RCRC') ? 'local' : t === 'UN' ? 'un' : 'ingo';
-    var full = x.organisation + ' — ' + t + (x.role ? ', ' + x.role : '');
+    var full = x.organisation + ', ' + t + (x.role ? ', ' + x.role : '');
     if (compact) return '<span class="chip2 ' + cls + '" title="' + esc(full) + '">' + esc(clip(x.organisation, 26)) + '<span class="ft">' + esc(t) + '</span></span>';
     return '<span class="chip2 ' + cls + '" title="' + esc(full) + '">' + esc(x.organisation) + '<span class="ft">' + esc(t + (x.role ? ' · ' + x.role : '')) + '</span></span>'; }).join('') + '</div>';
 }
@@ -12933,9 +12938,9 @@ function localAcrossHTML() {
   var chairs = countries.map(function (c) { return { c: c, v: (c.localisation || {}).local_cochair || {} }; });
   var yes = chairs.filter(function (x) { return x.v.value === 'yes'; }), no = chairs.filter(function (x) { return x.v.value === 'no'; }), unk = chairs.filter(function (x) { return x.v.value !== 'yes' && x.v.value !== 'no'; });
   var h = '<section class="panel"><div class="panel-h"><h3>Local or national co-chair (indicator 4.1)</h3><p class="sub">IASC target: by end-2027, 75% of cash working groups have local or national actors in co-chair roles. Read from each CWG’s public page.</p></div>' +
-    '<div class="pulse" style="margin-top:0">' + pulseCell('Yes', yes.length + ' of ' + N, yes.length ? yes.map(function (x) { return cLink(x.c); }).join(', ') : '—') +
-    pulseCell('No', no.length + ' of ' + N, no.length ? no.map(function (x) { return cLink(x.c); }).join(', ') : '—') +
-    pulseCell('Unknown', unk.length + ' of ' + N, unk.length ? unk.map(function (x) { return cLink(x.c); }).join(', ') : '—', true) +
+    '<div class="pulse" style="margin-top:0">' + pulseCell('Yes', yes.length + ' of ' + N, yes.length ? yes.map(function (x) { return cLink(x.c); }).join(', ') : 'none') +
+    pulseCell('No', no.length + ' of ' + N, no.length ? no.map(function (x) { return cLink(x.c); }).join(', ') : 'none') +
+    pulseCell('Unknown', unk.length + ' of ' + N, unk.length ? unk.map(function (x) { return cLink(x.c); }).join(', ') : 'none', true) +
     pulseCell('Known cases at target', (yes.length + no.length) ? fmtPct(yes.length / (yes.length + no.length) * 100) : 'n/a', 'share of CWGs with published chairs that have a local co-chair; the target is 75%', !(yes.length + no.length)) + '</div>' +
     caveat([CAV.chairs]) + '</section>';
   h += planPanelHTML(pp);

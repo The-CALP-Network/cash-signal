@@ -57,7 +57,10 @@ small { font-size: 13px; }
 .brand .name { font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--ink); }
 .brand .tag { font-size: 15px; color: var(--ink2); }
 .stamps { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.brandbar .intro { flex: 1 1 100%; order: 3; margin-top: 4px; max-width: 96ch; font-size: 15px; line-height: 1.5; color: var(--ink2); }
 .stamp { font-size: 13px; font-weight: 500; color: var(--blue); background: var(--blue-tint); padding: 5px 12px; border-radius: 999px; white-space: nowrap; }
+.stamp.btn-method { color: #fff; background: var(--red); border: 1px solid var(--red); font-weight: 700; }
+.stamp.btn-method:hover { background: #a81a20; border-color: #a81a20; color: #fff; text-decoration: none; }
 .stamp.ai { color: var(--ink2); background: var(--track); font-weight: 400; }
 
 /* ---------- browser-style tabs ---------- */
@@ -537,9 +540,11 @@ td.cn a:hover { color: var(--blue); }
       <span class="name">Cash Signal</span>
       <span class="tag">cash-related indicators across humanitarian responses</span>
     </div>
+    <p class="intro">Cash Signal is a living snapshot of cash and voucher assistance across our fifteen priority responses: funding, plan requirements, modality preference, coordination capacity, pulled from FTS and other sources into one place. It tells us where cash is winning, where it’s stalled, and where the sector should focus, and it’s honest about what we don’t know.</p>
     <div class="stamps">
       <span class="stamp" id="stampDate">Data collected 5 Nov 2026</span>
       <span class="stamp ai">AI-collected · unreviewed</span>
+      <a class="stamp btn-method" href="#method" data-tab="method">Methodology &amp; sources</a>
     </div>
   </div>
 </header>
@@ -577,13 +582,13 @@ td.cn a:hover { color: var(--blue); }
 
 <script>
 // ============================================================
-// CASH SIGNAL DATA — edit this block to update the dashboard.
+// CASH SIGNAL DATA: edit this block to update the dashboard.
 // One object per country. Schema: see schema.json.
 // Regional reps: fill the rep_notes fields for your countries.
 // ============================================================
 __CASH_SIGNAL_OBJECT__
 // ============================================================
-// END OF DATA BLOCK — everything below is rendering code.
+// END OF DATA BLOCK: everything below is rendering code.
 // ============================================================
 
 (function () {
@@ -1214,7 +1219,7 @@ function chairChips(chairs, compact) {
   if (!chairs || !chairs.length) return '<span class="muted">No chair organisations published.</span>';
   return '<div class="chips' + (compact ? ' compact' : '') + '">' + chairs.map(function (x) {
     var t = x.actor_type || 'Other', cls = (t === 'NNGO' || t === 'Government' || t === 'RCRC') ? 'local' : t === 'UN' ? 'un' : 'ingo';
-    var full = x.organisation + ' — ' + t + (x.role ? ', ' + x.role : '');
+    var full = x.organisation + ', ' + t + (x.role ? ', ' + x.role : '');
     if (compact) return '<span class="chip2 ' + cls + '" title="' + esc(full) + '">' + esc(clip(x.organisation, 26)) + '<span class="ft">' + esc(t) + '</span></span>';
     return '<span class="chip2 ' + cls + '" title="' + esc(full) + '">' + esc(x.organisation) + '<span class="ft">' + esc(t + (x.role ? ' · ' + x.role : '')) + '</span></span>'; }).join('') + '</div>';
 }
@@ -1343,9 +1348,9 @@ function localAcrossHTML() {
   var chairs = countries.map(function (c) { return { c: c, v: (c.localisation || {}).local_cochair || {} }; });
   var yes = chairs.filter(function (x) { return x.v.value === 'yes'; }), no = chairs.filter(function (x) { return x.v.value === 'no'; }), unk = chairs.filter(function (x) { return x.v.value !== 'yes' && x.v.value !== 'no'; });
   var h = '<section class="panel"><div class="panel-h"><h3>Local or national co-chair (indicator 4.1)</h3><p class="sub">IASC target: by end-2027, 75% of cash working groups have local or national actors in co-chair roles. Read from each CWG’s public page.</p></div>' +
-    '<div class="pulse" style="margin-top:0">' + pulseCell('Yes', yes.length + ' of ' + N, yes.length ? yes.map(function (x) { return cLink(x.c); }).join(', ') : '—') +
-    pulseCell('No', no.length + ' of ' + N, no.length ? no.map(function (x) { return cLink(x.c); }).join(', ') : '—') +
-    pulseCell('Unknown', unk.length + ' of ' + N, unk.length ? unk.map(function (x) { return cLink(x.c); }).join(', ') : '—', true) +
+    '<div class="pulse" style="margin-top:0">' + pulseCell('Yes', yes.length + ' of ' + N, yes.length ? yes.map(function (x) { return cLink(x.c); }).join(', ') : 'none') +
+    pulseCell('No', no.length + ' of ' + N, no.length ? no.map(function (x) { return cLink(x.c); }).join(', ') : 'none') +
+    pulseCell('Unknown', unk.length + ' of ' + N, unk.length ? unk.map(function (x) { return cLink(x.c); }).join(', ') : 'none', true) +
     pulseCell('Known cases at target', (yes.length + no.length) ? fmtPct(yes.length / (yes.length + no.length) * 100) : 'n/a', 'share of CWGs with published chairs that have a local co-chair; the target is 75%', !(yes.length + no.length)) + '</div>' +
     caveat([CAV.chairs]) + '</section>';
   h += planPanelHTML(pp);

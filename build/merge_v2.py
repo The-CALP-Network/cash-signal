@@ -4,7 +4,7 @@
 Inputs
   data/<id>.json       the v1 country record (edited in place, idempotently)
   data/fts/<id>.json   output of fts_pull.py
-  data/v2/<id>.json    research fragments (coordination, cwg_reliefweb, cash_volumes, fsps) — optional
+  data/v2/<id>.json    research fragments (coordination, cwg_reliefweb, cash_volumes, fsps): optional
 
 Adds / refreshes these blocks on each country record:
   coordination, fts_cva, cash_volumes, cwg_reliefweb, fsps, localisation
