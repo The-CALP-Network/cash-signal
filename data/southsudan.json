@@ -502,6 +502,22 @@
       "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
       "date": "2026-11-06",
       "accessed": "2026-11-06"
+    },
+    {
+      "id": "wfp1",
+      "title": "WFP Market Functionality Index (MFI), HDX release [2026-01-01T00:00:00 TO 2026-06-30T23:59:59]",
+      "publisher": "WFP via HDX",
+      "url": "https://data.humdata.org/dataset/market-functionality-index-mfi",
+      "date": "2026-06-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "wfp2",
+      "title": "WFP food prices for South Sudan (market-level monthly series)",
+      "publisher": "WFP via HDX",
+      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-south-sudan",
+      "date": "2026-11-04",
+      "accessed": "2026-11-06"
     }
   ],
   "fts_cva": {
@@ -804,5 +820,116 @@
       "usd": 23554038
     },
     "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  },
+  "markets": {
+    "pulled": "2026-11-06",
+    "mfi_score": {
+      "value": 5.04,
+      "available": "partial",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "wfp1"
+      ],
+      "note": "Median MFI score (0-10) across 2 markets, latest assessment per market, 2026-04-30. Weakest dimensions: Price, Services. Very few markets: indicative only.",
+      "markets": 2
+    },
+    "mfi_high_risk_pct": {
+      "value": 100.0,
+      "available": "partial",
+      "as_of": "2026-04-30",
+      "source_ids": [
+        "wfp1"
+      ],
+      "note": "Share of assessed markets WFP rates high or very high risk.",
+      "markets": 2
+    },
+    "mfi_detail": {
+      "markets": 2,
+      "surveys": 1,
+      "first_date": "2026-04-30",
+      "last_date": "2026-04-30",
+      "survey_types": [
+        "Full"
+      ],
+      "risk_counts": {
+        "Very High Risk": 1,
+        "High Risk": 1
+      },
+      "dimensions": {
+        "Assortment": 9.0,
+        "Availability": 9.17,
+        "Price": 2.92,
+        "Resilience": 5.83,
+        "Competition": 10.0,
+        "Infrastructure": 5.0,
+        "Service": 4.17,
+        "Quality": 8.12,
+        "AccessProtection": 8.75
+      },
+      "by_adm1": [
+        {
+          "adm1": "Warrap",
+          "markets": 1,
+          "median_score": 4.65
+        },
+        {
+          "adm1": "Jonglei",
+          "markets": 1,
+          "median_score": 5.44
+        }
+      ],
+      "excel_fixed_cells": 4
+    },
+    "price_markets": {
+      "value": 31,
+      "available": "yes",
+      "as_of": "2026-10",
+      "source_ids": [
+        "wfp2"
+      ],
+      "note": "Markets with a WFP retail food price in 2026-10; 36 markets reported at least once in the 12 months to then."
+    },
+    "price_change_yoy_local": {
+      "value": 36.7,
+      "available": "yes",
+      "as_of": "2026-10",
+      "source_ids": [
+        "wfp2"
+      ],
+      "note": "Year-on-year change in local currency (SSP). 357 food series (market x commodity) with a retail price in both 2026-10 and 2025-10; unweighted median. Middle half of series: 8.5% to 63.4%."
+    },
+    "price_change_yoy_usd": {
+      "value": 8.4,
+      "available": "yes",
+      "as_of": "2026-10",
+      "source_ids": [
+        "wfp2"
+      ],
+      "note": "Same series in US dollars at WFP's conversion rate (357 series). The gap to the local-currency figure is mostly the exchange rate."
+    },
+    "prices_detail": {
+      "latest_month": "2026-10",
+      "months_since_latest": 1,
+      "fresh_3m": true,
+      "markets_latest": 31,
+      "markets_12m": 36,
+      "commodities_latest": 20,
+      "currencies": [
+        "SSP"
+      ],
+      "yoy_base_month": "2025-10",
+      "yoy_series": 357,
+      "partial_months_after": []
+    },
+    "data_bridges": {
+      "status": "awaiting API access",
+      "pending": [
+        "MFI trend across survey rounds, not just the latest public release",
+        "MFI by admin area and market, with all nine dimensions",
+        "Exchange rates (official and parallel) and their month-on-month change",
+        "Minimum expenditure basket cost, where WFP computes one",
+        "Price series beyond the HDX extract: weekly prices and wholesale"
+      ]
+    }
   }
 }

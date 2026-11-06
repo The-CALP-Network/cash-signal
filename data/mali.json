@@ -448,6 +448,22 @@
       "url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
       "date": "2026-11-06",
       "accessed": "2026-11-06"
+    },
+    {
+      "id": "wfp1",
+      "title": "WFP Market Functionality Index (MFI), HDX release [2026-01-01T00:00:00 TO 2026-06-30T23:59:59]",
+      "publisher": "WFP via HDX",
+      "url": "https://data.humdata.org/dataset/market-functionality-index-mfi",
+      "date": "2026-06-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "wfp2",
+      "title": "WFP food prices for Mali (market-level monthly series)",
+      "publisher": "WFP via HDX",
+      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-mali",
+      "date": "2026-11-04",
+      "accessed": "2026-11-06"
     }
   ],
   "fts_cva": {
@@ -706,5 +722,154 @@
       "note": "No country-based pooled fund."
     },
     "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  },
+  "markets": {
+    "pulled": "2026-11-06",
+    "mfi_score": {
+      "value": 5.47,
+      "available": "yes",
+      "as_of": "2026-01-01",
+      "source_ids": [
+        "wfp1"
+      ],
+      "note": "Median MFI score (0-10) across 183 markets, latest assessment per market, 2026-01-01. Weakest dimensions: Services, Price.",
+      "markets": 183
+    },
+    "mfi_high_risk_pct": {
+      "value": 50.8,
+      "available": "yes",
+      "as_of": "2026-01-01",
+      "source_ids": [
+        "wfp1"
+      ],
+      "note": "Share of assessed markets WFP rates high or very high risk.",
+      "markets": 183
+    },
+    "mfi_detail": {
+      "markets": 183,
+      "surveys": 1,
+      "first_date": "2026-01-01",
+      "last_date": "2026-01-01",
+      "survey_types": [
+        "Full",
+        "Reduced"
+      ],
+      "risk_counts": {
+        "Medium Risk": 49,
+        "High Risk": 24,
+        "Very High Risk": 69,
+        "Low Risk": 41
+      },
+      "dimensions": {
+        "Assortment": 8.75,
+        "Availability": 10.0,
+        "Price": 5.0,
+        "Resilience": 7.5,
+        "Competition": 10.0,
+        "Infrastructure": 7.14,
+        "Service": 3.33,
+        "Quality": 7.14,
+        "AccessProtection": 10.0
+      },
+      "by_adm1": [
+        {
+          "adm1": "Kidal",
+          "markets": 2,
+          "median_score": 3.91
+        },
+        {
+          "adm1": "Tombouctou",
+          "markets": 28,
+          "median_score": 4.46
+        },
+        {
+          "adm1": "Koulikoro",
+          "markets": 9,
+          "median_score": 4.67
+        },
+        {
+          "adm1": "Gao",
+          "markets": 23,
+          "median_score": 4.96
+        },
+        {
+          "adm1": "Mopti",
+          "markets": 43,
+          "median_score": 5.12
+        },
+        {
+          "adm1": "Kayes",
+          "markets": 9,
+          "median_score": 5.44
+        },
+        {
+          "adm1": "Sikasso",
+          "markets": 17,
+          "median_score": 5.61
+        },
+        {
+          "adm1": "Segou",
+          "markets": 39,
+          "median_score": 6.12
+        },
+        {
+          "adm1": "Bamako",
+          "markets": 13,
+          "median_score": 6.53
+        }
+      ],
+      "excel_fixed_cells": 221
+    },
+    "price_markets": {
+      "value": 91,
+      "available": "yes",
+      "as_of": "2026-08",
+      "source_ids": [
+        "wfp2"
+      ],
+      "note": "Markets with a WFP retail food price in 2026-08; 112 markets reported at least once in the 12 months to then."
+    },
+    "price_change_yoy_local": {
+      "value": -5.7,
+      "available": "yes",
+      "as_of": "2026-08",
+      "source_ids": [
+        "wfp2"
+      ],
+      "note": "Year-on-year change in local currency (XOF). 527 food series (market x commodity) with a retail price in both 2026-08 and 2025-08; unweighted median. Middle half of series: -15.4% to 3.6%."
+    },
+    "price_change_yoy_usd": {
+      "value": -6.7,
+      "available": "yes",
+      "as_of": "2026-08",
+      "source_ids": [
+        "wfp2"
+      ],
+      "note": "Same series in US dollars at WFP's conversion rate (527 series). The gap to the local-currency figure is mostly the exchange rate."
+    },
+    "prices_detail": {
+      "latest_month": "2026-08",
+      "months_since_latest": 3,
+      "fresh_3m": true,
+      "markets_latest": 91,
+      "markets_12m": 112,
+      "commodities_latest": 28,
+      "currencies": [
+        "XOF"
+      ],
+      "yoy_base_month": "2025-08",
+      "yoy_series": 527,
+      "partial_months_after": []
+    },
+    "data_bridges": {
+      "status": "awaiting API access",
+      "pending": [
+        "MFI trend across survey rounds, not just the latest public release",
+        "MFI by admin area and market, with all nine dimensions",
+        "Exchange rates (official and parallel) and their month-on-month change",
+        "Minimum expenditure basket cost, where WFP computes one",
+        "Price series beyond the HDX extract: weekly prices and wholesale"
+      ]
+    }
   }
 }

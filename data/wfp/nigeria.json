@@ -1,0 +1,61 @@
+{
+  "id": "nigeria",
+  "iso3": "NGA",
+  "pulled": "2026-11-06",
+  "mfi_source": {
+    "dataset": "https://data.humdata.org/dataset/market-functionality-index-mfi",
+    "csv": "https://data.humdata.org/dataset/f8824b34-966b-4b74-99fa-7768042ce130/resource/bf837fe7-dfb9-41de-a5b2-1bf11012d723/download/market-functionality-index-.csv",
+    "dataset_date": "[2026-01-01T00:00:00 TO 2026-06-30T23:59:59]",
+    "last_modified": "2026-06-23",
+    "countries_in_release": [
+      "Armenia",
+      "Bangladesh",
+      "Burundi",
+      "Democratic Republic of the Congo",
+      "Ethiopia",
+      "Gaza",
+      "Guatemala",
+      "Kyrgyzstan",
+      "Lesotho",
+      "Madagascar",
+      "Malawi",
+      "Mali",
+      "South Sudan",
+      "Sri Lanka",
+      "United Republic of Tanzania",
+      "Venezuela (Bolivarian Republic of)"
+    ]
+  },
+  "mfi": null,
+  "prices_source": {
+    "dataset": "https://data.humdata.org/dataset/wfp-food-prices-for-nigeria",
+    "csv": "https://data.humdata.org/dataset/42db041f-7aaf-4ab4-961f-2a12096861e7/resource/12b51155-0cd3-4806-9924-61ede4077591/download/wfp_food_prices_nga.csv",
+    "dataset_date": "[2002-01-15T00:00:00 TO 2026-10-15T23:59:59]",
+    "last_modified": "2026-11-04"
+  },
+  "prices": {
+    "latest_month": "2026-10",
+    "partial_months_after": [],
+    "months_since_latest": 1,
+    "fresh_3m": true,
+    "markets_latest": 5,
+    "markets_12m": 41,
+    "commodities_latest": 26,
+    "currencies": [
+      "NGN"
+    ],
+    "price_flags": {
+      "aggregate": 125
+    },
+    "yoy_base_month": "2025-10",
+    "yoy_series": 93,
+    "yoy_local_pct": 16.4,
+    "yoy_local_iqr": [
+      0.0,
+      39.8
+    ],
+    "yoy_usd_pct": 27.8,
+    "yoy_usd_series": 93,
+    "flags": []
+  }
+}

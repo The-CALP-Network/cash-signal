@@ -6,7 +6,7 @@ AVAIL = {"yes", "partial", "no"}
 TOP = ["id","name","iso3","calp_region","last_researched","researched_by","plan","plan_2027",
        "modality_preference","cost_efficiency","hnrp_requirements","overall_funding","pooled_funds",
        "cash_feasibility","market_monitoring","cwg","ai_summary","rep_notes",
-       "coordination","fts_cva","cash_volumes","cwg_reliefweb","fsps","localisation","sources"]
+       "coordination","fts_cva","cash_volumes","cwg_reliefweb","fsps","localisation","markets","sources"]
 DATUM_GROUPS = {
   "plan": ["people_in_need","people_targeted","requirements_usd","funded_usd","funded_pct"],
   "modality_preference": ["cash_pct","vouchers_pct","in_kind_pct","other_pct"],
@@ -16,10 +16,12 @@ DATUM_GROUPS = {
   "pooled_funds": ["cbpf_allocations_usd","mpc_pct","sectoral_cash_pct","vouchers_pct"],
   "fts_cva": ["total_funding_usd","mpc_usd","ctp_usd","sectoral_cva_usd","cva_usd","cva_pct_of_total","sectoral_cva_pct_of_total","mpc_pct_of_total"],
   "cash_volumes": ["mpc_funding_fts_usd","sectoral_cva_best_usd","cva_delivered_usd","mpc_delivered_usd","sectoral_cva_delivered_usd"],
+  "markets": ["mfi_score","mfi_high_risk_pct","price_markets","price_change_yoy_local","price_change_yoy_usd"],
   "localisation": ["local_cochair","cva_to_local_pct","all_funding_to_local_pct","cbpf_cva_to_local_pct","cbpf_all_to_local_pct"],
 }
 # indicator slots counted on the page (fts_cva is a feeder block, not an indicator group)
-COUNTED = {k: v for k, v in DATUM_GROUPS.items() if k != "fts_cva"}
+# markets is shown in its own section and not counted toward source quality (added 6 Nov 2026, kept out so v2 scores stay comparable)
+COUNTED = {k: v for k, v in DATUM_GROUPS.items() if k not in ("fts_cva", "markets")}
 errs = []
 def err(m): errs.append(m)
 

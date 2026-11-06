@@ -1,0 +1,143 @@
+{
+  "id": "mali",
+  "iso3": "MLI",
+  "pulled": "2026-11-06",
+  "mfi_source": {
+    "dataset": "https://data.humdata.org/dataset/market-functionality-index-mfi",
+    "csv": "https://data.humdata.org/dataset/f8824b34-966b-4b74-99fa-7768042ce130/resource/bf837fe7-dfb9-41de-a5b2-1bf11012d723/download/market-functionality-index-.csv",
+    "dataset_date": "[2026-01-01T00:00:00 TO 2026-06-30T23:59:59]",
+    "last_modified": "2026-06-23",
+    "countries_in_release": [
+      "Armenia",
+      "Bangladesh",
+      "Burundi",
+      "Democratic Republic of the Congo",
+      "Ethiopia",
+      "Gaza",
+      "Guatemala",
+      "Kyrgyzstan",
+      "Lesotho",
+      "Madagascar",
+      "Malawi",
+      "Mali",
+      "South Sudan",
+      "Sri Lanka",
+      "United Republic of Tanzania",
+      "Venezuela (Bolivarian Republic of)"
+    ]
+  },
+  "mfi": {
+    "markets": 183,
+    "surveys": 1,
+    "assessments": 183,
+    "first_date": "2026-01-01",
+    "last_date": "2026-01-01",
+    "survey_types": [
+      "Full",
+      "Reduced"
+    ],
+    "median_score": 5.47,
+    "high_risk_pct": 50.8,
+    "risk_counts": {
+      "Medium Risk": 49,
+      "High Risk": 24,
+      "Very High Risk": 69,
+      "Low Risk": 41
+    },
+    "dimensions": {
+      "Assortment": 8.75,
+      "Availability": 10.0,
+      "Price": 5.0,
+      "Resilience": 7.5,
+      "Competition": 10.0,
+      "Infrastructure": 7.14,
+      "Service": 3.33,
+      "Quality": 7.14,
+      "AccessProtection": 10.0
+    },
+    "weakest": [
+      "Services",
+      "Price"
+    ],
+    "by_adm1": [
+      {
+        "adm1": "Kidal",
+        "markets": 2,
+        "median_score": 3.91
+      },
+      {
+        "adm1": "Tombouctou",
+        "markets": 28,
+        "median_score": 4.46
+      },
+      {
+        "adm1": "Koulikoro",
+        "markets": 9,
+        "median_score": 4.67
+      },
+      {
+        "adm1": "Gao",
+        "markets": 23,
+        "median_score": 4.96
+      },
+      {
+        "adm1": "Mopti",
+        "markets": 43,
+        "median_score": 5.12
+      },
+      {
+        "adm1": "Kayes",
+        "markets": 9,
+        "median_score": 5.44
+      },
+      {
+        "adm1": "Sikasso",
+        "markets": 17,
+        "median_score": 5.61
+      },
+      {
+        "adm1": "Segou",
+        "markets": 39,
+        "median_score": 6.12
+      },
+      {
+        "adm1": "Bamako",
+        "markets": 13,
+        "median_score": 6.53
+      }
+    ],
+    "excel_fixed_cells": 221,
+    "excel_dropped_cells": 0
+  },
+  "prices_source": {
+    "dataset": "https://data.humdata.org/dataset/wfp-food-prices-for-mali",
+    "csv": "https://data.humdata.org/dataset/d73f8595-0b0b-4b64-91b3-986b1cad5ae6/resource/e7489e71-2c7b-48d4-8ae7-f378b735dcba/download/wfp_food_prices_mli.csv",
+    "dataset_date": "[2003-01-15T00:00:00 TO 2026-08-15T23:59:59]",
+    "last_modified": "2026-11-04"
+  },
+  "prices": {
+    "latest_month": "2026-08",
+    "partial_months_after": [],
+    "months_since_latest": 3,
+    "fresh_3m": true,
+    "markets_latest": 91,
+    "markets_12m": 112,
+    "commodities_latest": 28,
+    "currencies": [
+      "XOF"
+    ],
+    "price_flags": {
+      "actual": 1035
+    },
+    "yoy_base_month": "2025-08",
+    "yoy_series": 527,
+    "yoy_local_pct": -5.7,
+    "yoy_local_iqr": [
+      -15.4,
+      3.6
+    ],
+    "yoy_usd_pct": -6.7,
+    "yoy_usd_series": 527,
+    "flags": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "somalia",
+  "iso3": "SOM",
+  "pulled": "2026-11-06",
+  "mfi_source": {
+    "dataset": "https://data.humdata.org/dataset/market-functionality-index-mfi",
+    "csv": "https://data.humdata.org/dataset/f8824b34-966b-4b74-99fa-7768042ce130/resource/bf837fe7-dfb9-41de-a5b2-1bf11012d723/download/market-functionality-index-.csv",
+    "dataset_date": "[2026-01-01T00:00:00 TO 2026-06-30T23:59:59]",
+    "last_modified": "2026-06-23",
+    "countries_in_release": [
+      "Armenia",
+      "Bangladesh",
+      "Burundi",
+      "Democratic Republic of the Congo",
+      "Ethiopia",
+      "Gaza",
+      "Guatemala",
+      "Kyrgyzstan",
+      "Lesotho",
+      "Madagascar",
+      "Malawi",
+      "Mali",
+      "South Sudan",
+      "Sri Lanka",
+      "United Republic of Tanzania",
+      "Venezuela (Bolivarian Republic of)"
+    ]
+  },
+  "mfi": null,
+  "prices_source": {
+    "dataset": "https://data.humdata.org/dataset/wfp-food-prices-for-somalia",
+    "csv": "https://data.humdata.org/dataset/26727d1b-af49-4323-9215-c2ac479abb87/resource/39614bfb-0f9c-4800-8997-e68e41a38ced/download/wfp_food_prices_som.csv",
+    "dataset_date": "[1995-01-15T00:00:00 TO 2026-08-15T23:59:59]",
+    "last_modified": "2026-10-19"
+  },
+  "prices": {
+    "latest_month": "2026-08",
+    "partial_months_after": [],
+    "months_since_latest": 3,
+    "fresh_3m": true,
+    "markets_latest": 34,
+    "markets_12m": 40,
+    "commodities_latest": 15,
+    "currencies": [
+      "SLS",
+      "SOS"
+    ],
+    "price_flags": {
+      "aggregate": 496
+    },
+    "yoy_base_month": "2025-08",
+    "yoy_series": 479,
+    "yoy_local_pct": 29.8,
+    "yoy_local_iqr": [
+      3.4,
+      64.4
+    ],
+    "yoy_usd_pct": 35.6,
+    "yoy_usd_series": 404,
+    "flags": []
+  }
+}

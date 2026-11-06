@@ -1,0 +1,105 @@
+{
+  "id": "southsudan",
+  "iso3": "SSD",
+  "pulled": "2026-11-06",
+  "mfi_source": {
+    "dataset": "https://data.humdata.org/dataset/market-functionality-index-mfi",
+    "csv": "https://data.humdata.org/dataset/f8824b34-966b-4b74-99fa-7768042ce130/resource/bf837fe7-dfb9-41de-a5b2-1bf11012d723/download/market-functionality-index-.csv",
+    "dataset_date": "[2026-01-01T00:00:00 TO 2026-06-30T23:59:59]",
+    "last_modified": "2026-06-23",
+    "countries_in_release": [
+      "Armenia",
+      "Bangladesh",
+      "Burundi",
+      "Democratic Republic of the Congo",
+      "Ethiopia",
+      "Gaza",
+      "Guatemala",
+      "Kyrgyzstan",
+      "Lesotho",
+      "Madagascar",
+      "Malawi",
+      "Mali",
+      "South Sudan",
+      "Sri Lanka",
+      "United Republic of Tanzania",
+      "Venezuela (Bolivarian Republic of)"
+    ]
+  },
+  "mfi": {
+    "markets": 2,
+    "surveys": 1,
+    "assessments": 2,
+    "first_date": "2026-04-30",
+    "last_date": "2026-04-30",
+    "survey_types": [
+      "Full"
+    ],
+    "median_score": 5.04,
+    "high_risk_pct": 100.0,
+    "risk_counts": {
+      "Very High Risk": 1,
+      "High Risk": 1
+    },
+    "dimensions": {
+      "Assortment": 9.0,
+      "Availability": 9.17,
+      "Price": 2.92,
+      "Resilience": 5.83,
+      "Competition": 10.0,
+      "Infrastructure": 5.0,
+      "Service": 4.17,
+      "Quality": 8.12,
+      "AccessProtection": 8.75
+    },
+    "weakest": [
+      "Price",
+      "Services"
+    ],
+    "by_adm1": [
+      {
+        "adm1": "Warrap",
+        "markets": 1,
+        "median_score": 4.65
+      },
+      {
+        "adm1": "Jonglei",
+        "markets": 1,
+        "median_score": 5.44
+      }
+    ],
+    "excel_fixed_cells": 4,
+    "excel_dropped_cells": 0
+  },
+  "prices_source": {
+    "dataset": "https://data.humdata.org/dataset/wfp-food-prices-for-south-sudan",
+    "csv": "https://data.humdata.org/dataset/4f48c45b-1a20-4478-b62d-bf637b8d4666/resource/5a3e103d-f352-41f6-94e9-acaad13c66a5/download/wfp_food_prices_ssd.csv",
+    "dataset_date": "[2006-01-15T00:00:00 TO 2026-10-15T23:59:59]",
+    "last_modified": "2026-11-04"
+  },
+  "prices": {
+    "latest_month": "2026-10",
+    "partial_months_after": [],
+    "months_since_latest": 1,
+    "fresh_3m": true,
+    "markets_latest": 31,
+    "markets_12m": 36,
+    "commodities_latest": 20,
+    "currencies": [
+      "SSP"
+    ],
+    "price_flags": {
+      "aggregate": 480
+    },
+    "yoy_base_month": "2025-10",
+    "yoy_series": 357,
+    "yoy_local_pct": 36.7,
+    "yoy_local_iqr": [
+      8.5,
+      63.4
+    ],
+    "yoy_usd_pct": 8.4,
+    "yoy_usd_series": 357,
+    "flags": []
+  }
+}

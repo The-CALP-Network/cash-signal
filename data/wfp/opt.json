@@ -1,0 +1,102 @@
+{
+  "id": "opt",
+  "iso3": "PSE",
+  "pulled": "2026-11-06",
+  "mfi_source": {
+    "dataset": "https://data.humdata.org/dataset/market-functionality-index-mfi",
+    "csv": "https://data.humdata.org/dataset/f8824b34-966b-4b74-99fa-7768042ce130/resource/bf837fe7-dfb9-41de-a5b2-1bf11012d723/download/market-functionality-index-.csv",
+    "dataset_date": "[2026-01-01T00:00:00 TO 2026-06-30T23:59:59]",
+    "last_modified": "2026-06-23",
+    "countries_in_release": [
+      "Armenia",
+      "Bangladesh",
+      "Burundi",
+      "Democratic Republic of the Congo",
+      "Ethiopia",
+      "Gaza",
+      "Guatemala",
+      "Kyrgyzstan",
+      "Lesotho",
+      "Madagascar",
+      "Malawi",
+      "Mali",
+      "South Sudan",
+      "Sri Lanka",
+      "United Republic of Tanzania",
+      "Venezuela (Bolivarian Republic of)"
+    ]
+  },
+  "mfi": {
+    "markets": 4,
+    "surveys": 1,
+    "assessments": 4,
+    "first_date": "2026-02-05",
+    "last_date": "2026-02-05",
+    "survey_types": [
+      "Full"
+    ],
+    "median_score": 6.07,
+    "high_risk_pct": 50.0,
+    "risk_counts": {
+      "High Risk": 1,
+      "Medium Risk": 1,
+      "Very High Risk": 1,
+      "Low Risk": 1
+    },
+    "dimensions": {
+      "Assortment": 9.5,
+      "Availability": 9.17,
+      "Price": 7.92,
+      "Resilience": 9.38,
+      "Competition": 10.0,
+      "Infrastructure": 4.29,
+      "Service": 5.0,
+      "Quality": 7.5,
+      "AccessProtection": 10.0
+    },
+    "weakest": [
+      "Infrastructure",
+      "Services"
+    ],
+    "by_adm1": [
+      {
+        "adm1": "Gaza Strip",
+        "markets": 4,
+        "median_score": 6.07
+      }
+    ],
+    "excel_fixed_cells": 5,
+    "excel_dropped_cells": 0
+  },
+  "prices_source": {
+    "dataset": "https://data.humdata.org/dataset/wfp-food-prices-for-state-of-palestine",
+    "csv": "https://data.humdata.org/dataset/7d06b059-5831-4101-aa68-6d9123ad65b7/resource/b82509ec-d48e-41d7-b376-af51c7f66737/download/wfp_food_prices_pse.csv",
+    "dataset_date": "[2007-01-15T00:00:00 TO 2026-09-15T23:59:59]",
+    "last_modified": "2026-11-04"
+  },
+  "prices": {
+    "latest_month": "2026-09",
+    "partial_months_after": [],
+    "months_since_latest": 2,
+    "fresh_3m": true,
+    "markets_latest": 2,
+    "markets_12m": 2,
+    "commodities_latest": 30,
+    "currencies": [
+      "ILS"
+    ],
+    "price_flags": {
+      "actual": 58
+    },
+    "yoy_base_month": "2025-09",
+    "yoy_series": 58,
+    "yoy_local_pct": -4.8,
+    "yoy_local_iqr": [
+      -65.8,
+      4.7
+    ],
+    "yoy_usd_pct": 5.0,
+    "yoy_usd_series": 58,
+    "flags": []
+  }
+}

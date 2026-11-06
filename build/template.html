@@ -119,6 +119,15 @@ small { font-size: 13px; }
 .pulse .pv { margin-top: 8px; font-size: 22px; font-weight: 700; color: var(--blue); line-height: 1.15; }
 .pulse .pv.na { color: var(--muted); font-weight: 400; }
 .pulse .pn { margin-top: 6px; font-size: 13px; color: var(--ink2); line-height: 1.45; overflow-wrap: anywhere; }
+.mfibars { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px 28px; margin-top: 10px; }
+.mfibar .t { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--ink2); }
+.mfibar .t b { color: var(--ink); }
+.mfibar .bt { height: 8px; background: var(--track); border-radius: 2px; margin-top: 4px; overflow: hidden; }
+.mfibar .bt span { display: block; height: 100%; background: var(--teal); }
+.mfibar.weak .bt span { background: var(--red); }
+.apibox { margin-top: 16px; padding: 12px 16px; border: 1px dashed var(--line); border-radius: 6px; font-size: 13.5px; line-height: 1.5; color: var(--ink2); }
+.apibox b { color: var(--blue); }
+.pulse .pv small { font-size: 14px; font-weight: 400; color: var(--muted); }
 .fresh { display: inline-block; font-size: 12px; font-weight: 500; padding: 0 6px; border-radius: 2px; vertical-align: 1px; }
 .fresh.ok { color: #1F6B3A; background: #E6F4EA; } .fresh.stale { color: var(--amber-ink); background: var(--amber-bg); } .fresh.none { color: var(--muted); background: var(--track); }
 .glance { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -776,6 +785,8 @@ var CAV = {
   fsp: 'Providers are those named in public reports and press releases. The list is not exhaustive and says nothing about volumes or contract status.',
   pref: 'Preference surveys differ in year, geography, sample and question wording. Compare across countries only with the note in view.',
   over: 'MPC funding above 100% of its requirement is reported as found. It can reflect FTS tagging, multi-year money or carry-over.',
+  mfi: 'The MFI is a WFP trader survey in markets WFP chose to assess, mostly where it runs or plans cash. It describes those markets, not the whole country. Only WFP’s latest public release (H1 2026, 16 countries) is used; earlier and unpublished rounds should come with Data Bridges API access.',
+  prices: 'Year-on-year food price change is the unweighted median across every market and food item with a WFP retail price in both months. It is not a CPI or an MEB cost. The local-currency figure mixes inflation and exchange-rate moves; the US$ figure uses WFP’s conversion rate.',
   cbpf_proxy: 'Pooled-fund shares marked partial are a proxy from FTS internal flows inside the 2026 plan, not from the fund’s own allocation reports.'
 };
 
@@ -1180,7 +1191,7 @@ function countryTabHTML(c, idx) {
     '<div class="rlists">' + list('Barriers', s.barriers) + list('Opportunities', s.opportunities) + list('Data gaps', s.data_gaps) + '</div></div></section>';
 
   /* indicator groups */
-  GROUPS.forEach(function (g) { h += groupSection(c, g); if (g.id === 'sys') h += cwgPulseSection(c); });
+  GROUPS.forEach(function (g) { h += groupSection(c, g); if (g.id === 'sys') h += cwgPulseSection(c) + marketSection(c); });
 
   /* financial service providers */
   h += fspSection(c);
@@ -1282,6 +1293,83 @@ function cwgPulseAcrossHTML() {
   return h + '</section>';
 }
 
+/* ================= Market functionality (v2.1): public WFP data, ready for Data Bridges ================= */
+var DIM_ORDER = [['Assortment', 'Assortment'], ['Availability', 'Availability'], ['Price', 'Price'], ['Resilience', 'Supply-chain resilience'], ['Competition', 'Competition'], ['Infrastructure', 'Infrastructure'], ['Service', 'Services'], ['Quality', 'Food quality'], ['AccessProtection', 'Access and protection']];
+function sgn(v) { return (v > 0 ? '+' : v < 0 ? '−' : '') + num1(Math.abs(v)) + '%'; }
+function mfiSpan(md) { return md.first_date === md.last_date ? fmtDate(md.first_date) : fmtDate(md.first_date) + ' to ' + fmtDate(md.last_date); }
+function weakDims(md, n) {
+  var d = md.dimensions || {};
+  return DIM_ORDER.filter(function (x) { return d[x[0]] != null; }).sort(function (a, b) { return d[a[0]] - d[b[0]]; }).slice(0, n || 2);
+}
+function marketSection(c) {
+  var k = c.markets;
+  var h = '<section aria-label="Market functionality">' + secHead('Market functionality', 'Whether markets can absorb cash: WFP’s Market Functionality Index from trader surveys, and what food prices did over the past year. Built to take the WFP Data Bridges feed once access is granted.', '<a href="#theme-markets">Compare across countries →</a>');
+  if (!k) return h + '<p class="gline">Not yet pulled for this country.</p></section>';
+  var ms = k.mfi_score || {}, mh = k.mfi_high_risk_pct || {}, md = k.mfi_detail, pd = k.prices_detail || {};
+  var pl = k.price_change_yoy_local || {}, pu = k.price_change_yoy_usd || {}, pm = k.price_markets || {};
+  var ptag = '<span class="tagp partial">partial</span>';
+  h += '<div class="pulse">' +
+    pulseCell('MFI score (WFP)', has(ms) ? num1(ms.value) + '<small> / 10</small>' : 'n/a', has(ms) ? 'median of ' + md.markets + ' markets, ' + esc(mfiSpan(md)) + (ms.available === 'partial' ? ' ' + ptag : '') : 'Not in WFP’s public MFI release', !has(ms)) +
+    pulseCell('Markets at high risk', has(mh) ? fmtPct(mh.value) : 'n/a', has(mh) ? 'rated high or very high risk by WFP' : 'No MFI assessment published', !has(mh)) +
+    pulseCell('Food prices, year on year', has(pl) ? sgn(pl.value) : has(pu) ? sgn(pu.value) + ' US$' : 'n/a', has(pl) ? 'local currency, ' + esc(fmtDate(pd.latest_month)) + ' vs ' + esc(fmtDate(pd.yoy_base_month)) + (has(pu) ? ' · ' + sgn(pu.value) + ' in US$' : '') + (pl.available === 'partial' ? ' ' + ptag : '') : 'No comparable series', !has(pl) && !has(pu)) +
+    pulseCell('WFP price monitoring', has(pm) ? pm.value + ' markets' : 'n/a', has(pm) ? 'reporting in ' + esc(fmtDate(pd.latest_month)) + ' ' + freshTag(pd.fresh_3m, pd.latest_month) : 'No WFP price series', !has(pm)) +
+    '</div>';
+  if (md) {
+    var dims = md.dimensions || {}, low = weakDims(md, 2).map(function (x) { return x[0]; });
+    h += '<p class="gline" style="margin-top:16px"><b>MFI dimensions</b> <span class="muted">median score, 0 to 10; the two weakest in red</span></p><div class="mfibars">' +
+      DIM_ORDER.filter(function (d) { return dims[d[0]] != null; }).map(function (d) {
+        var v = dims[d[0]];
+        return '<div class="mfibar' + (low.indexOf(d[0]) > -1 ? ' weak' : '') + '"><div class="t"><span>' + esc(d[1]) + '</span><b>' + num1(v) + '</b></div><div class="bt"><span style="width:' + Math.max(0, Math.min(100, v * 10)).toFixed(1) + '%"></span></div></div>';
+      }).join('') + '</div>';
+    if ((md.by_adm1 || []).length > 1) h += '<p class="gline"><b>By area, weakest first</b> <span class="muted">(median score, markets)</span>: ' + md.by_adm1.map(function (a) { return esc(a.adm1) + ' ' + num1(a.median_score) + ' (' + a.markets + ')'; }).join(' · ') + '</p>';
+  }
+  var mm = c.market_monitoring || {};
+  if (mm.system) h += '<p class="gline"><b>Joint market monitoring:</b> ' + (safeUrl(mm.url) ? '<a href="' + esc(mm.url) + '" target="_blank" rel="noopener">' + esc(mm.system) + '</a>' : esc(mm.system)) + (mm.last_published ? ' · last published ' + esc(/^\d{4}-\d{2}(-\d{2})?$/.test(mm.last_published) ? fmtDate(mm.last_published) : mm.last_published) : '') + '</p>';
+  var sl = srcLinks(c, ['wfp1', 'wfp2'].filter(function (s) { return srcOf(c, s); })); if (sl) h += '<p class="gline"><b>Sources:</b> ' + sl + '</p>';
+  var db = k.data_bridges || {};
+  if (db.pending && db.pending.length) h += '<div class="apibox"><b>Waiting on the WFP Data Bridges API.</b> With access, this section adds: ' + db.pending.map(esc).join('; ') + '.</div>';
+  var cv = [];
+  if (md) cv.push(CAV.mfi);
+  if (md && md.markets < 10) cv.push('Only ' + md.markets + ' markets were assessed in this release, so the score describes those markets and is indicative only.');
+  cv.push(CAV.prices);
+  if (pd.latest_month && !pd.fresh_3m) cv.push('WFP’s public price series for this country stops in ' + esc(fmtDate(pd.latest_month)) + '.');
+  h += caveat(cv);
+  return h + '</section>';
+}
+function marketsAcrossHTML() {
+  function v(c, key) { var d = (c.markets || {})[key]; return has(d) ? d.value : null; }
+  var rows = countries.slice().sort(function (a, b) {
+    var x = v(a, 'price_change_yoy_local'), y = v(b, 'price_change_yoy_local');
+    if (x === null && y === null) return a.name.localeCompare(b.name); if (x === null) return 1; if (y === null) return -1; return y - x; });
+  var withMfi = countries.filter(function (c) { return v(c, 'mfi_score') !== null; });
+  var fresh = countries.filter(function (c) { return ((c.markets || {}).prices_detail || {}).fresh_3m; });
+  var hot = countries.filter(function (c) { var x = v(c, 'price_change_yoy_local'); return x !== null && x >= 20; });
+  var jm = countries.filter(function (c) { return (c.market_monitoring || {}).functional === 'yes'; });
+  var h = '<section class="panel"><div class="pulse" style="margin-top:0">' +
+    pulseCell('MFI published', withMfi.length + ' of ' + N, withMfi.length ? withMfi.map(cLink).join(', ') : 'none') +
+    pulseCell('WFP prices within 3 months', fresh.length + ' of ' + N, 'latest complete month on HDX, checked ' + esc(fmtDate(((countries[0].markets) || {}).pulled))) +
+    pulseCell('Food prices up 20% or more', hot.length + ' of ' + N, hot.length ? hot.map(cLink).join(', ') : 'none', !hot.length) +
+    pulseCell('Joint monitoring functional', jm.length + ' of ' + N, 'JMMI or equivalent, from the Systems group') + '</div>';
+  h += '<div class="tbl-wrap" style="margin-top:24px"><table class="sys"><thead><tr><th scope="col">Country</th><th scope="col">Food prices y/y, local</th><th scope="col">y/y, US$</th><th scope="col">WFP price data</th><th scope="col">MFI score</th><th scope="col">High-risk markets</th><th scope="col">Weakest MFI dimensions</th><th scope="col">Joint monitoring</th></tr></thead><tbody>';
+  rows.forEach(function (c) {
+    var k = c.markets || {}, pd = k.prices_detail || {}, md = k.mfi_detail, mm = c.market_monitoring || {};
+    var loc = v(c, 'price_change_yoy_local'), usd = v(c, 'price_change_yoy_usd'), ms = v(c, 'mfi_score'), mh = v(c, 'mfi_high_risk_pct');
+    var part = (k.price_change_yoy_local || {}).available === 'partial' ? ' <span class="tagp partial">partial</span>' : '';
+    h += '<tr><td class="cn"><a href="#' + esc(c.slug) + '">' + esc(c.name) + '</a></td>' +
+      '<td>' + (loc !== null ? '<b>' + sgn(loc) + '</b>' + part + '<br><span class="muted">' + esc(fmtDate(pd.latest_month)) + ', ' + pd.yoy_series + ' series</span>' : '<span class="muted">n/a</span>') + '</td>' +
+      '<td>' + (usd !== null ? sgn(usd) : '<span class="muted">n/a</span>') + '</td>' +
+      '<td>' + (pd.latest_month ? (pd.markets_latest + ' markets<br>') : '') + freshTag(pd.fresh_3m, pd.latest_month, 'none') + '</td>' +
+      '<td>' + (ms !== null ? '<b>' + num1(ms) + '</b> / 10<br><span class="muted">' + md.markets + ' markets, ' + esc(mfiSpan(md)) + '</span>' : '<span class="muted">not published</span>') + '</td>' +
+      '<td>' + (mh !== null ? fmtPct(mh) : '<span class="muted">n/a</span>') + '</td>' +
+      '<td>' + (md ? esc(weakDims(md, 2).map(function (x) { return x[1]; }).join(', ')) : '<span class="muted">n/a</span>') + '</td>' +
+      '<td>' + esc(cap(mm.functional || 'unknown')) + (mm.system ? '<br><span class="muted">' + esc(clip(mm.system, 40)) + '</span>' : '') + '</td></tr>';
+  });
+  h += '</tbody></table></div>';
+  h += '<div class="apibox"><b>Waiting on the WFP Data Bridges API.</b> The MFI column fills only where WFP has published a round on HDX (H1 2026 release). With API access the page should add MFI trends and admin-level scores, exchange rates, and MEB costs for every country WFP covers.</div>';
+  h += caveat([CAV.mfi, CAV.prices, 'Countries are sorted by the local-currency price change. Rankings across countries mix different item baskets and market samples: read them as a prompt to look, not a league table.']);
+  return h + '</section>';
+}
+
 /* ================= THEME TABS (v4) ================= */
 var THEMES = [
   { gid: 'modality', id: 'theme-preference', label: 'Modality preference' },
@@ -1292,7 +1380,8 @@ var THEMES = [
   { gid: 'sys', id: 'theme-systems', label: 'Systems' },
   { gid: 'vol', id: 'theme-volumes', label: 'Cash volumes' },
   { gid: 'local', id: 'theme-local', label: 'Local leadership' },
-  { gid: 'sys', id: 'theme-cwg', label: 'CWG pulse', custom: true, title: 'CWG pulse (trial)', sub: 'Activity signals read from each cash working group’s public page: last update, dashboard currency, minutes and who chairs.' }
+  { gid: 'sys', id: 'theme-cwg', label: 'CWG pulse', custom: true, title: 'CWG pulse (trial)', sub: 'Activity signals read from each cash working group’s public page: last update, dashboard currency, minutes and who chairs.' },
+  { gid: 'mkt', id: 'theme-markets', label: 'Markets', custom: true, title: 'Market functionality', sub: 'Whether markets can absorb cash: WFP’s Market Functionality Index where published, food-price movement over the past year, and joint market monitoring. Ready for the WFP Data Bridges feed.', render: function () { return marketsAcrossHTML(); } }
 ];
 var THEME_OF = {};
 THEMES.forEach(function (t) { t.g = GROUPS.filter(function (g) { return g.id === t.gid; })[0]; if (!t.custom) THEME_OF[t.gid] = t; });
@@ -1369,7 +1458,7 @@ function themeTabHTML(t) {
   var g = t.g;
   if (t.custom) {
     return '<div class="ttab"><header class="thead"><h1>' + esc(t.title) + '</h1><p class="tsub">' + esc(t.sub) + '</p></header>' +
-      '<section class="tsec" aria-label="Across countries">' + secHead('Across countries') + cwgPulseAcrossHTML() + '</section></div>';
+      '<section class="tsec" aria-label="Across countries">' + secHead('Across countries') + (t.render ? t.render() : cwgPulseAcrossHTML()) + '</section></div>';
   }
   return '<div class="ttab"><header class="thead"><h1>' + esc(g.title) + '</h1><p class="tsub">' + esc(GROUP_SUB[g.id]) + '</p></header>' +
     '<section class="tsec" aria-label="Across countries">' + secHead('Across countries') + themeAcrossHTML(g) + '</section>' +
@@ -1493,7 +1582,7 @@ function methodHTML() {
 
   h += '<section class="panel" id="m-scope"><h3>Scope</h3>' +
     '<p>' + N + ' humanitarian responses chosen by CALP (Afghanistan, Myanmar, Sudan, South Sudan, Mozambique, Somalia, DRC, Lebanon, Gaza/oPt, Yemen, Syria, Chad, Niger, Nigeria, Mali). ' + TOTAL_SPECS + ' indicators per country in ' + GROUPS.length + ' groups: ' + esc(groupsList) + '. ' + got + ' of ' + (N * TOTAL_SPECS) + ' indicator slots are filled (' + Math.round(got / (N * TOTAL_SPECS) * 100) + '%); every empty slot carries a note on what was searched.</p>' +
-    '<p>Three further blocks sit outside the indicator count: a CWG pulse read from each working group’s public page, a list of financial service providers, and a coordination label (OCHA-led plan, UNHCR-led plan, both or neither). Each figure has an as-of date, a note and a link to its source; ' + srcCount + ' sources are listed across the country tabs.</p>' +
+    '<p>Four further blocks sit outside the indicator count: a CWG pulse read from each working group’s public page, a market functionality section from public WFP data, a list of financial service providers, and a coordination label (OCHA-led plan, UNHCR-led plan, both or neither). Each figure has an as-of date, a note and a link to its source; ' + srcCount + ' sources are listed across the country tabs.</p>' +
     '<p>Status words: <b>found</b> (a figure with a source), <b>partial</b> (a figure with a caveat that changes how it should be read) and <b>n/a</b> (looked for and not found, which is itself a finding). Source quality per country: ' + esc(QUALITY_RULE) + '</p></section>';
 
   h += '<section class="panel" id="m-sources"><h3>Data sources</h3><div class="tbl-wrap"><table class="mtable"><thead><tr><th>Source</th><th>Used for</th><th>How accessed</th><th>Date</th><th>Caveats</th></tr></thead><tbody>' +
@@ -1504,6 +1593,8 @@ function methodHTML() {
     tr(['In-country CVA dashboards and OCHA CVA snapshots (ReliefWeb)', 'CVA delivered (US$) by period; MPC and sectoral split where published', 'Infographics and dashboard pages', 'Varies, 2025–2026', 'Transfer value vs assistance value is not always stated; periods differ from the FTS year.']) +
     tr(['Country-based pooled fund reports and CBPF data hub', 'Pooled-fund allocations to cash, where published', 'Annual reports and allocation papers', 'Varies', 'Where no report was found, a proxy from FTS internal flows is used and marked partial.']) +
     tr(['Agency pages, press releases, CWG FSP mappings, CALP case studies', 'Financial service providers delivering humanitarian cash', 'Web search and page reads', 'Varies, 2017–2026', 'Named in public sources only; no contract or volume data. Logos are hot-linked, not stored.']) +
+    tr(['WFP Market Functionality Index, HDX dataset market-functionality-index-mfi', 'MFI score, share of markets at high or very high risk, the nine MFI dimensions, scores by first-level admin area', 'Scripted download of the public CSV (build/wfp_markets_pull.py)', esc(fmtDate(((countries[0].markets) || {}).pulled)), 'Public release covers H1 2026 and 16 countries, four of them in this set (DRC, Mali, Gaza, South Sudan). The CSV has been through a French-locale spreadsheet: some scores appear as dates (7.5 as “07.mai”, 8.75 as “août.75”) and are decoded by the script.']) +
+    tr(['WFP food prices, HDX datasets wfp-food-prices-for-&lt;country&gt;', 'Markets reporting, latest month, year-on-year food price change in local currency and US$', 'Scripted download of each country’s CSV (build/wfp_markets_pull.py)', esc(fmtDate(((countries[0].markets) || {}).pulled)), 'Same series as WFP’s DataViz and Data Bridges price endpoints. A month still running when the file was pulled is ignored. Some countries’ series stop months before the pull.']) +
     tr(['IASC MPC scaling plan', 'Objective 4 indicators 4.1 and 4.2', 'Indicator wording as supplied by CALP', '2025', 'Indicator 4.2 (“% of CVA funding donors allocate directly to local partners”) can only be approximated from FTS first-level recipients.']) +
     '</tbody></table></div></section>';
 
@@ -1517,6 +1608,7 @@ function methodHTML() {
     '<h4>Cash volumes</h4><p><b>MPC funding (FTS)</b> as above. <b>Sectoral CVA, best available</b> = the higher of (a) FTS flows tagged “Cash transfer programming (CTP)” whose destination cluster is not MPC and (b) a sectoral figure from an in-country dashboard, with the source named in the cell. <b>Total CVA funding (FTS)</b> = union of the MPC cluster and the CTP tag. <b>CVA delivered</b> = the latest US$ figure published by the CWG or OCHA for cash and vouchers delivered, with its period.</p>' +
     '<h4>Local leadership (IASC objective 4)</h4><p><b>4.1 Local co-chair</b>: yes when a national or local NGO/CSO, a national government body or the national Red Cross/Red Crescent society holds a chair, co-chair or co-lead role on the CWG’s public page or minutes; no when chairs are published and none is local; unknown when nothing is published. <b>4.2 proxy</b>: share of FTS cash funding (MPC cluster or CTP tag) whose first-level recipient organisation is tagged by FTS as a local or national non-state actor or a national government of the response country. Two companion lines give the same share for all funding and for the pooled fund’s cash grants (the one onward layer FTS records).</p>' +
     '<h4>CWG pulse (trial)</h4><p>From the group’s public page: date of the latest visible item (and what that item is), in-country dashboard with its update date and period, latest minutes, chair organisations by actor type. “Within 3 months” compares the date with the day the page was checked.</p>' +
+    '<h4>Market functionality</h4><p><b>MFI score</b>: median WFP Market Functionality Index (0 to 10) across markets in the public release, taking each market’s latest assessment. <b>Markets at high risk</b>: share rated high or very high risk. <b>Dimensions</b>: median per dimension (assortment, availability, price, supply-chain resilience, competition, infrastructure, services, food quality, access and protection). <b>Food prices, year on year</b>: for every market × food item × unit with a WFP retail price in the latest complete month and the same month a year earlier, the change in price; the cell shows the unweighted median across those series, in local currency and in US$ at WFP’s rate. Marked partial when fewer than 30 series match or the latest month is more than 3 months old. <b>WFP price monitoring</b>: markets with a retail food price in the latest complete month. This block is kept out of the source-quality count so that v2 scores stay comparable.</p>' +
     '<h4>Coordination</h4><p>OCHA when an HNRP, HRP or Flash Appeal covers 2026; UNHCR when a UNHCR-led plan has an in-country chapter (country RRP, regional RRP chapter, 3RP); both when both; neither when no such plan was found.</p></section>';
 
   h += '<section class="panel" id="m-issues"><h3>Known data-quality issues</h3><div class="tbl-wrap"><table class="mtable"><thead><tr><th>Issue</th><th>Effect</th><th>Where it bites</th><th>Shown as</th></tr></thead><tbody>' +
@@ -1532,6 +1624,9 @@ function methodHTML() {
     tr(['Chair information stale or unpublished', 'Indicator 4.1 is unknown where nothing is published', unkChair, 'Unknown, callout']) +
     tr(['Delivered-CVA figures unavailable', 'No in-country total for the latest period', noVol, 'n/a with note']) +
     tr(['FSP lists non-exhaustive', 'Only providers named in public sources; no volumes or contract status', 'None found for ' + noFsp, 'callout under each FSP section']) +
+    tr(['MFI published for few countries', 'The MFI columns are empty where WFP has not published a round, which says nothing about how markets function there', affected(function (c) { return !has((c.markets || {}).mfi_score); }), 'n/a, “not published”, callout on the Market functionality section']) +
+    tr(['MFI CSV mangled by a spreadsheet', 'Scores like 7.5 or 8.75 stored as French dates; read naively they are lost', 'MFI file on HDX (all countries in it)', 'decoded by script; count of decoded cells kept in data/wfp']) +
+    tr(['Price change is an unweighted median of series', 'Not a CPI or MEB cost; the basket and market sample differ by country', 'All countries', 'callout; marked partial when the series is thin or stale']) +
     tr(['Lebanon plan not on FTS', 'FTS figures use the Flash Appeal; LRP figures come from UNHCR funding updates', cLink(byId.lebanon), 'notes on the Lebanon tab']) +
     tr(['AI-collected, unreviewed', 'Transcription and interpretation errors are possible', 'All countries until a regional representative reviews', 'AI draft label on every country tab']) +
     '</tbody></table></div></section>';
@@ -1543,12 +1638,14 @@ function methodHTML() {
   h += '<section class="panel" id="m-update"><h3>How to update</h3><ul>' +
     '<li>Country facts live in <code>data/&lt;country&gt;.json</code>. Every figure is <code>{value, available, as_of, source_ids, note}</code>; sources are listed in each file. Leave <code>value</code> null and set <code>available: "no"</code> when nothing was found, and say in <code>note</code> what was looked for.</li>' +
     '<li>FTS figures: run <code>python3 -I build/fts_pull.py</code> then <code>python3 -I build/merge_v2.py</code>. The merge is idempotent and only fills v1 cells that are still empty.</li>' +
+    '<li>Market functionality: run <code>python3 -I build/wfp_markets_pull.py</code> then <code>python3 -I build/merge_markets.py</code>. When the WFP Data Bridges key arrives, swap the two fetch functions in the pull script for API calls; the output files and the page stay as they are.</li>' +
     '<li>CWG pulse, coordination, volumes and FSPs: edit <code>data/v2/&lt;country&gt;.json</code> and re-run the merge, or edit the merged blocks directly.</li>' +
     '<li>Validate and rebuild: <code>python3 -I schema/validate.py data/&lt;country&gt;.json</code>, then <code>python3 -I build/build.py</code>. Commit <code>data/</code> and <code>index.html</code> together.</li>' +
     '<li>Regional representatives fill the <code>rep_notes</code> fields for their countries. Setting <code>reviewed_by</code> switches the draft label to Reviewed.</li>' +
     '<li>Add a country by adding a JSON file; nothing in the page is written per country.</li></ul></section>';
 
   h += '<section class="panel" id="m-log"><h3>Change log</h3><ul>' +
+    '<li><b>6 Nov 2026, v2.1.</b> Market functionality section on every country tab and a Markets theme tab: WFP Market Functionality Index from the public HDX release (four countries), WFP food-price coverage and year-on-year change for all fifteen, the existing joint-monitoring entry, and a placeholder for what the Data Bridges API will add.</li>' +
     '<li><b>6 Nov 2026, v2.</b> Country search and draggable tab strip. Sectoral and total CVA from FTS in the at-a-glance strip. Cash volumes group (FTS funding beside in-country delivered value; sectoral line takes the higher of FTS and the CWG figure and names the source). Coordination label (OCHA / UNHCR / both / neither). CWG pulse trial from public pages. Financial service providers with logos. Local leadership group for IASC indicators 4.1 and 4.2. Pooled-fund and sectoral-cash cells filled from FTS where v1 found nothing, marked partial. Caveat callouts on every visual that rests on uneven data. This methodology page.</li>' +
     '<li><b>5 Nov 2026, v1.</b> First build: 24 indicators from CALP’s cash advocacy data points, 15 countries, AI country summaries, by-country and by-theme tabs, independent spot-check.</li></ul></section>';
   return h + '</div>';
@@ -1573,7 +1670,7 @@ TABS.forEach(function (t) {
     b.title = t.c.name + ': ' + q.n + ' of ' + TOTAL_SPECS + ' indicators found (' + q.word + ')';
   } else {
     b.textContent = t.label;
-    if (t.th) b.title = t.th.g.title;
+    if (t.th) b.title = t.th.title || t.th.g.title;
   }
   b.addEventListener('click', function () { go(t.id); });
   tablist.appendChild(b);
@@ -1628,7 +1725,7 @@ function activate(tab) {
     if (on) { p.innerHTML = t.render(); }
   });
   var changed = curTab !== tab; curTab = tab;
-  document.title = (cur.c ? cur.c.name : cur.th ? cur.th.g.title.replace(/ \(.*\)/, '') : cur.label) + ' · Cash Signal';
+  document.title = (cur.c ? cur.c.name : cur.th ? (cur.th.title || cur.th.g.title).replace(/ \(.*\)/, '') : cur.label) + ' · Cash Signal';
   var tb = document.getElementById('tab-' + tab);
   var sc = document.getElementById('tabsScroll');
   if (tb && sc.scrollWidth > sc.clientWidth) sc.scrollLeft = Math.max(0, tb.offsetLeft - 48);

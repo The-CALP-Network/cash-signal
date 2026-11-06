@@ -1,0 +1,61 @@
+{
+  "id": "lebanon",
+  "iso3": "LBN",
+  "pulled": "2026-11-06",
+  "mfi_source": {
+    "dataset": "https://data.humdata.org/dataset/market-functionality-index-mfi",
+    "csv": "https://data.humdata.org/dataset/f8824b34-966b-4b74-99fa-7768042ce130/resource/bf837fe7-dfb9-41de-a5b2-1bf11012d723/download/market-functionality-index-.csv",
+    "dataset_date": "[2026-01-01T00:00:00 TO 2026-06-30T23:59:59]",
+    "last_modified": "2026-06-23",
+    "countries_in_release": [
+      "Armenia",
+      "Bangladesh",
+      "Burundi",
+      "Democratic Republic of the Congo",
+      "Ethiopia",
+      "Gaza",
+      "Guatemala",
+      "Kyrgyzstan",
+      "Lesotho",
+      "Madagascar",
+      "Malawi",
+      "Mali",
+      "South Sudan",
+      "Sri Lanka",
+      "United Republic of Tanzania",
+      "Venezuela (Bolivarian Republic of)"
+    ]
+  },
+  "mfi": null,
+  "prices_source": {
+    "dataset": "https://data.humdata.org/dataset/wfp-food-prices-for-lebanon",
+    "csv": "https://data.humdata.org/dataset/db0b4fb1-ce11-458e-94e0-3342365a117a/resource/772bc34e-1327-4ada-b2eb-e72020a546f2/download/wfp_food_prices_lbn.csv",
+    "dataset_date": "[2012-08-15T00:00:00 TO 2026-08-15T23:59:59]",
+    "last_modified": "2026-10-18"
+  },
+  "prices": {
+    "latest_month": "2026-08",
+    "partial_months_after": [],
+    "months_since_latest": 3,
+    "fresh_3m": true,
+    "markets_latest": 8,
+    "markets_12m": 8,
+    "commodities_latest": 19,
+    "currencies": [
+      "LBP"
+    ],
+    "price_flags": {
+      "actual": 152
+    },
+    "yoy_base_month": "2025-08",
+    "yoy_series": 152,
+    "yoy_local_pct": 6.1,
+    "yoy_local_iqr": [
+      0.6,
+      16.2
+    ],
+    "yoy_usd_pct": 6.8,
+    "yoy_usd_series": 152,
+    "flags": []
+  }
+}
