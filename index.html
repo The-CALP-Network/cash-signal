@@ -14313,12 +14313,6 @@ function countryTabHTML(c, idx) {
     glanceCell('Coordination', (c.coordination || {}).label === 'Unknown' ? 'n/a' : (c.coordination || {}).label || 'n/a', esc((c.coordination || {}).note || 'Not researched'), !(c.coordination && c.coordination.label && c.coordination.label !== 'Unknown')) +
     '</div></section>';
 
-  /* the read */
-  function list(t, arr) { return '<div><h4>' + t + '</h4><ul>' + ((arr && arr.length) ? arr.map(function (i) { return '<li>' + citeText(c, i) + '</li>'; }).join('') : '<li class="none">None recorded.</li>') + '</ul></div>'; }
-  h += '<section aria-label="The read">' + secHead('The read', rev ? 'Reviewed by ' + esc(c.rep_notes.reviewed_by) + '. Drawn from the sources below.' : 'AI draft from the sources below; a regional representative has not yet reviewed it.') +
-    '<div class="readgrid"><div><p class="head">' + citeText(c, s.headline) + '</p><p class="narr">' + citeText(c, s.narrative) + '</p></div>' +
-    '<div class="rlists">' + list('Barriers', s.barriers) + list('Opportunities', s.opportunities) + list('Data gaps', s.data_gaps) + '</div></div></section>';
-
   /* indicator groups */
   GROUPS.forEach(function (g) { h += groupSection(c, g); if (g.id === 'sys') h += cwgPulseSection(c) + marketSection(c); });
 
