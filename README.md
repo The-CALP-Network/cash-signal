@@ -19,6 +19,9 @@ build/fts_pull.py     pulls every flow per plan from the FTS API and computes th
 build/rw_cwg_pull.py  reads the CWG pages on ReliefWeb Response
 build/merge_v2.py     merges fts/, rw/ and v2/ into data/<country>.json (idempotent)
 build/archive/        earlier templates (v1 sidebar … v5 pre-search)
+data/rep/rep_notes.json regional representatives' notes, exported hourly from the SharePoint list by a Power Automate flow
+sharepoint/           the list (provisioning script), the flow (step by step) and how the two reach the repo
+.github/workflows/    rebuilds index.html on every push that touches data/, build/ or schema/
 schema/schema.json    the country record format
 schema/validate.py    checks a country file (run before every rebuild)
 docs/                 research brief, spot-check reports, and the HNRP 2026 modality-preference review (xlsx)
@@ -37,7 +40,7 @@ docs/                 research brief, spot-check reports, and the HNRP 2026 moda
 
 1. Edit `data/<country>.json`. Every datum is `{value, available: yes|partial|no, as_of, source_ids, note}`; `source_ids` point at entries in that file's `sources[]`. Leave `value` null and set `available: "no"` when nothing was found: say in `note` what was looked for.
 2. FTS figures: `python3 -I build/fts_pull.py` then `python3 -I build/merge_v2.py`. CWG pages: `python3 -I build/rw_cwg_pull.py`, edit `data/rw/overrides.json` if chairs or dashboards changed, then merge. The merge only fills v1 cells that are still empty and refreshes the v2 blocks.
-3. Regional representatives fill the `rep_notes` block (key messages, barriers, CWG maturity, leadership buy-in, CALP priority, reviewed_by, reviewed_date). Once `reviewed_by` is set the country shows as Reviewed.
+3. Regional representatives do not edit JSON. They edit their country's row in the **Cash Signal Updates** SharePoint list; a Power Automate flow writes `data/rep/rep_notes.json` hourly when something changed, and `build.py` overlays it on each country's `rep_notes` (see `sharepoint/README.md`). Setting *Reviewed by* in the list switches the country to Reviewed. The notes sit at the top of each country tab.
 4. Validate and rebuild:
 
 ```
@@ -45,7 +48,7 @@ python3 -I schema/validate.py data/sudan.json
 python3 -I build/build.py
 ```
 
-5. Commit `data/` and `index.html` together.
+5. Commit `data/` and `index.html` together. A GitHub Action also rebuilds and commits `index.html` on any push touching `data/`, so `git pull --rebase` before you start editing.
 
 The "Data collected" date on the page is the latest `last_researched` across the country files.
 

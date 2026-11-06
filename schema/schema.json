@@ -274,7 +274,7 @@
     "status": "AI draft, not yet reviewed"
   },
   "rep_notes": {
-    "_comment": "For CALP regional representatives. Leave all empty.",
+    "_comment": "Leave empty. Filled at build time from data/rep/rep_notes.json, the export of the SharePoint list (sharepoint/README.md).",
     "key_messages": "",
     "barriers": "",
     "cwg_maturity": "",

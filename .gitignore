@@ -5,3 +5,6 @@ Thumbs.db
 *.png
 node_modules/
 _to_delete/
+
+# local working notes
+docs/feedback-log-*.md

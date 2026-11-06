@@ -593,7 +593,9 @@ td.cn a:hover { color: var(--blue); }
 // ============================================================
 // CASH SIGNAL DATA: edit this block to update the dashboard.
 // One object per country. Schema: see schema.json.
-// Regional reps: fill the rep_notes fields for your countries.
+// rep_notes come from the SharePoint list via data/rep/rep_notes.json (see sharepoint/README.md); do not edit them here.
+// Set to the SharePoint list URL once it exists; the country pages then link to it.
+var REP_LIST_URL = 'https://calpnetworkorg.sharepoint.com/sites/CALP/Lists/Cash%20Signal%20Updates/AllItems.aspx';
 // ============================================================
 __CASH_SIGNAL_OBJECT__
 // ============================================================
@@ -1170,6 +1172,16 @@ function countryTabHTML(c, idx) {
     '<div class="cright"><span class="quality" tabindex="0" title="' + esc(QUALITY_RULE) + '"><span class="dot ' + q.key + '" aria-hidden="true"></span>Source quality: ' + q.word + ' · ' + q.n + ' of ' + TOTAL_SPECS + ' found</span>' +
     '<span>' + (rev ? 'Reviewed by ' + esc(c.rep_notes.reviewed_by) + (c.rep_notes.reviewed_date ? ', ' + esc(fmtDate(c.rep_notes.reviewed_date)) : '') : 'AI draft, unreviewed ' + esc(fmtDate(c.last_researched || D.generated))) + '</span></div></header>';
 
+  /* rep notes */
+  var rn = c.rep_notes || {};
+  var RF = [['key_messages', 'Key messages'], ['barriers', 'Barriers'], ['cwg_maturity', 'CWG maturity'], ['leadership_buy_in', 'Leadership buy-in'], ['calp_priority', 'CALP priority'], ['reviewed_by', 'Reviewed by']];
+  h += '<section aria-label="Regional representative notes">' + secHead('Regional representative notes', 'CALP’s regional representative’s assessment.' + (REP_LIST_URL ? ' <a href="' + esc(REP_LIST_URL) + '" target="_blank" rel="noopener">Edit in the SharePoint list</a>.' : '')) + '<div class="repgrid">' +
+    RF.map(function (f) {
+      var v = rn[f[0]];
+      if (f[0] === 'reviewed_by' && v && rn.reviewed_date) v = v + ', ' + fmtDate(rn.reviewed_date);
+      return '<div class="rep"><div class="rk">' + f[1] + '</div><div class="rv' + (v ? '' : ' ph') + '">' + (v ? esc(v) : 'Not yet completed.') + '</div></div>'; }).join('') +
+    '</div></section>';
+
   /* at a glance */
   var rq = pl.requirements_usd, fp = pl.funded_pct, mr = c.hnrp_requirements.mpc_pct, mf = c.overall_funding.mpc_funded_pct_of_mpc_req, pf = c.modality_preference.cash_pct;
   var fc = c.fts_cva || {}, fs = fc.sectoral_cva_usd, fv = fc.cva_usd, dv = (c.cash_volumes || {}).cva_delivered_usd;
@@ -1195,16 +1207,6 @@ function countryTabHTML(c, idx) {
 
   /* financial service providers */
   h += fspSection(c);
-
-  /* rep notes */
-  var rn = c.rep_notes || {};
-  var RF = [['key_messages', 'Key messages'], ['barriers', 'Barriers'], ['cwg_maturity', 'CWG maturity'], ['leadership_buy_in', 'Leadership buy-in'], ['calp_priority', 'CALP priority'], ['reviewed_by', 'Reviewed by']];
-  h += '<section aria-label="Regional representative notes">' + secHead('Regional representative notes', 'For CALP’s regional representative to complete.') + '<div class="repgrid">' +
-    RF.map(function (f) {
-      var v = rn[f[0]];
-      if (f[0] === 'reviewed_by' && v && rn.reviewed_date) v = v + ', ' + fmtDate(rn.reviewed_date);
-      return '<div class="rep"><div class="rk">' + f[1] + '</div><div class="rv' + (v ? '' : ' ph') + '">' + (v ? esc(v) : 'To be completed by the regional representative. Edit rep_notes.' + f[0] + ' in the data block.') + '</div></div>'; }).join('') +
-    '</div></section>';
 
   /* sources */
   h += '<section aria-label="Sources">' + secHead('Sources') + '<ol class="srcs">' + c.sources.map(function (s) {

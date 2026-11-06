@@ -1,0 +1,40 @@
+name: Build dashboard
+
+# Rebuilds index.html whenever data changes: a push from VS Code, or the Power Automate flow
+# writing data/rep/rep_notes.json from the SharePoint list. Commits the result back to main,
+# which GitHub Pages (deploy from branch) then serves.
+on:
+  push:
+    branches: [main]
+    paths: ["data/**", "build/**", "schema/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-main
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # the bot's own commit touches only index.html, so paths: above already stops a loop; belt and braces
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate country files
+        run: for f in data/*.json; do python3 -I schema/validate.py "$f"; done
+      - name: Build
+        run: python3 -I build/build.py
+      - name: Commit index.html
+        run: |
+          git config user.name "cash-signal-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "Rebuild dashboard [skip ci]"
+          git push
