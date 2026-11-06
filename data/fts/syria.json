@@ -1,0 +1,68 @@
+{
+ "id": "syria",
+ "plan_id": 1518,
+ "plan_name": "Syrian Arab Republic Humanitarian Needs and Response Plan 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1518",
+ "fts_page": "https://fts.unocha.org/plans/1518/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 777,
+   "fundingTotal": 972244996,
+   "pledgeTotal": 1254730
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 256
+  }
+ },
+ "summary": {
+  "total_funding": 972244996,
+  "flow_count_incoming": 772,
+  "latest_flow_date": "2026-11-04",
+  "mpc_cluster_funding": 36735539,
+  "mpc_cluster_funding_shared_view": 41598833,
+  "mpc_cluster_name": "Multi-Purpose Cash",
+  "ctp_funding": 79321717,
+  "ctp_in_mpc": 36582899,
+  "sectoral_cva_funding": 42738818,
+  "sectoral_cva_by_cluster": {
+   "Food Security": 11431495,
+   "Water, Sanitation and Hygiene": 6572566,
+   "Shelter": 6565441,
+   "Protection": 5968365,
+   "NFI": 5865806,
+   "Multi-Purpose Cash": 4863294,
+   "Education": 4499602,
+   "Health": 4182321,
+   "Camp Coordination and Camp Management": 3925794,
+   "Nutrition": 3804278
+  },
+  "sectoral_cva_flow_count": 87,
+  "cva_funding": 79474357,
+  "cva_pct_of_total": 8.2,
+  "sectoral_cva_pct_of_total": 4.4,
+  "mpc_pct_of_total": 3.8,
+  "local_actor_funding": 17791675,
+  "local_actor_pct_of_total": 1.8,
+  "local_actor_cva_funding": 641032,
+  "local_actor_pct_of_cva": 0.8,
+  "cbpf_internal": {
+   "flow_count": 239,
+   "total": 184497271,
+   "mpc": 34435885,
+   "ctp": 58965428,
+   "cva": 58965428,
+   "mpc_pct": 18.7,
+   "cva_pct": 32.0,
+   "local_actor": 17710390,
+   "local_actor_pct": 9.6,
+   "local_actor_cva": 1781230,
+   "local_actor_pct_of_cva": 3.0
+  }
+ }
+}

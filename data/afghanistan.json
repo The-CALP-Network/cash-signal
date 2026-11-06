@@ -3,7 +3,7 @@
   "name": "Afghanistan",
   "iso3": "AFG",
   "calp_region": "Asia-Pacific",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Afghanistan Humanitarian Needs and Response Plan 2026",
@@ -195,12 +195,14 @@
       "note": "FTS single-cluster (destination) view: US$19.2M of US$14.7M MPC requirement. Shared-cluster view would give US$26.9M (183%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "FTS does not disaggregate sectoral cash from sector funding.",
-      "usd": null
+      "value": 1.4,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$8.0M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 7969626
     },
     "vouchers_pct": {
       "value": null,
@@ -224,20 +226,24 @@
       "note": "Eight targeted allocations in 2025."
     },
     "mpc_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "2025 annual report text does not break out multi-purpose cash; pfdata not opened.",
-      "usd": null
+      "value": 33.3,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: the pooled fund's onward grants inside this plan (145 internal flows, US$37.5M) tagged to the MPC cluster. The fund's own allocation reports may differ.",
+      "usd": 12459643
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not found.",
-      "usd": null
+      "value": 8.0,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$3.0M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 2999975
     },
     "vouchers_pct": {
       "value": null,
@@ -383,6 +389,381 @@
       "url": "https://www.unocha.org/publications/report/afghanistan/afghanistan-humanitarian-needs-and-response-plan-2026-december-2025-endarips",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1502 (Afghanistan Humanitarian Needs and Response Plan 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1502/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Humanitarian Needs and Response Plan Afghanistan 2026 - CVA overview",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1502/document/humanitarian-needs-and-response-plan-afghanistan-2026/article/cash-and-voucher-assistance-overview",
+      "date": "2025-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "2026 Response Plan for Afghan Returnees (RPAR) Published",
+      "publisher": "UN Afghanistan",
+      "url": "https://afghanistan.un.org/en/node/315785",
+      "date": "2026-05-19",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Cash Voucher Working Group",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+      "date": "2026-04-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Programme Policy Officer (Inter Agency CVWG Coordinator) - WFP vacancy",
+      "publisher": "Impactpool",
+      "url": "https://www.impactpool.org/jobs/653815",
+      "date": "2020-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "CVWG Co-chair Technical Coordinator (Afghan Nationals Only) vacancy",
+      "publisher": "UNTalent",
+      "url": "https://untalent.org/jobs/cash-and-voucher-working-group-cvwg-co-chair-technical-coordinator-afghan-nationals-only",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "HNRP Afghanistan 2026 - Cash and voucher assistance overview (2025 totals)",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1502/document/humanitarian-needs-and-response-plan-afghanistan-2026/article/cash-and-voucher-assistance-overview",
+      "date": "2025-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Afghanistan e-cash explainer",
+      "publisher": "Norwegian Refugee Council",
+      "url": "https://www.NRC.no/globalassets/pdf/explainers/afghanistan-e-cash/nrc-afghanistan-e-cash-explainer-february-2024_v2.pdf",
+      "date": "2024-02-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "UNHCR Afghanistan - cash assistance",
+      "publisher": "UNHCR",
+      "url": "https://www.unhcr.org/af/node/83",
+      "date": "2025-06-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "rw1",
+      "title": "Afghanistan: Cash Voucher Working Group (ReliefWeb Response)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1502,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1502",
+    "fts_page": "https://fts.unocha.org/plans/1502/summary",
+    "total_funding_usd": {
+      "value": 559667488,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 19204278,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multipurpose Cash cluster; shared-cluster view US$19.2M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 27173904,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 7969626,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 47 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Protection US$3.9M, Food Security and Agriculture US$3.1M, Emergency Shelter and NFI US$0.4M.",
+      "by_cluster": {
+        "Protection": 3877777,
+        "Food Security and Agriculture": 3071415,
+        "Emergency Shelter and NFI": 407897,
+        "Education": 203276,
+        "Coordination, Thematics and System Support": 148281,
+        "Water, Sanitation and Hygiene": 117814,
+        "Health": 72373,
+        "Nutrition": 70793
+      },
+      "flow_count": 47
+    },
+    "cva_usd": {
+      "value": 27173904,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 4.9,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 1.4,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 3.4,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 145,
+      "total": 37467711,
+      "mpc": 12459643,
+      "ctp": 15459618,
+      "cva": 15459618,
+      "mpc_pct": 33.3,
+      "cva_pct": 41.3,
+      "local_actor": 21569313,
+      "local_actor_pct": 57.6,
+      "local_actor_cva": 6932282,
+      "local_actor_pct_of_cva": 44.8
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Afghanistan Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "none found",
+    "note": "HNRP (OCHA). A separate 2026 Response Plan for Afghan Returnees (US$529.2M, published by the UN Resident Coordinator's Office, IOM and the integrated RC/HC office named as contacts) exists; no UNHCR-led plan confirmed.",
+    "source_ids": [
+      "v2s1",
+      "v2s2"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+    "page_title": "Afghanistan: Cash Voucher Working Group",
+    "page_last_updated": "2026-11-02",
+    "last_update_basis": "latest situation report posted in the page's ReliefWeb feed: Afghanistan: Weekly Market Report: Issue 316: Week 4 - October 2026",
+    "page_fresh_3m": true,
+    "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiNjEzOTY4OWEtYTg4Yy00YjQwLThhNTUtYzI2Y2Y1NDgwY2VhIiwidCI6IjNmODZkMWI0LTJjNmItNGIxYS1iMmFlLTZmNWU5NTBiY2ExZSIsImMiOjh9",
+    "dashboard_name": "Afghanistan Cash and Voucher Achievements (Power BI)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "not shown on the page",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [],
+    "local_cochair": "unknown",
+    "contacts_basis": "CWG page contacts tab lists two contacts without organisations, 6 Nov 2026",
+    "note": "Page has no contacts block, dashboard, minutes or updated stamp; listed documents are WFP market reports, not CVWG outputs.",
+    "source_ids": [
+      "rw1",
+      "v2s3",
+      "v2s4",
+      "v2s5"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 19204278,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multipurpose Cash cluster; shared-cluster view US$19.2M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 7969626,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": 152700000,
+      "available": "yes",
+      "as_of": "2025-09",
+      "source_ids": [
+        "v2s6"
+      ],
+      "note": "US$152.7M reaching 16.6M people through CWG partners; page says late Q3 and Q4 submissions pending.",
+      "period": "2025 (preliminary, data as of Sep 2025)",
+      "source_type": "other"
+    },
+    "mpc_delivered_usd": {
+      "value": 35600000,
+      "available": "yes",
+      "as_of": "2025-09",
+      "source_ids": [
+        "v2s6"
+      ],
+      "note": "Reported as MPC in HNRP 2026 CVA overview.",
+      "period": "2025 (preliminary, data as of Sep 2025)",
+      "source_type": "other"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s6"
+      ],
+      "note": "No sectoral split stated in the HNRP section opened.",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [
+    {
+      "name": "HesabPay",
+      "type": "fintech / e-wallet",
+      "used_by": [
+        "NRC",
+        "UNHCR"
+      ],
+      "evidence": "NRC e-cash pilot (USD170/month x3, Kandahar, 2024) via HesabPay; UNHCR page lists HesabPay prepaid cards (June 2025).",
+      "website": "https://hesab.com",
+      "logo_url": "https://hesab.com/images/logos/logo-color.png",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s7",
+        "v2s8"
+      ]
+    },
+    {
+      "name": "m-Hawala",
+      "type": "mobile money",
+      "used_by": [
+        "UNHCR"
+      ],
+      "evidence": "UNHCR Afghanistan page lists m-Hawala as a mobile money platform used for digital cash since 2024.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s8"
+      ]
+    },
+    {
+      "name": "Hawala agents (informal)",
+      "type": "hawala",
+      "used_by": [
+        "NRC",
+        "humanitarian actors generally"
+      ],
+      "evidence": "NRC explainer says humanitarian actors have relied almost exclusively on hawala; NRC previously delivered cash via hawala; e-cash costs the same 3% commission.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    }
+  ],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "rw1",
+        "v2s3",
+        "v2s4",
+        "v2s5"
+      ],
+      "note": "No chair or co-chair organisations found on the CWG page or in minutes."
+    },
+    "cva_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$27.2M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 0
+    },
+    "all_funding_to_local_pct": {
+      "value": 0.1,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$0.6M). Same first-level caveat.",
+      "usd": 569081
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 44.8,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$15.5M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 6932282
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 57.6,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$37.5M) to local or national actors.",
+      "usd": 21569313
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

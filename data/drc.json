@@ -3,7 +3,7 @@
   "name": "DRC",
   "iso3": "COD",
   "calp_region": "West and Central Africa",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026",
@@ -194,12 +194,14 @@
       "note": "FTS single-cluster (destination) view: US$16.3M of US$110.5M MPC requirement. Shared-cluster view would give US$52.4M (47%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "FTS does not disaggregate sectoral cash.",
-      "usd": null
+      "value": 1.1,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$12.7M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 12719119
     },
     "vouchers_pct": {
       "value": null,
@@ -223,20 +225,24 @@
       "note": "Additional US contribution announced Sep 2026, not the annual allocation total; UN News also cites USD 40.5M CERF and USD 36M other donors."
     },
     "mpc_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Cluster split of 2026 allocations not found (CBPF data hub not retrievable).",
-      "usd": null
+      "value": 9.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: the pooled fund's onward grants inside this plan (345 internal flows, US$383.2M) tagged to the MPC cluster. The fund's own allocation reports may differ.",
+      "usd": 36088110
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Only qualitative: USD 142M tranche meant to maintain cash transfers where conditions allow [s9]; a USD 10M FAO allocation includes some unconditional cash [s10].",
-      "usd": null
+      "value": 15.8,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$60.7M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 60677360
     },
     "vouchers_pct": {
       "value": null,
@@ -416,6 +422,441 @@
       "url": "https://reliefweb.int/report/democratic-republic-congo/republique-democratique-du-congo-besoins-humanitaire-et-plan-de-reponse-2026-janvier-2026",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1509 (République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1509/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Facing critical funding gap, humanitarian community in DRC forced to strictly prioritize its response in 2026",
+      "publisher": "OCHA via ReliefWeb",
+      "url": "https://reliefweb.int/report/democratic-republic-congo/facing-critical-funding-gap-humanitarian-community-drc-forced-strictly-prioritize-its-response-2026",
+      "date": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "DRC situation, Global Appeal 2026",
+      "publisher": "UNHCR",
+      "url": "https://www.unhcr.org/sites/default/files/2026-01/ga2026-drc-situation.pdf",
+      "date": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Cash Working Group (DRC)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/democratic-republic-congo/cash-working-group",
+      "date": "2024-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Rapport de la rencontre des Leads et Co-Leads des CWG d'Afrique de l'Ouest et du Centre (CALP, Dakar, 29 Jun-2 Jul 2026)",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Mercy Corps CAT DRC cash report (FSP landscape in eastern DRC, 2024 data)",
+      "publisher": "Mercy Corps",
+      "url": "https://www.prosperglobal.org/sites/default/files/2025-08/cat-drc-cash.pdf",
+      "date": "2025-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "République Démocratique du Congo - Interventions basées sur les espèces au 31 mars 2026",
+      "publisher": "UNHCR",
+      "url": "https://data.unhcr.org/en/documents/details/122167",
+      "date": "2026-04-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Fourniture de services de transfert d'argent en République Démocratique du Congo (RFP 30000034327)",
+      "publisher": "IOM via UNGM",
+      "url": "https://www.ungm.org/Public/Notice/319088",
+      "date": "2026-10-21",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "rw1",
+      "title": "Democratic Republic of Congo: Cash Working Group (ReliefWeb Response)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/democratic-republic-congo/cash-working-group",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1509,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1509",
+    "fts_page": "https://fts.unocha.org/plans/1509/summary",
+    "total_funding_usd": {
+      "value": 1142713793,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 16297373,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Transfert d’espèces à usages multiples cluster; shared-cluster view US$16.3M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 29016492,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 12719119,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 57 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Sécurité alimentaire US$9.9M, Protection US$1.4M, Réponse multisectorielle aux réfugiés US$0.4M.",
+      "by_cluster": {
+        "Sécurité alimentaire": 9936484,
+        "Protection": 1414354,
+        "Réponse multisectorielle aux réfugiés": 425982,
+        "Nutrition": 402505,
+        "Education": 244014,
+        "Santé": 226020,
+        "Abris et AME": 69760
+      },
+      "flow_count": 57
+    },
+    "cva_usd": {
+      "value": 29016492,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 2.5,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 1.1,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 1.4,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 345,
+      "total": 383229788,
+      "mpc": 36088110,
+      "ctp": 94792110,
+      "cva": 96765470,
+      "mpc_pct": 9.4,
+      "cva_pct": 25.2,
+      "local_actor": 18999936,
+      "local_actor_pct": 5.0,
+      "local_actor_cva": 1443400,
+      "local_actor_pct_of_cva": 1.5
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026 (HNRP)",
+    "unhcr_plan": "none",
+    "note": "HNRP (OCHA). No 2026 UNHCR in-country RRP chapter found; DRC refugees/IDPs are covered in the HNRP and UNHCR's own Global Appeal DRC situation chapter, which is not an RRP.",
+    "source_ids": [
+      "v2s1",
+      "v2s2"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/democratic-republic-congo/cash-working-group",
+    "page_title": "Democratic Republic of Congo: Cash Working Group",
+    "page_last_updated": "2024-12",
+    "last_update_basis": "latest document posted (CWG RDC 4W December 2024); page shows no updated stamp",
+    "page_fresh_3m": false,
+    "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiNTU1NzRmMTctNzAwOS00NjdmLWE0ZmQtMzliNTZhMjNiMWVmIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+    "dashboard_name": "Tableau de bord transfert monétaire (Power BI)",
+    "dashboard_last_updated": "2026-07-31",
+    "dashboard_period": "au 31 juillet 2026 (stated on the card)",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "OCHA (non-programmatic lead)",
+        "actor_type": "UN",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "GiveDirectly (programmatic lead)",
+        "actor_type": "INGO",
+        "role": "co-lead"
+      }
+    ],
+    "local_cochair": "no",
+    "contacts_basis": "CALP West and Central Africa CWG leads report (Jul 2026); the ReliefWeb page itself lists no contacts. REACH gives technical support without a lead role.",
+    "note": "Page lists 4W reports Jan 2024 to Dec 2024 and ToRs only; no dashboard, no minutes, no 2025-2026 items. National CWG plus regional groups (Goma, Bukavu, Kalemie, Kananga) and provincial groups (Bunia, Tshikapa).",
+    "source_ids": [
+      "rw1",
+      "v2s3",
+      "v2s4"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 16297373,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Transfert d’espèces à usages multiples cluster; shared-cluster view US$16.3M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 12719119,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": 76400000,
+      "available": "partial",
+      "as_of": "2025-04",
+      "source_ids": [
+        "v2s5"
+      ],
+      "note": "USD 76.4M delivered to 3.6M people across eastern DRC in 2024 per CWG 4W data as cited by Mercy Corps; 4W is partial and 2023 (USD 98.7M) is not comparable. No 2025 total found.",
+      "period": "Calendar year 2024, eastern DRC only",
+      "source_type": "other"
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No USD MPC total found. The 4W summaries on the CWG page give MPC shares only (e.g. about 59% multipurpose in Dec 2024), without the USD value in the text read.",
+      "period": "",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No USD sectoral total found.",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [
+    {
+      "name": "Trust Merchant Bank (TMB)",
+      "type": "bank",
+      "used_by": [
+        "UNHCR",
+        "NGOs in North Kivu (unnamed)"
+      ],
+      "evidence": "UNHCR cash snapshot to 31 Mar 2026 lists TMB for direct payments and mobile counters; Mercy Corps (Apr 2025) says banks handled 71% of NGO cash transfers in North Kivu in 2024, primarily TMB and Ecobank.",
+      "website": "https://www.tmb.cd",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s6",
+        "v2s5"
+      ]
+    },
+    {
+      "name": "Ecobank",
+      "type": "bank",
+      "used_by": [
+        "NGOs in North Kivu (unnamed)"
+      ],
+      "evidence": "Named with TMB as the main banks for NGO cash transfers in North Kivu in 2024 (CWG 4W data); banks in M23-held areas were ordered closed in Jan 2025.",
+      "website": "https://www.ecobank.com",
+      "logo_url": "https://www.ecobank.com/img/eco/eco-logo-svg.svg",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s5"
+      ]
+    },
+    {
+      "name": "M-Pesa (Vodacash / Vodacom)",
+      "type": "mobile money",
+      "used_by": [
+        "UNHCR"
+      ],
+      "evidence": "Listed as FSP in UNHCR DRC cash snapshot to 31 Mar 2026; also named as an example platform in an IOM Oct 2026 RFP.",
+      "website": "https://www.vodacom.cd",
+      "logo_url": "https://www.vodacom.cd/sites/drc-portal/themes/custom/drc_portal/logo.svg",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s6",
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Pepele Mobile",
+      "type": "mobile money",
+      "used_by": [
+        "UNHCR"
+      ],
+      "evidence": "Listed as FSP in UNHCR DRC cash snapshot to 31 Mar 2026.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s6"
+      ]
+    },
+    {
+      "name": "Airtel Money",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "Only named as an example mobile money platform in IOM's Oct 2026 RFP (Lot 2); use by humanitarians not confirmed in a source read.",
+      "website": "https://www.airtel.africa",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Orange Money",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "Only named as an example platform in IOM's Oct 2026 RFP (Lot 2); use not confirmed.",
+      "website": "https://www.orange.cd",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Africell Money",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "Only named as an example platform in IOM's Oct 2026 RFP (Lot 2); use not confirmed.",
+      "website": "https://africell.cd",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "COOPEC savings cooperatives (unnamed)",
+      "type": "other",
+      "used_by": [
+        "NGOs in Kivu provinces (unnamed)"
+      ],
+      "evidence": "Cooperatives handled 8% of NGO transfers in North Kivu and 20% in South Kivu in 2024; no individual cooperative named.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5"
+      ]
+    }
+  ],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": "no",
+      "available": "yes",
+      "as_of": "2024-12",
+      "source_ids": [
+        "rw1",
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Chairs found: OCHA (non-programmatic lead) (UN); GiveDirectly (programmatic lead) (INGO)"
+    },
+    "cva_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$29.0M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 0
+    },
+    "all_funding_to_local_pct": {
+      "value": 0.2,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$1.8M). Same first-level caveat.",
+      "usd": 1801188
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 1.5,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$96.8M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 1443400
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 5.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$383.2M) to local or national actors.",
+      "usd": 18999936
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

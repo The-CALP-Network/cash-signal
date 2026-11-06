@@ -4,3 +4,4 @@ __pycache__/
 Thumbs.db
 *.png
 node_modules/
+_to_delete/

@@ -1,0 +1,65 @@
+{
+ "id": "mali",
+ "plan_id": 1511,
+ "plan_name": "Mali Besoins Humanitaires et Plan de Réponse 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1511",
+ "fts_page": "https://fts.unocha.org/plans/1511/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 326,
+   "fundingTotal": 162135390,
+   "pledgeTotal": 0
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 67
+  }
+ },
+ "summary": {
+  "total_funding": 162135390,
+  "flow_count_incoming": 326,
+  "latest_flow_date": "2026-11-04",
+  "mpc_cluster_funding": 5528916,
+  "mpc_cluster_funding_shared_view": 5528916,
+  "mpc_cluster_name": "Transfert d’espèces à usages multiples",
+  "ctp_funding": 25005577,
+  "ctp_in_mpc": 5528916,
+  "sectoral_cva_funding": 19476661,
+  "sectoral_cva_by_cluster": {
+   "Sécurité alimentaire": 8887848,
+   "Protection": 3828451,
+   "Abris/Biens Non Alimentaires": 3089854,
+   "Santé": 2965789,
+   "Nutrition": 2615967,
+   "Réponse aux Réfugiés": 1773381,
+   "Eau Hygiène et Assainissement": 875019
+  },
+  "sectoral_cva_flow_count": 46,
+  "cva_funding": 25005577,
+  "cva_pct_of_total": 15.4,
+  "sectoral_cva_pct_of_total": 12.0,
+  "mpc_pct_of_total": 3.4,
+  "local_actor_funding": 2491538,
+  "local_actor_pct_of_total": 1.5,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 0,
+   "total": 0,
+   "mpc": 0,
+   "ctp": 0,
+   "cva": 0,
+   "mpc_pct": null,
+   "cva_pct": null,
+   "local_actor": 0,
+   "local_actor_pct": null,
+   "local_actor_cva": 0,
+   "local_actor_pct_of_cva": null
+  }
+ }
+}

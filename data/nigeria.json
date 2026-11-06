@@ -3,7 +3,7 @@
   "name": "Nigeria",
   "iso3": "NGA",
   "calp_region": "West and Central Africa",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Nigeria Humanitarian Needs and Response Plan 2026",
@@ -185,12 +185,14 @@
       "note": "FTS shows no MPC requirement for 2026, so coverage cannot be calculated."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "FTS does not disaggregate sectoral cash.",
-      "usd": null
+      "value": 0.7,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$2.4M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 2399924
     },
     "vouchers_pct": {
       "value": null,
@@ -205,27 +207,33 @@
     "cbpf_exists": true,
     "cbpf_name": "Nigeria Humanitarian Fund",
     "cbpf_allocations_usd": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "2026 allocation data not retrieved (CBPF data hub not reachable by API)."
+      "value": 122200055,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: sum of the pooled fund's onward grants recorded inside this plan (86 internal flows). Not the fund's full allocation total."
     },
     "mpc_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not retrieved.",
-      "usd": null
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: the pooled fund's onward grants inside this plan (86 internal flows, US$122.2M) tagged to the MPC cluster. The fund's own allocation reports may differ.",
+      "usd": 0
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not retrieved.",
-      "usd": null
+      "value": 42.2,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$51.5M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 51522230
     },
     "vouchers_pct": {
       "value": null,
@@ -380,6 +388,342 @@
       "url": "https://reliefweb.int/report/nigeria/nigeria-2026-humanitarian-needs-and-response-plan-january-2026",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1508 (Nigeria Humanitarian Needs and Response Plan 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1508/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Nigeria, humanitarian partners launch urgent appeal for US$516m for lifesaving support to 2.5m people in north-east",
+      "publisher": "press report of OCHA launch",
+      "url": "https://alabingo.com/?p=71357",
+      "date": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Cash Working Group (Nigeria)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/nigeria/cash-working-group",
+      "date": "2026-03-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Maps / Infographics (Nigeria CWG)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/nigeria/cash-working-group/maps",
+      "date": "2025-08-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Nigeria 2025 HNRP: Multipurpose cash and CVA overview",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1274/document/nigeria-2025-humanitarian-needs-and-response-plan/article/28-multipurpose-cash-and-cash-and-voucher-assistance-overview",
+      "date": "2025-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Nigeria 2025 HNRP: Multipurpose cash and CVA overview (volumes)",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1274/document/nigeria-2025-humanitarian-needs-and-response-plan/article/28-multipurpose-cash-and-cash-and-voucher-assistance-overview",
+      "date": "2025-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Financial Service and Transfer Mechanisms: FSP Mapping for Northeast Nigeria",
+      "publisher": "Nigeria CWG via ReliefWeb",
+      "url": "https://reliefweb.int/report/nigeria/financial-service-and-transfer-mechanisms-financial-service-providers-mapping",
+      "date": "2022",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Nigeria Digitisation of Cash Transfers, summary report",
+      "publisher": "FSD Africa / EFInA / GSMA / WFP",
+      "url": "https://fsdafrica.org/wp-content/uploads/2022/02/Nigeria-Digitisation-of-Cash-Transfers-SUMMARY-REPORT_10.pdf",
+      "date": "2021-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "WFP supports digital wallet, biometric IDV programme to reach 750k Nigerians with aid",
+      "publisher": "Biometric Update",
+      "url": "https://www.biometricupdate.com/202507/wfp-supports-digital-wallet-biometric-idv-program-to-reach-750k-nigerians-with-aid",
+      "date": "2025-07-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "rw1",
+      "title": "Nigeria: Cash Working Group (ReliefWeb Response)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/nigeria/cash-working-group",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1508,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1508",
+    "fts_page": "https://fts.unocha.org/plans/1508/summary",
+    "total_funding_usd": {
+      "value": 367725856,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 6707044,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash cluster; shared-cluster view US$6.7M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 9065907,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 2399924,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 31 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Protection US$0.9M, Food Security US$0.6M, Nutrition US$0.1M.",
+      "by_cluster": {
+        "Protection": 901267,
+        "Food Security": 577623,
+        "Nutrition": 97015,
+        "Shelter and Non-food Items": 78017,
+        "Education": 76604,
+        "WASH": 3884,
+        "Health": 1504
+      },
+      "flow_count": 31
+    },
+    "cva_usd": {
+      "value": 9106968,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 2.5,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 0.7,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 1.8,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 86,
+      "total": 122200055,
+      "mpc": 0,
+      "ctp": 51522230,
+      "cva": 51522230,
+      "mpc_pct": 0.0,
+      "cva_pct": 42.2,
+      "local_actor": 5600001,
+      "local_actor_pct": 4.6,
+      "local_actor_cva": 793577,
+      "local_actor_pct_of_cva": 1.5
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Nigeria Humanitarian Needs and Response Plan 2026 (HNRP, BAY states)",
+    "unhcr_plan": "none",
+    "note": "HNRP (OCHA) for Borno, Adamawa and Yobe. No 2026 UNHCR RRP chapter for Nigeria found.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/nigeria/cash-working-group",
+    "page_title": "Nigeria: Cash Working Group",
+    "page_last_updated": "2026-10-14",
+    "last_update_basis": "latest assessment posted in the page's ReliefWeb feed: Joint Market Monitoring Initiative - Price & Functionality Update Borno Adamawa Yobe (Augu",
+    "page_fresh_3m": true,
+    "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiNjRiNTBhYzgtNzIwMS00NDM1LThlMzQtM2Q0YWM1MTQ1YjA2IiwidCI6ImY2ZjcwZjFiLTJhMmQtNGYzMC04NTJhLTY0YjhjZTBjMTlkNyIsImMiOjF9",
+    "dashboard_name": "Northeast Nigeria: Cash & Voucher Assistance (Power BI)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "not shown on the page",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "OCHA",
+        "actor_type": "UN",
+        "role": "CWG lead"
+      },
+      {
+        "organisation": "Caritas Germany",
+        "actor_type": "INGO",
+        "role": "NE Nigeria technical co-lead"
+      }
+    ],
+    "local_cochair": "no",
+    "contacts_basis": "CWG page contacts tab, 6 Nov 2026. The 2025 HNRP named the Federal Ministry as national co-lead; the page does not.",
+    "note": "No meeting minutes listed (page points to an archive for pre-2022 minutes). Page also hosts an FSP mapping for BAY states (undated) and NE CWG ToR (Jun 2024).",
+    "source_ids": [
+      "rw1",
+      "v2s2",
+      "v2s3",
+      "v2s4"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 6707044,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash cluster; shared-cluster view US$6.7M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 2399924,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": 227000000,
+      "available": "partial",
+      "as_of": "2024-11",
+      "source_ids": [
+        "v2s5"
+      ],
+      "note": "2025 HNRP CVA overview: USD 227M by end of November 2024 (USD 150M in 2023). 2025 requirement USD 478M. The Aug 2025 OCHA infographic (39 partners, 26 LGAs, Jan-Mar 2025) gave no USD in text. No 2025 delivered total found.",
+      "period": "Jan-Nov 2024",
+      "source_type": "other"
+    },
+    "mpc_delivered_usd": {
+      "value": 11700000,
+      "available": "partial",
+      "as_of": "2024-11",
+      "source_ids": [
+        "v2s5"
+      ],
+      "note": "2025 HNRP: MPC USD 11.7M in 2024 (about USD 12M in 2023).",
+      "period": "2024",
+      "source_type": "other"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not stated; could be derived only by subtraction, which is not done here.",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": "no",
+      "available": "yes",
+      "as_of": "2026-10-14",
+      "source_ids": [
+        "rw1",
+        "v2s2",
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Chairs found: OCHA (UN); Caritas Germany (INGO)"
+    },
+    "cva_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$9.1M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 0
+    },
+    "all_funding_to_local_pct": {
+      "value": 0.3,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$1.0M). Same first-level caveat.",
+      "usd": 1031152
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 1.5,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$51.5M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 793577
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 4.6,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$122.2M) to local or national actors.",
+      "usd": 5600001
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

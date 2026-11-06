@@ -1,0 +1,76 @@
+{
+ "id": "southsudan",
+ "page_url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "South Sudan: South Sudan Cash Working Group",
+ "river": [
+  {
+   "title": "ACTED South Sudan Multi-Purpose Cash Assistance (MPCA) - Post Distribution Monitoring (PDM) Report, Majoknythiou Reception Centre & Host Communities, Northern Bahr el Ghazal State 2026",
+   "url": "https://reliefweb.int/node/4228144",
+   "format": "Situation Report",
+   "source": "OCHA",
+   "posted": "2026-09-02"
+  },
+  {
+   "title": "DTM South Sudan: Biometric Registration and Cash Assistance - Bentiu IDP Camp (05 February - 02 July 2026)",
+   "url": "https://reliefweb.int/node/4222103",
+   "format": "Infographic",
+   "source": "IOM",
+   "posted": "2026-07-20"
+  },
+  {
+   "title": "Cash Working Group (CWG) South Sudan: Minutes of the CWG meeting 29 January 2026 and time 10:00 to 11.45am - Venue: Hybrid [Meeting minutesล",
+   "url": "https://reliefweb.int/node/4222380",
+   "format": "Other",
+   "source": "OCHA",
+   "posted": "2026-07-22"
+  }
+ ],
+ "documents": [],
+ "iframes": [],
+ "dashboard_links": [
+  "http://www.climis-southsudan.org/dashboard",
+  "https://app.powerbi.com/view?r=eyJrIjoiMTg3YWY3YjItMGE0MS00MTViLWI4ZjctNDM5MTI0YTg3ZWNiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://data.humdata.org",
+  "https://data.humdata.org/"
+ ],
+ "contacts": [
+  {
+   "organisation": "CashCap)",
+   "role": "Email:"
+  },
+  {
+   "organisation": "OCHA)",
+   "role": "Email:"
+  },
+  {
+   "organisation": "UN Programmatic",
+   "role": "Co-Chair (IOM) Email:"
+  },
+  {
+   "organisation": "CRS)",
+   "role": "Email:"
+  },
+  {
+   "organisation": "OCHA)",
+   "role": "Email:"
+  }
+ ],
+ "latest_item": {
+  "title": "ACTED South Sudan Multi-Purpose Cash Assistance (MPCA) - Post Distribution Monitoring (PDM) Report, Majoknythiou Reception Centre & Host Communities, Northern Bahr el Ghazal State 2026",
+  "url": "https://reliefweb.int/node/4228144",
+  "format": "Situation Report",
+  "source": "OCHA",
+  "posted": "2026-09-02"
+ },
+ "latest_document": {
+  "title": "ACTED South Sudan Multi-Purpose Cash Assistance (MPCA) - Post Distribution Monitoring (PDM) Report, Majoknythiou Reception Centre & Host Communities, Northern Bahr el Ghazal State 2026",
+  "url": "https://reliefweb.int/node/4228144",
+  "format": "Situation Report",
+  "source": "OCHA",
+  "posted": "2026-09-02"
+ },
+ "latest_listed_document": null
+}

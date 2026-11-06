@@ -1,0 +1,250 @@
+{
+ "id": "sudan",
+ "coordination": {
+  "label": "OCHA + UNHCR",
+  "ocha_plan": "Sudan Humanitarian Needs and Response Plan 2026 (HNRP)",
+  "unhcr_plan": "Sudan Country Refugee Response Plan (CRP) 2026 (UNHCR portal; lead inferred from hosting). Sudan is not one of the seven asylum countries in the Sudan Regional RRP.",
+  "note": "HNRP (OCHA); a Sudan Country Refugee Response Plan 2026 is published on UNHCR's portal and cited in HNRP part 4; refugee needs also appear inside the HNRP.",
+  "source_ids": [
+   "v2s1",
+   "v2s10",
+   "v2s12"
+  ]
+ },
+ "cwg_reliefweb": {
+  "page_url": "https://reliefweb.int/report/sudan/sudan-cash-working-group-coordination-structure",
+  "page_title": "Sudan Cash Working Group: Coordination Structure",
+  "page_last_updated": "",
+  "last_update_basis": "No CWG page found on response.reliefweb.int (fetch failed); the ReliefWeb report has blank posted/published fields and no date.",
+  "dashboard_url": "",
+  "dashboard_name": "",
+  "dashboard_last_updated": "",
+  "dashboard_period": "",
+  "meeting_minutes_latest": "",
+  "co_chairs": [
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "co-chair"
+   },
+   {
+    "organisation": "Cash Consortium of Sudan (Mercy Corps-led)",
+    "actor_type": "Consortium",
+    "role": "co-chair"
+   }
+  ],
+  "local_cochair": "no",
+  "contacts_basis": "Single undated CWG Information Management Officer vacancy that names the Cash Consortium of Sudan as programmatic co-chair alongside OCHA; not confirmed on a CWG page.",
+  "note": "Page and contacts tab read by script on 6 Nov 2026; chairs taken from the contacts tab. A May 2024 sectoral cash snapshot exists; the MPCA and sectoral cash Power BI dashboard shows no update date.",
+  "source_ids": [
+   "v2s3",
+   "v2s4",
+   "v2s5"
+  ]
+ },
+ "cash_volumes": {
+  "cva_delivered_usd": {
+   "value": 50000000,
+   "available": "partial",
+   "as_of": "2025-08",
+   "period": "2025-01-01 to 2025-03-31",
+   "source_ids": [
+    "v2s6"
+   ],
+   "note": "OCHA Eastern Africa Q1 2025 overview gives about US$50.0M CVA disbursed in Sudan for the quarter; Q2 2025 overview says Sudan had the highest disbursements in the region but gives no dollar figure.",
+   "source_type": "OCHA CVA snapshot"
+  },
+  "mpc_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s1"
+   ],
+   "note": "HNRP 2026 states a plan to reach 1M with MPCA ($121.3M requirement) but no delivered MPCA amount; none found elsewhere.",
+   "source_type": "other"
+  },
+  "sectoral_cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "2024-05",
+   "period": "to May 2024",
+   "source_ids": [
+    "v2s5"
+   ],
+   "note": "May 2024 sectoral snapshot reports 208,000 people reached (FSL 188,000; Protection 11,800; SNFI 8,300) but no US$ value; nothing more recent found.",
+   "source_type": "CWG dashboard"
+  }
+ },
+ "fsps": [
+  {
+   "name": "Bankak (Bank of Khartoum app)",
+   "type": "bank",
+   "used_by": [],
+   "evidence": "CGAP (Dec 2024) says Bankak handled over 50M transactions since the war began; CALP landscape review (2026) lists Bankak, cash-in-hand and mobile money as delivery mechanisms. No agency named as user.",
+   "website": "https://bankofkhartoum.com",
+   "logo_url": "https://bankofkhartoum.com/umoajupt/assets/images/logo.png",
+   "logo_source": "provider site",
+   "source_ids": [
+    "v2s7",
+    "v2s2"
+   ]
+  },
+  {
+   "name": "MTN Sudan Fintech (MTN mobile money)",
+   "type": "mobile money",
+   "used_by": [
+    "Mercy Corps"
+   ],
+   "evidence": "Mercy Corps BRIDGE pilot case study (Nov 2023): 25 displaced families in Gedaref received SDG 45,800 via USSD MTN mobile money.",
+   "website": "https://www.mtn.sd",
+   "logo_url": "https://www.mtn.sd/Logo.png",
+   "logo_source": "provider site",
+   "source_ids": [
+    "v2s8"
+   ]
+  },
+  {
+   "name": "Cashi",
+   "type": "fintech / e-wallet",
+   "used_by": [
+    "CORE",
+    "NIDAA",
+    "Emergency Response Rooms"
+   ],
+   "evidence": "CALP article names RedRose and Cashi as FSPs for a locally led cash response; Cashi merchant network handled cash collection.",
+   "website": "",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s9"
+   ]
+  },
+  {
+   "name": "RedRose",
+   "type": "fintech / e-wallet",
+   "used_by": [
+    "CORE",
+    "NIDAA"
+   ],
+   "evidence": "Named alongside Cashi as FSP in the same CALP article (undated).",
+   "website": "https://www.redrose.io",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s9"
+   ]
+  },
+  {
+   "name": "Hawala networks and traders",
+   "type": "hawala",
+   "used_by": [],
+   "evidence": "CGAP (Dec 2024): hawala networks and traders provide remittances and credit and are also helping deliver humanitarian cash; no agency named.",
+   "website": "",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s7"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "v2s1",
+   "title": "Sudan HNRP 2026, 2.4 Cash voucher assistance overview and multi-purpose cash assistance",
+   "publisher": "OCHA / humanitarianaction.info",
+   "url": "https://humanitarianaction.info/plan/1514/document/sudan-humanitarian-needs-and-response-plan-2026/article/24-cash-voucher-assistance-overview-and-multi-purpose-cash-assistance",
+   "date": "2026",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s2",
+   "title": "Cash Landscape and Pathways Forward: Cash Landscape Review, Sudan",
+   "publisher": "CALP Network",
+   "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Cash-Landscape-and-Pathways-Forward_Cash-Landscape-Review_Sudan.pdf",
+   "date": "2026-07",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s3",
+   "title": "Sudan Cash Working Group: Coordination Structure",
+   "publisher": "OCHA / ReliefWeb",
+   "url": "https://reliefweb.int/report/sudan/sudan-cash-working-group-coordination-structure",
+   "date": "",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s4",
+   "title": "Cash Working Group (CWG) Information Management (IM) Officer vacancy",
+   "publisher": "UN Career (vacancy listing)",
+   "url": "https://uncareer.net/vacancy/cash-working-group-cwg-information-management-im-officer-748897",
+   "date": "",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s5",
+   "title": "Sudan: Sectoral Cash Snapshot, May 2024",
+   "publisher": "OCHA / ReliefWeb",
+   "url": "https://reliefweb.int/report/sudan/sudan-sectoral-cash-snapshot-may-2024",
+   "date": "2024-05",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s6",
+   "title": "Eastern Africa: Q1 Regional Cash and Voucher Assistance Overview (as of Aug 2025)",
+   "publisher": "OCHA / ReliefWeb",
+   "url": "https://reliefweb.int/report/sudan/eastern-africa-q1-regional-cash-and-voucher-assistance-overview-aug-2025",
+   "date": "2025-08",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s7",
+   "title": "Can what remains of Sudan's financial system be used to fight famine?",
+   "publisher": "CGAP",
+   "url": "https://www.cgap.org/blog/can-what-remains-of-sudans-financial-system-be-used-to-fight-famine",
+   "date": "2024-12-03",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s8",
+   "title": "Sudan Conflict Response: Piloting Mobile Money Cash Assistance in Sudan (CVA case study)",
+   "publisher": "Mercy Corps via ALNAP",
+   "url": "https://library.alnap.org/system/files/content/resource/files/main/SudanConflictCVACaseStudyMobileMoneyPilot.pdf",
+   "date": "2023-11",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s9",
+   "title": "Local leadership is what it took to make a CVA breakthrough in Sudan",
+   "publisher": "CALP Network",
+   "url": "https://www.calpnetwork.org/?p=217140",
+   "date": "",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s10",
+   "title": "Sudan Regional RRP 2026",
+   "publisher": "UNHCR / humanitarianaction.info",
+   "url": "https://humanitarianaction.info/plan/1523/article/sudan-regional-rrp",
+   "date": "2025-12",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s11",
+   "title": "Eastern Africa: Q2 Regional Cash and Voucher Assistance Overview",
+   "publisher": "OCHA / ReliefWeb",
+   "url": "https://reliefweb.int/report/sudan/eastern-africa-q2-regional-cash-and-voucher-assistance-overview",
+   "date": "2025-11-19",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s12",
+   "title": "Sudan Country Refugee Response Plan (CRP) - January-December 2026",
+   "publisher": "UNHCR Operational Data Portal",
+   "url": "https://data.unhcr.org/en/documents/details/121615",
+   "date": "2026-03-17",
+   "accessed": "2026-11-06"
+  }
+ ]
+}

@@ -1,0 +1,155 @@
+{
+ "_comment": "Curated from the CWG pages' contacts tabs and dashboard cards on 6 Nov 2026 (organisations and roles only). Edit when pages change.",
+ "sudan": {
+  "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiMTllMGUxMGUtMjk1Yi00NTRmLWI1NmItNjZiYmQ2ZjIzMTM0IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "dashboard_name": "MPCA and Sectoral Cash Overview (Power BI)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "not shown on the page",
+  "co_chairs": [
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "co-chair (non-programmatic)"
+   },
+   {
+    "organisation": "CashCap",
+    "actor_type": "Other",
+    "role": "co-chair (programmatic)"
+   },
+   {
+    "organisation": "WFP",
+    "actor_type": "UN",
+    "role": "co-chair (programmatic)"
+   }
+  ],
+  "local_cochair": "no",
+  "contacts_basis": "CWG page contacts tab, 6 Nov 2026"
+ },
+ "somalia": {
+  "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiYTIzNTk4N2MtZTg4Mi00NGQyLWJiZmItZmFlMzU2MmRiYWMzIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "dashboard_name": "Somalia CVA dashboard 2025 (Power BI)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "2025",
+  "co_chairs": [
+   {
+    "organisation": "WFP",
+    "actor_type": "UN",
+    "role": "chair"
+   }
+  ],
+  "local_cochair": "no",
+  "contacts_basis": "CWG page contacts tab lists a chair and an IMO only, 6 Nov 2026"
+ },
+ "nigeria": {
+  "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiNjRiNTBhYzgtNzIwMS00NDM1LThlMzQtM2Q0YWM1MTQ1YjA2IiwidCI6ImY2ZjcwZjFiLTJhMmQtNGYzMC04NTJhLTY0YjhjZTBjMTlkNyIsImMiOjF9",
+  "dashboard_name": "Northeast Nigeria: Cash & Voucher Assistance (Power BI)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "not shown on the page",
+  "co_chairs": [
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "CWG lead"
+   },
+   {
+    "organisation": "Caritas Germany",
+    "actor_type": "INGO",
+    "role": "NE Nigeria technical co-lead"
+   }
+  ],
+  "local_cochair": "no",
+  "contacts_basis": "CWG page contacts tab, 6 Nov 2026. The 2025 HNRP named the Federal Ministry as national co-lead; the page does not."
+ },
+ "southsudan": {
+  "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiMTg3YWY3YjItMGE0MS00MTViLWI4ZjctNDM5MTI0YTg3ZWNiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "dashboard_name": "Cash and Voucher Dashboard (Power BI)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "not shown on the page",
+  "co_chairs": [
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "non-programmatic co-chair"
+   },
+   {
+    "organisation": "IOM",
+    "actor_type": "UN",
+    "role": "UN programmatic co-chair"
+   },
+   {
+    "organisation": "CRS",
+    "actor_type": "INGO",
+    "role": "INGO programmatic co-chair"
+   },
+   {
+    "organisation": "ADA",
+    "actor_type": "NNGO",
+    "role": "national NGO programmatic co-chair (trainee seat)"
+   },
+   {
+    "organisation": "CashCap",
+    "actor_type": "Other",
+    "role": "technical advisor"
+   }
+  ],
+  "local_cochair": "yes",
+  "contacts_basis": "CWG page contacts tab, 6 Nov 2026"
+ },
+ "syria": {
+  "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiMWE5OTFmNmUtYWU0Mi00ZGVmLWFkNjQtYzY4ZjczZGQ3MjliIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "dashboard_name": "CVA Interactive Dashboard (Power BI)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "not shown on the page",
+  "co_chairs": [],
+  "local_cochair": "unknown",
+  "contacts_basis": "CWG page contacts tab not accessible (HTTP 403), 6 Nov 2026"
+ },
+ "drc": {
+  "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiNTU1NzRmMTctNzAwOS00NjdmLWE0ZmQtMzliNTZhMjNiMWVmIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "dashboard_name": "Tableau de bord transfert monétaire (Power BI)",
+  "dashboard_last_updated": "2026-07-31",
+  "dashboard_period": "au 31 juillet 2026 (stated on the card)"
+ },
+ "mali": {
+  "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiNjI5NDIzY2UtZjY4OS00ODdjLWJmODQtZGViMjc5NTUyMmEzIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "dashboard_name": "Tableau de bord des assistances en transfert monétaires (Power BI)",
+  "dashboard_last_updated": "2024-12-31",
+  "dashboard_period": "au 31 décembre 2024 (latest dated card)"
+ },
+ "afghanistan": {
+  "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiNjEzOTY4OWEtYTg4Yy00YjQwLThhNTUtYzI2Y2Y1NDgwY2VhIiwidCI6IjNmODZkMWI0LTJjNmItNGIxYS1iMmFlLTZmNWU5NTBiY2ExZSIsImMiOjh9",
+  "dashboard_name": "Afghanistan Cash and Voucher Achievements (Power BI)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "not shown on the page",
+  "co_chairs": [],
+  "local_cochair": "unknown",
+  "contacts_basis": "CWG page contacts tab lists two contacts without organisations, 6 Nov 2026"
+ },
+ "opt": {
+  "co_chairs": [
+   {
+    "organisation": "Action Against Hunger Spain",
+    "actor_type": "INGO",
+    "role": "national cash coordinator"
+   },
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "Gaza cash coordinator"
+   }
+  ],
+  "local_cochair": "no",
+  "contacts_basis": "CWG page contacts tab lists coordinators, not chairs, 6 Nov 2026"
+ },
+ "yemen": {
+  "co_chairs": [
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "cash coordination officer"
+   }
+  ],
+  "local_cochair": "unknown",
+  "contacts_basis": "CWG page contacts tab lists an OCHA coordination officer only, 6 Nov 2026"
+ }
+}

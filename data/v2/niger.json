@@ -1,0 +1,138 @@
+{
+ "id": "niger",
+ "coordination": {
+  "label": "OCHA",
+  "ocha_plan": "Niger Besoins Humanitaires et Plan de Réponse 2026 (HNRP)",
+  "unhcr_plan": "none",
+  "note": "HNRP coordinated by OCHA (Humanitarian Forum, working groups run by OCHA). UNHCR's 2026-27 Sahel+ Strategy is a strategy, not an RRP, and its list of countries includes Niger; no Nigeria-situation RRP chapter found. Existing record notes the FTS plan includes a Refugee Response component (not re-verified).",
+  "source_ids": [
+   "v2s1",
+   "v2s2"
+  ]
+ },
+ "cwg_reliefweb": {
+  "page_url": "https://response.reliefweb.int/niger",
+  "page_title": "Niger (country response hub; no dedicated Cash Working Group page found)",
+  "page_last_updated": "",
+  "last_update_basis": "Hub lists a 4W for Jan-Dec 2025 but gives no posting date",
+  "dashboard_url": "",
+  "dashboard_name": "Niger: Les interventions en transfert monétaire - Qui fait quoi, Où, Comment (4W)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "Jan-Dec 2025 (an earlier edition covers Jul-Sep 2025)",
+  "meeting_minutes_latest": "",
+  "co_chairs": [
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "co-lead"
+   }
+  ],
+  "local_cochair": "unknown",
+  "contacts_basis": "CALP West and Central Africa CWG leads report (Jul 2026): OCHA is co-lead, second co-lead not named; CALP CWG listing shows WFP and OCHA contacts. Group described as multisectoral cash working group active since 2017.",
+  "note": "The Niger hub has no CWG page or contacts block; the 4W item is listed without a link.",
+  "source_ids": [
+   "v2s3",
+   "v2s4",
+   "v2s5"
+  ]
+ },
+ "cash_volumes": {
+  "cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "Jan-Dec 2025",
+   "source_ids": [
+    "v2s3"
+   ],
+   "note": "A hub-page reading gave 17.3bn FCFA (about US$31M, 1.3M people, Jan-Dec 2025) but the figure is not in the page text and sits behind the 'Intervention en transfert monétaire' dashboard; not verifiable, so recorded as not found. Re-check in a browser.",
+   "source_type": "CWG dashboard"
+  },
+  "mpc_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [],
+   "note": "MPC split not given in the hub text.",
+   "source_type": ""
+  },
+  "sectoral_cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [],
+   "note": "Sectoral split not given in the hub text.",
+   "source_type": ""
+  }
+ },
+ "fsps": [
+  {
+   "name": "BNIF-AFUWA (Bureau nigérien d'intermédiation financière)",
+   "type": "other",
+   "used_by": [
+    "WFP",
+    "UNAIDS"
+   ],
+   "evidence": "Paid cash-in-envelope transfers at its offices in a 2020 WFP/UNAIDS pilot (65,000 FCFA per household across seven regions). Old evidence; current use not confirmed.",
+   "website": "",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s6"
+   ]
+  }
+ ],
+ "fsps_note": "No 2025-2026 source naming FSPs used for humanitarian cash in Niger was found. UNHCR Niger Q3 2025 update (33,882 people received cash) and a GOAL Niger e-money ToR (Jul 2025) refer only to unnamed financial service providers. A CWG regional minute (May 2024) notes difficulties with bank transfers and liquidity.",
+ "sources": [
+  {
+   "id": "v2s1",
+   "title": "Niger response hub (OCHA coordination: Humanitarian Forum, working groups)",
+   "publisher": "ReliefWeb Response",
+   "url": "https://response.reliefweb.int/niger",
+   "date": "2026-04",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s2",
+   "title": "SAHEL+ Strategy 2026-2027",
+   "publisher": "UNHCR",
+   "url": "https://data.unhcr.org/en/documents/details/120145",
+   "date": "2025-12-15",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s3",
+   "title": "Niger : Les interventions en transfert monétaire - Qui fait quoi, Où, Comment (4W)",
+   "publisher": "ReliefWeb Response (Niger hub)",
+   "url": "https://response.reliefweb.int/niger?page=0",
+   "date": "2026-04",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s4",
+   "title": "Rapport de la rencontre des Leads et Co-Leads des CWG d'Afrique de l'Ouest et du Centre",
+   "publisher": "CALP Network",
+   "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+   "date": "2026-07",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s5",
+   "title": "Groupes de travail sur les transferts monétaires (CALP listing)",
+   "publisher": "CALP Network",
+   "url": "https://www.calpnetwork.org/fr/community/cash-working-groups/",
+   "date": "2026",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s6",
+   "title": "Niger : Transferts monétaires pour les personnes vulnérables vivant avec le VIH et les populations clés",
+   "publisher": "UNAIDS / WFP",
+   "url": "https://docs.wfp.org/api/documents/WFP-0000144290/download",
+   "date": "2022",
+   "accessed": "2026-11-06"
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "id": "chad",
+ "coordination": {
+  "label": "OCHA + UNHCR",
+  "ocha_plan": "Tchad Besoins Humanitaires et Plan de Réponse 2026 (HNRP)",
+  "unhcr_plan": "Sudan Regional Refugee Response Plan 2026 (Chad is one of seven asylum countries)",
+  "note": "HNRP (OCHA) plus Sudan regional RRP 2026 (UNHCR) covering refugees in Chad.",
+  "source_ids": [
+   "v2s1",
+   "v2s2"
+  ]
+ },
+ "cwg_reliefweb": {
+  "page_url": "",
+  "page_title": "",
+  "page_last_updated": "",
+  "last_update_basis": "",
+  "dashboard_url": "",
+  "dashboard_name": "",
+  "dashboard_last_updated": "",
+  "dashboard_period": "",
+  "meeting_minutes_latest": "2024-10",
+  "co_chairs": [
+   {
+    "organisation": "Government (MASSAH, transition to permanent lead in progress)",
+    "actor_type": "Government",
+    "role": "chair"
+   },
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "coordinator"
+   },
+   {
+    "organisation": "Oxfam",
+    "actor_type": "INGO",
+    "role": "coordinator"
+   },
+   {
+    "organisation": "Chad Red Cross",
+    "actor_type": "RCRC",
+    "role": "coordinator"
+   }
+  ],
+  "local_cochair": "yes",
+  "contacts_basis": "CALP West and Central Africa CWG leads report (Jul 2026): government leadership, with OCHA, Oxfam and Chad Red Cross supporting coordination. Roles of the supporters are not specified; recorded as coordinator.",
+  "note": "No Chad Cash Working Group page found on response.reliefweb.int (tried /chad, /fr/chad, /chad/cash-working-group, /tchad/groupe-de-travail-cash; all failed to load). Latest minutes found: October 2024, posted on ReliefWeb (page body gives no meeting date or chair).",
+  "source_ids": [
+   "v2s3",
+   "v2s4"
+  ]
+ },
+ "cash_volumes": {
+  "cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s5",
+    "v2s9",
+    "v2s10"
+   ],
+   "note": "No Chad CWG dashboard or OCHA CVA snapshot with delivered USD found. Related: 192,368 households reached by 63 partners in 2023 (no value, May 2024 regional minutes); WFP alone reported USD 7.5M of CBT in a Sep 2025 monthly estimate; US-OCHA pooled allocation (Dec 2025) plans USD 18.8M of USD 100M as cash transfers. None is a CWG delivered total.",
+   "source_type": ""
+  },
+  "mpc_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s5"
+   ],
+   "note": "Only a planned figure found: USD 4.5M MPCA within the US-OCHA allocation (agreement signed Dec 2025, to Nov 2026). Not a delivered amount.",
+   "source_type": "other"
+  },
+  "sectoral_cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [],
+   "note": "Not found.",
+   "source_type": ""
+  }
+ },
+ "fsps": [
+  {
+   "name": "Moov Money (Moov Africa Chad)",
+   "type": "mobile money",
+   "used_by": [
+    "Government of Chad / PARCA project (World Bank-funded)"
+   ],
+   "evidence": "Paid 120,000 FCFA to 22,000 vulnerable N'Djamena households (Aug 2021) and 45,000 FCFA per refugee / 120,000 FCFA per host household at Guilmey (Jun 2022). Government social-protection / refugee-support transfers, not a named humanitarian agency. Both sources are government/World Bank social-protection or refugee programmes (PARCA), not NGO or UN humanitarian cash.",
+   "website": "https://moov-africa.td",
+   "logo_url": "https://moov-africa.td/wp-content/uploads/2025/07/LOGO-MOOV-AFRICA-1.png",
+   "logo_source": "provider site",
+   "source_ids": [
+    "v2s6",
+    "v2s7"
+   ]
+  },
+  {
+   "name": "Express Union",
+   "type": "money transfer operator",
+   "used_by": [
+    "Chad Red Cross"
+   ],
+   "evidence": "Selected as FSP for Chad Red Cross direct-cash pilot (Jan-Apr 2025) per Oct 2024 feasibility assessment.",
+   "website": "https://www.expressunion.net",
+   "logo_url": "https://www.expressunion.net/wp-content/uploads/2023/10/cropped-logop.png",
+   "logo_source": "provider site",
+   "source_ids": [
+    "v2s8"
+   ]
+  },
+  {
+   "name": "Airtel (mobile money)",
+   "type": "mobile money",
+   "used_by": [
+    "Chad Red Cross"
+   ],
+   "evidence": "Existing framework contract with Chad Red Cross that 'requires an update' (Oct 2024); mobile money inferred by the source.",
+   "website": "https://www.airtel.africa",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s8"
+   ]
+  },
+  {
+   "name": "Western Union",
+   "type": "money transfer operator",
+   "used_by": [],
+   "evidence": "Cited as an example FSP a framework contract could be signed with; no use shown.",
+   "website": "https://www.westernunion.com",
+   "logo_url": "https://www.westernunion.com/content/dam/wu/logo/logo.wu.big.svg",
+   "logo_source": "provider site",
+   "source_ids": [
+    "v2s8"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "v2s1",
+   "title": "Chad HNRP 2026 (existing country record plan source; see data/chad.json)",
+   "publisher": "OCHA",
+   "url": "https://reliefweb.int/country/tcd",
+   "date": "2026-02",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s2",
+   "title": "Sudan Regional Refugee Response Plan 2026",
+   "publisher": "UNHCR",
+   "url": "https://data.unhcr.org/en/documents/details/121204",
+   "date": "2026-02",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s3",
+   "title": "Tchad : réunion Cash Working Group, compte rendu octobre 2024",
+   "publisher": "ReliefWeb",
+   "url": "https://reliefweb.int/report/chad/tchad-reunion-cash-working-group-compte-rendu-octobre-2024-meeting-minutes",
+   "date": "2024-10",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s4",
+   "title": "Rapport de la rencontre des Leads et Co-Leads des CWG d'Afrique de l'Ouest et du Centre",
+   "publisher": "CALP Network",
+   "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+   "date": "2026-07",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s5",
+   "title": "Rapid Assessment of Cash Transfer Programmes Funded by OCHA's Pooled Fund with the US Allocation in Chad",
+   "publisher": "CALP Network",
+   "url": "https://www.calpnetwork.org/?p=631770",
+   "date": "2025-12",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s6",
+   "title": "Tchad : lancement de l'opération de paiement des ménages vulnérables par Moov Money",
+   "publisher": "Alwihda Info",
+   "url": "https://www.alwihdainfo.com/tchad-lancement-de-l-operation-de-paiement-des-menages-vulnerables-par-moov-money-a106326/",
+   "date": "2021-08-18",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s7",
+   "title": "Tchad : des réfugiés bénéficient de l'aide d'urgence via Moov Money",
+   "publisher": "Alwihda Info",
+   "url": "https://www.alwihdainfo.com/tchad-des-refugies-beneficient-de-l-aide-d-urgence-via-moov-money-a114266/",
+   "date": "2022-06-07",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s8",
+   "title": "Chad HSP report: Feasibility assessment, executive summary",
+   "publisher": "Chad Red Cross / Cash Hub",
+   "url": "https://cash-hub.org/wp-content/uploads/sites/3/2025/07/Chad-HSP-report-Feasibility-assessment-executive-summary.pdf",
+   "date": "2024-10",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s9",
+   "title": "CR CWG Régional, 22 May 2024 (Tchad section: 192,368 households, ~80% direct payment)",
+   "publisher": "CALP Network",
+   "url": "https://calpnetwork.org/wp-content/uploads/2024/06/CR_CWG-Reg_220524.pdf",
+   "date": "2024-05-22",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s10",
+   "title": "WFP Chad Country Brief, September 2025",
+   "publisher": "WFP via ReliefWeb",
+   "url": "https://reliefweb.int/report/chad/wfp-chad-country-brief-september-2025",
+   "date": "2025-09",
+   "accessed": "2026-11-06"
+  }
+ ]
+}

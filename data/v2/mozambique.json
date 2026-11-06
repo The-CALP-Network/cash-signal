@@ -1,0 +1,111 @@
+{
+ "id": "mozambique",
+ "coordination": {
+  "label": "OCHA",
+  "ocha_plan": "Mozambique Humanitarian Needs and Response Plan 2026 (HNRP)",
+  "unhcr_plan": "none found",
+  "note": "HNRP (OCHA); no UNHCR-led plan with an in-country chapter found.",
+  "source_ids": [
+   "v2s1"
+  ]
+ },
+ "cwg_reliefweb": {
+  "page_url": "https://response.reliefweb.int/mozambique/mozambique-cash-and-voucher-working-groups-maputo-and-beira",
+  "page_title": "Mozambique Cash and Voucher Working Group's (Maputo and Beira)",
+  "page_last_updated": "",
+  "last_update_basis": "Page lists no documents, events or updated stamp.",
+  "dashboard_url": "https://reliefweb.int/report/mozambique/mozambique-2025-humanitarian-response-cash-assistance-overview-31-december-2025-enpt",
+  "dashboard_name": "Mozambique: 2025 Humanitarian Response, Cash Assistance Overview (OCHA monthly infographic)",
+  "dashboard_last_updated": "2025-12-31",
+  "dashboard_period": "2025-01-01 to 2025-12-31",
+  "meeting_minutes_latest": "",
+  "co_chairs": [],
+  "local_cochair": "unknown",
+  "contacts_basis": "Page says focal-point contact details will be shared but names no organisations.",
+  "note": "National group active since 2017 with a Beira sub-group, supported by the Southern Africa regional technical CWG; chairs and meeting dates not published on the page. Dashboard is OCHA's monthly overview, posted for Jul and Aug 2025 on 4 Sep and 14 Oct 2025.",
+  "source_ids": [
+   "v2s2",
+   "v2s3",
+   "v2s4"
+  ]
+ },
+ "cash_volumes": {
+  "cva_delivered_usd": {
+   "value": 27900000,
+   "available": "yes",
+   "as_of": "2025-12-31",
+   "period": "2025-01-01 to 2025-12-31",
+   "source_ids": [
+    "v2s3"
+   ],
+   "note": "26 partners delivered US$27.9M to 904,000 people in nine provinces. By modality: paper vouchers 67%, mobile money 19%, e-vouchers 14%. By shock: cyclones $12M, conflict $9M, drought $4.5M.",
+   "source_type": "OCHA CVA snapshot"
+  },
+  "mpc_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s3"
+   ],
+   "note": "The overview does not split MPC from sectoral.",
+   "source_type": "OCHA CVA snapshot"
+  },
+  "sectoral_cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s3"
+   ],
+   "note": "The overview does not split MPC from sectoral.",
+   "source_type": "OCHA CVA snapshot"
+  }
+ },
+ "fsps": [],
+ "fsps_note": "No named FSP found. OCHA overview shows 19% of 2025 transfers by mobile money; WFP CSP revision 4 (31 Dec 2025) plans mobile-money transfers to 189,736 safety-net households without naming a provider.",
+ "sources": [
+  {
+   "id": "v2s1",
+   "title": "Mozambique Humanitarian Needs and Response Plan 2026 (FTS plan 1506)",
+   "publisher": "OCHA",
+   "url": "https://fts.unocha.org/plans/1506/summary",
+   "date": "2026",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s2",
+   "title": "Mozambique Cash and Voucher Working Group (Maputo and Beira)",
+   "publisher": "OCHA / ReliefWeb Response",
+   "url": "https://response.reliefweb.int/mozambique/mozambique-cash-and-voucher-working-groups-maputo-and-beira",
+   "date": "",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s3",
+   "title": "Mozambique: 2025 Humanitarian Response, Cash Assistance Overview (31 December 2025)",
+   "publisher": "OCHA / ReliefWeb",
+   "url": "https://reliefweb.int/report/mozambique/mozambique-2025-humanitarian-response-cash-assistance-overview-31-december-2025-enpt",
+   "date": "2025-12-31",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s4",
+   "title": "East Africa Regional CWG maps: Mozambique Cash Assistance Overview Jul and Aug 2025",
+   "publisher": "OCHA / ReliefWeb Response",
+   "url": "https://response.reliefweb.int/southern-and-eastern-africa/east-africa-regional-cash-working-group/maps",
+   "date": "2025-10-14",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s5",
+   "title": "Mozambique country strategic plan, revision 4",
+   "publisher": "WFP",
+   "url": "https://docs.wfp.org/api/documents/WFP-0000171276/download",
+   "date": "2025-12-31",
+   "accessed": "2026-11-06"
+  }
+ ]
+}

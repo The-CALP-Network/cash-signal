@@ -1,0 +1,175 @@
+{
+  "id": "yemen",
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Yemen Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "none found",
+    "note": "HNRP (OCHA); refugee/migrant CVA is reported within the OCHA CVA snapshot (RMMS multi-sector), not a separate UNHCR plan.",
+    "source_ids": [
+      "v2s3"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/yemen/cash-and-market",
+    "page_title": "Cash and Market",
+    "page_last_updated": "2025-12-14",
+    "last_update_basis": "latest document posted (OCHA MPCA Snapshot July-October 2025)",
+    "dashboard_url": "",
+    "dashboard_name": "Yemen Cash and Voucher Assistance Snapshot (OCHA infographics)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "Jan-Dec 2025 (infographic listed; undated)",
+    "meeting_minutes_latest": "",
+    "co_chairs": [],
+    "local_cochair": "unknown",
+    "contacts_basis": "No contacts block, chairs or minutes on the page.",
+    "note": "CMWG described as a technical advisory group. No chair/co-chair organisations or minutes shown; snapshot infographic has no dashboard link.",
+    "source_ids": [
+      "v2s1",
+      "v2s2"
+    ]
+  },
+  "cash_volumes": {
+    "cva_delivered_usd": {
+      "value": 48570000,
+      "available": "yes",
+      "as_of": "2025-06",
+      "period": "Jan-Jun 2025",
+      "source_ids": [
+        "v2s4"
+      ],
+      "note": "US$48.57M by 58 partners; a Jan-Dec 2025 infographic exists but its figures were not readable.",
+      "source_type": "OCHA CVA snapshot"
+    },
+    "mpc_delivered_usd": {
+      "value": 16310000,
+      "available": "yes",
+      "as_of": "2025-06",
+      "period": "Jan-Jun 2025",
+      "source_ids": [
+        "v2s4"
+      ],
+      "note": "MPC US$16.31M benefiting 274,000 people.",
+      "source_type": "OCHA CVA snapshot"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "partial",
+      "as_of": "2025-06",
+      "period": "Jan-Jun 2025",
+      "source_ids": [
+        "v2s4"
+      ],
+      "note": "Sectoral CVA (food security, protection, shelter) named but no amount stated; multisectoral CVA via RRM and RMMS.",
+      "source_type": "OCHA CVA snapshot"
+    }
+  },
+  "fsps": [
+    {
+      "name": "YCash (National Cash Transfer Co.)",
+      "type": "fintech / e-wallet",
+      "used_by": [
+        "ICRC"
+      ],
+      "evidence": "FinDev Gateway (2021) says YCash delivers ICRC cash transfers; licensed humanitarian transfers company.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5",
+        "v2s6"
+      ]
+    },
+    {
+      "name": "Yemen Post (Posts and Postal Services Corporation)",
+      "type": "post office",
+      "used_by": [
+        "WFP"
+      ],
+      "evidence": "WFP release reports cash transfers via the Yemeni postal corporation in Taiz and Ibb (undated, early programme).",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Yemen Mobile, Aden Net, YOU",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "REACH FSP findings (Apr 2025) name these three MNOs as partnering with FSPs to activate mobile money; no humanitarian user named; communities mainly use exchange offices.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s8"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "v2s1",
+      "title": "Cash and Market",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/yemen/cash-and-market",
+      "date": "2025-12-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Yemen response hub",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/yemen",
+      "date": "2026-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Yemen HNRP 2026",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1520",
+      "date": "2026-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Yemen: Cash and Voucher Assistance (CVA) January-June 2025",
+      "publisher": "OCHA",
+      "url": "https://reliefweb.int/report/yemen/yemen-cash-and-voucher-assistance-cva-january-june-2025",
+      "date": "2025",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "National Cash Transfer Co. launches operations in Yemen",
+      "publisher": "FinDev Gateway",
+      "url": "https://www.findevgateway.org/news/national-cash-transfer-co-launches-operations-yemen",
+      "date": "2019-11-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "YCash enrolls in new partnerships with humanitarian agencies",
+      "publisher": "FinDev Gateway",
+      "url": "https://findevgateway.org/news/ycash-enrolls-in-new-partnerships-with-humanitarian-agencies-and-deploys-humanitarian",
+      "date": "2021-04-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "WFP introduces cash transfers to assist food insecure households in Yemen",
+      "publisher": "WFP",
+      "url": "https://www.wfp.org/news/news-release/wfp-introduces-cash-transfers-assist-food-insecure-households-yemen",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "REACH Yemen FSP preliminary findings",
+      "publisher": "REACH / IMPACT",
+      "url": "https://repository.impact-initiatives.org/document/impact/8c3995f6/REACH_YEM_FSP_Preliminary-findings_April-2025-1.pdf",
+      "date": "2025-04",
+      "accessed": "2026-11-06"
+    }
+  ]
+}

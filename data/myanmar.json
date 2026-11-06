@@ -3,7 +3,7 @@
   "name": "Myanmar",
   "iso3": "MMR",
   "calp_region": "Asia-Pacific",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Myanmar Humanitarian Needs and Response Plan 2026",
@@ -189,12 +189,14 @@
       "note": "FTS single-cluster (destination) view: US$58.4M of US$85.4M MPC requirement. Shared-cluster view would give US$112.6M (132%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "FTS does not disaggregate sectoral cash.",
-      "usd": null
+      "value": 4.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$20.7M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 20678602
     },
     "vouchers_pct": {
       "value": null,
@@ -209,27 +211,33 @@
     "cbpf_exists": true,
     "cbpf_name": "Myanmar Humanitarian Fund",
     "cbpf_allocations_usd": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Fund appears in search results (annual reports to 2020 seen) but 2025/26 allocations were not found."
+      "value": 155673773,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: sum of the pooled fund's onward grants recorded inside this plan (264 internal flows). Not the fund's full allocation total."
     },
     "mpc_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not found.",
-      "usd": null
+      "value": 34.8,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: the pooled fund's onward grants inside this plan (264 internal flows, US$155.7M) tagged to the MPC cluster. The fund's own allocation reports may differ.",
+      "usd": 54211748
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not found.",
-      "usd": null
+      "value": 24.3,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$37.8M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 37809977
     },
     "vouchers_pct": {
       "value": null,
@@ -374,6 +382,336 @@
       "url": "https://reliefweb.int/report/myanmar/myanmar-humanitarian-needs-and-response-plan-2026-enmy",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1505 (Myanmar Humanitarian Needs and Response Plan 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1505/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Myanmar HNRP 2026 - CVA overview and MPC section",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1505/document/myanmar-humanitarian-needs-and-response-plan-2026/article/27-cash-voucher-assistance-overview-and-multipurpose-cash-section-0",
+      "date": "2025-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Cash and Markets Working Group",
+      "publisher": "MIMU",
+      "url": "https://themimu.info/emergencies/cmwg",
+      "date": "2025-06-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "SOW Subnational CMWG Coordinator Northwest Myanmar",
+      "publisher": "MIMU",
+      "url": "https://www.themimu.info/sites/themimu.info/files/jobs/SOW-Subnational_CMWG_Coordinator_Northwest_Myanmar_VA-450425.pdf",
+      "date": "2025-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Cash Programming",
+      "publisher": "MIMU",
+      "url": "https://www.themimu.info/taxonomy/term/4882",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Familiarity brings acceptance as IDPs embrace mobile transfers",
+      "publisher": "Frontier Myanmar",
+      "url": "https://www.frontiermyanmar.net/en/?p=3025",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "WFP Launches First Mobile Cash Transfers For Humanitarian Assistance In Myanmar",
+      "publisher": "NextBillion",
+      "url": "https://nextbillion.net/news/wfp-launches-first-mobile-cash-transfers-for-humanitarian-assistance-in-myanmar/",
+      "date": "2017-03-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Wave Money earthquake fee-free services",
+      "publisher": "Wave Money",
+      "url": "https://wavemoney.com.mm/media-center/wave-free-cashout-april-2025",
+      "date": "2025-04",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1505,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1505",
+    "fts_page": "https://fts.unocha.org/plans/1505/summary",
+    "total_funding_usd": {
+      "value": 468077276,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 58408549,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash cluster; shared-cluster view US$58.4M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 79087151,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 20678602,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 41 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Early Recovery US$10.0M, Food Security US$6.6M, Protection US$1.6M.",
+      "by_cluster": {
+        "Early Recovery": 10000000,
+        "Food Security": 6600132,
+        "Protection": 1550747,
+        "Coordination, Thematics and System Support": 1447800,
+        "Health": 540668,
+        "Shelter / NFI / CCCM": 270805,
+        "Education": 261361,
+        "Nutrition": 7089
+      },
+      "flow_count": 41
+    },
+    "cva_usd": {
+      "value": 79087151,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 16.9,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 4.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 12.5,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 264,
+      "total": 155673773,
+      "mpc": 54211748,
+      "ctp": 92021725,
+      "cva": 92021725,
+      "mpc_pct": 34.8,
+      "cva_pct": 59.1,
+      "local_actor": 19341965,
+      "local_actor_pct": 12.4,
+      "local_actor_cva": 4905491,
+      "local_actor_pct_of_cva": 5.3
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Myanmar Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "none found",
+    "note": "HNRP (OCHA); no UNHCR-led plan with a Myanmar chapter identified in searches.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://themimu.info/emergencies/cmwg",
+    "page_title": "Cash and Markets Working Group",
+    "page_last_updated": "2025-06-26",
+    "last_update_basis": "latest upload date listed (CBI for Shelter and NFI Guidance, EQ Annex); no updated stamp on page",
+    "page_fresh_3m": false,
+    "dashboard_url": "https://themimu.info/emergencies/cmwg",
+    "dashboard_name": "5W Cash Transfer Programming Dashboard",
+    "dashboard_last_updated": "",
+    "dashboard_period": "",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [],
+    "local_cochair": "unknown",
+    "contacts_basis": "No chair/co-chair listed on the MIMU page or in the 2025 subnational coordinator ToR opened; HNRP 2026 names the CMWG but not its leads.",
+    "note": "Hosted on themimu.info, not response.reliefweb.int. Dashboard has no date or period shown; no minutes listed; meeting calendar undated.",
+    "source_ids": [
+      "v2s2",
+      "v2s3",
+      "v2s4"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 58408549,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash cluster; shared-cluster view US$58.4M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 20678602,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s2",
+        "v2s1"
+      ],
+      "note": "No delivered-CVA total found: MIMU dashboard has no readable figures and HNRP 2026 CVA section gives none (only a MMK360,000/month provisional MPC transfer value).",
+      "period": "",
+      "source_type": ""
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s2",
+        "v2s1"
+      ],
+      "note": "No delivered-CVA total found: MIMU dashboard has no readable figures and HNRP 2026 CVA section gives none (only a MMK360,000/month provisional MPC transfer value).",
+      "period": "",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s2",
+        "v2s1"
+      ],
+      "note": "No delivered-CVA total found: MIMU dashboard has no readable figures and HNRP 2026 CVA section gives none (only a MMK360,000/month provisional MPC transfer value).",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [
+    {
+      "name": "Wave Money",
+      "type": "mobile money",
+      "used_by": [
+        "WFP"
+      ],
+      "evidence": "Frontier Myanmar and NextBillion report WFP mobile cash transfers to IDPs in Kachin via Wave Money (pilot Feb-Mar 2017); no 2025-26 humanitarian use confirmed. Source describes a WFP e-wallet pilot in Kachin, circa 2017; no 2025-26 humanitarian use found.",
+      "website": "https://wavemoney.com.mm",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5",
+        "v2s6",
+        "v2s7"
+      ]
+    }
+  ],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s2",
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "No chair or co-chair organisations found on the CWG page or in minutes."
+    },
+    "cva_to_local_pct": {
+      "value": 8.5,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$79.1M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 6722100
+    },
+    "all_funding_to_local_pct": {
+      "value": 1.8,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$8.4M). Same first-level caveat.",
+      "usd": 8388183
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 5.3,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$92.0M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 4905491
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 12.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$155.7M) to local or national actors.",
+      "usd": 19341965
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

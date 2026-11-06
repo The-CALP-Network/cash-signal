@@ -1,0 +1,67 @@
+{
+ "id": "yemen",
+ "plan_id": 1520,
+ "plan_name": "Yemen Humanitarian Needs and Response Plan 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1520",
+ "fts_page": "https://fts.unocha.org/plans/1520/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 524,
+   "fundingTotal": 496902669,
+   "pledgeTotal": 0
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 291
+  }
+ },
+ "summary": {
+  "total_funding": 496902669,
+  "flow_count_incoming": 524,
+  "latest_flow_date": "2026-11-04",
+  "mpc_cluster_funding": 26396614,
+  "mpc_cluster_funding_shared_view": 27573085,
+  "mpc_cluster_name": "Multipurpose Cash",
+  "ctp_funding": 48358622,
+  "ctp_in_mpc": 26396614,
+  "sectoral_cva_funding": 21962008,
+  "sectoral_cva_by_cluster": {
+   "Protection": 8634602,
+   "Health": 4382043,
+   "Refugees and Migrants Multisector": 3386966,
+   "Food Security and Agriculture": 2698243,
+   "Camp Coordination & Camp Management": 1746825,
+   "Shelter and NFI": 768735,
+   "Education": 231752,
+   "Nutrition": 107348,
+   "WASH, Sanitation and Hygiene": 5494
+  },
+  "sectoral_cva_flow_count": 56,
+  "cva_funding": 48358622,
+  "cva_pct_of_total": 9.7,
+  "sectoral_cva_pct_of_total": 4.4,
+  "mpc_pct_of_total": 5.3,
+  "local_actor_funding": 22512960,
+  "local_actor_pct_of_total": 4.5,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 288,
+   "total": 35294948,
+   "mpc": 3008516,
+   "ctp": 15344531,
+   "cva": 15344531,
+   "mpc_pct": 8.5,
+   "cva_pct": 43.5,
+   "local_actor": 23968766,
+   "local_actor_pct": 67.9,
+   "local_actor_cva": 11662872,
+   "local_actor_pct_of_cva": 76.0
+  }
+ }
+}

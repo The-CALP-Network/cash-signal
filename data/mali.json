@@ -3,7 +3,7 @@
   "name": "Mali",
   "iso3": "MLI",
   "calp_region": "West and Central Africa",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Mali Besoins Humanitaires et Plan de Réponse 2026",
@@ -189,12 +189,14 @@
       "note": "FTS single-cluster (destination) view: US$5.5M of US$30.7M MPC requirement. Shared-cluster view would give US$5.5M (18%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "FTS does not disaggregate sectoral cash.",
-      "usd": null
+      "value": 12.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$19.5M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 19476661
     },
     "vouchers_pct": {
       "value": null,
@@ -382,6 +384,327 @@
       "url": "https://reliefweb.int/report/mali/mali-besoins-humanitaires-et-plan-de-reponse-2026",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1511 (Mali Besoins Humanitaires et Plan de Réponse 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1511/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Mali response hub (OCHA-coordinated meetings, RRM, working groups)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/mali",
+      "date": "2026-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "SAHEL+ Strategy 2026-2027",
+      "publisher": "UNHCR",
+      "url": "https://data.unhcr.org/en/documents/details/120145",
+      "date": "2025-12-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Cash Working Group Mali",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
+      "date": "2025-05-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Rapport de la rencontre des Leads et Co-Leads des CWG d'Afrique de l'Ouest et du Centre",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "FHRAOC Atelier CALP CWG",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/FHRAOC_Atelier_CALP_CWG-FINAL.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Recrutement d'un prestataire de services pour les activités de transfert monétaire (CASH/CVA) au Mali (RFP 30000033497)",
+      "publisher": "IOM via UNGM",
+      "url": "https://www.ungm.org/Public/Notice/320854",
+      "date": "2026-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "rw1",
+      "title": "Mali: Cash Working Group Mali (ReliefWeb Response)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1511,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1511",
+    "fts_page": "https://fts.unocha.org/plans/1511/summary",
+    "total_funding_usd": {
+      "value": 162135390,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 5528916,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Transfert d’espèces à usages multiples cluster; shared-cluster view US$5.5M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 25005577,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 19476661,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 46 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Sécurité alimentaire US$8.9M, Protection US$3.8M, Abris/Biens Non Alimentaires US$3.1M.",
+      "by_cluster": {
+        "Sécurité alimentaire": 8887848,
+        "Protection": 3828451,
+        "Abris/Biens Non Alimentaires": 3089854,
+        "Santé": 2965789,
+        "Nutrition": 2615967,
+        "Réponse aux Réfugiés": 1773381,
+        "Eau Hygiène et Assainissement": 875019
+      },
+      "flow_count": 46
+    },
+    "cva_usd": {
+      "value": 25005577,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 15.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 12.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 3.4,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 0,
+      "total": 0,
+      "mpc": 0,
+      "ctp": 0,
+      "cva": 0,
+      "mpc_pct": null,
+      "cva_pct": null,
+      "local_actor": 0,
+      "local_actor_pct": null,
+      "local_actor_cva": 0,
+      "local_actor_pct_of_cva": null
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Mali Besoins Humanitaires et Plan de Réponse 2026 (HNRP)",
+    "unhcr_plan": "none",
+    "note": "HNRP coordinated by OCHA (response hub shows OCHA-run RRM and working-group calendar). UNHCR Sahel+ Strategy 2026-27 covers Mali but is a strategy, not an RRP.",
+    "source_ids": [
+      "v2s1",
+      "v2s2"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
+    "page_title": "Mali: Cash Working Group Mali",
+    "page_last_updated": "2026-09-10",
+    "last_update_basis": "latest manual and guideline posted in the page's ReliefWeb feed: Feuille de route: Groupe de Travail Technique sur les Programmes Transferts Monétaires pou",
+    "page_fresh_3m": true,
+    "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiNjI5NDIzY2UtZjY4OS00ODdjLWJmODQtZGViMjc5NTUyMmEzIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+    "dashboard_name": "Tableau de bord des assistances en transfert monétaires (Power BI)",
+    "dashboard_last_updated": "2024-12-31",
+    "dashboard_period": "au 31 décembre 2024 (latest dated card)",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "OCHA",
+        "actor_type": "UN",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "UNICEF",
+        "actor_type": "UN",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "DNPSES (national social protection directorate)",
+        "actor_type": "Government",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "Regional Directorates of Social Development",
+        "actor_type": "Government",
+        "role": "chair"
+      }
+    ],
+    "local_cochair": "yes",
+    "contacts_basis": "CALP West and Central Africa CWG leads report (Jul 2026): co-led by OCHA, DNPSES and UNICEF, with regional leadership by regional social development directorates. Government typing of DNPSES and the regional directorates is inferred by the report reader, not stated by the source; the ReliefWeb page lists no contacts.",
+    "note": "Page hosts a cash transfer dashboard link but no dated CWG products or minutes were visible.",
+    "source_ids": [
+      "rw1",
+      "v2s3",
+      "v2s4"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 5528916,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Transfert d’espèces à usages multiples cluster; shared-cluster view US$5.5M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 19476661,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s5"
+      ],
+      "note": "No Mali CWG dashboard total or OCHA CVA snapshot with USD found; the dashboard link on the CWG page could not be read. FHRAOC workshop (2026) says CVA was 15.0% of 2025 funding in Mali (share, not USD).",
+      "period": "",
+      "source_type": ""
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "period": "",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": "yes",
+      "available": "yes",
+      "as_of": "2026-09-10",
+      "source_ids": [
+        "rw1",
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Chairs found: OCHA (UN); UNICEF (UN); DNPSES (national social protection directorate) (Government); Regional Directorates of Social Development (Government)"
+    },
+    "cva_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$25.0M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 0
+    },
+    "all_funding_to_local_pct": {
+      "value": 1.5,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$2.5M). Same first-level caveat.",
+      "usd": 2491538
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No country-based pooled fund."
+    },
+    "cbpf_all_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No country-based pooled fund."
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

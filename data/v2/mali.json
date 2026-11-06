@@ -1,0 +1,136 @@
+{
+  "id": "mali",
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Mali Besoins Humanitaires et Plan de Réponse 2026 (HNRP)",
+    "unhcr_plan": "none",
+    "note": "HNRP coordinated by OCHA (response hub shows OCHA-run RRM and working-group calendar). UNHCR Sahel+ Strategy 2026-27 covers Mali but is a strategy, not an RRP.",
+    "source_ids": [
+      "v2s1",
+      "v2s2"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
+    "page_title": "Cash Working Group Mali",
+    "page_last_updated": "2025-05-07",
+    "last_update_basis": "most recent dated item on the page (OCHA news story on CBPF-funded cash, not a CWG product); page shows no updated stamp",
+    "dashboard_url": "",
+    "dashboard_name": "Tableau de bord des assistances en transfert monétaires (linked on page; URL not visible in text)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "",
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "OCHA",
+        "actor_type": "UN",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "UNICEF",
+        "actor_type": "UN",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "DNPSES (national social protection directorate)",
+        "actor_type": "Government",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "Regional Directorates of Social Development",
+        "actor_type": "Government",
+        "role": "chair"
+      }
+    ],
+    "local_cochair": "yes",
+    "contacts_basis": "CALP West and Central Africa CWG leads report (Jul 2026): co-led by OCHA, DNPSES and UNICEF, with regional leadership by regional social development directorates. Government typing of DNPSES and the regional directorates is inferred by the report reader, not stated by the source; the ReliefWeb page lists no contacts.",
+    "note": "Page hosts a cash transfer dashboard link but no dated CWG products or minutes were visible.",
+    "source_ids": [
+      "v2s3",
+      "v2s4"
+    ]
+  },
+  "cash_volumes": {
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [
+        "v2s5"
+      ],
+      "note": "No Mali CWG dashboard total or OCHA CVA snapshot with USD found; the dashboard link on the CWG page could not be read. FHRAOC workshop (2026) says CVA was 15.0% of 2025 funding in Mali (share, not USD).",
+      "source_type": ""
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "source_type": ""
+    }
+  },
+  "fsps": [],
+  "fsps_note": "No FSP names found for humanitarian cash in Mali. WFP Mali 2022 annual report and a World Bank Jigisémèjiri article (2023) mention only unnamed financial service providers / mobile transfers; UNHCR Mali cash snapshots (Mar, May, Aug 2025) are PDFs that could not be read. IOM issued an RFP for cash-transfer service providers in Mali on 2 Nov 2026 without naming providers.",
+  "sources": [
+    {
+      "id": "v2s1",
+      "title": "Mali response hub (OCHA-coordinated meetings, RRM, working groups)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/mali",
+      "date": "2026-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "SAHEL+ Strategy 2026-2027",
+      "publisher": "UNHCR",
+      "url": "https://data.unhcr.org/en/documents/details/120145",
+      "date": "2025-12-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Cash Working Group Mali",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
+      "date": "2025-05-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Rapport de la rencontre des Leads et Co-Leads des CWG d'Afrique de l'Ouest et du Centre",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "FHRAOC Atelier CALP CWG",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/FHRAOC_Atelier_CALP_CWG-FINAL.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Recrutement d'un prestataire de services pour les activités de transfert monétaire (CASH/CVA) au Mali (RFP 30000033497)",
+      "publisher": "IOM via UNGM",
+      "url": "https://www.ungm.org/Public/Notice/320854",
+      "date": "2026-11-02",
+      "accessed": "2026-11-06"
+    }
+  ]
+}

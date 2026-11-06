@@ -1,0 +1,51 @@
+{
+ "id": "yemen",
+ "page_url": "https://response.reliefweb.int/yemen/cash-and-market",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Yemen: Cash and Market",
+ "river": [
+  {
+   "title": "Cash and Voucher Assistance (CVA) (January - December 2025)",
+   "url": "https://reliefweb.int/node/4207600",
+   "format": "Infographic",
+   "source": "OCHA",
+   "posted": "2026-04-15"
+  },
+  {
+   "title": "Yemen | Joint Market Monitoring Initiative (JMMI) - Market Overview (December 2024)",
+   "url": "https://reliefweb.int/node/4127085",
+   "format": "Assessment",
+   "source": "REACH",
+   "posted": "2025-01-23"
+  }
+ ],
+ "documents": [],
+ "iframes": [],
+ "dashboard_links": [
+  "https://data.humdata.org",
+  "https://data.humdata.org/"
+ ],
+ "contacts": [
+  {
+   "organisation": "United Nations Office for the",
+   "role": "Coordination of Humanitarian Affairs (OCHA) - Yemen +967-712222870 /"
+  }
+ ],
+ "latest_item": {
+  "title": "Cash and Voucher Assistance (CVA) (January - December 2025)",
+  "url": "https://reliefweb.int/node/4207600",
+  "format": "Infographic",
+  "source": "OCHA",
+  "posted": "2026-04-15"
+ },
+ "latest_document": {
+  "title": "Cash and Voucher Assistance (CVA) (January - December 2025)",
+  "url": "https://reliefweb.int/node/4207600",
+  "format": "Infographic",
+  "source": "OCHA",
+  "posted": "2026-04-15"
+ },
+ "latest_listed_document": null
+}

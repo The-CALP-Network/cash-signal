@@ -1,0 +1,65 @@
+{
+ "id": "chad",
+ "page_url": "https://response.reliefweb.int/chad/cash-working-group",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Cash Working Group",
+ "river": [
+  {
+   "title": "Termes de Reference du Cash Working Group au Tchad (Juillet 2022)",
+   "url": "https://reliefweb.int/node/4030682",
+   "format": "Manual and Guideline",
+   "source": "OCHA",
+   "posted": "2024-01-18"
+  },
+  {
+   "title": "Termes de Reference du Cash Working Group au Tchad (Juillet 2022)",
+   "url": "https://reliefweb.int/node/4030682",
+   "format": "Manual and Guideline",
+   "source": "OCHA",
+   "posted": "2024-01-18"
+  },
+  {
+   "title": "Tchad: Mécanismes de coordination humanitaire (mars 2024)",
+   "url": "https://reliefweb.int/node/4165369",
+   "format": "Infographic",
+   "source": "OCHA",
+   "posted": "2025-07-16"
+  }
+ ],
+ "documents": [
+  {
+   "title": "Chad Termes de Reference du Cash Working Group au Tchad (Juillet 2022)",
+   "date": ""
+  },
+  {
+   "title": "Chad Termes de Reference du Cash Working Group au Tchad (Juillet 2022)",
+   "date": ""
+  },
+  {
+   "title": "Chad Tchad: Mécanismes de coordination humanitaire (mars 2024)",
+   "date": ""
+  }
+ ],
+ "iframes": [],
+ "dashboard_links": [
+  "https://data.humdata.org",
+  "https://data.humdata.org/"
+ ],
+ "latest_item": {
+  "title": "Tchad: Mécanismes de coordination humanitaire (mars 2024)",
+  "url": "https://reliefweb.int/node/4165369",
+  "format": "Infographic",
+  "source": "OCHA",
+  "posted": "2025-07-16"
+ },
+ "latest_document": {
+  "title": "Tchad: Mécanismes de coordination humanitaire (mars 2024)",
+  "url": "https://reliefweb.int/node/4165369",
+  "format": "Infographic",
+  "source": "OCHA",
+  "posted": "2025-07-16"
+ },
+ "latest_listed_document": null
+}

@@ -1,13 +1,11 @@
 {
   "_comment": "Cash Signal country record. Every indicator is a 'datum': {value, available, as_of, source_ids, note}. available is one of 'yes' | 'partial' | 'no'. value is null when available=='no'. source_ids reference ids in sources[]. Keep notes to one line.",
-
   "id": "afghanistan",
   "name": "Afghanistan",
   "iso3": "AFG",
   "calp_region": "Asia-Pacific | MENA | East and Southern Africa | West and Central Africa",
   "last_researched": "2026-11-05",
   "researched_by": "claude-sonnet (AI) — unreviewed",
-
   "plan": {
     "name": "Afghanistan Humanitarian Needs and Response Plan 2026",
     "type": "HNRP | HRP | Flash Appeal | RRP | Other | None",
@@ -15,62 +13,219 @@
     "status": "published | draft | not yet published | none",
     "url": "https://...",
     "fts_plan_id": 1234,
-    "people_in_need": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "people_targeted": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "requirements_usd": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "funded_usd": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "funded_pct": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""}
+    "people_in_need": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "people_targeted": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "requirements_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "funded_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "funded_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    }
   },
-
   "plan_2027": {
     "status": "not yet published | in preparation | published | unknown",
     "note": "",
     "source_ids": []
   },
-
   "modality_preference": {
     "_comment": "Share of surveyed population preferring each modality. Record the survey, year and sample in note/as_of. Percentages 0-100.",
-    "cash_pct": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "vouchers_pct": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "in_kind_pct": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "other_pct": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
+    "cash_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "vouchers_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "in_kind_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "other_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
     "survey_note": "e.g. REACH MSNA 2025, n=12,000 HH, question wording"
   },
-
   "cost_efficiency": {
     "_comment": "Record the metric exactly as the source states it. unit examples: 'cost-transfer ratio', 'USD per USD delivered', 'USD per beneficiary', 'Omega value'. Do not convert.",
-    "mpc": {"value": null, "unit": "", "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "sectoral_cash": {"value": null, "unit": "", "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "vouchers": {"value": null, "unit": "", "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "in_kind_food": {"value": null, "unit": "", "available": "no", "as_of": "", "source_ids": [], "note": ""}
+    "mpc": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "sectoral_cash": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "vouchers": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "in_kind_food": {
+      "value": null,
+      "unit": "",
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    }
   },
-
   "hnrp_requirements": {
     "_comment": "Share of the plan's total financial requirements. Percentages 0-100. Also give the USD figure in usd where known.",
-    "mpc_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "sectoral_cash_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "vouchers_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "total_cva_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""}
+    "mpc_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "vouchers_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "total_cva_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    }
   },
-
   "overall_funding": {
     "_comment": "Share of funding received against the plan (FTS) that is MPC / sectoral cash / vouchers. Usually only MPC is visible in FTS as a sector; say so in note if sectoral cash and vouchers are not disaggregated.",
-    "mpc_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "mpc_funded_pct_of_mpc_req": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": "MPC funding received as % of MPC requirement"},
-    "sectoral_cash_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "vouchers_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""}
+    "mpc_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "mpc_funded_pct_of_mpc_req": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "MPC funding received as % of MPC requirement"
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "vouchers_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    }
   },
-
   "pooled_funds": {
     "_comment": "Country-based pooled fund (CBPF) and CERF. Share of allocations that is MPC / sectoral cash / vouchers.",
     "cbpf_exists": true,
     "cbpf_name": "Afghanistan Humanitarian Fund",
-    "cbpf_allocations_usd": {"value": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "mpc_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "sectoral_cash_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""},
-    "vouchers_pct": {"value": null, "usd": null, "available": "no", "as_of": "", "source_ids": [], "note": ""}
+    "cbpf_allocations_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "mpc_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "sectoral_cash_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "vouchers_pct": {
+      "value": null,
+      "usd": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    }
   },
-
   "cash_feasibility": {
     "exists": "yes | no | unknown",
     "title": "",
@@ -80,7 +235,6 @@
     "source_ids": [],
     "note": ""
   },
-
   "market_monitoring": {
     "functional": "yes | partial | no | unknown",
     "system": "e.g. REACH JMMI; WFP market monitor; CWG price monitoring",
@@ -90,28 +244,35 @@
     "source_ids": [],
     "note": ""
   },
-
   "cwg": {
     "exists": "yes | no | unknown",
     "name": "",
-    "leads": ["OCHA", "WFP"],
+    "leads": [
+      "OCHA",
+      "WFP"
+    ],
     "cashcap_support": "yes | no | unknown",
     "url": "",
     "source_ids": [],
     "evidence_note": "one line on activity level: e.g. monthly meetings, published MEB 2025, 4W dashboard"
   },
-
   "ai_summary": {
     "headline": "One sentence, <= 20 words, the single most important thing about cash in this response.",
     "narrative": "120-180 words. Evidence first, inference labelled. Cite source ids inline like [s1].",
-    "barriers": ["short bullet", "short bullet"],
-    "opportunities": ["short bullet"],
-    "data_gaps": ["which Excel indicators could not be found, one phrase each"],
+    "barriers": [
+      "short bullet",
+      "short bullet"
+    ],
+    "opportunities": [
+      "short bullet"
+    ],
+    "data_gaps": [
+      "which Excel indicators could not be found, one phrase each"
+    ],
     "generated": "2026-11-05",
     "model": "claude-sonnet-5-5",
     "status": "AI draft — not yet reviewed"
   },
-
   "rep_notes": {
     "_comment": "For CALP regional representatives. Leave all empty.",
     "key_messages": "",
@@ -122,8 +283,229 @@
     "reviewed_by": "",
     "reviewed_date": ""
   },
-
+  "coordination": {
+    "_comment": "Who coordinates the 2026 response. OCHA = HNRP/HRP/Flash Appeal; UNHCR = RRP/3RP in-country chapter.",
+    "label": "OCHA | UNHCR | OCHA + UNHCR | Neither | Unknown",
+    "ocha_plan": "",
+    "unhcr_plan": "",
+    "note": "",
+    "source_ids": []
+  },
+  "fts_cva": {
+    "_comment": "Written by build/fts_pull.py + merge_v2.py. Do not edit by hand; re-run the pull.",
+    "pulled": "YYYY-MM-DD",
+    "plan_id": 1234,
+    "api_url": "",
+    "fts_page": "",
+    "total_funding_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "mpc_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "ctp_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "sectoral_cva_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "by_cluster": {},
+      "flow_count": 0
+    },
+    "cva_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "cva_pct_of_total": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "mpc_pct_of_total": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "cbpf_internal": {
+      "flow_count": 0,
+      "total": 0,
+      "mpc": 0,
+      "ctp": 0,
+      "cva": 0,
+      "mpc_pct": null,
+      "cva_pct": null,
+      "local_actor": 0,
+      "local_actor_pct": null,
+      "local_actor_cva": 0,
+      "local_actor_pct_of_cva": null
+    },
+    "caveat": ""
+  },
+  "cash_volumes": {
+    "_comment": "Funding (FTS) vs delivered value (in-country dashboards). sectoral_cva_best_usd = the higher of FTS sectoral CVA funding and the in-country sectoral figure, with source named.",
+    "mpc_funding_fts_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "sectoral_cva_best_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "source": "FTS | in-country dashboard"
+    },
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "period": "",
+      "source_type": ""
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "period": "",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": ""
+  },
+  "cwg_reliefweb": {
+    "_comment": "Trial: CWG health from its public page (ReliefWeb Response or equivalent). Organisations only, never people.",
+    "page_url": "",
+    "page_title": "",
+    "page_last_updated": "",
+    "last_update_basis": "",
+    "page_fresh_3m": false,
+    "dashboard_url": "",
+    "dashboard_name": "",
+    "dashboard_last_updated": "",
+    "dashboard_period": "",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "",
+        "actor_type": "UN | INGO | NNGO | Government | RCRC | Consortium | Other",
+        "role": ""
+      }
+    ],
+    "local_cochair": "yes | no | unknown",
+    "contacts_basis": "",
+    "note": "",
+    "source_ids": [],
+    "checked": "YYYY-MM-DD"
+  },
+  "fsps": [
+    {
+      "name": "",
+      "type": "bank | mobile money | money transfer operator | fintech / e-wallet | post office | hawala | card / prepaid | other",
+      "used_by": [],
+      "evidence": "",
+      "website": "",
+      "logo_url": "URL only, never stored in the repo",
+      "logo_source": "",
+      "source_ids": []
+    }
+  ],
+  "localisation": {
+    "_comment": "IASC MPC scaling plan objective 4. 4.1 local co-chair; 4.2 share of CVA funding to local/national actors (FTS first-level proxy).",
+    "framework": "",
+    "local_cochair": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": ""
+    },
+    "cva_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "usd": null
+    },
+    "all_funding_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "usd": null
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "usd": null
+    },
+    "cbpf_all_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "",
+      "usd": null
+    },
+    "caveat": ""
+  },
   "sources": [
-    {"id": "s1", "title": "", "publisher": "", "url": "https://...", "date": "YYYY-MM-DD or YYYY-MM or YYYY", "accessed": "2026-11-05"}
+    {
+      "id": "s1",
+      "title": "",
+      "publisher": "",
+      "url": "https://...",
+      "date": "YYYY-MM-DD or YYYY-MM or YYYY",
+      "accessed": "2026-11-05"
+    }
   ]
 }

@@ -1,0 +1,110 @@
+{
+ "id": "nigeria",
+ "page_url": "https://response.reliefweb.int/nigeria/cash-working-group",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Nigeria: Cash Working Group",
+ "river": [
+  {
+   "title": "Joint Market Monitoring Initiative - Price & Functionality Update Borno Adamawa Yobe (August 2026)",
+   "url": "https://reliefweb.int/node/4234062",
+   "format": "Assessment",
+   "source": "FACT",
+   "posted": "2026-10-14"
+  },
+  {
+   "title": "The National Cash and Voucher Assistance (NCVA) Policy and Implementation Plan",
+   "url": "https://reliefweb.int/node/4185514",
+   "format": "Manual and Guideline",
+   "source": "Govt. Nigeria",
+   "posted": "2025-10-31"
+  },
+  {
+   "title": "North-East Nigeria: Cash and Voucher Assistance (as of 20 August 2025)",
+   "url": "https://reliefweb.int/node/4172263",
+   "format": "Infographic",
+   "source": "OCHA",
+   "posted": "2025-08-26"
+  },
+  {
+   "title": "Cash Working Group Annual Report 2019",
+   "url": "https://reliefweb.int/node/3637844",
+   "format": "Other",
+   "source": "CRS, OCHA, Govt. Nigeria",
+   "posted": "2020-05-24"
+  },
+  {
+   "title": "Financial Service and Transfer Mechanisms: Financial Service Providers Mapping for Northeast Nigeria Cash Working Group Nigeria",
+   "url": "https://reliefweb.int/node/3415853",
+   "format": "Analysis",
+   "source": "CRS, OCHA",
+   "posted": "2019-11-28"
+  },
+  {
+   "title": "Nigeria: Sub-National - Cash Working Group, 27 June 2024 [Meeting Minutes]",
+   "url": "https://reliefweb.int/node/4075726",
+   "format": "Other",
+   "source": "Govt. Nigeria, OCHA",
+   "posted": "2024-07-05"
+  },
+  {
+   "title": "Northeast Nigeria Cash Working Group: Terms of Reference (June 2024)",
+   "url": "https://reliefweb.int/node/4075722",
+   "format": "Manual and Guideline",
+   "source": "OCHA",
+   "posted": "2024-07-05"
+  }
+ ],
+ "documents": [
+  {
+   "title": "Nigeria Cash Working Group Annual Report 2019",
+   "date": ""
+  },
+  {
+   "title": "Nigeria Financial Service and Transfer Mechanisms: Financial Service Providers Mapping for Northeast Nigeria Cash Workin",
+   "date": ""
+  },
+  {
+   "title": "Nigeria Northeast Nigeria Cash Working Group: Terms of Reference (June 2024)",
+   "date": ""
+  },
+  {
+   "title": "Nigeria: Cash Barometer in Nigeria Summary 2020",
+   "date": ""
+  }
+ ],
+ "iframes": [],
+ "dashboard_links": [
+  "/nigeria/cash-working-group/nigeria-market-index-dashboard-jmmi",
+  "https://app.powerbi.com/view?r=eyJrIjoiNjRiNTBhYzgtNzIwMS00NDM1LThlMzQtM2Q0YWM1MTQ1YjA2IiwidCI6ImY2ZjcwZjFiLTJhMmQtNGYzMC04NTJhLTY0YjhjZTBjMTlkNyIsImMiOjF9",
+  "https://data.humdata.org",
+  "https://data.humdata.org/",
+  "https://reliefweb.int/attachments/f0c5ab47-8503-4c0a-97ff-2f45f65547f9/CVA%20Dashboard.pdf"
+ ],
+ "contacts": [
+  {
+   "organisation": "OCHA)",
+   "role": "Email –"
+  },
+  {
+   "organisation": "Caritas Germany)",
+   "role": "Email –"
+  }
+ ],
+ "latest_item": {
+  "title": "Joint Market Monitoring Initiative - Price & Functionality Update Borno Adamawa Yobe (August 2026)",
+  "url": "https://reliefweb.int/node/4234062",
+  "format": "Assessment",
+  "source": "FACT",
+  "posted": "2026-10-14"
+ },
+ "latest_document": {
+  "title": "Joint Market Monitoring Initiative - Price & Functionality Update Borno Adamawa Yobe (August 2026)",
+  "url": "https://reliefweb.int/node/4234062",
+  "format": "Assessment",
+  "source": "FACT",
+  "posted": "2026-10-14"
+ },
+ "latest_listed_document": null
+}

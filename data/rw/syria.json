@@ -1,0 +1,22 @@
+{
+ "id": "syria",
+ "page_url": "https://response.reliefweb.int/syria/cash-working-group",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Syria: Cash Working Group",
+ "river": [],
+ "documents": [],
+ "iframes": [],
+ "dashboard_links": [
+  "https://app.powerbi.com/view?r=eyJrIjoiMWE3NzI2YjEtYWEzOC00NTRmLTg0YTEtYmU5N2Y3YzBhOThlIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://app.powerbi.com/view?r=eyJrIjoiMWE5OTFmNmUtYWU0Mi00ZGVmLWFkNjQtYzY4ZjczZGQ3MjliIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://app.powerbi.com/view?r=eyJrIjoiNzMwNmVjMTItMzQ4Yi00YWNlLWI5Y2QtOGZmZGFlMTNiZTk0IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://app.powerbi.com/view?r=eyJrIjoiZjJkYWJjZjYtYzE3Yy00NTg3LTk1NjQtNzE0MjYwNGYwMWQyIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://data.humdata.org",
+  "https://data.humdata.org/"
+ ],
+ "latest_item": null,
+ "latest_document": null,
+ "latest_listed_document": null
+}

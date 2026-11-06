@@ -1,0 +1,63 @@
+{
+ "id": "somalia",
+ "plan_id": 1516,
+ "plan_name": "Somalia Humanitarian Needs and Response Plan 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1516",
+ "fts_page": "https://fts.unocha.org/plans/1516/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 336,
+   "fundingTotal": 303480905,
+   "pledgeTotal": 340000
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 127
+  }
+ },
+ "summary": {
+  "total_funding": 303480905,
+  "flow_count_incoming": 335,
+  "latest_flow_date": "2026-11-02",
+  "mpc_cluster_funding": 35086246,
+  "mpc_cluster_funding_shared_view": 35086246,
+  "mpc_cluster_name": "Multi Purpose Cash",
+  "ctp_funding": 59997145,
+  "ctp_in_mpc": 32650787,
+  "sectoral_cva_funding": 27346358,
+  "sectoral_cva_by_cluster": {
+   "Refugee Response": 13198307,
+   "Food Security and Livelihoods": 7092630,
+   "Protection": 6302731,
+   "Education": 583963,
+   "Shelter and NFIs": 168727
+  },
+  "sectoral_cva_flow_count": 36,
+  "cva_funding": 62432604,
+  "cva_pct_of_total": 20.6,
+  "sectoral_cva_pct_of_total": 9.0,
+  "mpc_pct_of_total": 11.6,
+  "local_actor_funding": 2810088,
+  "local_actor_pct_of_total": 0.9,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 127,
+   "total": 22998380,
+   "mpc": 0,
+   "ctp": 2392726,
+   "cva": 2392726,
+   "mpc_pct": 0.0,
+   "cva_pct": 10.4,
+   "local_actor": 16429116,
+   "local_actor_pct": 71.4,
+   "local_actor_cva": 2181066,
+   "local_actor_pct_of_cva": 91.2
+  }
+ }
+}

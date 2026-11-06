@@ -3,7 +3,7 @@
   "name": "Gaza (oPt)",
   "iso3": "PSE",
   "calp_region": "MENA",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Escalation of Hostilities in the OPT Flash Appeal 2026",
@@ -184,11 +184,14 @@
       "note": "FTS single-cluster (destination) view: US$46.4M of US$592.6M MPC requirement. Shared-cluster view would give US$48.1M (8%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "FTS does not disaggregate sectoral cash within clusters."
+      "value": 2.0,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$27.6M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 27602032
     },
     "vouchers_pct": {
       "value": null,
@@ -221,12 +224,14 @@
       "usd": 9500000
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not reported.",
-      "usd": null
+      "value": 0.6,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$0.2M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 202000
     },
     "vouchers_pct": {
       "value": null,
@@ -399,6 +404,386 @@
       "url": "https://live.libnanews.com/event/ev-1786365429095-2b1e",
       "date": "2026-08-10",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1510 (Escalation of Hostilities in the OPT Flash Appeal 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1510/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Escalation of Hostilities in the OPT Flash Appeal 2026",
+      "publisher": "OCHA",
+      "url": "https://www.un.org/unispal/wp-content/uploads/2025/12/OPT_Flash_Appeal_2026_EN_FINAL.pdf",
+      "date": "2025-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Palestine Cash Working Group",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/palestine/palestine-cash-working-group",
+      "date": "2026-05-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "OCHA Cash Coordinator P3 Gaza vacancy",
+      "publisher": "CANADEM",
+      "url": "https://portal.canadem.ca/careers/57869-CANADEM-General-Portal/jobs/16727067-OCHA-Cash-Coordinator-P3-Gaza-oPt",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Palestine CWG reports listing",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/palestine/palestine-cash-working-group/reports",
+      "date": "2024-09-18",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Cash Working Group, Gaza Strip: Mobile money and e-wallet modalities, Gaza CWG guiding note",
+      "publisher": "Gaza CWG / ReliefWeb",
+      "url": "https://reliefweb.int/report/occupied-palestinian-territory/cash-working-group-gaza-strip-mobile-money-and-e-wallet-modalities-gaza-cwg-guiding-note-june-2024",
+      "date": "2024-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Gaza Strip Digital Cash Assistance and Market Monitoring Bulletin, June 2026",
+      "publisher": "UNICEF",
+      "url": "https://www.unicef.org/sop/media/6856/file/Gaza%20Strip%20Cash%20Assistance%20Bulletin%20June%202026.pdf.pdf",
+      "date": "2026-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "UNDP partners with leading digital payment service providers to strengthen digital financial solutions in Gaza",
+      "publisher": "UNDP/PAPP",
+      "url": "https://www.undp.org/papp/press-releases/undp-partners-leading-digital-payment-service-providers-strengthen-digital-financial-solutions-gaza",
+      "date": "2024-09-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "rw1",
+      "title": "Occupied Palestinian Territory: Palestine Cash Working Group (ReliefWeb Response)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/palestine/palestine-cash-working-group",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1510,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1510",
+    "fts_page": "https://fts.unocha.org/plans/1510/summary",
+    "total_funding_usd": {
+      "value": 1409241203,
+      "available": "yes",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 57742708,
+      "available": "yes",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-purpose Cash Assistance cluster; shared-cluster view US$63.1M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 85344740,
+      "available": "yes",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 27602032,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 64 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Protection US$15.0M, Food Security US$8.4M, Water, Sanitation and Hygiene US$3.6M.",
+      "by_cluster": {
+        "Protection": 14993695,
+        "Food Security": 8391281,
+        "Water, Sanitation and Hygiene": 3590602,
+        "Education": 2680965,
+        "Health": 2680965,
+        "Nutrition": 2680965,
+        "Multi-purpose Cash Assistance": 2680965,
+        "Shelter": 1967242
+      },
+      "flow_count": 64
+    },
+    "cva_usd": {
+      "value": 85344740,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 6.1,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 2.0,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 4.1,
+      "available": "yes",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 36,
+      "total": 32422550,
+      "mpc": 2679183,
+      "ctp": 2881183,
+      "cva": 2881183,
+      "mpc_pct": 8.3,
+      "cva_pct": 8.9,
+      "local_actor": 8432353,
+      "local_actor_pct": 26.0,
+      "local_actor_cva": 2881183,
+      "local_actor_pct_of_cva": 100.0
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Escalation of Hostilities in the OPT Flash Appeal 2026",
+    "unhcr_plan": "none (no UNHCR-led plan found; UNRWA separately serves Palestine refugees)",
+    "note": "OCHA-coordinated Flash Appeal; UNRWA is a CWG contact organisation but its own appeal was not checked.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/palestine/palestine-cash-working-group",
+    "page_title": "Occupied Palestinian Territory: Palestine Cash Working Group",
+    "page_last_updated": "2024-07-02",
+    "last_update_basis": "latest manual and guideline posted in the page's ReliefWeb feed: Cash Working Group - Gaza Strip: Cash for Work – Gaza (May 2024)",
+    "page_fresh_3m": false,
+    "dashboard_url": "",
+    "dashboard_name": "",
+    "dashboard_last_updated": "",
+    "dashboard_period": "",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "Action Against Hunger Spain",
+        "actor_type": "INGO",
+        "role": "national cash coordinator"
+      },
+      {
+        "organisation": "OCHA",
+        "actor_type": "UN",
+        "role": "Gaza cash coordinator"
+      }
+    ],
+    "local_cochair": "no",
+    "contacts_basis": "CWG page contacts tab lists coordinators, not chairs, 6 Nov 2026",
+    "note": "No in-country CVA dashboard on the page. The Gaza guiding note on mobile money and e-wallets (June 2024) is the latest CWG document found.",
+    "source_ids": [
+      "rw1",
+      "v2s2",
+      "v2s3",
+      "v2s4"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 57742708,
+      "available": "yes",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-purpose Cash Assistance cluster; shared-cluster view US$63.1M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 27602032,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s5",
+        "v2s6"
+      ],
+      "note": "No total US$ delivered found. Gaza CWG note (Jun 2024): at least one emergency MPCA payment to over 178,000 households since 7 Oct 2023. UNICEF bulletin (Jun 2026): cumulatively about 1.3M people in about 213,000 families, no US$ total.",
+      "period": "",
+      "source_type": "other"
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s6"
+      ],
+      "note": "UNICEF MPC reach given in people and families only.",
+      "period": "",
+      "source_type": "other"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Not found.",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [
+    {
+      "name": "PalPay",
+      "type": "fintech / e-wallet",
+      "used_by": [
+        "Gaza CWG actors",
+        "UNICEF",
+        "UNDP"
+      ],
+      "evidence": "Gaza CWG note (Jun 2024): the vast majority of cash assistance was distributed via the PalPay agent network; UNICEF June 2026 bulletin says its digital cash is activated via PalPay/Jawwal Pay agents.",
+      "website": "https://palpay.ps",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5",
+        "v2s6",
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Jawwal Pay",
+      "type": "fintech / e-wallet",
+      "used_by": [
+        "UNICEF",
+        "UNDP"
+      ],
+      "evidence": "UNICEF June 2026 bulletin cites PalPay/Jawwal Pay agents; UNDP/PAPP partnership (Sep 2024) names Jawwal Pay as digital payment partner.",
+      "website": "https://www.jawwalpay.ps",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s6",
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Bank of Palestine",
+      "type": "bank",
+      "used_by": [
+        "PalPay agents (liquidity source)"
+      ],
+      "evidence": "Gaza CWG note: PalPay agents accessed liquidity through Bank of Palestine ATMs and over-the-counter withdrawals; PalPay is a Bank of Palestine subsidiary per UNDP.",
+      "website": "https://www.bop.ps",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5",
+        "v2s7"
+      ]
+    }
+  ],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": "no",
+      "available": "yes",
+      "as_of": "2024-07-02",
+      "source_ids": [
+        "rw1",
+        "v2s2",
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Chairs found: Action Against Hunger Spain (INGO); OCHA (UN)"
+    },
+    "cva_to_local_pct": {
+      "value": 1.2,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$85.3M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 1021958
+    },
+    "all_funding_to_local_pct": {
+      "value": 1.1,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$15.1M). Same first-level caveat.",
+      "usd": 15102639
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 100.0,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$2.9M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 2881183
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 26.0,
+      "available": "partial",
+      "as_of": "2026-11-06",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$32.4M) to local or national actors.",
+      "usd": 8432353
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

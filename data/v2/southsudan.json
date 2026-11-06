@@ -1,0 +1,174 @@
+{
+ "id": "southsudan",
+ "coordination": {
+  "label": "OCHA + UNHCR",
+  "ocha_plan": "South Sudan Humanitarian Needs and Response Plan 2026 (HNRP)",
+  "unhcr_plan": "South Sudan Country Refugee Response Plan (CRRP) 2026 and the South Sudan chapter of the 2026 Sudan Regional RRP",
+  "note": "HNRP (OCHA) plus refugee plans on UNHCR's portal; the pages opened do not state the lead agency explicitly, so UNHCR leadership is inferred from hosting.",
+  "source_ids": [
+   "v2s7",
+   "v2s8",
+   "v2s9"
+  ]
+ },
+ "cwg_reliefweb": {
+  "page_url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+  "page_title": "South Sudan Cash Working Group (Inter-Agency Cash Working Group, IA-CWG)",
+  "page_last_updated": "2025-10",
+  "last_update_basis": "Latest dated document title on the page (DTM biometric registration and cash assistance, Naivasha IDP camp, Oct 2025); no page updated stamp. A Jan-Mar 2026 cash snapshot is listed but undated.",
+  "dashboard_url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+  "dashboard_name": "Cash and Voucher Snapshot: January - March 2026 (infographic)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "2026-01 to 2026-03",
+  "meeting_minutes_latest": "2026-01-29",
+  "co_chairs": [
+   {
+    "organisation": "REACH",
+    "actor_type": "INGO",
+    "role": "IM lead"
+   }
+  ],
+  "local_cochair": "unknown",
+  "contacts_basis": "Page contacts block names only REACH (JMMI technical working group lead). A CALP page names a CashCap coordinator without co-lead organisations; earlier CALP listings conflict on co-leads.",
+  "note": "The page's 'Latest Dashboard' section is empty; the Jan-Mar 2026 snapshot figures could not be read from the page text. Monthly meetings, minutes listed to 25 Sep 2025. Page feed lists minutes of the 29 Jan 2026 meeting (seen 6 Nov 2026).",
+  "source_ids": [
+   "v2s1",
+   "v2s2",
+   "v2s6"
+  ]
+ },
+ "cash_volumes": {
+  "cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s3"
+   ],
+   "note": "HNRP 2026 gives only the 2025 HNRP allocation (about $197M, 11% of budget, to CVA; $25M for MPCA), not delivered amounts; the Jan-Mar 2026 snapshot was not readable.",
+   "source_type": "other"
+  },
+  "mpc_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s3"
+   ],
+   "note": "Only an allocation of about $25M for MPCA in the 2025 HNRP is reported, not delivery.",
+   "source_type": "other"
+  },
+  "sectoral_cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [],
+   "note": "No sectoral delivered value found.",
+   "source_type": ""
+  }
+ },
+ "fsps": [
+  {
+   "name": "MTN South Sudan (MoMo)",
+   "type": "mobile money",
+   "used_by": [],
+   "evidence": "GSMA blog and trade press describe MTN as a recent mobile money provider in South Sudan; no humanitarian agency named as user in the pages opened.",
+   "website": "https://www.mtn.com.ss",
+   "logo_url": "https://www.mtn.com.ss/wp-content/themes/mtn-vivid-wp/public/img/mtn-logo.svg",
+   "logo_source": "provider site",
+   "source_ids": [
+    "v2s4"
+   ]
+  },
+  {
+   "name": "Zain South Sudan (m-Gurush, Nilepay)",
+   "type": "mobile money",
+   "used_by": [],
+   "evidence": "GSMA blog says Zain partnered on m-Gurush and Nilepay launched in 2019; humanitarian actors generally distribute cash via mobile money, no agency named.",
+   "website": "https://ss.zain.com",
+   "logo_url": "https://ss.zain.com/wp-content/uploads/2024/03/ZN_LOGO_SILVER-CMYK.png",
+   "logo_source": "provider site",
+   "source_ids": [
+    "v2s4"
+   ]
+  }
+ ],
+ "fsps_note": "Few named FSPs with named humanitarian users were found; Mercy Corps/Prosper Global tender (2021) sought an FSP but named none.",
+ "sources": [
+  {
+   "id": "v2s1",
+   "title": "South Sudan Cash Working Group (IA-CWG)",
+   "publisher": "OCHA / ReliefWeb Response",
+   "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+   "date": "2025-10",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s2",
+   "title": "South Sudan Cash Working Group",
+   "publisher": "CALP Network",
+   "url": "https://www.calpnetwork.org/groups-and-communities/east-and-southern-africa-cash-working-groups/south-sudan-cash-working-group/",
+   "date": "",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s3",
+   "title": "South Sudan Humanitarian Needs and Response Plan 2026 (p.22)",
+   "publisher": "OCHA",
+   "url": "https://solidarityssudan.org/wp-content/uploads/2026/01/South-Sudan-2026-HNRP-1.pdf",
+   "date": "2026-01",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s4",
+   "title": "South Sudan: Mobile money's role in the road to recovery",
+   "publisher": "GSMA",
+   "url": "https://www.gsma.com/mobilefordevelopment/blog/south-sudan-mobile-moneys-role-in-the-road-to-recovery/",
+   "date": "",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s5",
+   "title": "Tender: Financial Service Providers (FSP) to implement cash transfer activities in South Sudan",
+   "publisher": "Prosper Global (ex-Mercy Corps)",
+   "url": "https://www.prosperglobal.org/tenders/tender-name-financial-service-providers-fsp-implement-cash-transfer-activities-south-sudan",
+   "date": "2021-12",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s6",
+   "title": "Cash and Voucher Snapshot: January - March 2026 (listing)",
+   "publisher": "OCHA / ReliefWeb Response",
+   "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group?page=0",
+   "date": "2026",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s7",
+   "title": "South Sudan Country Refugee Response Plan (CRRP) 2026",
+   "publisher": "UNHCR",
+   "url": "https://data.unhcr.org/en/documents/details/120458",
+   "date": "2026-01-13",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s8",
+   "title": "Sudan Regional RRP 2026",
+   "publisher": "UNHCR / humanitarianaction.info",
+   "url": "https://humanitarianaction.info/plan/1523/article/sudan-regional-rrp",
+   "date": "2025-12",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s9",
+   "title": "South Sudan HNRP 2026 (ReliefWeb edition)",
+   "publisher": "OCHA",
+   "url": "https://reliefweb.int/report/south-sudan/south-sudan-humanitarian-needs-and-response-plan-2026-december-2025",
+   "date": "2025-12",
+   "accessed": "2026-11-06"
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "id": "niger",
+ "plan_id": 1513,
+ "plan_name": "Niger Besoins Humanitaires et Plan de Réponse 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1513",
+ "fts_page": "https://fts.unocha.org/plans/1513/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 278,
+   "fundingTotal": 135295007,
+   "pledgeTotal": 0
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 60
+  }
+ },
+ "summary": {
+  "total_funding": 135295007,
+  "flow_count_incoming": 278,
+  "latest_flow_date": "2026-11-02",
+  "mpc_cluster_funding": 14247,
+  "mpc_cluster_funding_shared_view": 14247,
+  "mpc_cluster_name": "Transfert d’espèces à usages multiples",
+  "ctp_funding": 7626488,
+  "ctp_in_mpc": 0,
+  "sectoral_cva_funding": 7626488,
+  "sectoral_cva_by_cluster": {
+   "Protection": 4086992,
+   "Sécurité Alimentaire": 2404717,
+   "Abris/NFI": 851861,
+   "EHA - Eau, Hygiène et Assainissement": 126797,
+   "Réponse aux Réfugiés": 126180,
+   "Education": 29941
+  },
+  "sectoral_cva_flow_count": 23,
+  "cva_funding": 7640735,
+  "cva_pct_of_total": 5.6,
+  "sectoral_cva_pct_of_total": 5.6,
+  "mpc_pct_of_total": 0.0,
+  "local_actor_funding": 5910090,
+  "local_actor_pct_of_total": 4.4,
+  "local_actor_cva_funding": 70138,
+  "local_actor_pct_of_cva": 0.9,
+  "cbpf_internal": {
+   "flow_count": 0,
+   "total": 0,
+   "mpc": 0,
+   "ctp": 0,
+   "cva": 0,
+   "mpc_pct": null,
+   "cva_pct": null,
+   "local_actor": 0,
+   "local_actor_pct": null,
+   "local_actor_cva": 0,
+   "local_actor_pct_of_cva": null
+  }
+ }
+}

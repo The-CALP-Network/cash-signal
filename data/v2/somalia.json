@@ -1,0 +1,172 @@
+{
+ "id": "somalia",
+ "coordination": {
+  "label": "OCHA",
+  "ocha_plan": "Somalia Humanitarian Needs and Response Plan 2026 (HNRP)",
+  "unhcr_plan": "none found",
+  "note": "HNRP (OCHA); no UNHCR-led Somalia plan with an in-country chapter was found in search.",
+  "source_ids": [
+   "v2s1"
+  ]
+ },
+ "cwg_reliefweb": {
+  "page_url": "https://response.reliefweb.int/somalia/somalia-cash-working-group",
+  "page_title": "Somalia Cash Working Group (Somalia Inter Agency Cash Working Group)",
+  "page_last_updated": "2026-04-06",
+  "last_update_basis": "Latest document posted on the page (GBV AoR guidance note on cash in GBV case management); no page updated stamp.",
+  "dashboard_url": "https://response.reliefweb.int/somalia/somalia-cash-working-group",
+  "dashboard_name": "Somalia CVA dashboard 2025 (also 2024; monthly cash and voucher mapping on HDX)",
+  "dashboard_last_updated": "",
+  "dashboard_period": "2025",
+  "meeting_minutes_latest": "",
+  "co_chairs": [
+   {
+    "organisation": "WFP",
+    "actor_type": "UN",
+    "role": "co-lead"
+   },
+   {
+    "organisation": "Concern Worldwide",
+    "actor_type": "INGO",
+    "role": "co-lead"
+   }
+  ],
+  "local_cochair": "unknown",
+  "contacts_basis": "Undated CALP CWG page whose co-lead email domains are wfp.org and concern.net; ReliefWeb page contacts list many organisations incl. Government of Somalia but no stated chair roles. Earlier project notes cite an OCHA non-programmatic co-chair (not verified here).",
+  "note": "Meetings monthly; sub-national CWGs in seven areas and an FSP workstream. Dashboard figures not readable from page text; HDX visualisation opened shows only Aug 2020. Contacts tab lists a WFP chair only; the group's Nov 2024 minutes mention an OCHA co-chair, so the published structure may be incomplete.",
+  "source_ids": [
+   "v2s2",
+   "v2s3",
+   "v2s4"
+  ]
+ },
+ "cash_volumes": {
+  "cva_delivered_usd": {
+   "value": 36300000,
+   "available": "partial",
+   "as_of": "2025-08",
+   "period": "2025-01-01 to 2025-03-31",
+   "source_ids": [
+    "v2s5"
+   ],
+   "note": "OCHA Eastern Africa Q1 2025 overview: about US$36.3M CVA disbursed in Somalia in the quarter. WFP alone reports US$122.8M CBT in 2025 (annual country report), not a national total.",
+   "source_type": "OCHA CVA snapshot"
+  },
+  "mpc_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [],
+   "note": "No MPC-specific delivered value found.",
+   "source_type": ""
+  },
+  "sectoral_cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [],
+   "note": "No sectoral delivered value found.",
+   "source_type": ""
+  }
+ },
+ "fsps": [
+  {
+   "name": "Hormuud Telecom (EVC Plus)",
+   "type": "mobile money",
+   "used_by": [
+    "INGOs via Hormuud Humanitarian Portal",
+    "Save the Children"
+   ],
+   "evidence": "Hormuud/GSMA M4H (Jun 2023): EVC Plus underlies a Humanitarian Portal used by INGOs to deliver cash; Save the Children (USAID/FFP, 2017) used Hormuud and Golis mobile money.",
+   "website": "https://hormuud.com",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s6",
+    "v2s7"
+   ]
+  },
+  {
+   "name": "Golis Telecom",
+   "type": "mobile money",
+   "used_by": [
+    "Save the Children"
+   ],
+   "evidence": "CALP Nov 2017 case study: monthly cash transfers via mobile money with Golis and Hormuud in Bari, Nugaal and Hiran.",
+   "website": "https://golis.so",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s7"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "v2s1",
+   "title": "Somalia Humanitarian Needs and Response Plan 2026 (FTS plan 1516)",
+   "publisher": "OCHA",
+   "url": "https://fts.unocha.org/plans/1516/summary",
+   "date": "2026",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s2",
+   "title": "Somalia Cash Working Group",
+   "publisher": "OCHA / ReliefWeb Response",
+   "url": "https://response.reliefweb.int/somalia/somalia-cash-working-group",
+   "date": "2026-04-06",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s3",
+   "title": "Somalia Cash Working Group",
+   "publisher": "CALP Network",
+   "url": "https://calpnetwork.org/?p=16093",
+   "date": "",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s4",
+   "title": "Cash Based Programming in Somalia (HDX visualisation)",
+   "publisher": "OCHA / HDX",
+   "url": "https://data.humdata.org/visualization/somalia-cash-programing-v3/",
+   "date": "2020-08",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s5",
+   "title": "Eastern Africa: Q1 Regional Cash and Voucher Assistance Overview (as of Aug 2025)",
+   "publisher": "OCHA / ReliefWeb",
+   "url": "https://reliefweb.int/report/sudan/eastern-africa-q1-regional-cash-and-voucher-assistance-overview-aug-2025",
+   "date": "2025-08",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s6",
+   "title": "Hormuud Telecom teams up with GSMA to expand mobile network services for humanitarian sector in Somalia",
+   "publisher": "TechAfrica News",
+   "url": "https://techafricanews.com/2023/06/16/hormuud-telecom-teams-up-with-gsma-to-expand-mobile-network-services-for-humanitarian-sector-in-somalia/",
+   "date": "2023-06-16",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s7",
+   "title": "Somalia mobile money case (Save the Children, USAID/FFP)",
+   "publisher": "CALP Network",
+   "url": "https://www.calpnetwork.org/?p=9755",
+   "date": "2017-11",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s8",
+   "title": "WFP Somalia Annual Country Report 2025 (at a glance)",
+   "publisher": "WFP",
+   "url": "https://docs.wfp.org/api/documents/WFP-0000173080/download/",
+   "date": "2025",
+   "accessed": "2026-11-06"
+  }
+ ]
+}

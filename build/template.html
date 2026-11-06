@@ -77,6 +77,62 @@ small { font-size: 13px; }
 .tablist { gap: 2px; }
 .tab:hover { background: rgba(255,255,255,.65); color: var(--ink); }
 .tab[aria-selected="true"] { background: var(--paper); color: var(--ink); font-weight: 700; border-color: var(--line); border-top-color: var(--red); padding-bottom: 14px; z-index: 2; }
+.tabs-area { display: flex; align-items: flex-end; gap: 4px; }
+.tabs-scroll { flex: 1 1 0; min-width: 0; cursor: grab; }
+.tabs-scroll.dragging { cursor: grabbing; user-select: none; }
+.tabs-scroll.dragging .tab { pointer-events: none; }
+.tabarrow { flex: none; width: 30px; height: 36px; margin-bottom: 2px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--blue); font-size: 18px; line-height: 1; cursor: pointer; }
+.tabarrow:hover { border-color: var(--blue); }
+.tabarrow[disabled] { opacity: .3; cursor: default; }
+.search { flex: none; position: relative; }
+.search input { width: 190px; padding: 7px 30px 7px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); font: inherit; font-size: 14px; color: var(--ink); }
+.search input:focus { border-color: var(--blue); outline: none; box-shadow: 0 0 0 2px var(--blue-tint); }
+.search .sx { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); border: 0; background: transparent; color: var(--muted); font-size: 16px; cursor: pointer; padding: 2px 6px; }
+.search .hits { position: absolute; left: 0; top: calc(100% + 4px); z-index: 20; min-width: 100%; max-height: 320px; overflow: auto; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.08); padding: 4px; }
+.search .hits[hidden] { display: none; }
+.search .hits button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 8px 10px; border: 0; background: transparent; text-align: left; font: inherit; font-size: 14px; color: var(--ink); border-radius: 6px; cursor: pointer; white-space: nowrap; }
+.search .hits button small { color: var(--muted); font-size: 12.5px; }
+.search .hits button:hover, .search .hits button.on { background: var(--blue-tint); color: var(--blue); }
+.search .hits .nohit { padding: 8px 10px; font-size: 13.5px; color: var(--muted); }
+.tab.dim { opacity: .35; }
+.caveat { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 12px; align-items: start; margin: 16px 0 0; padding: 12px 16px; border: 1px solid #EBD39A; border-left: 4px solid #D99A1B; background: var(--amber-bg); color: var(--amber-ink); font-size: 13.5px; line-height: 1.5; border-radius: 0 6px 6px 0; }
+.caveat .ck { font-weight: 700; white-space: nowrap; }
+.caveat ul { margin: 0; padding-left: 16px; } .caveat li + li { margin-top: 3px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chip2 { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 8px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font-size: 13.5px; color: var(--ink); }
+.chip2 img { width: 22px; height: 22px; object-fit: contain; border-radius: 4px; background: #fff; }
+.chip2 .ft { color: var(--muted); font-size: 12px; }
+.chip2.local { border-color: var(--teal); background: #EEF9FA; }
+.chips.compact { margin-top: 0; gap: 4px; } .chips.compact .chip2 { padding: 2px 8px; font-size: 12.5px; gap: 5px; } .chips.compact .ft { font-size: 11px; }
+.chip2.un { border-color: var(--blue); } .chip2.ingo { border-color: var(--line); }
+.fsp { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 12px; align-items: start; padding: 14px 0; border-top: 1px solid var(--line); }
+.fsp .lg { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 8px; background: #fff; font-weight: 700; color: var(--blue); font-size: 15px; overflow: hidden; }
+.fsp .lg img { width: 40px; height: 40px; object-fit: contain; }
+.fsp .fn { font-weight: 700; font-size: 15px; } .fsp .fn small { font-weight: 400; color: var(--muted); margin-left: 8px; }
+.fsp .fe { font-size: 13.5px; color: var(--ink2); margin-top: 4px; line-height: 1.5; }
+.fsp .fu { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.pulse { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 16px; }
+.pulse > div { background: var(--paper); padding: 18px 20px; min-width: 0; }
+.pulse .pv { margin-top: 8px; font-size: 22px; font-weight: 700; color: var(--blue); line-height: 1.15; }
+.pulse .pv.na { color: var(--muted); font-weight: 400; }
+.pulse .pn { margin-top: 6px; font-size: 13px; color: var(--ink2); line-height: 1.45; overflow-wrap: anywhere; }
+.fresh { display: inline-block; font-size: 12px; font-weight: 500; padding: 0 6px; border-radius: 2px; vertical-align: 1px; }
+.fresh.ok { color: #1F6B3A; background: #E6F4EA; } .fresh.stale { color: var(--amber-ink); background: var(--amber-bg); } .fresh.none { color: var(--muted); background: var(--track); }
+.glance { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.vbars .brow .bl { width: 150px; }
+.cot { display: inline-block; font-size: 12.5px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; color: var(--blue); background: var(--blue-tint); vertical-align: 2px; }
+.cot.unhcr { color: #0A5EA8; background: #E8F1FB; } .cot.both { color: var(--teal-ink); background: #E5F6F8; } .cot.none { color: var(--muted); background: var(--track); }
+.mtable { width: 100%; border-collapse: collapse; font-size: 14px; }
+.mtable th, .mtable td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-top: 1px solid var(--line); line-height: 1.5; }
+.mtable th { font-weight: 700; color: var(--blue); font-size: 13px; text-transform: uppercase; letter-spacing: .02em; border-top: 0; }
+.mtable td.k { font-weight: 700; width: 22%; min-width: 160px; }
+.methodfull { max-width: 1180px; } .methodfull > * + * { margin-top: 48px; }
+.methodfull h3 { font-size: 20px; font-weight: 700; color: var(--blue); margin-bottom: 14px; }
+.methodfull h4 { font-size: 15px; font-weight: 700; margin: 20px 0 6px; }
+.methodfull p, .methodfull li { font-size: 14.5px; line-height: 1.6; color: var(--ink2); max-width: 90ch; }
+.methodfull ul { padding-left: 18px; } .methodfull li + li { margin-top: 6px; }
+.methodfull code { font-family: Roboto, Arial, sans-serif; font-weight: 500; background: var(--ground); padding: 0 4px; }
+.toc { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; margin-top: -8px; }
 .tabs-fade { display: block; transition: opacity .15s; position: absolute; right: 0; top: 0; bottom: 0; width: 36px; pointer-events: none; background: linear-gradient(to right, rgba(247,247,245,0), var(--ground)); }
 
 /* ---------- the white sheet ---------- */
@@ -278,6 +334,8 @@ td.cn a:hover { color: var(--blue); }
 /* ---------- responsive ---------- */
 @media (max-width: 960px) {
   .hero, .grid3, .grid-2-1, .method, .grid2, .kvgrid { grid-template-columns: minmax(0, 1fr); }
+  .pulse { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .search input { width: 150px; }
   .statstrip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lists { grid-template-columns: minmax(0, 1fr); }
   .brand .tag { display: none; }
@@ -492,11 +550,18 @@ td.cn a:hover { color: var(--blue); }
       <button type="button" role="radio" id="mode-country" data-mode="country" aria-checked="true" tabindex="0">By country</button>
       <button type="button" role="radio" id="mode-theme" data-mode="theme" aria-checked="false" tabindex="-1">By theme</button>
     </div>
+    <div class="search" id="search">
+      <input type="search" id="searchBox" placeholder="Find a country…" aria-label="Find a country" autocomplete="off" spellcheck="false">
+      <button type="button" class="sx" id="searchClear" aria-label="Clear search" hidden>×</button>
+      <div class="hits" id="searchHits" role="listbox" aria-label="Matching countries" hidden></div>
+    </div>
     <div class="tabs-area">
+      <button type="button" class="tabarrow" id="tabPrev" aria-label="Scroll tabs left">‹</button>
       <div class="tabs-scroll" id="tabsScroll">
         <div class="tablist" role="tablist" aria-label="Cash Signal sections" id="tablist"></div>
       </div>
-      <div class="tabs-fade" id="tabsFade" aria-hidden="true"></div>
+      <button type="button" class="tabarrow" id="tabNext" aria-label="Scroll tabs right">›</button>
+      <div class="tabs-fade" id="tabsFade" aria-hidden="true" style="right:34px"></div>
     </div>
   </div>
 </div>
@@ -506,7 +571,7 @@ td.cn a:hover { color: var(--blue); }
 </main>
 
 <footer class="wrap colophon">
-  <span>CALP Network · Cash Signal · data collected 5 November 2026 · indicator set from CALP's cash advocacy data points</span>
+  <span>CALP Network · Cash Signal · data collected 5–6 November 2026 · indicator set from CALP's cash advocacy data points, extended with FTS cash tags, CWG pulse, FSPs and IASC localisation indicators</span>
   <span>AI-collected, unreviewed. Every figure links to its source on the country tab.</span>
 </footer>
 
@@ -607,7 +672,17 @@ var GROUPS = [
     { key: 'sy_feas', label: 'Cash feasibility study', kind: 'sys', fn: 'feas' },
     { key: 'sy_mkt', label: 'Market monitoring', kind: 'sys', fn: 'mkt' },
     { key: 'sy_cwg', label: 'Cash working group (CWG)', kind: 'sys', fn: 'cwg' },
-    { key: 'sy_27', label: '2027 plan status', kind: 'sys', fn: 'p27' } ] }
+    { key: 'sy_27', label: '2027 plan status', kind: 'sys', fn: 'p27' } ] },
+  { id: 'vol', title: 'Cash volumes', short: 'Cash volumes', rows: [
+    P('vl_mpc', 'MPC funding (FTS)', 'cash_volumes.mpc_funding_fts_usd', { kind: 'usd' }),
+    P('vl_sect', 'Sectoral CVA, best available', 'cash_volumes.sectoral_cva_best_usd', { kind: 'usd' }),
+    P('vl_cva', 'Total CVA funding (FTS)', 'fts_cva.cva_usd', { kind: 'usd' }),
+    P('vl_deliv', 'CVA delivered (in-country dashboard)', 'cash_volumes.cva_delivered_usd', { kind: 'usd' }) ] },
+  { id: 'local', title: 'Local leadership (IASC MPC scaling plan, objective 4)', short: 'Local leadership', rows: [
+    P('lo_chair', 'Local or national co-chair of the CWG (4.1)', 'localisation.local_cochair', { kind: 'yesno' }),
+    P('lo_cva', 'CVA funding to local/national actors (4.2 proxy)', 'localisation.cva_to_local_pct'),
+    P('lo_all', 'All funding to local/national actors', 'localisation.all_funding_to_local_pct'),
+    P('lo_cbpf', 'Pooled-fund cash grants to local/national actors', 'localisation.cbpf_cva_to_local_pct') ] }
 ];
 var ALL_SPECS = [], spec = {};
 GROUPS.forEach(function (g) { g.rows.forEach(function (r) { r.group = g; ALL_SPECS.push(r); spec[r.key] = r; }); });
@@ -621,7 +696,13 @@ function model(c, sp) {
   if (sp.kind === 'pct') {
     m.main = fmtPct(d.value); m.pct = d.value; m.over = d.value > 100;
     if (d.usd !== null && d.usd !== undefined) m.sub = fmtUsdM(d.usd);
-  } else if (sp.kind === 'usd') { m.main = fmtUsdM(d.value); }
+  } else if (sp.kind === 'usd') {
+    m.main = fmtUsdM(d.value); m.usd = d.value;
+    m.sub = [d.period ? d.period : '', d.source ? 'source: ' + d.source : (d.source_type ? d.source_type : '')].filter(Boolean).join(' · ');
+  } else if (sp.kind === 'yesno') {
+    m.main = d.value === 'yes' ? 'Yes' : d.value === 'no' ? 'No' : 'Unknown';
+    m.state = d.value === 'yes' ? 'g' : d.value === 'no' ? 'r' : 'n';
+  }
   else if (sp.kind === 'cost') { m.main = fmtNum(d.value); m.unit = d.unit || ''; }
   return m;
 }
@@ -669,11 +750,29 @@ function sysModel(c, fn) {
 }
 function countAvail(c) { return ALL_SPECS.filter(function (s) { return model(c, s).avail !== 'no'; }).length; }
 function groupAvail(c, g) { return g.rows.filter(function (s) { return model(c, s).avail !== 'no'; }).length; }
+var Q_GREEN = Math.ceil(TOTAL_SPECS * 0.5), Q_AMBER = Math.ceil(TOTAL_SPECS * 0.3);
 function quality(c) {
   var n = countAvail(c);
-  return { n: n, key: n >= 12 ? 'g' : n >= 7 ? 'a' : 'r', word: n >= 12 ? 'green' : n >= 7 ? 'amber' : 'red' };
+  return { n: n, key: n >= Q_GREEN ? 'g' : n >= Q_AMBER ? 'a' : 'r', word: n >= Q_GREEN ? 'green' : n >= Q_AMBER ? 'amber' : 'red' };
 }
-var QUALITY_RULE = 'Source quality rule: green when 12 or more of ' + TOTAL_SPECS + ' indicators were found, amber for 7 to 11, red for 6 or fewer. Partial figures count as found.';
+var QUALITY_RULE = 'Source quality rule: green when at least half (' + Q_GREEN + ') of ' + TOTAL_SPECS + ' indicators were found, amber for ' + Q_AMBER + ' to ' + (Q_GREEN - 1) + ', red below that. Partial figures count as found.';
+/* ---------- caveat callouts: one per visual that rests on uneven data ---------- */
+function caveat(items, label) {
+  if (!items || !items.length) return '';
+  return '<div class="caveat" role="note"><span class="ck">' + esc(label || 'Data quality') + '</span><ul>' + items.map(function (t) { return '<li>' + t + '</li>'; }).join('') + '</ul></div>';
+}
+var CAV = {
+  fts_sect: 'Sectoral CVA on FTS depends on a modality tag (“Cash transfer programming”) that donors and agencies apply unevenly. Treat it as a floor, not a measure.',
+  fts_first: 'FTS records first-level recipients only. Money that reaches local actors through UN agencies, INGOs or consortia is invisible here, so local shares are floors.',
+  fts_fund: 'FTS figures are funding received, not cash transferred to people. As-of dates are the latest flow seen.',
+  vol_mix: 'Funding (FTS) and delivered value (in-country dashboards) are different quantities with different periods and coverage. Do not add them.',
+  cwg_dates: 'CWG page dates come from the latest item visible on a public page, not from the group’s actual activity. A quiet page can hide an active group, and the reverse.',
+  chairs: 'Chair and co-chair organisations are read from public pages and minutes, which are often stale. Unknown means nothing was published, not that no local actor co-chairs.',
+  fsp: 'Providers are those named in public reports and press releases. The list is not exhaustive and says nothing about volumes or contract status.',
+  pref: 'Preference surveys differ in year, geography, sample and question wording. Compare across countries only with the note in view.',
+  over: 'MPC funding above 100% of its requirement is reported as found. It can reflect FTS tagging, multi-year money or carry-over.',
+  cbpf_proxy: 'Pooled-fund shares marked partial are a proxy from FTS internal flows inside the 2026 plan, not from the fund’s own allocation reports.'
+};
 
 /* ---------- source links ---------- */
 function srcOf(c, sid) { for (var i = 0; i < c.sources.length; i++) if (c.sources[i].id === sid) return c.sources[i]; return null; }
@@ -742,9 +841,57 @@ function overviewHTML() {
   /* preference vs provision */
   h += '<div>' + secHead('Preference and provision', 'People who say they want cash, set against how much of the plan asks for it.') + prefChartHTML() + '</div>';
 
+  /* cash funding seen on FTS */
+  h += '<div>' + secHead('Cash funding seen on FTS', 'Multi-purpose cash and tagged sectoral cash in each plan’s funding, as the Financial Tracking Service can see it.') + volAcrossHTML() + '</div>';
+
+  /* who moves the money */
+  h += '<div>' + secHead('Who moves the money', 'Financial service providers named in public sources as delivering humanitarian cash.') + fspAcrossHTML() + '</div>';
+
   /* what the sector does not know */
   h += '<div>' + secHead('What the sector does not know', 'The five indicators found in the fewest responses.') + availPanelHTML() + '</div>';
   return h;
+}
+function cotBadge(c) {
+  var l = (c.coordination || {}).label || 'Unknown';
+  var cls = l === 'UNHCR' ? 'unhcr' : l === 'OCHA + UNHCR' ? 'both' : (l === 'Neither' || l === 'Unknown') ? 'none' : '';
+  return '<span class="cot ' + cls + '" title="' + esc((c.coordination || {}).note || '') + '">' + esc(l === 'Unknown' ? 'Coordination: unknown' : l) + '</span>';
+}
+function volAcrossHTML() {
+  var rows = countries.map(function (c) {
+    var f = c.fts_cva || {}, mpc = has(f.mpc_usd) ? f.mpc_usd.value : 0, sect = has(f.sectoral_cva_usd) ? f.sectoral_cva_usd.value : 0, tot = has(f.total_funding_usd) ? f.total_funding_usd.value : 0;
+    return { c: c, mpc: mpc, sect: sect, cva: mpc + sect, tot: tot, pct: tot ? (mpc + sect) / tot * 100 : 0, f: f };
+  }).sort(function (a, b) { return b.cva - a.cva; });
+  var mx = Math.max.apply(null, rows.map(function (r) { return r.cva; })) || 1;
+  var h = '<section class="panel vbars"><div class="panel-h"><h3>CVA funding by plan, US$</h3><p class="sub">Stacked: multi-purpose cash cluster (teal) and sectoral cash tagged “Cash transfer programming” outside it (blue). The percentage is the pair as a share of all plan funding. Open the country tab for the cluster split.</p></div>';
+  h += '<div class="legend"><span><i class="sw teal"></i>MPC cluster (single view)</span><span><i class="sw blue"></i>Sectoral CVA (CTP tag)</span></div>';
+  h += '<div role="img" aria-label="Stacked bars of MPC and sectoral CVA funding for ' + rows.length + ' plans. Values are printed.">';
+  rows.forEach(function (r) {
+    var w1 = r.mpc / mx * 100, w2 = r.sect / mx * 100;
+    h += '<div class="brow"><div class="bl">' + cLink(r.c) + '</div><div class="bt" title="' + esc((r.f.sectoral_cva_usd || {}).note || '') + '">' +
+      (r.mpc ? '<span class="fill teal" style="width:' + w1.toFixed(2) + '%;border-radius:0"></span>' : '') +
+      (r.sect ? '<span class="fill" style="left:' + w1.toFixed(2) + '%;width:' + w2.toFixed(2) + '%"></span>' : '') + '</div>' +
+      '<div class="bv"><b>' + fmtUsdM(r.cva) + '</b><small>' + fmtPct(r.pct) + ' of ' + fmtUsdM(r.tot) + '</small>' + (r.mpc ? '' : ' <span class="tagp partial">no MPC cluster</span>') + '</div></div>';
+  });
+  h += '</div>' + caveat([CAV.fts_sect, CAV.fts_fund]);
+  return h + '</section>';
+}
+function fspAcrossHTML() {
+  var h = '<section class="panel"><div class="panel-h"><h3>Financial service providers by country</h3><p class="sub">Banks, mobile money operators, money transfer operators, post offices and hawala named as delivery channels. Each chip opens the country tab, where the evidence and sources are listed.</p></div>';
+  var any = false;
+  tabCountries.forEach(function (c) {
+    var f = c.fsps || [];
+    h += '<div class="brow" style="align-items:flex-start"><div class="bl" style="padding-top:6px">' + cLink(c) + '</div><div style="flex:1;min-width:0">' +
+      (f.length ? '<div class="chips" style="margin-top:0">' + f.map(function (x) { return '<a class="chip2" href="#' + esc(c.slug) + '" title="' + esc(x.evidence) + '">' + logoImg(x, 18) + esc(x.name) + '<span class="ft">' + esc(x.type) + '</span></a>'; }).join('') + '</div>'
+               : '<span class="muted" style="font-size:13.5px;display:inline-block;padding-top:6px">None found in public sources.</span>') + '</div></div>';
+    if (f.length) any = true;
+  });
+  if (!any) h += '<p class="muted">No providers recorded yet.</p>';
+  return h + caveat([CAV.fsp, 'Logos are the trademarks of their owners and are loaded from the provider’s own site or Wikimedia Commons; they are not stored in this repository.']) + '</section>';
+}
+function logoImg(x, size) {
+  var u = safeUrl(x.logo_url);
+  if (!u) return '';
+  return '<img src="' + esc(u) + '" alt="" width="' + size + '" height="' + size + '" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">';
 }
 function prefChartHTML() {
   var both = [], missing = [];
@@ -833,6 +980,9 @@ function planBody(pp) {
   h += '</div>';
   if (!rows.length) h += '<p class="muted">No country has this figure.</p>';
   h += noneLine('No figure', none);
+  if (pp.id === 'fund' && (mk === 'fd_sect' || mk === 'fd_vouch')) h += caveat([CAV.fts_sect]);
+  if (pp.id === 'fund' && mk === 'fd_mpcreq' && anyOver) h += caveat([CAV.over, CAV.fts_fund]);
+  if (pp.id === 'cbpf') h += caveat([CAV.cbpf_proxy]);
   return h;
 }
 function planPanelHTML(pp) {
@@ -916,7 +1066,9 @@ var GROUP_SUB = {
   req: 'How much of the plan is budgeted as cash or vouchers. This is intent, before any money arrives.',
   fund: 'How much of the money received reached cash and vouchers. Set against requirements, it shows whether the intent was funded.',
   cbpf: 'How much of the OCHA country-based pooled fund went to cash. These funds are flexible money that donors can steer.',
-  sys: 'The structures that let cash scale: a feasibility study, market monitoring, a working group and a place in next year’s plan. A gap here slows every programme.'
+  sys: 'The structures that let cash scale: a feasibility study, market monitoring, a working group and a place in next year’s plan. A gap here slows every programme.',
+  vol: 'How much cash money is visible: funding on FTS (multi-purpose and tagged sectoral) and, where a CWG publishes one, the value actually delivered. The sectoral line takes the higher of FTS and the in-country figure and names the source.',
+  local: 'Whether national and local actors lead and receive. Indicator 4.1 (local co-chair) is read from the CWG page; indicator 4.2 (direct CVA funding to local partners) is approximated from FTS first-level recipients, which understates it.'
 };
 var CELLS = {
   pref_cash: ['Prefer cash', 'of surveyed people'], pref_vouchers: ['Prefer vouchers', 'of surveyed people'],
@@ -927,7 +1079,11 @@ var CELLS = {
   fd_mpc: ['MPC', 'of funding received'], fd_mpcreq: ['MPC funded', 'of the MPC requirement'],
   fd_sect: ['Sectoral cash', 'of funding received'], fd_vouch: ['Vouchers', 'of funding received'],
   pf_alloc: ['Allocations', 'to the pooled fund'], pf_mpc: ['MPC', 'of allocations'],
-  pf_sect: ['Sectoral cash', 'of allocations'], pf_vouch: ['Vouchers', 'of allocations']
+  pf_sect: ['Sectoral cash', 'of allocations'], pf_vouch: ['Vouchers', 'of allocations'],
+  vl_mpc: ['MPC funding', 'FTS, single-cluster view'], vl_sect: ['Sectoral CVA', 'higher of FTS tag and in-country figure'],
+  vl_cva: ['Total CVA funding', 'FTS: MPC cluster or CTP tag'], vl_deliv: ['CVA delivered', 'in-country dashboard or snapshot'],
+  lo_chair: ['Local co-chair (4.1)', 'national or local actor chairs or co-chairs the CWG'], lo_cva: ['CVA to local actors (4.2)', 'of FTS cash funding, first-level recipients'],
+  lo_all: ['All funding to local actors', 'of all plan funding, first-level recipients'], lo_cbpf: ['Pooled-fund cash to local actors', 'of the pooled fund’s cash grants']
 };
 function srcShort(c, sids) { return srcLinks(c, (sids || []).slice(0, 2)); }
 function cellHTML(c, sp) {
@@ -943,6 +1099,13 @@ function cellHTML(c, sp) {
     return h + '</div>';
   }
   var meta = CELLS[sp.key] || [sp.label, ''];
+  if (sp.kind === 'yesno') {
+    var dt = na ? 'n' : m.state;
+    h = '<div class="scell"><div class="label">' + esc(meta[0]) + '</div><div class="sval sm' + (dt === 'n' ? ' na' : '') + '"><span class="dot ' + dt + '" aria-hidden="true"></span><span>' + esc(na ? 'Unknown' : m.main) + '</span></div><div class="unit">' + esc(meta[1]) + '</div>';
+    var slx = srcShort(c, m.sids); if (slx) h += '<div class="src">' + slx + '</div>';
+    h += '<div class="cnote">' + esc(m.note || 'No chair information found.') + '</div>';
+    return h + '</div>';
+  }
   var mpc = /_mpc/.test(sp.key);
   var unit = na ? meta[1] : (m.unit ? m.unit : meta[1]);
   if (!na && m.sub) unit = (unit ? unit + ' · ' : '') + m.sub;
@@ -967,7 +1130,17 @@ function groupSection(c, g) {
   h += '<div class="cells">' + cells + '</div>';
   if (g.id === 'modality' && c.modality_preference.survey_note) h += '<p class="gline"><b>Survey:</b> ' + esc(c.modality_preference.survey_note) + '</p>';
   if (g.id === 'cost' && g.rows.every(function (sp) { return model(c, sp).avail === 'no'; })) h += '<p class="gline">No cost-efficiency figure was found for this response.</p>';
+  h += groupCaveats(c, g);
   return h + '</section>';
+}
+function groupCaveats(c, g) {
+  var items = [];
+  if (g.id === 'modality' && g.rows.some(function (sp) { return model(c, sp).avail !== 'no'; })) items.push(CAV.pref);
+  if (g.id === 'fund') { items.push(CAV.fts_fund); if (model(c, spec.fd_mpcreq).over) items.push(CAV.over); if (model(c, spec.fd_sect).avail === 'partial') items.push(CAV.fts_sect); }
+  if (g.id === 'cbpf' && g.rows.some(function (sp) { return model(c, sp).avail === 'partial'; })) items.push(CAV.cbpf_proxy);
+  if (g.id === 'vol') { items.push(CAV.vol_mix, CAV.fts_sect); var bc = (c.fts_cva || {}).sectoral_cva_usd; if (bc && bc.by_cluster && Object.keys(bc.by_cluster).length) items.push('FTS sectoral CVA by cluster: ' + Object.keys(bc.by_cluster).slice(0, 5).map(function (k) { return esc(k) + ' ' + fmtUsdM(bc.by_cluster[k]); }).join(', ') + (Object.keys(bc.by_cluster).length > 5 ? ', …' : '') + '.'); }
+  if (g.id === 'local') items.push(CAV.fts_first, CAV.chairs);
+  return caveat(items);
 }
 function glanceCell(label, value, note, na) {
   return '<div><div class="label">' + esc(label) + '</div><div class="gv' + (na ? ' na' : '') + '">' + esc(value) + '</div><div class="gn">' + note + '</div></div>';
@@ -977,17 +1150,22 @@ function countryTabHTML(c, idx) {
   var planLink = safeUrl(pl.url) ? '<a href="' + esc(pl.url) + '" target="_blank" rel="noopener">' + esc(pl.name) + '</a>' : esc(pl.name || 'No plan');
   var rev = isReviewed(c);
   var h = '<div class="ctab">';
-  h += '<header class="chead"><div><h1>' + esc(c.name) + '</h1><div class="meta"><span>' + esc(c.calp_region) + '</span><span>' + planLink + '</span><span>' + esc(pl.type) + ' ' + esc(pl.year) + ', ' + esc(pl.status) + '</span></div></div>' +
+  h += '<header class="chead"><div><h1>' + esc(c.name) + '</h1><div class="meta"><span>' + esc(c.calp_region) + '</span><span>' + planLink + '</span><span>' + esc(pl.type) + ' ' + esc(pl.year) + ', ' + esc(pl.status) + '</span><span>' + cotBadge(c) + '</span></div></div>' +
     '<div class="cright"><span class="quality" tabindex="0" title="' + esc(QUALITY_RULE) + '"><span class="dot ' + q.key + '" aria-hidden="true"></span>Source quality: ' + q.word + ' · ' + q.n + ' of ' + TOTAL_SPECS + ' found</span>' +
     '<span>' + (rev ? 'Reviewed by ' + esc(c.rep_notes.reviewed_by) + (c.rep_notes.reviewed_date ? ', ' + esc(fmtDate(c.rep_notes.reviewed_date)) : '') : 'AI draft, unreviewed ' + esc(fmtDate(c.last_researched || D.generated))) + '</span></div></header>';
 
   /* at a glance */
   var rq = pl.requirements_usd, fp = pl.funded_pct, mr = c.hnrp_requirements.mpc_pct, mf = c.overall_funding.mpc_funded_pct_of_mpc_req, pf = c.modality_preference.cash_pct;
+  var fc = c.fts_cva || {}, fs = fc.sectoral_cva_usd, fv = fc.cva_usd, dv = (c.cash_volumes || {}).cva_delivered_usd;
   h += '<section aria-label="At a glance">' + secHead('At a glance') + '<div class="glance">' +
     glanceCell('Plan requirements', has(rq) ? fmtUsdM(rq.value) : 'n/a', has(rq) ? (has(fp) ? fmtPct(fp.value) + ' funded' + (fp.as_of ? ', as of ' + esc(fmtDate(fp.as_of)) : '') : 'Funded share not found') : 'Plan requirements not found', !has(rq)) +
     glanceCell('MPC % of requirements', has(mr) ? fmtPct(mr.value) : 'n/a', has(mr) ? 'as of ' + esc(fmtDate(mr.as_of)) : 'No MPC line found in the plan', !has(mr)) +
     glanceCell('MPC funded vs MPC requirement', has(mf) ? fmtPct(mf.value) : 'n/a', has(mf) ? 'as of ' + esc(fmtDate(mf.as_of)) + (mf.value > 100 ? ' <span class="tagp over">over 100%</span>' : '') : 'Not found', !has(mf)) +
     glanceCell('Preference for cash', has(pf) ? fmtPct(pf.value) : 'n/a', has(pf) ? esc(fmtDate(pf.as_of)) + (pf.available === 'partial' ? ' <span class="tagp partial">partial</span>' : '') : 'No quantified preference found', !has(pf)) +
+    glanceCell('Sectoral CVA funded (FTS)', has(fs) ? fmtUsdM(fs.value) : 'n/a', has(fs) ? (has(fc.sectoral_cva_pct_of_total) ? fmtPct(fc.sectoral_cva_pct_of_total.value) + ' of plan funding, ' : '') + 'CTP-tagged flows outside MPC <span class="tagp partial">floor</span>' : 'Not seen on FTS', !has(fs)) +
+    glanceCell('Total CVA funded (FTS)', has(fv) ? fmtUsdM(fv.value) : 'n/a', has(fv) ? (has(fc.cva_pct_of_total) ? fmtPct(fc.cva_pct_of_total.value) + ' of plan funding, ' : '') + 'MPC cluster plus CTP tag, as of ' + esc(fmtDate(fv.as_of)) : 'Not seen on FTS', !has(fv)) +
+    glanceCell('CVA delivered (in-country)', has(dv) ? fmtUsdM(dv.value) : 'n/a', has(dv) ? esc(dv.period || fmtDate(dv.as_of)) + (dv.source_type ? ', ' + esc(dv.source_type) : '') + (dv.available === 'partial' ? ' <span class="tagp partial">partial</span>' : '') : 'No delivered figure published', !has(dv)) +
+    glanceCell('Coordination', (c.coordination || {}).label === 'Unknown' ? 'n/a' : (c.coordination || {}).label || 'n/a', esc((c.coordination || {}).note || 'Not researched'), !(c.coordination && c.coordination.label && c.coordination.label !== 'Unknown')) +
     '</div></section>';
 
   /* the read */
@@ -997,7 +1175,10 @@ function countryTabHTML(c, idx) {
     '<div class="rlists">' + list('Barriers', s.barriers) + list('Opportunities', s.opportunities) + list('Data gaps', s.data_gaps) + '</div></div></section>';
 
   /* indicator groups */
-  GROUPS.forEach(function (g) { h += groupSection(c, g); });
+  GROUPS.forEach(function (g) { h += groupSection(c, g); if (g.id === 'sys') h += cwgPulseSection(c); });
+
+  /* financial service providers */
+  h += fspSection(c);
 
   /* rep notes */
   var rn = c.rep_notes || {};
@@ -1021,6 +1202,81 @@ function countryTabHTML(c, idx) {
   return h + '</div>';
 }
 
+/* ================= CWG pulse (trial) and FSPs (v6) ================= */
+function freshTag(fresh, date, none) {
+  if (!date) return '<span class="fresh none">' + esc(none || 'no date') + '</span>';
+  return '<span class="fresh ' + (fresh ? 'ok' : 'stale') + '">' + (fresh ? 'within 3 months' : 'older than 3 months') + '</span>';
+}
+function pulseCell(label, value, note, na) {
+  return '<div><div class="label">' + esc(label) + '</div><div class="pv' + (na ? ' na' : '') + '">' + value + '</div><div class="pn">' + note + '</div></div>';
+}
+function chairChips(chairs, compact) {
+  if (!chairs || !chairs.length) return '<span class="muted">No chair organisations published.</span>';
+  return '<div class="chips' + (compact ? ' compact' : '') + '">' + chairs.map(function (x) {
+    var t = x.actor_type || 'Other', cls = (t === 'NNGO' || t === 'Government' || t === 'RCRC') ? 'local' : t === 'UN' ? 'un' : 'ingo';
+    var full = x.organisation + ' — ' + t + (x.role ? ', ' + x.role : '');
+    if (compact) return '<span class="chip2 ' + cls + '" title="' + esc(full) + '">' + esc(clip(x.organisation, 26)) + '<span class="ft">' + esc(t) + '</span></span>';
+    return '<span class="chip2 ' + cls + '" title="' + esc(full) + '">' + esc(x.organisation) + '<span class="ft">' + esc(t + (x.role ? ' · ' + x.role : '')) + '</span></span>'; }).join('') + '</div>';
+}
+function cwgPulseSection(c) {
+  var w = c.cwg_reliefweb || {};
+  var pu = safeUrl(w.page_url), du = safeUrl(w.dashboard_url);
+  var h = '<section aria-label="Cash working group pulse">' + secHead('CWG pulse (trial)', 'What the working group’s public page says about its activity: when it was last updated, whether it keeps a dashboard current, and who chairs it. Read with the caveat below.', pu ? '<a href="' + esc(pu) + '" target="_blank" rel="noopener">Open the CWG page ↗</a>' : '');
+  if (!pu && !w.checked) return h + '<p class="gline">Not yet checked for this country.</p></section>';
+  h += '<div class="pulse">' +
+    pulseCell('Public page', pu ? '<a href="' + esc(pu) + '" target="_blank" rel="noopener">' + esc(clip(w.page_title || w.page_url.replace(/^https?:\/\//, ''), 34)) + '</a>' : 'None found', pu ? esc(w.page_url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]) : 'No CWG page located on ReliefWeb Response or an equivalent hub.', !pu) +
+    pulseCell('Page last updated', w.page_last_updated ? esc(fmtDate(w.page_last_updated)) : 'n/a', freshTag(w.page_fresh_3m, w.page_last_updated) + (w.last_update_basis ? ' ' + esc(w.last_update_basis) : ''), !w.page_last_updated) +
+    pulseCell('In-country dashboard', du ? '<a href="' + esc(du) + '" target="_blank" rel="noopener">' + esc(clip(w.dashboard_name || 'Dashboard', 30)) + '</a>' : (w.dashboard_name ? esc(clip(w.dashboard_name, 30)) : 'None found'), (w.dashboard_last_updated ? 'updated ' + esc(fmtDate(w.dashboard_last_updated)) + ' ' : '') + freshTag(w.dashboard_fresh_3m, w.dashboard_last_updated, du || w.dashboard_name ? 'no date shown' : 'no dashboard') + (w.dashboard_period ? ' · covers ' + esc(w.dashboard_period) : ''), !(du || w.dashboard_name)) +
+    pulseCell('Latest minutes', w.meeting_minutes_latest ? esc(fmtDate(w.meeting_minutes_latest)) : 'n/a', w.meeting_minutes_latest ? 'latest meeting minutes found online' : 'No minutes published on the page', !w.meeting_minutes_latest) +
+    '</div>';
+  h += '<p class="gline" style="margin-top:16px"><b>Chairs and co-chairs:</b> ' + (w.contacts_basis ? '<span class="muted">(' + esc(w.contacts_basis) + ')</span>' : '') + '</p>' + chairChips(w.co_chairs);
+  h += '<p class="gline"><b>Local or national co-chair (IASC 4.1):</b> ' + esc(cap(w.local_cochair || 'unknown')) + (w.note ? ' · ' + esc(w.note) : '') + '</p>';
+  var sl = srcLinks(c, w.source_ids); if (sl) h += '<p class="gline"><b>Sources:</b> ' + sl + '</p>';
+  h += caveat([CAV.cwg_dates, CAV.chairs]);
+  return h + '</section>';
+}
+function fspSection(c) {
+  var f = c.fsps || [];
+  var h = '<section aria-label="Financial service providers">' + secHead('Financial service providers', 'Who is named in public sources as moving the money: banks, mobile money, money transfer operators, post offices and hawala networks.');
+  if (!f.length) return h + '<p class="gline">No provider named in the public sources searched (CWG documents, agency pages, press releases, HNRP).</p>' + caveat([CAV.fsp]) + '</section>';
+  h += '<div>' + f.map(function (x) {
+    var wu = safeUrl(x.website);
+    return '<div class="fsp"><div class="lg">' + (safeUrl(x.logo_url) ? logoImg(x, 40) + '<span style="display:none">' + esc(x.name.charAt(0)) + '</span>' : esc(x.name.charAt(0))) + '</div><div>' +
+      '<div class="fn">' + (wu ? '<a href="' + esc(wu) + '" target="_blank" rel="noopener">' + esc(x.name) + '</a>' : esc(x.name)) + '<small>' + esc(x.type) + '</small></div>' +
+      (x.evidence ? '<div class="fe">' + esc(x.evidence) + '</div>' : '') +
+      '<div class="fu">' + (x.used_by && x.used_by.length ? 'Used by: ' + esc(x.used_by.join(', ')) : 'User not named') + (x.source_ids && x.source_ids.length ? ' · ' + srcShort(c, x.source_ids) : '') + '</div></div></div>';
+  }).join('') + '</div>';
+  h += caveat([CAV.fsp, 'Logos are trademarks of their owners, shown for identification and loaded from the provider’s own site or Wikimedia Commons.']);
+  return h + '</section>';
+}
+function cwgPulseAcrossHTML() {
+  var h = '<section class="panel"><div class="legend"><span><span class="fresh ok">within 3 months</span></span><span><span class="fresh stale">older</span></span><span><span class="fresh none">no date</span></span><span><span class="chip2 local" style="padding:2px 8px;font-size:12px">local chip</span> national or local actor in a chair role</span></div>';
+  h += '<div class="tbl-wrap"><table class="sys"><thead><tr><th scope="col">Country</th><th scope="col">CWG page</th><th scope="col">Last updated</th><th scope="col">Dashboard</th><th scope="col">Minutes</th><th scope="col">Chairs</th><th scope="col">Local co-chair</th></tr></thead><tbody>';
+  countries.forEach(function (c) {
+    var w = c.cwg_reliefweb || {}, pu = safeUrl(w.page_url), du = safeUrl(w.dashboard_url);
+    h += '<tr><td class="cn"><a href="#' + esc(c.slug) + '">' + esc(c.name) + '</a></td>' +
+      '<td>' + (pu ? '<a href="' + esc(pu) + '" target="_blank" rel="noopener">' + esc(w.page_url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]) + '</a>' : '<span class="muted">none found</span>') + '</td>' +
+      '<td>' + (w.page_last_updated ? esc(fmtDate(w.page_last_updated)) + '<br>' : '') + freshTag(w.page_fresh_3m, w.page_last_updated) + '</td>' +
+      '<td>' + (du ? '<a href="' + esc(du) + '" target="_blank" rel="noopener">' + esc(clip(w.dashboard_name || 'dashboard', 26)) + '</a><br>' : (w.dashboard_name ? esc(clip(w.dashboard_name, 26)) + '<br>' : '')) + freshTag(w.dashboard_fresh_3m, w.dashboard_last_updated, du || w.dashboard_name ? 'no date' : 'none') + '</td>' +
+      '<td>' + (w.meeting_minutes_latest ? esc(fmtDate(w.meeting_minutes_latest)) : '<span class="muted">none</span>') + '</td>' +
+      '<td style="min-width:260px">' + ((w.co_chairs || []).length ? chairChips(w.co_chairs, true) : '<span class="muted">not published</span>') + '</td>' +
+      '<td>' + esc(cap(w.local_cochair || 'unknown')) + '</td></tr>';
+  });
+  h += '</tbody></table></div>';
+  var withPage = countries.filter(function (c) { return safeUrl((c.cwg_reliefweb || {}).page_url); }).length;
+  var fresh = countries.filter(function (c) { return (c.cwg_reliefweb || {}).page_fresh_3m; }).length;
+  var dfresh = countries.filter(function (c) { return (c.cwg_reliefweb || {}).dashboard_fresh_3m; }).length;
+  var localc = countries.filter(function (c) { return (c.cwg_reliefweb || {}).local_cochair === 'yes'; }).length;
+  var known = countries.filter(function (c) { return (c.cwg_reliefweb || {}).local_cochair !== 'unknown' && (c.cwg_reliefweb || {}).local_cochair; }).length;
+  h += '<div class="pulse" style="margin-top:24px">' +
+    pulseCell('Public CWG page found', withPage + ' of ' + N, 'on ReliefWeb Response or an equivalent hub') +
+    pulseCell('Page updated within 3 months', fresh + ' of ' + withPage, 'by the latest item visible on the page') +
+    pulseCell('Dashboard current within 3 months', dfresh + ' of ' + N, 'in-country CVA dashboard with a visible update date') +
+    pulseCell('Local or national co-chair', localc + ' of ' + known + ' known', 'IASC target 4.1: 75% of CWGs by end-2027; ' + (N - known) + ' unknown') + '</div>';
+  h += caveat([CAV.cwg_dates, CAV.chairs]);
+  return h + '</section>';
+}
+
 /* ================= THEME TABS (v4) ================= */
 var THEMES = [
   { gid: 'modality', id: 'theme-preference', label: 'Modality preference' },
@@ -1028,10 +1284,13 @@ var THEMES = [
   { gid: 'req', id: 'theme-requirements', label: 'Plan requirements' },
   { gid: 'fund', id: 'theme-funding', label: 'Funding' },
   { gid: 'cbpf', id: 'theme-pooled', label: 'Pooled funds' },
-  { gid: 'sys', id: 'theme-systems', label: 'Systems' }
+  { gid: 'sys', id: 'theme-systems', label: 'Systems' },
+  { gid: 'vol', id: 'theme-volumes', label: 'Cash volumes' },
+  { gid: 'local', id: 'theme-local', label: 'Local leadership' },
+  { gid: 'sys', id: 'theme-cwg', label: 'CWG pulse', custom: true, title: 'CWG pulse (trial)', sub: 'Activity signals read from each cash working group’s public page: last update, dashboard currency, minutes and who chairs.' }
 ];
 var THEME_OF = {};
-THEMES.forEach(function (t) { t.g = GROUPS.filter(function (g) { return g.id === t.gid; })[0]; THEME_OF[t.gid] = t; });
+THEMES.forEach(function (t) { t.g = GROUPS.filter(function (g) { return g.id === t.gid; })[0]; if (!t.custom) THEME_OF[t.gid] = t; });
 function themeLinksHTML() {
   return '<div class="themelinks">Browse by theme: ' + THEMES.map(function (t) { return '<a href="#' + t.id + '">' + esc(t.label) + '</a>'; }).join(' <i aria-hidden="true">·</i> ') + '</div>';
 }
@@ -1054,6 +1313,8 @@ function cellCompactHTML(c, sp) {
     var tags = (m.avail === 'partial' ? '<span class="tagp partial">partial</span>' : '') + (m.over ? '<span class="tagp over">over 100%</span>' : '');
     h = '<div class="scell cmp"><div class="label">' + esc(meta[0]) + '</div><div class="sval' + (na ? ' na' : mpc ? ' teal' : '') + '"><span>' + esc(m.main) + '</span>' + (na ? '' : tags) + '</div>';
     if (!na && m.unit) h += '<div class="unit">' + esc(m.unit) + '</div>';
+    if (!na && m.sub && sp.kind === 'usd') h += '<div class="unit">' + esc(m.sub) + '</div>';
+    if (sp.kind === 'yesno') h = h.replace('<span>' + esc(m.main) + '</span>', '<span class="dot ' + (na ? 'n' : m.state) + '" aria-hidden="true"></span><span>' + esc(na ? 'Unknown' : m.main) + '</span>');
     h += '<div class="asof">' + (m.asof ? 'as of ' + esc(fmtDate(m.asof)) : (na ? 'not found' : '')) + '</div>';
   }
   var sl = srcPub(c, m.sids); if (sl) h += '<div class="src">' + sl + '</div>';
@@ -1073,7 +1334,27 @@ function themeRowHTML(c, g) {
   if (note) h += '<p class="cr-note">' + esc(note) + '</p>';
   return h + '</div></div>';
 }
+function localAcrossHTML() {
+  var pp = { id: 'local', title: 'Local leadership', sub: 'Money reaching national and local actors, as FTS can see it (first-level recipients only).', metrics: [
+    { k: 'lo_cva', label: 'CVA funding to local actors %', d: 'IASC indicator 4.2 proxy: share of FTS cash funding (MPC cluster or CTP tag) whose first-level recipient is a local or national actor.' },
+    { k: 'lo_all', label: 'All funding to local actors %', d: 'Share of all plan funding whose first-level recipient is a local or national actor.' },
+    { k: 'lo_cbpf', label: 'Pooled-fund cash to local actors %', d: 'Share of the country-based pooled fund’s cash grants inside the plan that went to local or national actors (a second-level view).' } ] };
+  if (!PLAN_PANELS.some(function (p) { return p.id === 'local'; })) { PLAN_PANELS.push(pp); planSel.local = 'lo_cva'; }
+  var chairs = countries.map(function (c) { return { c: c, v: (c.localisation || {}).local_cochair || {} }; });
+  var yes = chairs.filter(function (x) { return x.v.value === 'yes'; }), no = chairs.filter(function (x) { return x.v.value === 'no'; }), unk = chairs.filter(function (x) { return x.v.value !== 'yes' && x.v.value !== 'no'; });
+  var h = '<section class="panel"><div class="panel-h"><h3>Local or national co-chair (indicator 4.1)</h3><p class="sub">IASC target: by end-2027, 75% of cash working groups have local or national actors in co-chair roles. Read from each CWG’s public page.</p></div>' +
+    '<div class="pulse" style="margin-top:0">' + pulseCell('Yes', yes.length + ' of ' + N, yes.length ? yes.map(function (x) { return cLink(x.c); }).join(', ') : '—') +
+    pulseCell('No', no.length + ' of ' + N, no.length ? no.map(function (x) { return cLink(x.c); }).join(', ') : '—') +
+    pulseCell('Unknown', unk.length + ' of ' + N, unk.length ? unk.map(function (x) { return cLink(x.c); }).join(', ') : '—', true) +
+    pulseCell('Known cases at target', (yes.length + no.length) ? fmtPct(yes.length / (yes.length + no.length) * 100) : 'n/a', 'share of CWGs with published chairs that have a local co-chair; the target is 75%', !(yes.length + no.length)) + '</div>' +
+    caveat([CAV.chairs]) + '</section>';
+  h += planPanelHTML(pp);
+  h = h.replace('<div class="ppbody">', '<div class="ppbody">');
+  return h + caveat([CAV.fts_first, CAV.fts_sect]);
+}
 function themeAcrossHTML(g) {
+  if (g.id === 'vol') return volAcrossHTML();
+  if (g.id === 'local') return localAcrossHTML();
   if (g.id === 'modality') return prefHTML();
   if (g.id === 'cost') return costHTML();
   if (g.id === 'sys') return systemsHTML();
@@ -1081,6 +1362,10 @@ function themeAcrossHTML(g) {
 }
 function themeTabHTML(t) {
   var g = t.g;
+  if (t.custom) {
+    return '<div class="ttab"><header class="thead"><h1>' + esc(t.title) + '</h1><p class="tsub">' + esc(t.sub) + '</p></header>' +
+      '<section class="tsec" aria-label="Across countries">' + secHead('Across countries') + cwgPulseAcrossHTML() + '</section></div>';
+  }
   return '<div class="ttab"><header class="thead"><h1>' + esc(g.title) + '</h1><p class="tsub">' + esc(GROUP_SUB[g.id]) + '</p></header>' +
     '<section class="tsec" aria-label="Across countries">' + secHead('Across countries') + themeAcrossHTML(g) + '</section>' +
     '<section aria-label="Country by country">' + secHead('Country by country', 'One row per country, in alphabetical order. A name opens that country’s tab.') +
@@ -1130,7 +1415,20 @@ var COLS = [
       if (r.cls === 'na' && c.pooled_funds && c.pooled_funds.cbpf_exists === false) return { val: 'No CBPF', sub: '', key: null, title: c.pooled_funds.cbpf_name }; return r; } },
   { label: 'Feasibility study', tip: 'Whether a cash feasibility study was found.', get: sysCell('feas', function (c, m) { return esc(m.asof); }) },
   { label: 'Market monitoring', tip: 'Whether regular market monitoring is functioning.', get: sysCell('mkt', function (c) { return esc(c.market_monitoring.frequency || ''); }) },
-  { label: 'CWG and CashCap', tip: 'Cash working group exists; CashCap support status.', get: sysCell('cwg', function (c) { return 'CashCap: ' + esc(c.cwg.cashcap_support || 'unknown'); }) }
+  { label: 'CWG and CashCap', tip: 'Cash working group exists; CashCap support status.', get: sysCell('cwg', function (c) { return 'CashCap: ' + esc(c.cwg.cashcap_support || 'unknown'); }) },
+  { label: 'Sectoral CVA funded (FTS)', tip: 'CTP-tagged flows outside the MPC cluster, US$ millions. A floor.', get: function (c) {
+      var d = (c.fts_cva || {}).sectoral_cva_usd; if (!has(d)) return { cls: 'na', val: 'n/a', key: null, title: (d || {}).note || '' };
+      return { val: fmtUsdM(d.value), sub: '<span class="tagp partial">floor</span>', key: d.value, pct: d.value, tint: T, title: d.note }; } },
+  { label: 'CVA to local actors %', tip: 'IASC 4.2 proxy: share of FTS cash funding whose first-level recipient is a local or national actor.', get: numCell(spec.lo_cva, T) },
+  { label: 'Local co-chair', tip: 'IASC 4.1: a national or local actor chairs or co-chairs the CWG.', get: function (c) {
+      var m = model(c, spec.lo_chair); if (m.avail === 'no') return { cls: 'na', val: 'Unknown', key: null, title: m.note };
+      return { val: m.main, key: m.main === 'Yes' ? 3 : 1, title: m.note }; } },
+  { label: 'CWG page updated', tip: 'Date of the latest item on the group’s public page.', get: function (c) {
+      var w = c.cwg_reliefweb || {}; if (!w.page_last_updated) return { cls: 'na', val: 'n/a', key: null, title: w.note || 'No dated page found' };
+      return { val: fmtDate(w.page_last_updated), sub: freshTag(w.page_fresh_3m, w.page_last_updated), key: Date.parse(w.page_last_updated) || 0, title: w.last_update_basis || '' }; } },
+  { label: 'Coordination', tip: 'OCHA-coordinated plan, UNHCR-led plan, both or neither.', get: function (c) {
+      var l = (c.coordination || {}).label || 'Unknown'; if (l === 'Unknown') return { cls: 'na', val: 'n/a', key: null, title: '' };
+      return { val: l, key: l === 'OCHA + UNHCR' ? 3 : l === 'OCHA' ? 2 : l === 'UNHCR' ? 1 : 0, title: (c.coordination || {}).note || '' }; } }
 ];
 var sortState = { col: null, dir: 1 };
 function matrixHTML() {
@@ -1168,27 +1466,87 @@ function matrixTab() {
     '<section class="panel"><div class="legend"><span><i class="sw" style="background:repeating-linear-gradient(135deg,#fff 0 3px,#CFCFC8 3px 4px);border:1px solid var(--line)"></i>n/a: looked, not found</span><span><i class="sw" style="background:rgba(0,176,191,.3)"></i>Teal tint: higher value in MPC and cash columns</span><span><span class="tagp partial">partial</span> figure with a caveat</span><span class="muted">Select a heading to sort, a row to open the country.</span></div><div class="tbl-wrap" id="matrixWrap">' + matrixHTML() + '</div></section>';
 }
 
-/* ================= TAB: Method ================= */
+/* ================= TAB: Method (full methodology) ================= */
 function methodHTML() {
-  var groupsList = GROUPS.map(function (g) { return g.title.replace(/ \(.*\)/, '').toLowerCase().replace('ocha', 'OCHA'); }).join(', ');
-  return secHead('Method', 'What is counted, what to be careful about, and how to keep this page current.') +
-    '<div class="method">' +
-    '<section class="panel"><h3>What is counted</h3><ul>' +
-      '<li class="first">Data in this page was collected by an AI assistant (Claude) on 5 November 2026 from public sources and has not been verified by CALP staff. Country summaries are AI drafts awaiting review by regional representatives.</li>' +
-      '<li>' + TOTAL_SPECS + ' indicators per country in six groups: ' + esc(groupsList) + '. ' + N + ' countries, ' + (N * TOTAL_SPECS) + ' indicator slots.</li>' +
-      '<li>Each slot is found, found with a caveat (partial) or not found. Not found is a finding, shown as n/a with a note on what was searched.</li>' +
-      '<li>Every figure carries an as-of date, a note and a link to its source. Plan requirements are revised requirements.</li></ul></section>' +
-    '<section class="panel"><h3>Cautions</h3><ul>' +
-      '<li>FTS figures were pulled from the FTS public API on 5 Nov 2026 using the destination-cluster view of the Multipurpose Cash sector. Cluster views can differ from plan-level views.</li>' +
-      '<li>As-of dates show the latest flow date seen and may be lower bounds.</li>' +
-      '<li>MPC funding above 100% of the MPC requirement is reported as found. It may reflect FTS tagging or carry-over.</li>' +
-      '<li>Preference surveys differ in year, geography, sample and question wording. Do not compare them across countries without reading the note.</li>' +
-      '<li>AI summaries are drafts. Check them against the linked sources.</li></ul></section>' +
-    '<section class="panel"><h3>How to update</h3><ul>' +
-      '<li>Edit the CASH SIGNAL DATA block near the top of the script in this file, or update the JSON files and re-run <code>python3 -I build.py</code>.</li>' +
-      '<li>Regional representatives fill the <code>rep_notes</code> fields for their countries. Setting <code>reviewed_by</code> switches the draft label to Reviewed.</li>' +
-      '<li>Add new countries as new JSON files. Nothing in the page is written per country.</li></ul></section>' +
-    '</div>';
+  var groupsList = GROUPS.map(function (g) { return g.title.replace(/ \(.*\)/, ''); }).join(', ');
+  var got = 0; countries.forEach(function (c) { got += countAvail(c); });
+  var srcCount = 0; countries.forEach(function (c) { srcCount += c.sources.length; });
+  var ftsDate = (countries[0].fts_cva || {}).pulled || D.generated;
+  function tr(cells) { return '<tr>' + cells.map(function (x, i) { return i === 0 ? '<td class="k">' + x + '</td>' : '<td>' + x + '</td>'; }).join('') + '</tr>'; }
+  function affected(fn) { var a = countries.filter(fn).map(function (c) { return cLink(c); }); return a.length ? a.join(', ') : '<span class="muted">none</span>'; }
+  var overC = affected(function (c) { return model(c, spec.fd_mpcreq).over; });
+  var noMpc = affected(function (c) { return !has((c.fts_cva || {}).mpc_usd); });
+  var partialPref = affected(function (c) { return c.modality_preference.cash_pct.available === 'partial'; });
+  var cbpfProxy = affected(function (c) { return (c.pooled_funds.mpc_pct.source_ids || []).indexOf('fts1') > -1; });
+  var noPage = affected(function (c) { return !safeUrl((c.cwg_reliefweb || {}).page_url); });
+  var unkChair = affected(function (c) { return ((c.cwg_reliefweb || {}).local_cochair || 'unknown') === 'unknown'; });
+  var noVol = affected(function (c) { return !has((c.cash_volumes || {}).cva_delivered_usd); });
+  var noFsp = affected(function (c) { return !(c.fsps || []).length; });
+  var h = secHead('Method', 'Everything on this page is traceable: what was counted, where it came from, what it cannot tell you, and how to keep it current.') +
+    '<div class="methodfull">' +
+    '<nav class="toc" aria-label="Method sections"><a href="#m-scope" data-anchor="m-scope">Scope</a><a href="#m-sources" data-anchor="m-sources">Data sources</a><a href="#m-defs" data-anchor="m-defs">Indicator definitions</a><a href="#m-issues" data-anchor="m-issues">Known data-quality issues</a><a href="#m-ai" data-anchor="m-ai">AI collection and review</a><a href="#m-update" data-anchor="m-update">How to update</a><a href="#m-log" data-anchor="m-log">Change log</a></nav>';
+
+  h += '<section class="panel" id="m-scope"><h3>Scope</h3>' +
+    '<p>' + N + ' humanitarian responses chosen by CALP (Afghanistan, Myanmar, Sudan, South Sudan, Mozambique, Somalia, DRC, Lebanon, Gaza/oPt, Yemen, Syria, Chad, Niger, Nigeria, Mali). ' + TOTAL_SPECS + ' indicators per country in ' + GROUPS.length + ' groups: ' + esc(groupsList) + '. ' + got + ' of ' + (N * TOTAL_SPECS) + ' indicator slots are filled (' + Math.round(got / (N * TOTAL_SPECS) * 100) + '%); every empty slot carries a note on what was searched.</p>' +
+    '<p>Three further blocks sit outside the indicator count: a CWG pulse read from each working group’s public page, a list of financial service providers, and a coordination label (OCHA-led plan, UNHCR-led plan, both or neither). Each figure has an as-of date, a note and a link to its source; ' + srcCount + ' sources are listed across the country tabs.</p>' +
+    '<p>Status words: <b>found</b> (a figure with a source), <b>partial</b> (a figure with a caveat that changes how it should be read) and <b>n/a</b> (looked for and not found, which is itself a finding). Source quality per country: ' + esc(QUALITY_RULE) + '</p></section>';
+
+  h += '<section class="panel" id="m-sources"><h3>Data sources</h3><div class="tbl-wrap"><table class="mtable"><thead><tr><th>Source</th><th>Used for</th><th>How accessed</th><th>Date</th><th>Caveats</th></tr></thead><tbody>' +
+    tr(['OCHA FTS public API (api.hpc.tools)', 'Plan requirements and funding; MPC cluster funding; sectoral CVA via the “Cash transfer programming (CTP)” modality tag; funding by recipient organisation type; pooled-fund onward grants (internal flows)', 'Scripted pull of every flow per plan (build/fts_pull.py), incoming and internal flows, pledges excluded', esc(fmtDate(ftsDate)), 'First-level recipients only. MPC uses the single-cluster (destination) view; the shared view is given in each note. The CTP tag is applied unevenly.']) +
+    tr(['2026 Humanitarian Needs and Response Plans and Flash Appeals (humanitarianaction.info, ReliefWeb)', 'People in need and targeted, CVA and MPC requirements, preference statements, delivered-CVA figures where the plan reports them, 2027 plan status', 'Plan documents and plan web pages, read page by page', 'Nov 2026', 'Plans report planned, not delivered, cash. Lebanon’s LRP is not on FTS; its Flash Appeal is used for FTS figures.']) +
+    tr(['Modality-preference surveys (REACH MSNA, cluster assessments, HNRP AAP sections)', 'Share of surveyed people preferring cash, vouchers, in-kind or other', 'Survey reports and factsheets', '2020–2025, by country', 'Year, geography, sample and question wording differ; many surveys allow more than one answer.']) +
+    tr(['CWG public pages (response.reliefweb.int, data.unhcr.org, themimu.info)', 'CWG existence, chairs and co-chairs, latest update, dashboards, minutes', 'Page contents as visible on the access date', 'Nov 2026', 'A page’s latest item is a proxy for activity. Chairs are often stated only in old vacancy notices or minutes. No personal names are recorded.']) +
+    tr(['In-country CVA dashboards and OCHA CVA snapshots (ReliefWeb)', 'CVA delivered (US$) by period; MPC and sectoral split where published', 'Infographics and dashboard pages', 'Varies, 2025–2026', 'Transfer value vs assistance value is not always stated; periods differ from the FTS year.']) +
+    tr(['Country-based pooled fund reports and CBPF data hub', 'Pooled-fund allocations to cash, where published', 'Annual reports and allocation papers', 'Varies', 'Where no report was found, a proxy from FTS internal flows is used and marked partial.']) +
+    tr(['Agency pages, press releases, CWG FSP mappings, CALP case studies', 'Financial service providers delivering humanitarian cash', 'Web search and page reads', 'Varies, 2017–2026', 'Named in public sources only; no contract or volume data. Logos are hot-linked, not stored.']) +
+    tr(['IASC MPC scaling plan', 'Objective 4 indicators 4.1 and 4.2', 'Indicator wording as supplied by CALP', '2025', 'Indicator 4.2 (“% of CVA funding donors allocate directly to local partners”) can only be approximated from FTS first-level recipients.']) +
+    '</tbody></table></div></section>';
+
+  h += '<section class="panel" id="m-defs"><h3>Indicator definitions</h3>' +
+    '<h4>Modality preference</h4><p>Share of surveyed people naming each modality, recorded exactly as the survey reports it, with survey, year and wording in the note. Not re-based to 100%.</p>' +
+    '<h4>Cost efficiency</h4><p>Any sourced cost-efficiency metric for MPC, sectoral cash, vouchers or in-kind food, in the unit the source uses (cost-transfer ratio, Omega value, USD per beneficiary). Nothing was found for any country in this round.</p>' +
+    '<h4>Plan requirements</h4><p>MPC, sectoral cash, vouchers and total CVA requirements as a share of the plan’s total revised requirements, from the plan document or the FTS plan record.</p>' +
+    '<h4>Overall funding</h4><p>MPC funding = FTS flows whose destination cluster is the plan’s multi-purpose cash cluster, single-cluster view, as a share of all funding received. MPC funded vs requirement divides that by the MPC requirement; values over 100% are reported as found. Sectoral cash, where marked partial, is the FTS CTP-tag proxy below.</p>' +
+    '<h4>OCHA pooled funds</h4><p>Share of the country-based pooled fund’s allocations that is MPC, sectoral cash or vouchers, from the fund’s own reporting. Where absent, the proxy is the fund’s onward grants recorded as internal flows inside the 2026 plan on FTS, marked partial.</p>' +
+    '<h4>Systems</h4><p>Cash feasibility study (exists / none / unknown), market monitoring (functional / partial / none, with system and frequency), cash working group (exists, leads, CashCap support), 2027 plan status.</p>' +
+    '<h4>Cash volumes</h4><p><b>MPC funding (FTS)</b> as above. <b>Sectoral CVA, best available</b> = the higher of (a) FTS flows tagged “Cash transfer programming (CTP)” whose destination cluster is not MPC and (b) a sectoral figure from an in-country dashboard, with the source named in the cell. <b>Total CVA funding (FTS)</b> = union of the MPC cluster and the CTP tag. <b>CVA delivered</b> = the latest US$ figure published by the CWG or OCHA for cash and vouchers delivered, with its period.</p>' +
+    '<h4>Local leadership (IASC objective 4)</h4><p><b>4.1 Local co-chair</b>: yes when a national or local NGO/CSO, a national government body or the national Red Cross/Red Crescent society holds a chair, co-chair or co-lead role on the CWG’s public page or minutes; no when chairs are published and none is local; unknown when nothing is published. <b>4.2 proxy</b>: share of FTS cash funding (MPC cluster or CTP tag) whose first-level recipient organisation is tagged by FTS as a local or national non-state actor or a national government of the response country. Two companion lines give the same share for all funding and for the pooled fund’s cash grants (the one onward layer FTS records).</p>' +
+    '<h4>CWG pulse (trial)</h4><p>From the group’s public page: date of the latest visible item (and what that item is), in-country dashboard with its update date and period, latest minutes, chair organisations by actor type. “Within 3 months” compares the date with the day the page was checked.</p>' +
+    '<h4>Coordination</h4><p>OCHA when an HNRP, HRP or Flash Appeal covers 2026; UNHCR when a UNHCR-led plan has an in-country chapter (country RRP, regional RRP chapter, 3RP); both when both; neither when no such plan was found.</p></section>';
+
+  h += '<section class="panel" id="m-issues"><h3>Known data-quality issues</h3><div class="tbl-wrap"><table class="mtable"><thead><tr><th>Issue</th><th>Effect</th><th>Where it bites</th><th>Shown as</th></tr></thead><tbody>' +
+    tr(['FTS sees first-level recipients only', 'Local-actor shares understate money that reaches local partners through intermediaries', 'All countries; every localisation figure', 'partial, with a callout on the Local leadership group']) +
+    tr(['CTP modality tag applied unevenly', 'Sectoral CVA on FTS is a floor; a country can deliver sectoral cash that appears as “traditional aid”', 'All countries; largest relative effect where the tag is rarely used', 'partial / floor tags, callouts on Funding and Cash volumes']) +
+    tr(['Single vs shared cluster views', 'MPC funding differs by view; shared counts one grant under several clusters', 'Noted per country; large gaps for Afghanistan, DRC, Myanmar, Syria', 'single view used; shared view in each note']) +
+    tr(['MPC funding above 100% of requirement', 'Tagging, multi-year money or carry-over, not necessarily over-funding', overC, 'over 100% tag']) +
+    tr(['No MPC cluster on FTS', 'MPC funding cannot be seen even if MPC is delivered', noMpc, 'n/a with note']) +
+    tr(['Pooled-fund shares from FTS internal flows', 'A proxy; the fund’s own allocation figures may differ', cbpfProxy, 'partial, callout on the CBPF group']) +
+    tr(['Preference surveys not comparable', 'Different years, areas, samples and wording', 'All; flagged partial for ' + partialPref, 'partial tags, callout on Modality preference']) +
+    tr(['Funding vs delivered value', 'FTS counts money received by agencies; dashboards count value delivered to people, over different periods', 'Cash volumes group', 'callout; the two are never summed']) +
+    tr(['CWG page dates as an activity proxy', 'A quiet page can hide an active group and vice versa', 'No page found for ' + noPage, 'fresh / stale / no-date tags, callout']) +
+    tr(['Chair information stale or unpublished', 'Indicator 4.1 is unknown where nothing is published', unkChair, 'Unknown, callout']) +
+    tr(['Delivered-CVA figures unavailable', 'No in-country total for the latest period', noVol, 'n/a with note']) +
+    tr(['FSP lists non-exhaustive', 'Only providers named in public sources; no volumes or contract status', 'None found for ' + noFsp, 'callout under each FSP section']) +
+    tr(['Lebanon plan not on FTS', 'FTS figures use the Flash Appeal; LRP figures come from UNHCR funding updates', cLink(byId.lebanon), 'notes on the Lebanon tab']) +
+    tr(['AI-collected, unreviewed', 'Transcription and interpretation errors are possible', 'All countries until a regional representative reviews', 'AI draft label on every country tab']) +
+    '</tbody></table></div></section>';
+
+  h += '<section class="panel" id="m-ai"><h3>AI collection and review</h3>' +
+    '<p>Data was collected on 5–6 November 2026 by AI research agents (Claude) from public sources, then independently spot-checked by a separate agent that had not seen the collection. The v1 check covered 43 data points: 31 confirmed, 10 plausible, 1 mismatch (fixed), 1 unverifiable (flagged). The v2 check (6 Nov 2026) covered 58: 48 confirmed, 5 plausible, 2 mismatches (both fixed: Sudan’s refugee plan and a stale CWG note), 3 unverifiable (Niger’s delivered-CVA figure was withdrawn; Nigeria’s absence of a refugee plan and one logo could not be confirmed). Every FTS value re-pulled by the checker reproduced exactly. FTS figures are pulled by script rather than read by an agent, so they are reproducible. Country summaries are AI drafts. Nothing here has yet been verified by CALP staff; a country shows as Reviewed once its regional representative fills <code>rep_notes.reviewed_by</code>.</p>' +
+    '<p>What the agents were told: record only what a page says; mark not-found honestly; prefer 2025–2026 sources; never record personal names or contact details; record logo URLs only from the provider’s own site or Wikimedia Commons, never download them.</p></section>';
+
+  h += '<section class="panel" id="m-update"><h3>How to update</h3><ul>' +
+    '<li>Country facts live in <code>data/&lt;country&gt;.json</code>. Every figure is <code>{value, available, as_of, source_ids, note}</code>; sources are listed in each file. Leave <code>value</code> null and set <code>available: "no"</code> when nothing was found, and say in <code>note</code> what was looked for.</li>' +
+    '<li>FTS figures: run <code>python3 -I build/fts_pull.py</code> then <code>python3 -I build/merge_v2.py</code>. The merge is idempotent and only fills v1 cells that are still empty.</li>' +
+    '<li>CWG pulse, coordination, volumes and FSPs: edit <code>data/v2/&lt;country&gt;.json</code> and re-run the merge, or edit the merged blocks directly.</li>' +
+    '<li>Validate and rebuild: <code>python3 -I schema/validate.py data/&lt;country&gt;.json</code>, then <code>python3 -I build/build.py</code>. Commit <code>data/</code> and <code>index.html</code> together.</li>' +
+    '<li>Regional representatives fill the <code>rep_notes</code> fields for their countries. Setting <code>reviewed_by</code> switches the draft label to Reviewed.</li>' +
+    '<li>Add a country by adding a JSON file; nothing in the page is written per country.</li></ul></section>';
+
+  h += '<section class="panel" id="m-log"><h3>Change log</h3><ul>' +
+    '<li><b>6 Nov 2026, v2.</b> Country search and draggable tab strip. Sectoral and total CVA from FTS in the at-a-glance strip. Cash volumes group (FTS funding beside in-country delivered value; sectoral line takes the higher of FTS and the CWG figure and names the source). Coordination label (OCHA / UNHCR / both / neither). CWG pulse trial from public pages. Financial service providers with logos. Local leadership group for IASC indicators 4.1 and 4.2. Pooled-fund and sectoral-cash cells filled from FTS where v1 found nothing, marked partial. Caveat callouts on every visual that rests on uneven data. This methodology page.</li>' +
+    '<li><b>5 Nov 2026, v1.</b> First build: 24 indicators from CALP’s cash advocacy data points, 15 countries, AI country summaries, by-country and by-theme tabs, independent spot-check.</li></ul></section>';
+  return h + '</div>';
 }
 
 /* ================= tabs, routing ================= */
@@ -1280,6 +1638,74 @@ function fade() {
 document.getElementById('tabsScroll').addEventListener('scroll', fade);
 window.addEventListener('resize', fade);
 
+/* ---------- tab strip: arrows and drag-to-scroll ---------- */
+(function () {
+  var sc = document.getElementById('tabsScroll'), prev = document.getElementById('tabPrev'), next = document.getElementById('tabNext');
+  function arrows() {
+    var can = sc.scrollWidth > sc.clientWidth + 4;
+    prev.hidden = next.hidden = !can;
+    prev.disabled = sc.scrollLeft <= 2; next.disabled = sc.scrollLeft + sc.clientWidth >= sc.scrollWidth - 2;
+  }
+  prev.addEventListener('click', function () { sc.scrollBy({ left: -Math.max(200, sc.clientWidth * 0.6), behavior: 'smooth' }); });
+  next.addEventListener('click', function () { sc.scrollBy({ left: Math.max(200, sc.clientWidth * 0.6), behavior: 'smooth' }); });
+  sc.addEventListener('scroll', arrows); window.addEventListener('resize', arrows);
+  var down = false, startX = 0, startLeft = 0, moved = false;
+  sc.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'touch' || e.button !== 0) return;
+    down = true; moved = false; startX = e.clientX; startLeft = sc.scrollLeft;
+  });
+  window.addEventListener('pointermove', function (e) {
+    if (!down) return;
+    var dx = e.clientX - startX;
+    if (!moved && Math.abs(dx) > 6) { moved = true; sc.classList.add('dragging'); try { sc.setPointerCapture(e.pointerId); } catch (x) {} }
+    if (moved) { sc.scrollLeft = startLeft - dx; e.preventDefault(); }
+  });
+  window.addEventListener('pointerup', function () { if (!down) return; down = false; setTimeout(function () { sc.classList.remove('dragging'); }, 0); });
+  sc.addEventListener('wheel', function (e) { if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && sc.scrollWidth > sc.clientWidth) { sc.scrollLeft += e.deltaY; e.preventDefault(); } }, { passive: false });
+  setTimeout(arrows, 0);
+  document.getElementById('modeSwitch').addEventListener('click', function () { setTimeout(arrows, 0); });
+})();
+
+/* ---------- country search ---------- */
+(function () {
+  var box = document.getElementById('searchBox'), hits = document.getElementById('searchHits'), clear = document.getElementById('searchClear');
+  var ALIAS = { opt: ['gaza', 'palestine', 'opt', 'occupied palestinian territory', 'west bank'], drc: ['congo', 'drc', 'rdc', 'kinshasa'], southsudan: ['south sudan', 'juba'], myanmar: ['burma'], syria: ['syrian arab republic'], chad: ['tchad'] };
+  var items = tabCountries.map(function (c) { return { c: c, keys: [c.name, c.short, c.id, c.slug, c.calp_region].concat(ALIAS[c.id] || []).map(function (k) { return String(k).toLowerCase(); }) }; });
+  var sel = -1, cur = [];
+  function norm(q) { return q.toLowerCase().replace(/[^a-zÀ-ɏ\s-]/g, '').trim(); }
+  function match(q) {
+    if (!q) return [];
+    return items.filter(function (it) { return it.keys.some(function (k) { return k.indexOf(q) > -1; }); })
+      .sort(function (a, b) { var sa = a.keys[0].indexOf(q) === 0 ? 0 : 1, sb = b.keys[0].indexOf(q) === 0 ? 0 : 1; return sa - sb || a.c.short.localeCompare(b.c.short); });
+  }
+  function render() {
+    var q = norm(box.value); cur = match(q); sel = cur.length ? 0 : -1;
+    clear.hidden = !box.value;
+    TABS.forEach(function (t) { if (t.c) document.getElementById('tab-' + t.id).classList.toggle('dim', !!q && !cur.some(function (it) { return it.c === t.c; })); });
+    if (!q) { hits.hidden = true; hits.innerHTML = ''; return; }
+    hits.innerHTML = cur.length ? cur.map(function (it, i) {
+      var qq = quality(it.c);
+      return '<button type="button" role="option" data-go="' + esc(it.c.slug) + '" class="' + (i === sel ? 'on' : '') + '" aria-selected="' + (i === sel) + '"><span class="dot ' + qq.key + '" aria-hidden="true"></span>' + esc(it.c.name) + '<small>' + esc(it.c.calp_region) + '</small></button>'; }).join('')
+      : '<div class="nohit">No country matches “' + esc(box.value) + '”. Try the plan’s country name.</div>';
+    hits.hidden = false;
+    if (cur.length) { var tb = document.getElementById('tab-' + cur[0].c.slug); if (mode === 'theme') { mode = 'country'; syncMode(); } if (tb) tb.scrollIntoView({ block: 'nearest', inline: 'center' }); }
+  }
+  function pick(i) { if (i < 0 || !cur[i]) return; var slug = cur[i].c.slug; box.value = ''; render(); go(slug); box.blur(); }
+  box.addEventListener('input', render);
+  box.addEventListener('focus', function () { if (box.value) render(); });
+  box.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (cur.length) { sel = (sel + 1) % cur.length; render2(); } }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); if (cur.length) { sel = (sel - 1 + cur.length) % cur.length; render2(); } }
+    else if (e.key === 'Enter') { e.preventDefault(); pick(sel); }
+    else if (e.key === 'Escape') { box.value = ''; render(); box.blur(); }
+  });
+  function render2() { Array.prototype.forEach.call(hits.querySelectorAll('button'), function (b, i) { b.classList.toggle('on', i === sel); b.setAttribute('aria-selected', i === sel); }); }
+  hits.addEventListener('click', function (e) { var b = e.target.closest ? e.target.closest('button[data-go]') : null; if (b) { var i = Array.prototype.indexOf.call(hits.querySelectorAll('button'), b); pick(i); } });
+  clear.addEventListener('click', function () { box.value = ''; render(); box.focus(); });
+  document.addEventListener('click', function (e) { if (!document.getElementById('search').contains(e.target)) { hits.hidden = true; } });
+  document.addEventListener('keydown', function (e) { if (e.key === '/' && document.activeElement !== box && !/input|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); box.focus(); } });
+})();
+
 
 document.addEventListener('click', function (e) {
   var t = e.target; if (!t.closest) return;
@@ -1292,6 +1718,8 @@ document.addEventListener('click', function (e) {
   }
   var tl = t.closest('a[data-tab]');
   if (tl) { e.preventDefault(); go(tl.getAttribute('data-tab')); return; }
+  var an = t.closest('a[data-anchor]');
+  if (an) { e.preventDefault(); var el = document.getElementById(an.getAttribute('data-anchor')); if (el) el.scrollIntoView({ block: 'start', behavior: 'smooth' }); return; }
   var pp = t.closest('button[data-pp]');
   if (pp) {
     var id = pp.getAttribute('data-pp'); planSel[id] = pp.getAttribute('data-k');
@@ -1314,7 +1742,7 @@ document.addEventListener('click', function (e) {
   if (row && !t.closest('a')) go(row.getAttribute('data-go'));
 });
 window.addEventListener('hashchange', route);
-document.getElementById('stampDate').textContent = 'Data collected ' + fmtDate(D.generated);
+document.getElementById('stampDate').textContent = 'Data collected ' + fmtDate(D.generated) + ' · v2';
 route();
 })();
 </script>

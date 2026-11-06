@@ -3,7 +3,7 @@
   "name": "Mozambique",
   "iso3": "MOZ",
   "calp_region": "East and Southern Africa",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Mozambique Humanitarian Needs and Response Plan 2026",
@@ -180,11 +180,14 @@
       "note": "No MPC requirement exists in the plan to measure against."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "FTS does not disaggregate sectoral cash."
+      "value": 3.2,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$7.3M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 7295039
     },
     "vouchers_pct": {
       "value": null,
@@ -373,6 +376,291 @@
       "url": "https://reliefweb.int/report/mozambique/mozambique-humanitarian-needs-and-response-plan-humanitarian-programme-cycle-2026-issued-29-december-2025-enpt",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1506 (Mozambique Humanitarian Needs and Response Plan 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1506/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Mozambique Humanitarian Needs and Response Plan 2026 (FTS plan 1506)",
+      "publisher": "OCHA",
+      "url": "https://fts.unocha.org/plans/1506/summary",
+      "date": "2026",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Mozambique Cash and Voucher Working Group (Maputo and Beira)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/mozambique/mozambique-cash-and-voucher-working-groups-maputo-and-beira",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Mozambique: 2025 Humanitarian Response, Cash Assistance Overview (31 December 2025)",
+      "publisher": "OCHA / ReliefWeb",
+      "url": "https://reliefweb.int/report/mozambique/mozambique-2025-humanitarian-response-cash-assistance-overview-31-december-2025-enpt",
+      "date": "2025-12-31",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "East Africa Regional CWG maps: Mozambique Cash Assistance Overview Jul and Aug 2025",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/southern-and-eastern-africa/east-africa-regional-cash-working-group/maps",
+      "date": "2025-10-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Mozambique country strategic plan, revision 4",
+      "publisher": "WFP",
+      "url": "https://docs.wfp.org/api/documents/WFP-0000171276/download",
+      "date": "2025-12-31",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1506,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1506",
+    "fts_page": "https://fts.unocha.org/plans/1506/summary",
+    "total_funding_usd": {
+      "value": 230201189,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "No multi-purpose cash cluster with funding is visible on FTS for this plan (the plan may still carry an MPC requirement), so MPC funding cannot be seen."
+    },
+    "ctp_usd": {
+      "value": 7295039,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 7295039,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 24 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Food Security and Livelihoods US$5.8M, Shelter/NFIs US$0.3M, Education US$0.1M.",
+      "by_cluster": {
+        "Food Security and Livelihoods": 5840101,
+        "Shelter/NFIs": 271013,
+        "Education": 134857,
+        "Protection": 64891,
+        "Water, Sanitation and Hygiene (WASH)": 58242
+      },
+      "flow_count": 24
+    },
+    "cva_usd": {
+      "value": 7295039,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 3.2,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 3.2,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 0,
+      "total": 0,
+      "mpc": 0,
+      "ctp": 0,
+      "cva": 0,
+      "mpc_pct": null,
+      "cva_pct": null,
+      "local_actor": 0,
+      "local_actor_pct": null,
+      "local_actor_cva": 0,
+      "local_actor_pct_of_cva": null
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Mozambique Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "none found",
+    "note": "HNRP (OCHA); no UNHCR-led plan with an in-country chapter found.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/mozambique/mozambique-cash-and-voucher-working-groups-maputo-and-beira",
+    "page_title": "Mozambique Cash and Voucher Working Group's (Maputo and Beira)",
+    "page_last_updated": "",
+    "last_update_basis": "Page lists no documents, events or updated stamp.",
+    "page_fresh_3m": false,
+    "dashboard_url": "https://reliefweb.int/report/mozambique/mozambique-2025-humanitarian-response-cash-assistance-overview-31-december-2025-enpt",
+    "dashboard_name": "Mozambique: 2025 Humanitarian Response, Cash Assistance Overview (OCHA monthly infographic)",
+    "dashboard_last_updated": "2025-12-31",
+    "dashboard_period": "2025-01-01 to 2025-12-31",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [],
+    "local_cochair": "unknown",
+    "contacts_basis": "Page says focal-point contact details will be shared but names no organisations.",
+    "note": "National group active since 2017 with a Beira sub-group, supported by the Southern Africa regional technical CWG; chairs and meeting dates not published on the page. Dashboard is OCHA's monthly overview, posted for Jul and Aug 2025 on 4 Sep and 14 Oct 2025.",
+    "source_ids": [
+      "v2s2",
+      "v2s3",
+      "v2s4"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "No multi-purpose cash cluster with funding is visible on FTS for this plan (the plan may still carry an MPC requirement), so MPC funding cannot be seen."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 7295039,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": 27900000,
+      "available": "yes",
+      "as_of": "2025-12-31",
+      "source_ids": [
+        "v2s3"
+      ],
+      "note": "26 partners delivered US$27.9M to 904,000 people in nine provinces. By modality: paper vouchers 67%, mobile money 19%, e-vouchers 14%. By shock: cyclones $12M, conflict $9M, drought $4.5M.",
+      "period": "2025-01-01 to 2025-12-31",
+      "source_type": "OCHA CVA snapshot"
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3"
+      ],
+      "note": "The overview does not split MPC from sectoral.",
+      "period": "",
+      "source_type": "OCHA CVA snapshot"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3"
+      ],
+      "note": "The overview does not split MPC from sectoral.",
+      "period": "",
+      "source_type": "OCHA CVA snapshot"
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s2",
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "No chair or co-chair organisations found on the CWG page or in minutes."
+    },
+    "cva_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$7.3M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 0
+    },
+    "all_funding_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$0.0M). Same first-level caveat.",
+      "usd": 0
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No country-based pooled fund."
+    },
+    "cbpf_all_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No country-based pooled fund."
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

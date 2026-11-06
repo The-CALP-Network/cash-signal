@@ -3,7 +3,7 @@
   "name": "South Sudan",
   "iso3": "SSD",
   "calp_region": "East and Southern Africa",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "South Sudan Humanitarian Needs and Response Plan 2026",
@@ -194,12 +194,14 @@
       "note": "FTS single-cluster (destination) view: US$15.7M of US$33.5M MPC requirement. Shared-cluster view would give US$16.7M (50%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not disaggregated in the FTS extract.",
-      "usd": null
+      "value": 1.5,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$8.9M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 8900142
     },
     "vouchers_pct": {
       "value": null,
@@ -214,27 +216,33 @@
     "cbpf_exists": true,
     "cbpf_name": "South Sudan Humanitarian Fund (SSHF)",
     "cbpf_allocations_usd": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "No 2026 SSHF allocation total found; pfdata hub did not load and searches returned only 2024 items."
+      "value": 164539882,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: sum of the pooled fund's onward grants recorded inside this plan (263 internal flows). Not the fund's full allocation total."
     },
     "mpc_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "No SSHF cash breakdown found.",
-      "usd": null
+      "value": 0.6,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: the pooled fund's onward grants inside this plan (263 internal flows, US$164.5M) tagged to the MPC cluster. The fund's own allocation reports may differ.",
+      "usd": 997500
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not found.",
-      "usd": null
+      "value": 14.8,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$24.4M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 24374705
     },
     "vouchers_pct": {
       "value": null,
@@ -406,6 +414,395 @@
       "url": "https://reliefweb.int/report/south-sudan/south-sudan-humanitarian-needs-and-response-plan-2026-january-2026",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1512 (South Sudan Humanitarian Needs and Response Plan 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1512/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "South Sudan Cash Working Group (IA-CWG)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+      "date": "2025-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "South Sudan Cash Working Group",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/groups-and-communities/east-and-southern-africa-cash-working-groups/south-sudan-cash-working-group/",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "South Sudan Humanitarian Needs and Response Plan 2026 (p.22)",
+      "publisher": "OCHA",
+      "url": "https://solidarityssudan.org/wp-content/uploads/2026/01/South-Sudan-2026-HNRP-1.pdf",
+      "date": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "South Sudan: Mobile money's role in the road to recovery",
+      "publisher": "GSMA",
+      "url": "https://www.gsma.com/mobilefordevelopment/blog/south-sudan-mobile-moneys-role-in-the-road-to-recovery/",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Tender: Financial Service Providers (FSP) to implement cash transfer activities in South Sudan",
+      "publisher": "Prosper Global (ex-Mercy Corps)",
+      "url": "https://www.prosperglobal.org/tenders/tender-name-financial-service-providers-fsp-implement-cash-transfer-activities-south-sudan",
+      "date": "2021-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Cash and Voucher Snapshot: January - March 2026 (listing)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group?page=0",
+      "date": "2026",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "South Sudan Country Refugee Response Plan (CRRP) 2026",
+      "publisher": "UNHCR",
+      "url": "https://data.unhcr.org/en/documents/details/120458",
+      "date": "2026-01-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "Sudan Regional RRP 2026",
+      "publisher": "UNHCR / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1523/article/sudan-regional-rrp",
+      "date": "2025-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s9",
+      "title": "South Sudan HNRP 2026 (ReliefWeb edition)",
+      "publisher": "OCHA",
+      "url": "https://reliefweb.int/report/south-sudan/south-sudan-humanitarian-needs-and-response-plan-2026-december-2025",
+      "date": "2025-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "rw1",
+      "title": "South Sudan: South Sudan Cash Working Group (ReliefWeb Response)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1512,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1512",
+    "fts_page": "https://fts.unocha.org/plans/1512/summary",
+    "total_funding_usd": {
+      "value": 590844983,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 15724265,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash cluster; shared-cluster view US$17.3M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 24505005,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 8900142,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 40 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Food Security US$3.4M, Protection US$2.3M, Refugee Response US$2.1M.",
+      "by_cluster": {
+        "Food Security": 3408551,
+        "Protection": 2277285,
+        "Refugee Response": 2067976,
+        "Education": 1864546,
+        "Nutrition": 1626733,
+        "Health": 1608579,
+        "Water, Sanitation  and Hygiene": 1608579,
+        "Multi-Purpose Cash": 1608579,
+        "Shelter and Non-food Items": 440829,
+        "Coordination, Thematic and System Support": 431380
+      },
+      "flow_count": 40
+    },
+    "cva_usd": {
+      "value": 24624407,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 4.2,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 1.5,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 2.7,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 263,
+      "total": 164539882,
+      "mpc": 997500,
+      "ctp": 25372205,
+      "cva": 25372205,
+      "mpc_pct": 0.6,
+      "cva_pct": 15.4,
+      "local_actor": 23554038,
+      "local_actor_pct": 14.3,
+      "local_actor_cva": 1504542,
+      "local_actor_pct_of_cva": 5.9
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA + UNHCR",
+    "ocha_plan": "South Sudan Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "South Sudan Country Refugee Response Plan (CRRP) 2026 and the South Sudan chapter of the 2026 Sudan Regional RRP",
+    "note": "HNRP (OCHA) plus refugee plans on UNHCR's portal; the pages opened do not state the lead agency explicitly, so UNHCR leadership is inferred from hosting.",
+    "source_ids": [
+      "v2s7",
+      "v2s8",
+      "v2s9"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/south-sudan/south-sudan-cash-working-group",
+    "page_title": "South Sudan: South Sudan Cash Working Group",
+    "page_last_updated": "2026-09-02",
+    "last_update_basis": "latest situation report posted in the page's ReliefWeb feed: ACTED South Sudan Multi-Purpose Cash Assistance (MPCA) - Post Distribution Monitoring (PDM",
+    "page_fresh_3m": true,
+    "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiMTg3YWY3YjItMGE0MS00MTViLWI4ZjctNDM5MTI0YTg3ZWNiIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+    "dashboard_name": "Cash and Voucher Dashboard (Power BI)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "not shown on the page",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "2026-01-29",
+    "co_chairs": [
+      {
+        "organisation": "OCHA",
+        "actor_type": "UN",
+        "role": "non-programmatic co-chair"
+      },
+      {
+        "organisation": "IOM",
+        "actor_type": "UN",
+        "role": "UN programmatic co-chair"
+      },
+      {
+        "organisation": "CRS",
+        "actor_type": "INGO",
+        "role": "INGO programmatic co-chair"
+      },
+      {
+        "organisation": "ADA",
+        "actor_type": "NNGO",
+        "role": "national NGO programmatic co-chair (trainee seat)"
+      },
+      {
+        "organisation": "CashCap",
+        "actor_type": "Other",
+        "role": "technical advisor"
+      }
+    ],
+    "local_cochair": "yes",
+    "contacts_basis": "CWG page contacts tab, 6 Nov 2026",
+    "note": "The page's 'Latest Dashboard' section is empty; the Jan-Mar 2026 snapshot figures could not be read from the page text. Monthly meetings, minutes listed to 25 Sep 2025. Page feed lists minutes of the 29 Jan 2026 meeting (seen 6 Nov 2026).",
+    "source_ids": [
+      "rw1",
+      "v2s1",
+      "v2s2",
+      "v2s6"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 15724265,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash cluster; shared-cluster view US$17.3M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 8900142,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3"
+      ],
+      "note": "HNRP 2026 gives only the 2025 HNRP allocation (about $197M, 11% of budget, to CVA; $25M for MPCA), not delivered amounts; the Jan-Mar 2026 snapshot was not readable.",
+      "period": "",
+      "source_type": "other"
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3"
+      ],
+      "note": "Only an allocation of about $25M for MPCA in the 2025 HNRP is reported, not delivery.",
+      "period": "",
+      "source_type": "other"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No sectoral delivered value found.",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [
+    {
+      "name": "MTN South Sudan (MoMo)",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "GSMA blog and trade press describe MTN as a recent mobile money provider in South Sudan; no humanitarian agency named as user in the pages opened.",
+      "website": "https://www.mtn.com.ss",
+      "logo_url": "https://www.mtn.com.ss/wp-content/themes/mtn-vivid-wp/public/img/mtn-logo.svg",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s4"
+      ]
+    },
+    {
+      "name": "Zain South Sudan (m-Gurush, Nilepay)",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "GSMA blog says Zain partnered on m-Gurush and Nilepay launched in 2019; humanitarian actors generally distribute cash via mobile money, no agency named.",
+      "website": "https://ss.zain.com",
+      "logo_url": "https://ss.zain.com/wp-content/uploads/2024/03/ZN_LOGO_SILVER-CMYK.png",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s4"
+      ]
+    }
+  ],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": "yes",
+      "available": "yes",
+      "as_of": "2026-09-02",
+      "source_ids": [
+        "rw1",
+        "v2s1",
+        "v2s2",
+        "v2s6"
+      ],
+      "note": "Chairs found: OCHA (UN); IOM (UN); CRS (INGO); ADA (NNGO); CashCap (Other)"
+    },
+    "cva_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$24.6M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 0
+    },
+    "all_funding_to_local_pct": {
+      "value": 0.9,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$5.3M). Same first-level caveat.",
+      "usd": 5291136
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 5.9,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$25.4M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 1504542
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 14.3,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$164.5M) to local or national actors.",
+      "usd": 23554038
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

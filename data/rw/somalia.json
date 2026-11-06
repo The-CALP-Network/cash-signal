@@ -1,0 +1,132 @@
+{
+ "id": "somalia",
+ "page_url": "https://response.reliefweb.int/somalia/somalia-cash-working-group",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Somalia: Somalia Cash Working Group",
+ "river": [
+  {
+   "title": "Somali Cash Consortium - Baseline and Endline Findings: MPCA Outcomes from the Integrated Response Framework (June 2026)",
+   "url": "https://reliefweb.int/node/4233922",
+   "format": "Assessment",
+   "source": "IMPACT Initiatives",
+   "posted": "2026-10-14"
+  },
+  {
+   "title": "Somali Cash Consortium - Baseline and Endline Findings CCCM-Based Approach: Afgoye and Mogadishu, Somalia (November 2025)",
+   "url": "https://reliefweb.int/node/4233921",
+   "format": "Assessment",
+   "source": "IMPACT Initiatives",
+   "posted": "2026-10-14"
+  },
+  {
+   "title": "Somali Cash Consortium - Baseline and Endline Findings MPCA Outcomes from the Direct Nutrition Referral Approach: Kismayo & Banadir, Somalia (June 2026)",
+   "url": "https://reliefweb.int/node/4232950",
+   "format": "Assessment",
+   "source": "REACH",
+   "posted": "2026-10-07"
+  },
+  {
+   "title": "Roadmap – Gap analysis",
+   "url": "https://reliefweb.int/node/4115386",
+   "format": "Manual and Guideline",
+   "source": "FAO, Govt. Somalia, REACH, WFP",
+   "posted": "2024-12-04"
+  },
+  {
+   "title": "Somalia National Bureau of Statistics (SNBS): Methodology & Analysis results to inform the MEB gap analysis & TV",
+   "url": "https://reliefweb.int/node/4115385",
+   "format": "Manual and Guideline",
+   "source": "FAO, Govt. Somalia, REACH, WFP",
+   "posted": "2024-12-04"
+  },
+  {
+   "title": "Identifying Gaps in Households Economic Capacity to Meet Essential Needs (food and non-food) and the New Transfer Value Recommendation (September 2024)",
+   "url": "https://reliefweb.int/node/4115384",
+   "format": "Manual and Guideline",
+   "source": "FAO, Govt. Somalia, REACH, WFP",
+   "posted": "2024-12-04"
+  },
+  {
+   "title": "Somalia National Bureau of Statistics (SNBS): Analysis results to inform the MPCA & food MEB new transfer values",
+   "url": "https://reliefweb.int/node/4115383",
+   "format": "Manual and Guideline",
+   "source": "FAO, Govt. Somalia, REACH, WFP",
+   "posted": "2024-12-04"
+  },
+  {
+   "title": "Somalia Cash Working Group Meeting Minutes, Thursday 28th Nov 2024",
+   "url": "https://reliefweb.int/node/4150822",
+   "format": "Other",
+   "source": "Concern, WFP",
+   "posted": "2025-05-06"
+  },
+  {
+   "title": "Somalia - Humanitarian Dashboard, January - September 2025",
+   "url": "https://reliefweb.int/node/4184595",
+   "format": "Infographic",
+   "source": "OCHA",
+   "posted": "2025-11-02"
+  },
+  {
+   "title": "Somalia: Humanitarian Dashboard, January - August 2025",
+   "url": "https://reliefweb.int/node/4178167",
+   "format": "Infographic",
+   "source": "OCHA",
+   "posted": "2025-09-28"
+  }
+ ],
+ "documents": [],
+ "iframes": [
+  "https://app.powerbi.com/view?r=eyJrIjoiYTIzNTk4N2MtZTg4Mi00NGQyLWJiZmItZmFlMzU2MmRiYWMzIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://app.powerbi.com/view?r=eyJrIjoiNDI2YWJiYjMtNTQxNC00YTEzLTlkZjctNjg1NTMyNTU4ODA2IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9"
+ ],
+ "dashboard_links": [
+  "https://analytics.wfp.org/t/Public/views/Dashboard2023/SOMALIACASHDASHBOARD2023?%3Aembed=y&amp;%3AisGuestRedirectFromVizportal=y",
+  "https://app.powerbi.com/view?r=eyJrIjoiNDI2YWJiYjMtNTQxNC00YTEzLTlkZjctNjg1NTMyNTU4ODA2IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://app.powerbi.com/view?r=eyJrIjoiYTIzNTk4N2MtZTg4Mi00NGQyLWJiZmItZmFlMzU2MmRiYWMzIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://data.humdata.org",
+  "https://data.humdata.org/",
+  "https://data.humdata.org/visualization/somalia-cash-programing-v4/",
+  "https://reliefweb.int/attachments/67fa6c01-b9a2-48ef-8c3c-adc3b817c407/Somalia%20-%20Humanitarian%20Response%20Dashboard%2C%20August%202025.pdf",
+  "https://reliefweb.int/attachments/de86a978-44c3-4789-b3f1-26e7e727fb4c/Somalia%20-%20Humanitarian%20Response%20Dashboard%2C%20September%202025.pdf",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-april-june-2020",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-april-june-2021",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-april-june-2022",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-january-march-2020",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-january-march-2021",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-january-march-2022",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-july-september-2020",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-july-september-2021",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-july-september-2022",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-october-december-2020",
+  "https://reliefweb.int/report/somalia/somalia-cash-and-markets-quarterly-dashboard-october-december-2021",
+  "https://reliefweb.int/updates?view=maps&amp;advanced-search=%28PC216%29_%28S1503%29&amp;search=title%3A%22humanitarian+dashboard%22"
+ ],
+ "contacts": [
+  {
+   "organisation": "World Food Programme",
+   "role": ""
+  },
+  {
+   "organisation": "World Food Programme",
+   "role": ""
+  }
+ ],
+ "latest_item": {
+  "title": "Somali Cash Consortium - Baseline and Endline Findings: MPCA Outcomes from the Integrated Response Framework (June 2026)",
+  "url": "https://reliefweb.int/node/4233922",
+  "format": "Assessment",
+  "source": "IMPACT Initiatives",
+  "posted": "2026-10-14"
+ },
+ "latest_document": {
+  "title": "Somali Cash Consortium - Baseline and Endline Findings: MPCA Outcomes from the Integrated Response Framework (June 2026)",
+  "url": "https://reliefweb.int/node/4233922",
+  "format": "Assessment",
+  "source": "IMPACT Initiatives",
+  "posted": "2026-10-14"
+ },
+ "latest_listed_document": null
+}

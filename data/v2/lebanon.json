@@ -1,0 +1,193 @@
+{
+  "id": "lebanon",
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Lebanon Flash Appeal 2026 (Mar-Aug) and Lebanon Response Plan 2026 with Sep-Dec addendum",
+    "unhcr_plan": "3RP regional (Lebanon chapter not verified on a page opened)",
+    "note": "LRP/Flash Appeal coordinated via the Inter-Sector Coordination Group on the UNHCR data portal; Lebanon chapter of 3RP not confirmed.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://data.unhcr.org/en/working-group/15",
+    "page_title": "Cash Working Group - Lebanon",
+    "page_last_updated": "2026-11-03",
+    "last_update_basis": "latest document posted (LRP Funding Update Jan-Sep 2026) on the working-group page; no updated stamp",
+    "dashboard_url": "https://data.unhcr.org/en/documents/details/124231",
+    "dashboard_name": "Lebanon Response Plan: Cash Working Group Dashboard - Mid-Year 2026",
+    "dashboard_last_updated": "2026-09-24",
+    "dashboard_period": "Jan-Jun 2026 (progress through 2026-06-30)",
+    "meeting_minutes_latest": "2026-09-07",
+    "co_chairs": [],
+    "local_cochair": "unknown",
+    "contacts_basis": "Page refers to 'Key Contacts' not visible; chairs not stated in the strategy or minutes metadata opened (PDFs unreadable).",
+    "note": "Minutes date is the portal publish date, not the meeting date. Also published: CWG Q3 2026 at a Glance (2026-11-02), 2026 Strategy and Logframe (2026-02-05), EMPCA Guidelines (2026-06-02).",
+    "source_ids": [
+      "v2s2",
+      "v2s3",
+      "v2s4"
+    ]
+  },
+  "cash_volumes": {
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Dashboard (Mid-Year 2026) and Q3 2026 at a Glance exist, but only PDFs, whose text did not load; no total read.",
+      "source_type": "CWG dashboard"
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Dashboard (Mid-Year 2026) and Q3 2026 at a Glance exist, but only PDFs, whose text did not load; no total read.",
+      "source_type": "CWG dashboard"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Dashboard (Mid-Year 2026) and Q3 2026 at a Glance exist, but only PDFs, whose text did not load; no total read.",
+      "source_type": "CWG dashboard"
+    }
+  },
+  "fsps": [
+    {
+      "name": "BoB Finance",
+      "type": "other",
+      "used_by": [
+        "UNHCR",
+        "WFP"
+      ],
+      "evidence": "UNHCR Lebanon notice (Mar 2024): recipients of UNHCR or WFP cash can withdraw at BoB Finance branches.",
+      "website": "https://www.bobfinance.com.lb",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5"
+      ]
+    },
+    {
+      "name": "Banque Libano-Francaise (BLF)",
+      "type": "bank",
+      "used_by": [
+        "UNHCR"
+      ],
+      "evidence": "UNHCR Lebanon cash page: BLF issues the bank card and PIN and operates ATMs for withdrawal; cycle Nov 2026-Jun 2027.",
+      "website": "https://www.blf.com.lb",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s6"
+      ]
+    },
+    {
+      "name": "OMT (Online Money Transfer)",
+      "type": "money transfer operator",
+      "used_by": [
+        "UNICEF"
+      ],
+      "evidence": "OMT newsletter: UNICEF emergency cash recipients could collect at 1,000+ OMT locations from 2020-11-16; no 2026 use confirmed.",
+      "website": "https://omt.com.lb",
+      "logo_url": "https://omt.com.lb/img/new_omt_logo.svg",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Whish Money",
+      "type": "fintech / e-wallet",
+      "used_by": [],
+      "evidence": "Named in a 2026 article on digital wallets for aid in Lebanon; no humanitarian user identified on the page.",
+      "website": "https://whish.money",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s8"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "v2s1",
+      "title": "Coordination - Lebanon (ISCG)",
+      "publisher": "UNHCR Operational Data Portal",
+      "url": "https://data.unhcr.org/en/working-group/478",
+      "date": "2026-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Cash Working Group - Lebanon",
+      "publisher": "UNHCR Operational Data Portal",
+      "url": "https://data.unhcr.org/en/working-group/15",
+      "date": "2026-11-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Lebanon Response Plan: Cash Working Group Dashboard - Mid-Year 2026",
+      "publisher": "UNHCR Operational Data Portal",
+      "url": "https://data.unhcr.org/en/documents/details/124231",
+      "date": "2026-09-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Lebanon Response Plan: Cash Working Group Q3 2026 at a Glance",
+      "publisher": "UNHCR Operational Data Portal",
+      "url": "https://data.unhcr.org/en/documents/details/124726",
+      "date": "2026-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "21 new cash withdrawal locations",
+      "publisher": "UNHCR Lebanon Help",
+      "url": "https://help.unhcr.org/lebanon/en/2024/03/29/21-new-cash-withdrawal-locations",
+      "date": "2024-03-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Cash Assistance",
+      "publisher": "UNHCR Lebanon Help",
+      "url": "https://help.unhcr.org/lebanon/en/?p=1112",
+      "date": "2026-11",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Cash Out | UNICEF",
+      "publisher": "OMT Lebanon",
+      "url": "https://omt.com.lb/en/news/cash-out-unicef",
+      "date": "2020-11-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "With One Million Displaced, Lebanon Turns to Digital Wallets for Aid",
+      "publisher": "Pulse",
+      "url": "https://www.pulse.bot/fintech/news/with-one-million-displaced-lebanon-turns-to-digital-wallets-for-aid-50d4343f-a9a1-41ac-8c75-c71feec343da",
+      "date": "2026-04-05",
+      "accessed": "2026-11-06"
+    }
+  ]
+}

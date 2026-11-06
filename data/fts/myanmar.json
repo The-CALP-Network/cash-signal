@@ -1,0 +1,66 @@
+{
+ "id": "myanmar",
+ "plan_id": 1505,
+ "plan_name": "Myanmar Humanitarian Needs and Response Plan 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1505",
+ "fts_page": "https://fts.unocha.org/plans/1505/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 328,
+   "fundingTotal": 468077276,
+   "pledgeTotal": 85112
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 266
+  }
+ },
+ "summary": {
+  "total_funding": 468077276,
+  "flow_count_incoming": 325,
+  "latest_flow_date": "2026-11-04",
+  "mpc_cluster_funding": 58408549,
+  "mpc_cluster_funding_shared_view": 58408549,
+  "mpc_cluster_name": "Multi-Purpose Cash",
+  "ctp_funding": 79087151,
+  "ctp_in_mpc": 58408549,
+  "sectoral_cva_funding": 20678602,
+  "sectoral_cva_by_cluster": {
+   "Early Recovery": 10000000,
+   "Food Security": 6600132,
+   "Protection": 1550747,
+   "Coordination, Thematics and System Support": 1447800,
+   "Health": 540668,
+   "Shelter / NFI / CCCM": 270805,
+   "Education": 261361,
+   "Nutrition": 7089
+  },
+  "sectoral_cva_flow_count": 41,
+  "cva_funding": 79087151,
+  "cva_pct_of_total": 16.9,
+  "sectoral_cva_pct_of_total": 4.4,
+  "mpc_pct_of_total": 12.5,
+  "local_actor_funding": 8388183,
+  "local_actor_pct_of_total": 1.8,
+  "local_actor_cva_funding": 6722100,
+  "local_actor_pct_of_cva": 8.5,
+  "cbpf_internal": {
+   "flow_count": 264,
+   "total": 155673773,
+   "mpc": 54211748,
+   "ctp": 92021725,
+   "cva": 92021725,
+   "mpc_pct": 34.8,
+   "cva_pct": 59.1,
+   "local_actor": 19341965,
+   "local_actor_pct": 12.4,
+   "local_actor_cva": 4905491,
+   "local_actor_pct_of_cva": 5.3
+  }
+ }
+}

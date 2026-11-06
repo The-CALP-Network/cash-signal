@@ -1,0 +1,201 @@
+{
+ "id": "opt",
+ "coordination": {
+  "label": "OCHA",
+  "ocha_plan": "Escalation of Hostilities in the OPT Flash Appeal 2026",
+  "unhcr_plan": "none (no UNHCR-led plan found; UNRWA separately serves Palestine refugees)",
+  "note": "OCHA-coordinated Flash Appeal; UNRWA is a CWG contact organisation but its own appeal was not checked.",
+  "source_ids": [
+   "v2s1"
+  ]
+ },
+ "cwg_reliefweb": {
+  "page_url": "https://response.reliefweb.int/palestine/palestine-cash-working-group",
+  "page_title": "Palestine Cash Working Group",
+  "page_last_updated": "2026-05-20",
+  "last_update_basis": "Most recent dated item visible: calendar entry for a West Bank MPCA group meeting on 20 May 2026. Latest document posted on the page is 2024-07-02 (Gaza cash-for-work guidance); no updated stamp.",
+  "dashboard_url": "",
+  "dashboard_name": "",
+  "dashboard_last_updated": "",
+  "dashboard_period": "",
+  "meeting_minutes_latest": "",
+  "co_chairs": [
+   {
+    "organisation": "OCHA",
+    "actor_type": "UN",
+    "role": "co-chair"
+   },
+   {
+    "organisation": "Save the Children",
+    "actor_type": "INGO",
+    "role": "co-chair"
+   },
+   {
+    "organisation": "Action Against Hunger Spain",
+    "actor_type": "INGO",
+    "role": "co-lead"
+   },
+   {
+    "organisation": "UNRWA",
+    "actor_type": "UN",
+    "role": "co-lead"
+   },
+   {
+    "organisation": "WFP",
+    "actor_type": "UN",
+    "role": "co-lead"
+   }
+  ],
+  "local_cochair": "no",
+  "contacts_basis": "A CANADEM OCHA vacancy says OCHA co-chairs the National CWG with Save the Children; the ReliefWeb page contacts block lists Action Against Hunger Spain, OCHA, UNRWA and WFP without stating roles (roles for the last three are inferred and the sources differ).",
+  "note": "No in-country CVA dashboard on the page. The Gaza guiding note on mobile money and e-wallets (June 2024) is the latest CWG document found.",
+  "source_ids": [
+   "v2s2",
+   "v2s3",
+   "v2s4"
+  ]
+ },
+ "cash_volumes": {
+  "cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s5",
+    "v2s6"
+   ],
+   "note": "No total US$ delivered found. Gaza CWG note (Jun 2024): at least one emergency MPCA payment to over 178,000 households since 7 Oct 2023. UNICEF bulletin (Jun 2026): cumulatively about 1.3M people in about 213,000 families, no US$ total.",
+   "source_type": "other"
+  },
+  "mpc_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [
+    "v2s6"
+   ],
+   "note": "UNICEF MPC reach given in people and families only.",
+   "source_type": "other"
+  },
+  "sectoral_cva_delivered_usd": {
+   "value": null,
+   "available": "no",
+   "as_of": "",
+   "period": "",
+   "source_ids": [],
+   "note": "Not found.",
+   "source_type": ""
+  }
+ },
+ "fsps": [
+  {
+   "name": "PalPay",
+   "type": "fintech / e-wallet",
+   "used_by": [
+    "Gaza CWG actors",
+    "UNICEF",
+    "UNDP"
+   ],
+   "evidence": "Gaza CWG note (Jun 2024): the vast majority of cash assistance was distributed via the PalPay agent network; UNICEF June 2026 bulletin says its digital cash is activated via PalPay/Jawwal Pay agents.",
+   "website": "https://palpay.ps",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s5",
+    "v2s6",
+    "v2s7"
+   ]
+  },
+  {
+   "name": "Jawwal Pay",
+   "type": "fintech / e-wallet",
+   "used_by": [
+    "UNICEF",
+    "UNDP"
+   ],
+   "evidence": "UNICEF June 2026 bulletin cites PalPay/Jawwal Pay agents; UNDP/PAPP partnership (Sep 2024) names Jawwal Pay as digital payment partner.",
+   "website": "https://www.jawwalpay.ps",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s6",
+    "v2s7"
+   ]
+  },
+  {
+   "name": "Bank of Palestine",
+   "type": "bank",
+   "used_by": [
+    "PalPay agents (liquidity source)"
+   ],
+   "evidence": "Gaza CWG note: PalPay agents accessed liquidity through Bank of Palestine ATMs and over-the-counter withdrawals; PalPay is a Bank of Palestine subsidiary per UNDP.",
+   "website": "https://www.bop.ps",
+   "logo_url": "",
+   "logo_source": "",
+   "source_ids": [
+    "v2s5",
+    "v2s7"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "v2s1",
+   "title": "Escalation of Hostilities in the OPT Flash Appeal 2026",
+   "publisher": "OCHA",
+   "url": "https://www.un.org/unispal/wp-content/uploads/2025/12/OPT_Flash_Appeal_2026_EN_FINAL.pdf",
+   "date": "2025-12",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s2",
+   "title": "Palestine Cash Working Group",
+   "publisher": "OCHA / ReliefWeb Response",
+   "url": "https://response.reliefweb.int/palestine/palestine-cash-working-group",
+   "date": "2026-05-20",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s3",
+   "title": "OCHA Cash Coordinator P3 Gaza vacancy",
+   "publisher": "CANADEM",
+   "url": "https://portal.canadem.ca/careers/57869-CANADEM-General-Portal/jobs/16727067-OCHA-Cash-Coordinator-P3-Gaza-oPt",
+   "date": "",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s4",
+   "title": "Palestine CWG reports listing",
+   "publisher": "OCHA / ReliefWeb Response",
+   "url": "https://response.reliefweb.int/palestine/palestine-cash-working-group/reports",
+   "date": "2024-09-18",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s5",
+   "title": "Cash Working Group, Gaza Strip: Mobile money and e-wallet modalities, Gaza CWG guiding note",
+   "publisher": "Gaza CWG / ReliefWeb",
+   "url": "https://reliefweb.int/report/occupied-palestinian-territory/cash-working-group-gaza-strip-mobile-money-and-e-wallet-modalities-gaza-cwg-guiding-note-june-2024",
+   "date": "2024-06",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s6",
+   "title": "Gaza Strip Digital Cash Assistance and Market Monitoring Bulletin, June 2026",
+   "publisher": "UNICEF",
+   "url": "https://www.unicef.org/sop/media/6856/file/Gaza%20Strip%20Cash%20Assistance%20Bulletin%20June%202026.pdf.pdf",
+   "date": "2026-06",
+   "accessed": "2026-11-06"
+  },
+  {
+   "id": "v2s7",
+   "title": "UNDP partners with leading digital payment service providers to strengthen digital financial solutions in Gaza",
+   "publisher": "UNDP/PAPP",
+   "url": "https://www.undp.org/papp/press-releases/undp-partners-leading-digital-payment-service-providers-strengthen-digital-financial-solutions-gaza",
+   "date": "2024-09-26",
+   "accessed": "2026-11-06"
+  }
+ ]
+}

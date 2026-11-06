@@ -1,0 +1,67 @@
+{
+ "id": "mali",
+ "page_url": "https://response.reliefweb.int/mali/groupe-de-travail-cash",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Mali: Cash Working Group Mali",
+ "river": [
+  {
+   "title": "Feuille de route: Groupe de Travail Technique sur les Programmes Transferts Monétaires pour la Nutrition (GTT PTM-Nut) - Avril 2026",
+   "url": "https://reliefweb.int/node/4229276",
+   "format": "Manual and Guideline",
+   "source": "Nutrition Cluster",
+   "posted": "2026-09-10"
+  },
+  {
+   "title": "Revue de la litterature au Mali Programmes de Transferts Monétaires pour la Nutrition",
+   "url": "https://reliefweb.int/node/4229274",
+   "format": "Analysis",
+   "source": "Nutrition Cluster",
+   "posted": "2026-09-10"
+  },
+  {
+   "title": "Cash Working Group (CWG) au Mali : Cartographie Rapide de l'Assistance Monétaire, Juin 2026",
+   "url": "https://reliefweb.int/node/4221531",
+   "format": "Other",
+   "source": "OCHA",
+   "posted": "2026-07-15"
+  },
+  {
+   "title": "Cash Working Group (CWG) au Mali : Compte rendu de la Réunion CWG du mardi, 29 Avril 2025 - Réunion présentiel et en ligne [Meeting Minutes]",
+   "url": "https://reliefweb.int/node/4159362",
+   "format": "Other",
+   "source": "OCHA",
+   "posted": "2025-06-17"
+  }
+ ],
+ "documents": [],
+ "iframes": [
+  "https://app.powerbi.com/view?r=eyJrIjoiNjI5NDIzY2UtZjY4OS00ODdjLWJmODQtZGViMjc5NTUyMmEzIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9"
+ ],
+ "dashboard_links": [
+  "https://app.powerbi.com/reportEmbed?reportId=6533eefb-ee2e-4421-9ac9-854c7e9bc867&amp;autoAuth=true&amp;ctid=0f9e35db-544f-4f60-bdcc-5ea416e6dc70",
+  "https://app.powerbi.com/view?r=eyJrIjoiNjI5NDIzY2UtZjY4OS00ODdjLWJmODQtZGViMjc5NTUyMmEzIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://data.humdata.org",
+  "https://data.humdata.org/",
+  "https://reliefweb.int/report/mali/mali-tableau-de-bord-des-assistances-en-transfert-monetaires-janvier-juin-2023",
+  "https://reliefweb.int/report/mali/mali-tableau-de-bord-des-assistances-en-transfert-monetaires-juillet-septembre-2023",
+  "https://reliefweb.int/report/mali/mali-tableau-de-bord-des-assistances-en-transfert-monetaires-octobre-decembre-2023"
+ ],
+ "contacts": [],
+ "latest_item": {
+  "title": "Feuille de route: Groupe de Travail Technique sur les Programmes Transferts Monétaires pour la Nutrition (GTT PTM-Nut) - Avril 2026",
+  "url": "https://reliefweb.int/node/4229276",
+  "format": "Manual and Guideline",
+  "source": "Nutrition Cluster",
+  "posted": "2026-09-10"
+ },
+ "latest_document": {
+  "title": "Feuille de route: Groupe de Travail Technique sur les Programmes Transferts Monétaires pour la Nutrition (GTT PTM-Nut) - Avril 2026",
+  "url": "https://reliefweb.int/node/4229276",
+  "format": "Manual and Guideline",
+  "source": "Nutrition Cluster",
+  "posted": "2026-09-10"
+ },
+ "latest_listed_document": null
+}

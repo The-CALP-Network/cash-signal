@@ -1,0 +1,139 @@
+{
+  "id": "syria",
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Syria Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "none found",
+    "note": "HNRP (OCHA) with CWG-led MPCA/group cash transfers; no UNHCR-led in-country plan confirmed.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/syria/syria-hub/cash-working-group-archive",
+    "page_title": "Cash Working Group Archive",
+    "page_last_updated": "",
+    "last_update_basis": "page states the Syria Hub is archived and not updated; no item dates shown",
+    "dashboard_url": "https://response.reliefweb.int/syria/syria-hub/cash-working-group-archive",
+    "dashboard_name": "MPC and CVA HCT-Coordinated Response dashboards (archived, 2023-2024)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "2024 (latest archived)",
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "Oxfam",
+        "actor_type": "INGO",
+        "role": "co-chair"
+      },
+      {
+        "organisation": "Caritas Switzerland (CACH)",
+        "actor_type": "INGO",
+        "role": "co-chair"
+      }
+    ],
+    "local_cochair": "unknown",
+    "contacts_basis": "Damascus CWG co-chair vacancies: Oxfam (programmatic co-chair, listed 2026-04-23) and Caritas Switzerland (NGO co-chair, undated). Seat-holders not confirmed on a CWG page.",
+    "note": "No live 2026 CWG page found on ReliefWeb; NW Syria CWG page (Turkiye cross-border) is also archived. Syrian-led NWS community of practice since 2014.",
+    "source_ids": [
+      "v2s2",
+      "v2s3",
+      "v2s4",
+      "v2s5"
+    ]
+  },
+  "cash_volumes": {
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [
+        "v2s1"
+      ],
+      "note": "No 2025/26 delivered-CVA total found; HNRP 2026 MPCA section gives requirements (US$183.4M) and targets only.",
+      "source_type": ""
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [
+        "v2s1"
+      ],
+      "note": "No 2025/26 delivered-CVA total found; HNRP 2026 MPCA section gives requirements (US$183.4M) and targets only.",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [
+        "v2s1"
+      ],
+      "note": "No 2025/26 delivered-CVA total found; HNRP 2026 MPCA section gives requirements (US$183.4M) and targets only.",
+      "source_type": ""
+    }
+  },
+  "fsps": [],
+  "sources": [
+    {
+      "id": "v2s1",
+      "title": "Syria HNRP 2026 - CVA overview and MPC section",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1518/document/syria-humanitarian-needs-and-response-plan-2026/article/27-cash-voucher-assistance-overview-and-multipurpose-cash-section-5",
+      "date": "2026-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Cash Working Group Archive",
+      "publisher": "ReliefWeb Response (Syria Hub)",
+      "url": "https://response.reliefweb.int/syria/syria-hub/cash-working-group-archive",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Cash Working Group - Northwest Syria (NWS)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/turkiye-cross-border/cash-working-group-northwest-syria-nws",
+      "date": "2025-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Cash Working Group Programmatic Co-Chair (Oxfam)",
+      "publisher": "Work in Charities",
+      "url": "https://www.workincharities.co.uk/job/cash-working-group-programmatic-co-chair-international-0a2c11e8",
+      "date": "2026-04-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Cash Working Group Co-Chair Syria (Caritas Switzerland)",
+      "publisher": "Daleel Madani",
+      "url": "https://daleel-madani.org/civil-society-directory/caritas-lebanon/jobs/cash-working-group-co-chair-syria-caritas-switzerland",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "UNHCR Syria - cash assistance",
+      "publisher": "UNHCR",
+      "url": "https://help.unhcr.org/syria/topics/cash-assistance/",
+      "date": "2026-08-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "FAO RFP: financial services, money transfer and cash delivery within Syria (LTA)",
+      "publisher": "UNGM",
+      "url": "https://www.ungm.org/Public/Notice/305923",
+      "date": "2026-07-02",
+      "accessed": "2026-11-06"
+    }
+  ],
+  "fsps_note": "No named FSP found. HNRP 2026 refers to 'a network of FSPs' (v2s1); UNHCR Syria page names none (v2s6); FAO LTA tender names no provider (v2s7)."
+}

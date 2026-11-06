@@ -1,0 +1,58 @@
+{
+ "id": "afghanistan",
+ "page_url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Afghanistan: Cash Voucher Working Group",
+ "river": [
+  {
+   "title": "Afghanistan: Weekly Market Report: Issue 316: Week 4 - October 2026",
+   "url": "https://reliefweb.int/node/4236479",
+   "format": "Situation Report",
+   "source": "WFP",
+   "posted": "2026-11-02"
+  },
+  {
+   "title": "Afghanistan: Weekly Market Report: Issue 315: Week 3 - October 2026",
+   "url": "https://reliefweb.int/node/4235473",
+   "format": "Situation Report",
+   "source": "WFP",
+   "posted": "2026-10-26"
+  },
+  {
+   "title": "Afghanistan rural marketplace opportunity: Bringing the market closer to rural producers (October 2026)",
+   "url": "https://reliefweb.int/node/4235010",
+   "format": "Assessment",
+   "source": "Data for Afghanistan",
+   "posted": "2026-10-21"
+  }
+ ],
+ "documents": [],
+ "iframes": [],
+ "dashboard_links": [
+  "/afghanistan/natural-disasters-dashboard",
+  "https://app.powerbi.com/view?r=eyJrIjoiNjEzOTY4OWEtYTg4Yy00YjQwLThhNTUtYzI2Y2Y1NDgwY2VhIiwidCI6IjNmODZkMWI0LTJjNmItNGIxYS1iMmFlLTZmNWU5NTBiY2ExZSIsImMiOjh9&amp;amp;pageName=ReportSection",
+  "https://data.humdata.org",
+  "https://data.humdata.org/",
+  "https://response.reliefweb.int/afghanistan/response-monitoring-dashboard"
+ ],
+ "contacts": [],
+ "events": [],
+ "event_dates": [],
+ "latest_item": {
+  "title": "Afghanistan: Weekly Market Report: Issue 316: Week 4 - October 2026",
+  "url": "https://reliefweb.int/node/4236479",
+  "format": "Situation Report",
+  "source": "WFP",
+  "posted": "2026-11-02"
+ },
+ "latest_document": {
+  "title": "Afghanistan: Weekly Market Report: Issue 316: Week 4 - October 2026",
+  "url": "https://reliefweb.int/node/4236479",
+  "format": "Situation Report",
+  "source": "WFP",
+  "posted": "2026-11-02"
+ },
+ "latest_listed_document": null
+}

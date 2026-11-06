@@ -1,0 +1,243 @@
+{
+  "id": "drc",
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026 (HNRP)",
+    "unhcr_plan": "none",
+    "note": "HNRP (OCHA). No 2026 UNHCR in-country RRP chapter found; DRC refugees/IDPs are covered in the HNRP and UNHCR's own Global Appeal DRC situation chapter, which is not an RRP.",
+    "source_ids": [
+      "v2s1",
+      "v2s2"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/democratic-republic-congo/cash-working-group",
+    "page_title": "Cash Working Group",
+    "page_last_updated": "2024-12",
+    "last_update_basis": "latest document posted (CWG RDC 4W December 2024); page shows no updated stamp",
+    "dashboard_url": "",
+    "dashboard_name": "",
+    "dashboard_last_updated": "",
+    "dashboard_period": "",
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "OCHA (non-programmatic lead)",
+        "actor_type": "UN",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "GiveDirectly (programmatic lead)",
+        "actor_type": "INGO",
+        "role": "co-lead"
+      }
+    ],
+    "local_cochair": "no",
+    "contacts_basis": "CALP West and Central Africa CWG leads report (Jul 2026); the ReliefWeb page itself lists no contacts. REACH gives technical support without a lead role.",
+    "note": "Page lists 4W reports Jan 2024 to Dec 2024 and ToRs only; no dashboard, no minutes, no 2025-2026 items. National CWG plus regional groups (Goma, Bukavu, Kalemie, Kananga) and provincial groups (Bunia, Tshikapa).",
+    "source_ids": [
+      "v2s3",
+      "v2s4"
+    ]
+  },
+  "cash_volumes": {
+    "cva_delivered_usd": {
+      "value": 76400000,
+      "available": "partial",
+      "as_of": "2025-04",
+      "period": "Calendar year 2024, eastern DRC only",
+      "source_ids": [
+        "v2s5"
+      ],
+      "note": "USD 76.4M delivered to 3.6M people across eastern DRC in 2024 per CWG 4W data as cited by Mercy Corps; 4W is partial and 2023 (USD 98.7M) is not comparable. No 2025 total found.",
+      "source_type": "other"
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [],
+      "note": "No USD MPC total found. The 4W summaries on the CWG page give MPC shares only (e.g. about 59% multipurpose in Dec 2024), without the USD value in the text read.",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [],
+      "note": "No USD sectoral total found.",
+      "source_type": ""
+    }
+  },
+  "fsps": [
+    {
+      "name": "Trust Merchant Bank (TMB)",
+      "type": "bank",
+      "used_by": [
+        "UNHCR",
+        "NGOs in North Kivu (unnamed)"
+      ],
+      "evidence": "UNHCR cash snapshot to 31 Mar 2026 lists TMB for direct payments and mobile counters; Mercy Corps (Apr 2025) says banks handled 71% of NGO cash transfers in North Kivu in 2024, primarily TMB and Ecobank.",
+      "website": "https://www.tmb.cd",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s6",
+        "v2s5"
+      ]
+    },
+    {
+      "name": "Ecobank",
+      "type": "bank",
+      "used_by": [
+        "NGOs in North Kivu (unnamed)"
+      ],
+      "evidence": "Named with TMB as the main banks for NGO cash transfers in North Kivu in 2024 (CWG 4W data); banks in M23-held areas were ordered closed in Jan 2025.",
+      "website": "https://www.ecobank.com",
+      "logo_url": "https://www.ecobank.com/img/eco/eco-logo-svg.svg",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s5"
+      ]
+    },
+    {
+      "name": "M-Pesa (Vodacash / Vodacom)",
+      "type": "mobile money",
+      "used_by": [
+        "UNHCR"
+      ],
+      "evidence": "Listed as FSP in UNHCR DRC cash snapshot to 31 Mar 2026; also named as an example platform in an IOM Oct 2026 RFP.",
+      "website": "https://www.vodacom.cd",
+      "logo_url": "https://www.vodacom.cd/sites/drc-portal/themes/custom/drc_portal/logo.svg",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s6",
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Pepele Mobile",
+      "type": "mobile money",
+      "used_by": [
+        "UNHCR"
+      ],
+      "evidence": "Listed as FSP in UNHCR DRC cash snapshot to 31 Mar 2026.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s6"
+      ]
+    },
+    {
+      "name": "Airtel Money",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "Only named as an example mobile money platform in IOM's Oct 2026 RFP (Lot 2); use by humanitarians not confirmed in a source read.",
+      "website": "https://www.airtel.africa",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Orange Money",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "Only named as an example platform in IOM's Oct 2026 RFP (Lot 2); use not confirmed.",
+      "website": "https://www.orange.cd",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Africell Money",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "Only named as an example platform in IOM's Oct 2026 RFP (Lot 2); use not confirmed.",
+      "website": "https://africell.cd",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "COOPEC savings cooperatives (unnamed)",
+      "type": "other",
+      "used_by": [
+        "NGOs in Kivu provinces (unnamed)"
+      ],
+      "evidence": "Cooperatives handled 8% of NGO transfers in North Kivu and 20% in South Kivu in 2024; no individual cooperative named.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "v2s1",
+      "title": "Facing critical funding gap, humanitarian community in DRC forced to strictly prioritize its response in 2026",
+      "publisher": "OCHA via ReliefWeb",
+      "url": "https://reliefweb.int/report/democratic-republic-congo/facing-critical-funding-gap-humanitarian-community-drc-forced-strictly-prioritize-its-response-2026",
+      "date": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "DRC situation, Global Appeal 2026",
+      "publisher": "UNHCR",
+      "url": "https://www.unhcr.org/sites/default/files/2026-01/ga2026-drc-situation.pdf",
+      "date": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Cash Working Group (DRC)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/democratic-republic-congo/cash-working-group",
+      "date": "2024-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Rapport de la rencontre des Leads et Co-Leads des CWG d'Afrique de l'Ouest et du Centre (CALP, Dakar, 29 Jun-2 Jul 2026)",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Mercy Corps CAT DRC cash report (FSP landscape in eastern DRC, 2024 data)",
+      "publisher": "Mercy Corps",
+      "url": "https://www.prosperglobal.org/sites/default/files/2025-08/cat-drc-cash.pdf",
+      "date": "2025-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "République Démocratique du Congo - Interventions basées sur les espèces au 31 mars 2026",
+      "publisher": "UNHCR",
+      "url": "https://data.unhcr.org/en/documents/details/122167",
+      "date": "2026-04-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Fourniture de services de transfert d'argent en République Démocratique du Congo (RFP 30000034327)",
+      "publisher": "IOM via UNGM",
+      "url": "https://www.ungm.org/Public/Notice/319088",
+      "date": "2026-10-21",
+      "accessed": "2026-11-06"
+    }
+  ]
+}

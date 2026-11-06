@@ -5,7 +5,8 @@ import json, sys, re
 AVAIL = {"yes", "partial", "no"}
 TOP = ["id","name","iso3","calp_region","last_researched","researched_by","plan","plan_2027",
        "modality_preference","cost_efficiency","hnrp_requirements","overall_funding","pooled_funds",
-       "cash_feasibility","market_monitoring","cwg","ai_summary","rep_notes","sources"]
+       "cash_feasibility","market_monitoring","cwg","ai_summary","rep_notes",
+       "coordination","fts_cva","cash_volumes","cwg_reliefweb","fsps","localisation","sources"]
 DATUM_GROUPS = {
   "plan": ["people_in_need","people_targeted","requirements_usd","funded_usd","funded_pct"],
   "modality_preference": ["cash_pct","vouchers_pct","in_kind_pct","other_pct"],
@@ -13,7 +14,12 @@ DATUM_GROUPS = {
   "hnrp_requirements": ["mpc_pct","sectoral_cash_pct","vouchers_pct","total_cva_pct"],
   "overall_funding": ["mpc_pct","mpc_funded_pct_of_mpc_req","sectoral_cash_pct","vouchers_pct"],
   "pooled_funds": ["cbpf_allocations_usd","mpc_pct","sectoral_cash_pct","vouchers_pct"],
+  "fts_cva": ["total_funding_usd","mpc_usd","ctp_usd","sectoral_cva_usd","cva_usd","cva_pct_of_total","sectoral_cva_pct_of_total","mpc_pct_of_total"],
+  "cash_volumes": ["mpc_funding_fts_usd","sectoral_cva_best_usd","cva_delivered_usd","mpc_delivered_usd","sectoral_cva_delivered_usd"],
+  "localisation": ["local_cochair","cva_to_local_pct","all_funding_to_local_pct","cbpf_cva_to_local_pct","cbpf_all_to_local_pct"],
 }
+# indicator slots counted on the page (fts_cva is a feeder block, not an indicator group)
+COUNTED = {k: v for k, v in DATUM_GROUPS.items() if k != "fts_cva"}
 errs = []
 def err(m): errs.append(m)
 
@@ -52,7 +58,18 @@ for grp, keys in DATUM_GROUPS.items():
         if k not in g: err(f"{grp}.{k} missing")
         else: check_datum(f"{grp}.{k}", g[k])
 
-for blk in ("cash_feasibility","market_monitoring","cwg","plan_2027"):
+if d.get("coordination",{}).get("label") not in {"OCHA","UNHCR","OCHA + UNHCR","Neither","Unknown"}: err("coordination.label invalid")
+cw = d.get("cwg_reliefweb", {})
+if cw.get("local_cochair") not in {"yes","no","unknown"}: err("cwg_reliefweb.local_cochair must be yes|no|unknown")
+for ch in cw.get("co_chairs", []):
+    if ch.get("actor_type") not in {"UN","INGO","NNGO","Government","RCRC","Consortium","Other"}: err(f"cwg_reliefweb.co_chairs: bad actor_type {ch.get('actor_type')!r}")
+    if re.search(r"@", ch.get("organisation","")): err("cwg_reliefweb.co_chairs: contains an email address")
+for i, f in enumerate(d.get("fsps", [])):
+    if not f.get("name"): err(f"fsps[{i}] missing name")
+    for sid in f.get("source_ids", []):
+        if sid not in src_ids: err(f"fsps[{i}]: unknown source id {sid}")
+    if f.get("logo_url") and not re.match(r"^https?://", f["logo_url"]): err(f"fsps[{i}]: logo_url not a URL")
+for blk in ("cash_feasibility","market_monitoring","cwg","plan_2027","coordination","cwg_reliefweb"):
     for sid in d.get(blk, {}).get("source_ids", []):
         if sid not in src_ids: err(f"{blk}: unknown source id {sid}")
 if d.get("cash_feasibility",{}).get("exists") not in {"yes","no","unknown"}: err("cash_feasibility.exists must be yes|no|unknown")
@@ -74,6 +91,6 @@ if "_comment" in d: err("remove top-level _comment")
 
 if errs:
     print(f"{len(errs)} problem(s):"); [print(" -", e) for e in errs]; sys.exit(1)
-yes = sum(1 for g,ks in DATUM_GROUPS.items() for k in ks if d[g][k]["available"]=="yes")
-tot = sum(len(ks) for ks in DATUM_GROUPS.values())
+yes = sum(1 for g,ks in COUNTED.items() for k in ks if d[g][k]["available"]!="no")
+tot = sum(len(ks) for ks in COUNTED.values())
 print(f"OK — {d['name']}: {yes}/{tot} indicators available, {len(src_ids)} sources")

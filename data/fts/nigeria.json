@@ -1,0 +1,65 @@
+{
+ "id": "nigeria",
+ "plan_id": 1508,
+ "plan_name": "Nigeria Humanitarian Needs and Response Plan 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1508",
+ "fts_page": "https://fts.unocha.org/plans/1508/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 297,
+   "fundingTotal": 367725856,
+   "pledgeTotal": 0
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 86
+  }
+ },
+ "summary": {
+  "total_funding": 367725856,
+  "flow_count_incoming": 297,
+  "latest_flow_date": "2026-11-02",
+  "mpc_cluster_funding": 6707044,
+  "mpc_cluster_funding_shared_view": 6707044,
+  "mpc_cluster_name": "Multi-Purpose Cash",
+  "ctp_funding": 9065907,
+  "ctp_in_mpc": 6665983,
+  "sectoral_cva_funding": 2399924,
+  "sectoral_cva_by_cluster": {
+   "Protection": 901267,
+   "Food Security": 577623,
+   "Nutrition": 97015,
+   "Shelter and Non-food Items": 78017,
+   "Education": 76604,
+   "WASH": 3884,
+   "Health": 1504
+  },
+  "sectoral_cva_flow_count": 31,
+  "cva_funding": 9106968,
+  "cva_pct_of_total": 2.5,
+  "sectoral_cva_pct_of_total": 0.7,
+  "mpc_pct_of_total": 1.8,
+  "local_actor_funding": 1031152,
+  "local_actor_pct_of_total": 0.3,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 86,
+   "total": 122200055,
+   "mpc": 0,
+   "ctp": 51522230,
+   "cva": 51522230,
+   "mpc_pct": 0.0,
+   "cva_pct": 42.2,
+   "local_actor": 5600001,
+   "local_actor_pct": 4.6,
+   "local_actor_cva": 793577,
+   "local_actor_pct_of_cva": 1.5
+  }
+ }
+}

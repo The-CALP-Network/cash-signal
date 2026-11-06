@@ -1,0 +1,68 @@
+{
+ "id": "southsudan",
+ "plan_id": 1512,
+ "plan_name": "South Sudan Humanitarian Needs and Response Plan 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1512",
+ "fts_page": "https://fts.unocha.org/plans/1512/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 461,
+   "fundingTotal": 590844983,
+   "pledgeTotal": 1122689
+  },
+  "outgoing": {
+   "flowCount": 2,
+   "fundingTotal": 399000,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 273
+  }
+ },
+ "summary": {
+  "total_funding": 590844983,
+  "flow_count_incoming": 458,
+  "latest_flow_date": "2026-11-02",
+  "mpc_cluster_funding": 15724265,
+  "mpc_cluster_funding_shared_view": 17332844,
+  "mpc_cluster_name": "Multi-Purpose Cash",
+  "ctp_funding": 24505005,
+  "ctp_in_mpc": 15604863,
+  "sectoral_cva_funding": 8900142,
+  "sectoral_cva_by_cluster": {
+   "Food Security": 3408551,
+   "Protection": 2277285,
+   "Refugee Response": 2067976,
+   "Education": 1864546,
+   "Nutrition": 1626733,
+   "Health": 1608579,
+   "Water, Sanitation  and Hygiene": 1608579,
+   "Multi-Purpose Cash": 1608579,
+   "Shelter and Non-food Items": 440829,
+   "Coordination, Thematic and System Support": 431380
+  },
+  "sectoral_cva_flow_count": 40,
+  "cva_funding": 24624407,
+  "cva_pct_of_total": 4.2,
+  "sectoral_cva_pct_of_total": 1.5,
+  "mpc_pct_of_total": 2.7,
+  "local_actor_funding": 5291136,
+  "local_actor_pct_of_total": 0.9,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 263,
+   "total": 164539882,
+   "mpc": 997500,
+   "ctp": 25372205,
+   "cva": 25372205,
+   "mpc_pct": 0.6,
+   "cva_pct": 15.4,
+   "local_actor": 23554038,
+   "local_actor_pct": 14.3,
+   "local_actor_cva": 1504542,
+   "local_actor_pct_of_cva": 5.9
+  }
+ }
+}

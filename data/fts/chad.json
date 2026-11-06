@@ -1,0 +1,65 @@
+{
+ "id": "chad",
+ "plan_id": 1501,
+ "plan_name": "Tchad Besoins Humanitaires et Plan de Réponse 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1501",
+ "fts_page": "https://fts.unocha.org/plans/1501/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 377,
+   "fundingTotal": 443545769,
+   "pledgeTotal": 1875679
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 85
+  }
+ },
+ "summary": {
+  "total_funding": 443545769,
+  "flow_count_incoming": 375,
+  "latest_flow_date": "2026-10-29",
+  "mpc_cluster_funding": 0,
+  "mpc_cluster_funding_shared_view": 0,
+  "mpc_cluster_name": null,
+  "ctp_funding": 5287511,
+  "ctp_in_mpc": 0,
+  "sectoral_cva_funding": 5287511,
+  "sectoral_cva_by_cluster": {
+   "Sécurité Alimentaire": 3151057,
+   "Abris AME": 896001,
+   "Protection": 846486,
+   "Education": 186287,
+   "Eau, Hygiène et Assainissement": 184697,
+   "Santé": 23213,
+   "Transfert d'Espèce à Usage Multiple (TEUM)": 115
+  },
+  "sectoral_cva_flow_count": 30,
+  "cva_funding": 5287511,
+  "cva_pct_of_total": 1.2,
+  "sectoral_cva_pct_of_total": 1.2,
+  "mpc_pct_of_total": 0.0,
+  "local_actor_funding": 3360938,
+  "local_actor_pct_of_total": 0.8,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 0,
+   "total": 0,
+   "mpc": 0,
+   "ctp": 0,
+   "cva": 0,
+   "mpc_pct": null,
+   "cva_pct": null,
+   "local_actor": 0,
+   "local_actor_pct": null,
+   "local_actor_cva": 0,
+   "local_actor_pct_of_cva": null
+  }
+ }
+}

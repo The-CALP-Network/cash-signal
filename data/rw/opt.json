@@ -1,0 +1,88 @@
+{
+ "id": "opt",
+ "page_url": "https://response.reliefweb.int/palestine/palestine-cash-working-group",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Occupied Palestinian Territory: Palestine Cash Working Group",
+ "river": [
+  {
+   "title": "Cash Working Group: CVA Coordination Structure in the occupied Palestinian territory (oPt) - September 2023 (updated)",
+   "url": "https://reliefweb.int/node/3996335",
+   "format": "Manual and Guideline",
+   "source": "OCHA",
+   "posted": "2023-09-12"
+  },
+  {
+   "title": "Cash Working Group - Gaza Strip: Cash for Work – Gaza (May 2024)",
+   "url": "https://reliefweb.int/node/4074504",
+   "format": "Manual and Guideline",
+   "source": "OCHA",
+   "posted": "2024-07-02"
+  },
+  {
+   "title": "Cash Working Group - Gaza Strip: Mobile money and e-wallet modalities: Gaza CWG guiding note – June 2024",
+   "url": "https://reliefweb.int/node/4074506",
+   "format": "Manual and Guideline",
+   "source": "OCHA",
+   "posted": "2024-07-02"
+  },
+  {
+   "title": "West Bank Minimum Expenditure Basket report - West Bank Cash Working Group, March 2023",
+   "url": "https://reliefweb.int/node/3956223",
+   "format": "Manual and Guideline",
+   "source": "OCHA",
+   "posted": "2023-04-26"
+  }
+ ],
+ "documents": [
+  {
+   "title": "occupied Palestinian territory Cash Working Group: CVA Coordination Structure in the occupied Palestinian territory (oPt",
+   "date": ""
+  },
+  {
+   "title": "occupied Palestinian territory Cash Working Group - Gaza Strip: Cash for Work – Gaza (May 2024)",
+   "date": ""
+  },
+  {
+   "title": "occupied Palestinian territory Cash Working Group - Gaza Strip: Mobile money and e-wallet modalities: Gaza CWG guiding n",
+   "date": ""
+  },
+  {
+   "title": "occupied Palestinian territory West Bank Minimum Expenditure Basket report - West Bank Cash Working Group, March 2023",
+   "date": ""
+  }
+ ],
+ "iframes": [],
+ "dashboard_links": [
+  "https://data.humdata.org",
+  "https://data.humdata.org/"
+ ],
+ "contacts": [
+  {
+   "organisation": "Action Against Hunger - Spain National",
+   "role": "Cash Coordinator"
+  },
+  {
+   "organisation": "United Nations Office for the",
+   "role": "Coordination of Humanitarian Affairs (OCHA) Gaza Cash Coordinator"
+  }
+ ],
+ "events": [],
+ "event_dates": [],
+ "latest_item": {
+  "title": "Cash Working Group - Gaza Strip: Cash for Work – Gaza (May 2024)",
+  "url": "https://reliefweb.int/node/4074504",
+  "format": "Manual and Guideline",
+  "source": "OCHA",
+  "posted": "2024-07-02"
+ },
+ "latest_document": {
+  "title": "Cash Working Group - Gaza Strip: Cash for Work – Gaza (May 2024)",
+  "url": "https://reliefweb.int/node/4074504",
+  "format": "Manual and Guideline",
+  "source": "OCHA",
+  "posted": "2024-07-02"
+ },
+ "latest_listed_document": null
+}

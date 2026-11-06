@@ -3,7 +3,7 @@
   "name": "Niger",
   "iso3": "NER",
   "calp_region": "West and Central Africa",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Niger Besoins Humanitaires et Plan de Réponse 2026",
@@ -186,12 +186,14 @@
       "note": "FTS single-cluster (destination) view: US$0.0M of US$1.3M MPC requirement. Shared-cluster view would give US$0.0M (1%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "FTS does not disaggregate sectoral cash.",
-      "usd": null
+      "value": 5.6,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$7.6M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 7626488
     },
     "vouchers_pct": {
       "value": null,
@@ -380,6 +382,319 @@
       "url": "https://reliefweb.int/report/niger/niger-besoins-humanitaires-et-plan-de-reponse-fevrier-2026",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1513 (Niger Besoins Humanitaires et Plan de Réponse 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1513/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Niger response hub (OCHA coordination: Humanitarian Forum, working groups)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/niger",
+      "date": "2026-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "SAHEL+ Strategy 2026-2027",
+      "publisher": "UNHCR",
+      "url": "https://data.unhcr.org/en/documents/details/120145",
+      "date": "2025-12-15",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Niger : Les interventions en transfert monétaire - Qui fait quoi, Où, Comment (4W)",
+      "publisher": "ReliefWeb Response (Niger hub)",
+      "url": "https://response.reliefweb.int/niger?page=0",
+      "date": "2026-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Rapport de la rencontre des Leads et Co-Leads des CWG d'Afrique de l'Ouest et du Centre",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/wp-content/uploads/2026/07/Rapport_Leads-et-Co-Leads_AOC_2026-FR.pdf",
+      "date": "2026-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Groupes de travail sur les transferts monétaires (CALP listing)",
+      "publisher": "CALP Network",
+      "url": "https://www.calpnetwork.org/fr/community/cash-working-groups/",
+      "date": "2026",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Niger : Transferts monétaires pour les personnes vulnérables vivant avec le VIH et les populations clés",
+      "publisher": "UNAIDS / WFP",
+      "url": "https://docs.wfp.org/api/documents/WFP-0000144290/download",
+      "date": "2022",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1513,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1513",
+    "fts_page": "https://fts.unocha.org/plans/1513/summary",
+    "total_funding_usd": {
+      "value": 135295007,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 14247,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Transfert d’espèces à usages multiples cluster; shared-cluster view US$0.0M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 7626488,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 7626488,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 23 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Protection US$4.1M, Sécurité Alimentaire US$2.4M, Abris/NFI US$0.9M.",
+      "by_cluster": {
+        "Protection": 4086992,
+        "Sécurité Alimentaire": 2404717,
+        "Abris/NFI": 851861,
+        "EHA - Eau, Hygiène et Assainissement": 126797,
+        "Réponse aux Réfugiés": 126180,
+        "Education": 29941
+      },
+      "flow_count": 23
+    },
+    "cva_usd": {
+      "value": 7640735,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 5.6,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 5.6,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 0.0,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 0,
+      "total": 0,
+      "mpc": 0,
+      "ctp": 0,
+      "cva": 0,
+      "mpc_pct": null,
+      "cva_pct": null,
+      "local_actor": 0,
+      "local_actor_pct": null,
+      "local_actor_cva": 0,
+      "local_actor_pct_of_cva": null
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Niger Besoins Humanitaires et Plan de Réponse 2026 (HNRP)",
+    "unhcr_plan": "none",
+    "note": "HNRP coordinated by OCHA (Humanitarian Forum, working groups run by OCHA). UNHCR's 2026-27 Sahel+ Strategy is a strategy, not an RRP, and its list of countries includes Niger; no Nigeria-situation RRP chapter found. Existing record notes the FTS plan includes a Refugee Response component (not re-verified).",
+    "source_ids": [
+      "v2s1",
+      "v2s2"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/niger",
+    "page_title": "Niger (country response hub; no dedicated Cash Working Group page found)",
+    "page_last_updated": "",
+    "last_update_basis": "Hub lists a 4W for Jan-Dec 2025 but gives no posting date",
+    "page_fresh_3m": false,
+    "dashboard_url": "",
+    "dashboard_name": "Niger: Les interventions en transfert monétaire - Qui fait quoi, Où, Comment (4W)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "Jan-Dec 2025 (an earlier edition covers Jul-Sep 2025)",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "OCHA",
+        "actor_type": "UN",
+        "role": "co-lead"
+      }
+    ],
+    "local_cochair": "unknown",
+    "contacts_basis": "CALP West and Central Africa CWG leads report (Jul 2026): OCHA is co-lead, second co-lead not named; CALP CWG listing shows WFP and OCHA contacts. Group described as multisectoral cash working group active since 2017.",
+    "note": "The Niger hub has no CWG page or contacts block; the 4W item is listed without a link.",
+    "source_ids": [
+      "v2s3",
+      "v2s4",
+      "v2s5"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 14247,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Transfert d’espèces à usages multiples cluster; shared-cluster view US$0.0M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 7626488,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3"
+      ],
+      "note": "A hub-page reading gave 17.3bn FCFA (about US$31M, 1.3M people, Jan-Dec 2025) but the figure is not in the page text and sits behind the 'Intervention en transfert monétaire' dashboard; not verifiable, so recorded as not found. Re-check in a browser.",
+      "period": "Jan-Dec 2025",
+      "source_type": "CWG dashboard"
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "MPC split not given in the hub text.",
+      "period": "",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "Sectoral split not given in the hub text.",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [
+    {
+      "name": "BNIF-AFUWA (Bureau nigérien d'intermédiation financière)",
+      "type": "other",
+      "used_by": [
+        "WFP",
+        "UNAIDS"
+      ],
+      "evidence": "Paid cash-in-envelope transfers at its offices in a 2020 WFP/UNAIDS pilot (65,000 FCFA per household across seven regions). Old evidence; current use not confirmed.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s6"
+      ]
+    }
+  ],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3",
+        "v2s4",
+        "v2s5"
+      ],
+      "note": "Chairs found: OCHA (UN)"
+    },
+    "cva_to_local_pct": {
+      "value": 0.9,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$7.6M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 70138
+    },
+    "all_funding_to_local_pct": {
+      "value": 4.4,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$5.9M). Same first-level caveat.",
+      "usd": 5910090
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No country-based pooled fund."
+    },
+    "cbpf_all_to_local_pct": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [],
+      "note": "No country-based pooled fund."
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

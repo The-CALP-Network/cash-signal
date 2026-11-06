@@ -1,0 +1,63 @@
+{
+ "id": "mozambique",
+ "plan_id": 1506,
+ "plan_name": "Mozambique Humanitarian Needs and Response Plan 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1506",
+ "fts_page": "https://fts.unocha.org/plans/1506/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 210,
+   "fundingTotal": 230201189,
+   "pledgeTotal": 0
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 104
+  }
+ },
+ "summary": {
+  "total_funding": 230201189,
+  "flow_count_incoming": 210,
+  "latest_flow_date": "2026-11-04",
+  "mpc_cluster_funding": 0,
+  "mpc_cluster_funding_shared_view": 0,
+  "mpc_cluster_name": null,
+  "ctp_funding": 7295039,
+  "ctp_in_mpc": 0,
+  "sectoral_cva_funding": 7295039,
+  "sectoral_cva_by_cluster": {
+   "Food Security and Livelihoods": 5840101,
+   "Shelter/NFIs": 271013,
+   "Education": 134857,
+   "Protection": 64891,
+   "Water, Sanitation and Hygiene (WASH)": 58242
+  },
+  "sectoral_cva_flow_count": 24,
+  "cva_funding": 7295039,
+  "cva_pct_of_total": 3.2,
+  "sectoral_cva_pct_of_total": 3.2,
+  "mpc_pct_of_total": 0.0,
+  "local_actor_funding": 0,
+  "local_actor_pct_of_total": 0.0,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 0,
+   "total": 0,
+   "mpc": 0,
+   "ctp": 0,
+   "cva": 0,
+   "mpc_pct": null,
+   "cva_pct": null,
+   "local_actor": 0,
+   "local_actor_pct": null,
+   "local_actor_cva": 0,
+   "local_actor_pct_of_cva": null
+  }
+ }
+}

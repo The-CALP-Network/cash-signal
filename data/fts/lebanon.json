@@ -1,0 +1,63 @@
+{
+ "id": "lebanon",
+ "plan_id": 1568,
+ "plan_name": "Lebanon Response Plan 2026 (LRP), with Flash Appeal (Mar-Aug 2026) and LRP Addendum (Sep-Dec 2026)",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1568",
+ "fts_page": "https://fts.unocha.org/plans/1568/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 436,
+   "fundingTotal": 348592985,
+   "pledgeTotal": 0
+  },
+  "outgoing": {
+   "flowCount": 24,
+   "fundingTotal": 5854748,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 161
+  }
+ },
+ "summary": {
+  "total_funding": 348592985,
+  "flow_count_incoming": 436,
+  "latest_flow_date": "2026-11-02",
+  "mpc_cluster_funding": 50933349,
+  "mpc_cluster_funding_shared_view": 50933349,
+  "mpc_cluster_name": "Multi-Purpose Cash Assistance (MPCA)",
+  "ctp_funding": 66639592,
+  "ctp_in_mpc": 50933349,
+  "sectoral_cva_funding": 15706243,
+  "sectoral_cva_by_cluster": {
+   "Protection": 6244694,
+   "Food Security and Agriculture": 5998494,
+   "Shelter & SMC": 2094606,
+   "Water, Sanitation and Hygiene": 668449,
+   "Health": 300000
+  },
+  "sectoral_cva_flow_count": 28,
+  "cva_funding": 66639592,
+  "cva_pct_of_total": 19.1,
+  "sectoral_cva_pct_of_total": 4.5,
+  "mpc_pct_of_total": 14.6,
+  "local_actor_funding": 5195021,
+  "local_actor_pct_of_total": 1.5,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 154,
+   "total": 34285508,
+   "mpc": 0,
+   "ctp": 6178315,
+   "cva": 6178315,
+   "mpc_pct": 0.0,
+   "cva_pct": 18.0,
+   "local_actor": 12844175,
+   "local_actor_pct": 37.5,
+   "local_actor_cva": 2341836,
+   "local_actor_pct_of_cva": 37.9
+  }
+ }
+}

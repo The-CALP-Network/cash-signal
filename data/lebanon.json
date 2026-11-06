@@ -3,7 +3,7 @@
   "name": "Lebanon",
   "iso3": "LBN",
   "calp_region": "MENA",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Lebanon Response Plan 2026 (LRP), with Flash Appeal (Mar-Aug 2026) and LRP Addendum (Sep-Dec 2026)",
@@ -198,11 +198,14 @@
       "note": "Blends LRP, Flash Appeal and Addendum CWG-sector lines (US$136.9M of US$559.5M). LRP-only basis, matching the plan requirements shown: US$32.1M of US$321.5M = 10%. Received $136.9M against $559.5M combined CWG sector appeals (LRP $321.5M + FA $134M + Addendum $104M). By instrument: LRP 10%, FA 42-43%, Addendum 46%. Partners disbursed more than they reported receiving ($100.7M regular + $76.5M FA), so funding is likely under-reported [s5]. FTS: FA MPCA 38% funded [s6]."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Sector funding is reported by sector, not by modality; sectoral cash is not separable."
+      "value": 4.5,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$15.7M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 15706243
     },
     "vouchers_pct": {
       "value": null,
@@ -225,20 +228,24 @@
       "note": "2026 second reserve allocation only; other 2026 LHF/CERF allocations not found."
     },
     "mpc_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Allocation sectors listed are shelter and site management, food security, WASH, health and nutrition, protection; no MPC share stated.",
-      "usd": null
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: the pooled fund's onward grants inside this plan (154 internal flows, US$34.3M) tagged to the MPC cluster. The fund's own allocation reports may differ.",
+      "usd": 0
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not reported.",
-      "usd": null
+      "value": 18.0,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$6.2M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 6178315
     },
     "vouchers_pct": {
       "value": null,
@@ -427,6 +434,380 @@
       "url": "https://live.libnanews.com/event/ev-1773624444097-82bd",
       "date": "2026-03-11",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1568 (Lebanon Response Plan 2026 (LRP), with Flash Appeal (Mar-Aug 2026) and LRP Addendum (Sep-Dec 2026))",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1568/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Coordination - Lebanon (ISCG)",
+      "publisher": "UNHCR Operational Data Portal",
+      "url": "https://data.unhcr.org/en/working-group/478",
+      "date": "2026-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Cash Working Group - Lebanon",
+      "publisher": "UNHCR Operational Data Portal",
+      "url": "https://data.unhcr.org/en/working-group/15",
+      "date": "2026-11-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Lebanon Response Plan: Cash Working Group Dashboard - Mid-Year 2026",
+      "publisher": "UNHCR Operational Data Portal",
+      "url": "https://data.unhcr.org/en/documents/details/124231",
+      "date": "2026-09-24",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Lebanon Response Plan: Cash Working Group Q3 2026 at a Glance",
+      "publisher": "UNHCR Operational Data Portal",
+      "url": "https://data.unhcr.org/en/documents/details/124726",
+      "date": "2026-11-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "21 new cash withdrawal locations",
+      "publisher": "UNHCR Lebanon Help",
+      "url": "https://help.unhcr.org/lebanon/en/2024/03/29/21-new-cash-withdrawal-locations",
+      "date": "2024-03-29",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Cash Assistance",
+      "publisher": "UNHCR Lebanon Help",
+      "url": "https://help.unhcr.org/lebanon/en/?p=1112",
+      "date": "2026-11",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Cash Out | UNICEF",
+      "publisher": "OMT Lebanon",
+      "url": "https://omt.com.lb/en/news/cash-out-unicef",
+      "date": "2020-11-16",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "With One Million Displaced, Lebanon Turns to Digital Wallets for Aid",
+      "publisher": "Pulse",
+      "url": "https://www.pulse.bot/fintech/news/with-one-million-displaced-lebanon-turns-to-digital-wallets-for-aid-50d4343f-a9a1-41ac-8c75-c71feec343da",
+      "date": "2026-04-05",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1568,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1568",
+    "fts_page": "https://fts.unocha.org/plans/1568/summary",
+    "total_funding_usd": {
+      "value": 348592985,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 50933349,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash Assistance (MPCA) cluster; shared-cluster view US$50.9M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 66639592,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 15706243,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 28 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Protection US$6.2M, Food Security and Agriculture US$6.0M, Shelter & SMC US$2.1M.",
+      "by_cluster": {
+        "Protection": 6244694,
+        "Food Security and Agriculture": 5998494,
+        "Shelter & SMC": 2094606,
+        "Water, Sanitation and Hygiene": 668449,
+        "Health": 300000
+      },
+      "flow_count": 28
+    },
+    "cva_usd": {
+      "value": 66639592,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 19.1,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 4.5,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 14.6,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 154,
+      "total": 34285508,
+      "mpc": 0,
+      "ctp": 6178315,
+      "cva": 6178315,
+      "mpc_pct": 0.0,
+      "cva_pct": 18.0,
+      "local_actor": 12844175,
+      "local_actor_pct": 37.5,
+      "local_actor_cva": 2341836,
+      "local_actor_pct_of_cva": 37.9
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Lebanon Flash Appeal 2026 (Mar-Aug) and Lebanon Response Plan 2026 with Sep-Dec addendum",
+    "unhcr_plan": "3RP regional (Lebanon chapter not verified on a page opened)",
+    "note": "LRP/Flash Appeal coordinated via the Inter-Sector Coordination Group on the UNHCR data portal; Lebanon chapter of 3RP not confirmed.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://data.unhcr.org/en/working-group/15",
+    "page_title": "Cash Working Group - Lebanon",
+    "page_last_updated": "2026-11-03",
+    "last_update_basis": "latest document posted (LRP Funding Update Jan-Sep 2026) on the working-group page; no updated stamp",
+    "page_fresh_3m": true,
+    "dashboard_url": "https://data.unhcr.org/en/documents/details/124231",
+    "dashboard_name": "Lebanon Response Plan: Cash Working Group Dashboard - Mid-Year 2026",
+    "dashboard_last_updated": "2026-09-24",
+    "dashboard_period": "Jan-Jun 2026 (progress through 2026-06-30)",
+    "dashboard_fresh_3m": true,
+    "meeting_minutes_latest": "2026-09-07",
+    "co_chairs": [],
+    "local_cochair": "unknown",
+    "contacts_basis": "Page refers to 'Key Contacts' not visible; chairs not stated in the strategy or minutes metadata opened (PDFs unreadable).",
+    "note": "Minutes date is the portal publish date, not the meeting date. Also published: CWG Q3 2026 at a Glance (2026-11-02), 2026 Strategy and Logframe (2026-02-05), EMPCA Guidelines (2026-06-02).",
+    "source_ids": [
+      "v2s2",
+      "v2s3",
+      "v2s4"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 50933349,
+      "available": "yes",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash Assistance (MPCA) cluster; shared-cluster view US$50.9M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 15706243,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Dashboard (Mid-Year 2026) and Q3 2026 at a Glance exist, but only PDFs, whose text did not load; no total read.",
+      "period": "",
+      "source_type": "CWG dashboard"
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Dashboard (Mid-Year 2026) and Q3 2026 at a Glance exist, but only PDFs, whose text did not load; no total read.",
+      "period": "",
+      "source_type": "CWG dashboard"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "Dashboard (Mid-Year 2026) and Q3 2026 at a Glance exist, but only PDFs, whose text did not load; no total read.",
+      "period": "",
+      "source_type": "CWG dashboard"
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [
+    {
+      "name": "BoB Finance",
+      "type": "other",
+      "used_by": [
+        "UNHCR",
+        "WFP"
+      ],
+      "evidence": "UNHCR Lebanon notice (Mar 2024): recipients of UNHCR or WFP cash can withdraw at BoB Finance branches.",
+      "website": "https://www.bobfinance.com.lb",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5"
+      ]
+    },
+    {
+      "name": "Banque Libano-Francaise (BLF)",
+      "type": "bank",
+      "used_by": [
+        "UNHCR"
+      ],
+      "evidence": "UNHCR Lebanon cash page: BLF issues the bank card and PIN and operates ATMs for withdrawal; cycle Nov 2026-Jun 2027.",
+      "website": "https://www.blf.com.lb",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s6"
+      ]
+    },
+    {
+      "name": "OMT (Online Money Transfer)",
+      "type": "money transfer operator",
+      "used_by": [
+        "UNICEF"
+      ],
+      "evidence": "OMT newsletter: UNICEF emergency cash recipients could collect at 1,000+ OMT locations from 2020-11-16; no 2026 use confirmed.",
+      "website": "https://omt.com.lb",
+      "logo_url": "https://omt.com.lb/img/new_omt_logo.svg",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Whish Money",
+      "type": "fintech / e-wallet",
+      "used_by": [],
+      "evidence": "Named in a 2026 article on digital wallets for aid in Lebanon; no humanitarian user identified on the page.",
+      "website": "https://whish.money",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s8"
+      ]
+    }
+  ],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s2",
+        "v2s3",
+        "v2s4"
+      ],
+      "note": "No chair or co-chair organisations found on the CWG page or in minutes."
+    },
+    "cva_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$66.6M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 0
+    },
+    "all_funding_to_local_pct": {
+      "value": 1.5,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$5.2M). Same first-level caveat.",
+      "usd": 5195021
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 37.9,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$6.2M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 2341836
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 37.5,
+      "available": "partial",
+      "as_of": "2026-11-02",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$34.3M) to local or national actors.",
+      "usd": 12844175
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

@@ -3,7 +3,7 @@
   "name": "Syria",
   "iso3": "SYR",
   "calp_region": "MENA",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Syrian Arab Republic Humanitarian Needs and Response Plan 2026",
@@ -188,12 +188,14 @@
       "note": "FTS single-cluster (destination) view: US$36.6M of US$183.4M MPC requirement. Shared-cluster view would give US$71.1M (39%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not visible in FTS; only MPC is a separate sector.",
-      "usd": null
+      "value": 4.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$42.7M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 42738818
     },
     "vouchers_pct": {
       "value": null,
@@ -217,20 +219,24 @@
       "note": "SHF 2026 First Standard Allocation USD 70m endorsed 5 Aug 2026; not the fund's full-year total."
     },
     "mpc_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Allocation by cluster not retrieved; cash mention not visible in excerpt.",
-      "usd": null
+      "value": 18.7,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: the pooled fund's onward grants inside this plan (239 internal flows, US$184.5M) tagged to the MPC cluster. The fund's own allocation reports may differ.",
+      "usd": 34435885
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not retrieved.",
-      "usd": null
+      "value": 13.3,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$24.5M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 24529543
     },
     "vouchers_pct": {
       "value": null,
@@ -390,6 +396,330 @@
       "url": "https://reliefweb.int/report/syrian-arab-republic/syrian-arab-republic-2026-humanitarian-needs-and-response-plan-april-2026-enar",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1518 (Syrian Arab Republic Humanitarian Needs and Response Plan 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1518/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Syria HNRP 2026 - CVA overview and MPC section",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1518/document/syria-humanitarian-needs-and-response-plan-2026/article/27-cash-voucher-assistance-overview-and-multipurpose-cash-section-5",
+      "date": "2026-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Cash Working Group Archive",
+      "publisher": "ReliefWeb Response (Syria Hub)",
+      "url": "https://response.reliefweb.int/syria/syria-hub/cash-working-group-archive",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Cash Working Group - Northwest Syria (NWS)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/turkiye-cross-border/cash-working-group-northwest-syria-nws",
+      "date": "2025-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Cash Working Group Programmatic Co-Chair (Oxfam)",
+      "publisher": "Work in Charities",
+      "url": "https://www.workincharities.co.uk/job/cash-working-group-programmatic-co-chair-international-0a2c11e8",
+      "date": "2026-04-23",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Cash Working Group Co-Chair Syria (Caritas Switzerland)",
+      "publisher": "Daleel Madani",
+      "url": "https://daleel-madani.org/civil-society-directory/caritas-lebanon/jobs/cash-working-group-co-chair-syria-caritas-switzerland",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "UNHCR Syria - cash assistance",
+      "publisher": "UNHCR",
+      "url": "https://help.unhcr.org/syria/topics/cash-assistance/",
+      "date": "2026-08-13",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "FAO RFP: financial services, money transfer and cash delivery within Syria (LTA)",
+      "publisher": "UNGM",
+      "url": "https://www.ungm.org/Public/Notice/305923",
+      "date": "2026-07-02",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "rw1",
+      "title": "Syria: Cash Working Group (ReliefWeb Response)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/syria/cash-working-group",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1518,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1518",
+    "fts_page": "https://fts.unocha.org/plans/1518/summary",
+    "total_funding_usd": {
+      "value": 972244996,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 36735539,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash cluster; shared-cluster view US$41.6M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 79321717,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 42738818,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 87 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Food Security US$11.4M, Water, Sanitation and Hygiene US$6.6M, Shelter US$6.6M.",
+      "by_cluster": {
+        "Food Security": 11431495,
+        "Water, Sanitation and Hygiene": 6572566,
+        "Shelter": 6565441,
+        "Protection": 5968365,
+        "NFI": 5865806,
+        "Multi-Purpose Cash": 4863294,
+        "Education": 4499602,
+        "Health": 4182321,
+        "Camp Coordination and Camp Management": 3925794,
+        "Nutrition": 3804278
+      },
+      "flow_count": 87
+    },
+    "cva_usd": {
+      "value": 79474357,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 8.2,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 4.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 3.8,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 239,
+      "total": 184497271,
+      "mpc": 34435885,
+      "ctp": 58965428,
+      "cva": 58965428,
+      "mpc_pct": 18.7,
+      "cva_pct": 32.0,
+      "local_actor": 17710390,
+      "local_actor_pct": 9.6,
+      "local_actor_cva": 1781230,
+      "local_actor_pct_of_cva": 3.0
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Syria Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "none found",
+    "note": "HNRP (OCHA) with CWG-led MPCA/group cash transfers; no UNHCR-led in-country plan confirmed.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/syria/cash-working-group",
+    "page_title": "Syria: Cash Working Group",
+    "page_last_updated": "",
+    "last_update_basis": "page states the Syria Hub is archived and not updated; no item dates shown",
+    "page_fresh_3m": false,
+    "dashboard_url": "https://app.powerbi.com/view?r=eyJrIjoiMWE5OTFmNmUtYWU0Mi00ZGVmLWFkNjQtYzY4ZjczZGQ3MjliIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+    "dashboard_name": "CVA Interactive Dashboard (Power BI)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "not shown on the page",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [],
+    "local_cochair": "unknown",
+    "contacts_basis": "CWG page contacts tab not accessible (HTTP 403), 6 Nov 2026",
+    "note": "No live 2026 CWG page found on ReliefWeb; NW Syria CWG page (Turkiye cross-border) is also archived. Syrian-led NWS community of practice since 2014.",
+    "source_ids": [
+      "rw1",
+      "v2s2",
+      "v2s3",
+      "v2s4",
+      "v2s5"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 36735539,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multi-Purpose Cash cluster; shared-cluster view US$41.6M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 42738818,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s1"
+      ],
+      "note": "No 2025/26 delivered-CVA total found; HNRP 2026 MPCA section gives requirements (US$183.4M) and targets only.",
+      "period": "",
+      "source_type": ""
+    },
+    "mpc_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s1"
+      ],
+      "note": "No 2025/26 delivered-CVA total found; HNRP 2026 MPCA section gives requirements (US$183.4M) and targets only.",
+      "period": "",
+      "source_type": ""
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s1"
+      ],
+      "note": "No 2025/26 delivered-CVA total found; HNRP 2026 MPCA section gives requirements (US$183.4M) and targets only.",
+      "period": "",
+      "source_type": ""
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "rw1",
+        "v2s2",
+        "v2s3",
+        "v2s4",
+        "v2s5"
+      ],
+      "note": "No chair or co-chair organisations found on the CWG page or in minutes."
+    },
+    "cva_to_local_pct": {
+      "value": 0.8,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$79.5M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 641032
+    },
+    "all_funding_to_local_pct": {
+      "value": 1.8,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$17.8M). Same first-level caveat.",
+      "usd": 17791675
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 3.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$59.0M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 1781230
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 9.6,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$184.5M) to local or national actors.",
+      "usd": 17710390
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }

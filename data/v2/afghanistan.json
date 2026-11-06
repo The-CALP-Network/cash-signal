@@ -1,0 +1,197 @@
+{
+  "id": "afghanistan",
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Afghanistan Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "none found",
+    "note": "HNRP (OCHA). A separate 2026 Response Plan for Afghan Returnees (US$529.2M, published by the UN Resident Coordinator's Office, IOM and the integrated RC/HC office named as contacts) exists; no UNHCR-led plan confirmed.",
+    "source_ids": [
+      "v2s1",
+      "v2s2"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+    "page_title": "Cash Voucher Working Group",
+    "page_last_updated": "2026-04-17",
+    "last_update_basis": "latest document listed on the page (WFP Weekly Market Report, issue 291, posted 2026-04-17)",
+    "dashboard_url": "",
+    "dashboard_name": "",
+    "dashboard_last_updated": "",
+    "dashboard_period": "",
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "WFP",
+        "actor_type": "UN",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "DRC",
+        "actor_type": "INGO",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "IRC",
+        "actor_type": "INGO",
+        "role": "co-chair"
+      }
+    ],
+    "local_cochair": "unknown",
+    "contacts_basis": "Not on the ReliefWeb page. WFP co-lead and NGO co-lead (DRC) come from a closed 2020 WFP vacancy notice; IRC hosts a 'CVWG Co-chair Technical Coordinator (Afghan nationals only)' post, undated. Current seat-holders not confirmed.",
+    "note": "Page has no contacts block, dashboard, minutes or updated stamp; listed documents are WFP market reports, not CVWG outputs.",
+    "source_ids": [
+      "v2s3",
+      "v2s4",
+      "v2s5"
+    ]
+  },
+  "cash_volumes": {
+    "cva_delivered_usd": {
+      "value": 152700000,
+      "available": "yes",
+      "as_of": "2025-09",
+      "period": "2025 (preliminary, data as of Sep 2025)",
+      "source_ids": [
+        "v2s6"
+      ],
+      "note": "US$152.7M reaching 16.6M people through CWG partners; page says late Q3 and Q4 submissions pending.",
+      "source_type": "other"
+    },
+    "mpc_delivered_usd": {
+      "value": 35600000,
+      "available": "yes",
+      "as_of": "2025-09",
+      "period": "2025 (preliminary, data as of Sep 2025)",
+      "source_ids": [
+        "v2s6"
+      ],
+      "note": "Reported as MPC in HNRP 2026 CVA overview.",
+      "source_type": "other"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [
+        "v2s6"
+      ],
+      "note": "No sectoral split stated in the HNRP section opened.",
+      "source_type": ""
+    }
+  },
+  "fsps": [
+    {
+      "name": "HesabPay",
+      "type": "fintech / e-wallet",
+      "used_by": [
+        "NRC",
+        "UNHCR"
+      ],
+      "evidence": "NRC e-cash pilot (USD170/month x3, Kandahar, 2024) via HesabPay; UNHCR page lists HesabPay prepaid cards (June 2025).",
+      "website": "https://hesab.com",
+      "logo_url": "https://hesab.com/images/logos/logo-color.png",
+      "logo_source": "provider site",
+      "source_ids": [
+        "v2s7",
+        "v2s8"
+      ]
+    },
+    {
+      "name": "m-Hawala",
+      "type": "mobile money",
+      "used_by": [
+        "UNHCR"
+      ],
+      "evidence": "UNHCR Afghanistan page lists m-Hawala as a mobile money platform used for digital cash since 2024.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s8"
+      ]
+    },
+    {
+      "name": "Hawala agents (informal)",
+      "type": "hawala",
+      "used_by": [
+        "NRC",
+        "humanitarian actors generally"
+      ],
+      "evidence": "NRC explainer says humanitarian actors have relied almost exclusively on hawala; NRC previously delivered cash via hawala; e-cash costs the same 3% commission.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "v2s1",
+      "title": "Humanitarian Needs and Response Plan Afghanistan 2026 - CVA overview",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1502/document/humanitarian-needs-and-response-plan-afghanistan-2026/article/cash-and-voucher-assistance-overview",
+      "date": "2025-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "2026 Response Plan for Afghan Returnees (RPAR) Published",
+      "publisher": "UN Afghanistan",
+      "url": "https://afghanistan.un.org/en/node/315785",
+      "date": "2026-05-19",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Cash Voucher Working Group",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/afghanistan/cash-voucher-working-group",
+      "date": "2026-04-17",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Programme Policy Officer (Inter Agency CVWG Coordinator) - WFP vacancy",
+      "publisher": "Impactpool",
+      "url": "https://www.impactpool.org/jobs/653815",
+      "date": "2020-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "CVWG Co-chair Technical Coordinator (Afghan Nationals Only) vacancy",
+      "publisher": "UNTalent",
+      "url": "https://untalent.org/jobs/cash-and-voucher-working-group-cvwg-co-chair-technical-coordinator-afghan-nationals-only",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "HNRP Afghanistan 2026 - Cash and voucher assistance overview (2025 totals)",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1502/document/humanitarian-needs-and-response-plan-afghanistan-2026/article/cash-and-voucher-assistance-overview",
+      "date": "2025-12",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Afghanistan e-cash explainer",
+      "publisher": "Norwegian Refugee Council",
+      "url": "https://www.NRC.no/globalassets/pdf/explainers/afghanistan-e-cash/nrc-afghanistan-e-cash-explainer-february-2024_v2.pdf",
+      "date": "2024-02-20",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "UNHCR Afghanistan - cash assistance",
+      "publisher": "UNHCR",
+      "url": "https://www.unhcr.org/af/node/83",
+      "date": "2025-06-17",
+      "accessed": "2026-11-06"
+    }
+  ]
+}

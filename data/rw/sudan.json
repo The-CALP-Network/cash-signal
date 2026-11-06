@@ -1,0 +1,109 @@
+{
+ "id": "sudan",
+ "page_url": "https://response.reliefweb.int/sudan/cash-working-group",
+ "checked": "2026-11-06",
+ "http_status": 200,
+ "exists": true,
+ "page_title": "Sudan: Cash Working Group",
+ "river": [
+  {
+   "title": "Sudan | Cash and Services in Sudan for ICCG 20260916",
+   "url": "https://reliefweb.int/node/4237081",
+   "format": "Analysis",
+   "source": "OCHA",
+   "posted": "2026-11-05"
+  },
+  {
+   "title": "Sudan | Cash and Services in Sudan for ICCG 20260916",
+   "url": "https://reliefweb.int/node/4237081",
+   "format": "Analysis",
+   "source": "OCHA",
+   "posted": "2026-11-05"
+  },
+  {
+   "title": "'A trip to the market should never cost a child their life'",
+   "url": "https://reliefweb.int/node/4236253",
+   "format": "News and Press Release",
+   "source": "UNICEF",
+   "posted": "2026-10-29"
+  },
+  {
+   "title": "UNISFA statement on drone strikes at Amiet Market in Abyei (Updated - 22 October 2026)",
+   "url": "https://reliefweb.int/node/4235276",
+   "format": "News and Press Release",
+   "source": "UNISFA",
+   "posted": "2026-10-23"
+  },
+  {
+   "title": "Sudan Cash Working Group: Coordination Structure",
+   "url": "https://reliefweb.int/node/4043123",
+   "format": "Other",
+   "source": "IRC, Mercy Corps, OCHA",
+   "posted": "2024-03-03"
+  },
+  {
+   "title": "What does “Cash” mean for WASH Outcomes? [EN/AR]",
+   "url": "https://reliefweb.int/node/4049171",
+   "format": "Manual and Guideline",
+   "source": "IFRC",
+   "posted": "2021-05-17"
+  }
+ ],
+ "documents": [
+  {
+   "title": "Sudan Sudan | Cash and Services in Sudan for ICCG 20260916",
+   "date": ""
+  },
+  {
+   "title": "Sudan Sudan Cash Working Group: Coordination Structure",
+   "date": ""
+  },
+  {
+   "title": "World What does “Cash” mean for WASH Outcomes? [EN/AR]",
+   "date": ""
+  }
+ ],
+ "iframes": [],
+ "dashboard_links": [
+  "https://app.powerbi.com/view?r=eyJrIjoiMTllMGUxMGUtMjk1Yi00NTRmLWI1NmItNjZiYmQ2ZjIzMTM0IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://app.powerbi.com/view?r=eyJrIjoiMjYzNjY4ODQtMGEwZC00ZmIwLWJmNzEtM2NlM2Y5NzU4Y2M4IiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://app.powerbi.com/view?r=eyJrIjoiNmE1NzI3MjYtM2Y3NS00MGE2LWE1ZDQtNjY1MzVjMjE1ODdlIiwidCI6IjBmOWUzNWRiLTU0NGYtNGY2MC1iZGNjLTVlYTQxNmU2ZGM3MCIsImMiOjh9",
+  "https://data.humdata.org",
+  "https://data.humdata.org/"
+ ],
+ "contacts": [
+  {
+   "organisation": "United Nations Office for Coordination of Humanitarian Affairs (OCHA)",
+   "role": "CWG Co-chair (non-programmatic)"
+  },
+  {
+   "organisation": "CashCap",
+   "role": "CWG Co-chair (programmatic)"
+  },
+  {
+   "organisation": "World Food Programme",
+   "role": "CWG Co-chair (programmatic)"
+  },
+  {
+   "organisation": "United Nations Office for Coordination of Humanitarian Affairs (OCHA)",
+   "role": "Cash Coordination Officer"
+  }
+ ],
+ "events": [],
+ "event_dates": [],
+ "latest_item": {
+  "title": "Sudan | Cash and Services in Sudan for ICCG 20260916",
+  "url": "https://reliefweb.int/node/4237081",
+  "format": "Analysis",
+  "source": "OCHA",
+  "posted": "2026-11-05"
+ },
+ "latest_document": {
+  "title": "Sudan | Cash and Services in Sudan for ICCG 20260916",
+  "url": "https://reliefweb.int/node/4237081",
+  "format": "Analysis",
+  "source": "OCHA",
+  "posted": "2026-11-05"
+ },
+ "latest_listed_document": null
+}

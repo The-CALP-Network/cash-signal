@@ -1,0 +1,66 @@
+{
+ "id": "opt",
+ "plan_id": 1510,
+ "plan_name": "Escalation of Hostilities in the OPT Flash Appeal 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1510",
+ "fts_page": "https://fts.unocha.org/plans/1510/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 1100,
+   "fundingTotal": 1409241203,
+   "pledgeTotal": 0
+  },
+  "outgoing": {
+   "flowCount": 2,
+   "fundingTotal": 443750,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 69
+  }
+ },
+ "summary": {
+  "total_funding": 1409241203,
+  "flow_count_incoming": 1100,
+  "latest_flow_date": "2026-11-06",
+  "mpc_cluster_funding": 57742708,
+  "mpc_cluster_funding_shared_view": 63084490,
+  "mpc_cluster_name": "Multi-purpose Cash Assistance",
+  "ctp_funding": 85344740,
+  "ctp_in_mpc": 57742708,
+  "sectoral_cva_funding": 27602032,
+  "sectoral_cva_by_cluster": {
+   "Protection": 14993695,
+   "Food Security": 8391281,
+   "Water, Sanitation and Hygiene": 3590602,
+   "Education": 2680965,
+   "Health": 2680965,
+   "Nutrition": 2680965,
+   "Multi-purpose Cash Assistance": 2680965,
+   "Shelter": 1967242
+  },
+  "sectoral_cva_flow_count": 64,
+  "cva_funding": 85344740,
+  "cva_pct_of_total": 6.1,
+  "sectoral_cva_pct_of_total": 2.0,
+  "mpc_pct_of_total": 4.1,
+  "local_actor_funding": 15102639,
+  "local_actor_pct_of_total": 1.1,
+  "local_actor_cva_funding": 1021958,
+  "local_actor_pct_of_cva": 1.2,
+  "cbpf_internal": {
+   "flow_count": 36,
+   "total": 32422550,
+   "mpc": 2679183,
+   "ctp": 2881183,
+   "cva": 2881183,
+   "mpc_pct": 8.3,
+   "cva_pct": 8.9,
+   "local_actor": 8432353,
+   "local_actor_pct": 26.0,
+   "local_actor_cva": 2881183,
+   "local_actor_pct_of_cva": 100.0
+  }
+ }
+}

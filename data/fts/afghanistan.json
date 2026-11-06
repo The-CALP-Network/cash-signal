@@ -1,0 +1,66 @@
+{
+ "id": "afghanistan",
+ "plan_id": 1502,
+ "plan_name": "Afghanistan Humanitarian Needs and Response Plan 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1502",
+ "fts_page": "https://fts.unocha.org/plans/1502/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 511,
+   "fundingTotal": 559667488,
+   "pledgeTotal": 500000
+  },
+  "outgoing": {
+   "flowCount": 0,
+   "fundingTotal": 0,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 148
+  }
+ },
+ "summary": {
+  "total_funding": 559667488,
+  "flow_count_incoming": 510,
+  "latest_flow_date": "2026-11-02",
+  "mpc_cluster_funding": 19204278,
+  "mpc_cluster_funding_shared_view": 19204278,
+  "mpc_cluster_name": "Multipurpose Cash",
+  "ctp_funding": 27173904,
+  "ctp_in_mpc": 19204278,
+  "sectoral_cva_funding": 7969626,
+  "sectoral_cva_by_cluster": {
+   "Protection": 3877777,
+   "Food Security and Agriculture": 3071415,
+   "Emergency Shelter and NFI": 407897,
+   "Education": 203276,
+   "Coordination, Thematics and System Support": 148281,
+   "Water, Sanitation and Hygiene": 117814,
+   "Health": 72373,
+   "Nutrition": 70793
+  },
+  "sectoral_cva_flow_count": 47,
+  "cva_funding": 27173904,
+  "cva_pct_of_total": 4.9,
+  "sectoral_cva_pct_of_total": 1.4,
+  "mpc_pct_of_total": 3.4,
+  "local_actor_funding": 569081,
+  "local_actor_pct_of_total": 0.1,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 145,
+   "total": 37467711,
+   "mpc": 12459643,
+   "ctp": 15459618,
+   "cva": 15459618,
+   "mpc_pct": 33.3,
+   "cva_pct": 41.3,
+   "local_actor": 21569313,
+   "local_actor_pct": 57.6,
+   "local_actor_cva": 6932282,
+   "local_actor_pct_of_cva": 44.8
+  }
+ }
+}

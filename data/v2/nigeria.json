@@ -1,0 +1,149 @@
+{
+  "id": "nigeria",
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Nigeria Humanitarian Needs and Response Plan 2026 (HNRP, BAY states)",
+    "unhcr_plan": "none",
+    "note": "HNRP (OCHA) for Borno, Adamawa and Yobe. No 2026 UNHCR RRP chapter for Nigeria found.",
+    "source_ids": [
+      "v2s1"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/nigeria/cash-working-group",
+    "page_title": "Cash Working Group (Latest Market Monitoring)",
+    "page_last_updated": "2026-03-10",
+    "last_update_basis": "latest document posted (Nigeria JMMI, December 2025, by FACT and OCHA); page shows no updated stamp",
+    "dashboard_url": "https://reliefweb.int/report/nigeria/north-east-nigeria-cash-and-voucher-assistance-20-august-2025",
+    "dashboard_name": "North-East Nigeria: Cash and Voucher Assistance infographic (OCHA); the page's Dashboards section lists none",
+    "dashboard_last_updated": "2025-08-20",
+    "dashboard_period": "Jan-Mar 2025",
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "OCHA",
+        "actor_type": "UN",
+        "role": "co-chair"
+      },
+      {
+        "organisation": "Federal Ministry of Humanitarian Affairs, Disaster Management and Social Development",
+        "actor_type": "Government",
+        "role": "co-lead"
+      },
+      {
+        "organisation": "Catholic Relief Services (north-east sub-national CWG)",
+        "actor_type": "INGO",
+        "role": "co-chair"
+      }
+    ],
+    "local_cochair": "yes",
+    "contacts_basis": "Nigeria 2025 HNRP CVA section (national CWG co-led by OCHA and the Federal Ministry; north-east CWG co-chaired by OCHA and CRS); not confirmed for 2026. CALP CWG listing shows iMMAP and OCHA contacts for Maiduguri. The CWG page has no contacts block. The May 2024 regional minutes and the 2026 leads report do not name Nigeria leads.",
+    "note": "No meeting minutes listed (page points to an archive for pre-2022 minutes). Page also hosts an FSP mapping for BAY states (undated) and NE CWG ToR (Jun 2024).",
+    "source_ids": [
+      "v2s2",
+      "v2s3",
+      "v2s4"
+    ]
+  },
+  "cash_volumes": {
+    "cva_delivered_usd": {
+      "value": 227000000,
+      "available": "partial",
+      "as_of": "2024-11",
+      "period": "Jan-Nov 2024",
+      "source_ids": [
+        "v2s5"
+      ],
+      "note": "2025 HNRP CVA overview: USD 227M by end of November 2024 (USD 150M in 2023). 2025 requirement USD 478M. The Aug 2025 OCHA infographic (39 partners, 26 LGAs, Jan-Mar 2025) gave no USD in text. No 2025 delivered total found.",
+      "source_type": "other"
+    },
+    "mpc_delivered_usd": {
+      "value": 11700000,
+      "available": "partial",
+      "as_of": "2024-11",
+      "period": "2024",
+      "source_ids": [
+        "v2s5"
+      ],
+      "note": "2025 HNRP: MPC USD 11.7M in 2024 (about USD 12M in 2023).",
+      "source_type": "other"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "period": "",
+      "source_ids": [],
+      "note": "Not stated; could be derived only by subtraction, which is not done here.",
+      "source_type": ""
+    }
+  },
+  "fsps": [],
+  "fsps_note": "No individual FSP names found in any source read. The CWG's FSP mapping for BAY states (ReliefWeb, undated) reports categories only: banks, microfinance banks, mobile money providers, digital payment platforms, local financial systems, cash vendors. WFP-government programme (Jul 2025) uses a digital wallet and POS vouchers with no provider named. 2021 FSD Africa study cites Globacom's Money Master as a licensed payment service bank. 2023 FSS cash dashboard lists delivery mechanisms (direct cash, e-voucher, paper voucher, ATM card, bank transfer) without FSP names.",
+  "sources": [
+    {
+      "id": "v2s1",
+      "title": "Nigeria, humanitarian partners launch urgent appeal for US$516m for lifesaving support to 2.5m people in north-east",
+      "publisher": "press report of OCHA launch",
+      "url": "https://alabingo.com/?p=71357",
+      "date": "2026-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Cash Working Group (Nigeria)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/nigeria/cash-working-group",
+      "date": "2026-03-10",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Maps / Infographics (Nigeria CWG)",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/nigeria/cash-working-group/maps",
+      "date": "2025-08-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Nigeria 2025 HNRP: Multipurpose cash and CVA overview",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1274/document/nigeria-2025-humanitarian-needs-and-response-plan/article/28-multipurpose-cash-and-cash-and-voucher-assistance-overview",
+      "date": "2025-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "Nigeria 2025 HNRP: Multipurpose cash and CVA overview (volumes)",
+      "publisher": "OCHA",
+      "url": "https://humanitarianaction.info/plan/1274/document/nigeria-2025-humanitarian-needs-and-response-plan/article/28-multipurpose-cash-and-cash-and-voucher-assistance-overview",
+      "date": "2025-01",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "Financial Service and Transfer Mechanisms: FSP Mapping for Northeast Nigeria",
+      "publisher": "Nigeria CWG via ReliefWeb",
+      "url": "https://reliefweb.int/report/nigeria/financial-service-and-transfer-mechanisms-financial-service-providers-mapping",
+      "date": "2022",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "Nigeria Digitisation of Cash Transfers, summary report",
+      "publisher": "FSD Africa / EFInA / GSMA / WFP",
+      "url": "https://fsdafrica.org/wp-content/uploads/2022/02/Nigeria-Digitisation-of-Cash-Transfers-SUMMARY-REPORT_10.pdf",
+      "date": "2021-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "WFP supports digital wallet, biometric IDV programme to reach 750k Nigerians with aid",
+      "publisher": "Biometric Update",
+      "url": "https://www.biometricupdate.com/202507/wfp-supports-digital-wallet-biometric-idv-program-to-reach-750k-nigerians-with-aid",
+      "date": "2025-07-01",
+      "accessed": "2026-11-06"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+ "id": "drc",
+ "plan_id": 1509,
+ "plan_name": "République Démocratique du Congo Besoins Humanitaires et Plan de Réponse 2026",
+ "pulled": "2026-11-06",
+ "api": "https://api.hpc.tools/v1/public/fts/flow?planId=1509",
+ "fts_page": "https://fts.unocha.org/plans/1509/summary",
+ "meta": {
+  "incoming": {
+   "flowCount": 517,
+   "fundingTotal": 1142713793,
+   "pledgeTotal": 1741293
+  },
+  "outgoing": {
+   "flowCount": 2,
+   "fundingTotal": 350000,
+   "pledgeTotal": 0
+  },
+  "internal": {
+   "flowCount": 357
+  }
+ },
+ "summary": {
+  "total_funding": 1142713793,
+  "flow_count_incoming": 515,
+  "latest_flow_date": "2026-11-04",
+  "mpc_cluster_funding": 16297373,
+  "mpc_cluster_funding_shared_view": 16297373,
+  "mpc_cluster_name": "Transfert d’espèces à usages multiples",
+  "ctp_funding": 29016492,
+  "ctp_in_mpc": 16297373,
+  "sectoral_cva_funding": 12719119,
+  "sectoral_cva_by_cluster": {
+   "Sécurité alimentaire": 9936484,
+   "Protection": 1414354,
+   "Réponse multisectorielle aux réfugiés": 425982,
+   "Nutrition": 402505,
+   "Education": 244014,
+   "Santé": 226020,
+   "Abris et AME": 69760
+  },
+  "sectoral_cva_flow_count": 57,
+  "cva_funding": 29016492,
+  "cva_pct_of_total": 2.5,
+  "sectoral_cva_pct_of_total": 1.1,
+  "mpc_pct_of_total": 1.4,
+  "local_actor_funding": 1801188,
+  "local_actor_pct_of_total": 0.2,
+  "local_actor_cva_funding": 0,
+  "local_actor_pct_of_cva": 0.0,
+  "cbpf_internal": {
+   "flow_count": 345,
+   "total": 383229788,
+   "mpc": 36088110,
+   "ctp": 94792110,
+   "cva": 96765470,
+   "mpc_pct": 9.4,
+   "cva_pct": 25.2,
+   "local_actor": 18999936,
+   "local_actor_pct": 5.0,
+   "local_actor_cva": 1443400,
+   "local_actor_pct_of_cva": 1.5
+  }
+ }
+}

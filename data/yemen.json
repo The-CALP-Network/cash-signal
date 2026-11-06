@@ -3,7 +3,7 @@
   "name": "Yemen",
   "iso3": "YEM",
   "calp_region": "MENA",
-  "last_researched": "2026-11-05",
+  "last_researched": "2026-11-06",
   "researched_by": "claude-sonnet (AI) — unreviewed",
   "plan": {
     "name": "Yemen Humanitarian Needs and Response Plan 2026",
@@ -187,12 +187,14 @@
       "note": "FTS single-cluster (destination) view: US$35.7M of US$119.9M MPC requirement. Shared-cluster view would give US$38.5M (32%). FTS API pull 5 Nov 2026."
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not visible in FTS; only MPC is a separate sector.",
-      "usd": null
+      "value": 4.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged flows outside the MPC cluster (US$22.0M) as a share of all plan funding. Vouchers are not separable from cash in this tag. A floor, see Method.",
+      "usd": 21962008
     },
     "vouchers_pct": {
       "value": null,
@@ -207,27 +209,33 @@
     "cbpf_exists": true,
     "cbpf_name": "Yemen Humanitarian Fund",
     "cbpf_allocations_usd": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Existence evidenced by FTS flow to Yemen Humanitarian Fund; 2026 allocation total not retrieved (CBPF API endpoints did not return data)."
+      "value": 35294948,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: sum of the pooled fund's onward grants recorded inside this plan (288 internal flows). Not the fund's full allocation total."
     },
     "mpc_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Allocation by cluster not retrieved.",
-      "usd": null
+      "value": 8.5,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: the pooled fund's onward grants inside this plan (288 internal flows, US$35.3M) tagged to the MPC cluster. The fund's own allocation reports may differ.",
+      "usd": 3008516
     },
     "sectoral_cash_pct": {
-      "value": null,
-      "available": "no",
-      "as_of": "",
-      "source_ids": [],
-      "note": "Not retrieved.",
-      "usd": null
+      "value": 35.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS proxy: CTP-tagged pooled-fund grants outside the MPC cluster (US$12.3M) as a share of the fund's grants inside the plan. Floor.",
+      "usd": 12336015
     },
     "vouchers_pct": {
       "value": null,
@@ -376,6 +384,381 @@
       "url": "https://www.unocha.org/publications/report/yemen/yemen-humanitarian-needs-and-response-plan-2026-march-2026",
       "date": "2026",
       "accessed": "2026-11-05"
+    },
+    {
+      "id": "fts1",
+      "title": "FTS public API, flows for plan 1520 (Yemen Humanitarian Needs and Response Plan 2026)",
+      "publisher": "OCHA FTS",
+      "url": "https://fts.unocha.org/plans/1520/summary",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s1",
+      "title": "Cash and Market",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/yemen/cash-and-market",
+      "date": "2025-12-14",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s2",
+      "title": "Yemen response hub",
+      "publisher": "ReliefWeb Response",
+      "url": "https://response.reliefweb.int/yemen",
+      "date": "2026-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s3",
+      "title": "Yemen HNRP 2026",
+      "publisher": "OCHA / humanitarianaction.info",
+      "url": "https://humanitarianaction.info/plan/1520",
+      "date": "2026-03",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s4",
+      "title": "Yemen: Cash and Voucher Assistance (CVA) January-June 2025",
+      "publisher": "OCHA",
+      "url": "https://reliefweb.int/report/yemen/yemen-cash-and-voucher-assistance-cva-january-june-2025",
+      "date": "2025",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s5",
+      "title": "National Cash Transfer Co. launches operations in Yemen",
+      "publisher": "FinDev Gateway",
+      "url": "https://www.findevgateway.org/news/national-cash-transfer-co-launches-operations-yemen",
+      "date": "2019-11-07",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s6",
+      "title": "YCash enrolls in new partnerships with humanitarian agencies",
+      "publisher": "FinDev Gateway",
+      "url": "https://findevgateway.org/news/ycash-enrolls-in-new-partnerships-with-humanitarian-agencies-and-deploys-humanitarian",
+      "date": "2021-04-26",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s7",
+      "title": "WFP introduces cash transfers to assist food insecure households in Yemen",
+      "publisher": "WFP",
+      "url": "https://www.wfp.org/news/news-release/wfp-introduces-cash-transfers-assist-food-insecure-households-yemen",
+      "date": "",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "v2s8",
+      "title": "REACH Yemen FSP preliminary findings",
+      "publisher": "REACH / IMPACT",
+      "url": "https://repository.impact-initiatives.org/document/impact/8c3995f6/REACH_YEM_FSP_Preliminary-findings_April-2025-1.pdf",
+      "date": "2025-04",
+      "accessed": "2026-11-06"
+    },
+    {
+      "id": "rw1",
+      "title": "Yemen: Cash and Market (ReliefWeb Response)",
+      "publisher": "OCHA / ReliefWeb Response",
+      "url": "https://response.reliefweb.int/yemen/cash-and-market",
+      "date": "2026-11-06",
+      "accessed": "2026-11-06"
     }
-  ]
+  ],
+  "fts_cva": {
+    "pulled": "2026-11-06",
+    "plan_id": 1520,
+    "api_url": "https://api.hpc.tools/v1/public/fts/flow?planId=1520",
+    "fts_page": "https://fts.unocha.org/plans/1520/summary",
+    "total_funding_usd": {
+      "value": 496902669,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All incoming funding to the plan, pledges excluded. Matches the FTS plan summary."
+    },
+    "mpc_usd": {
+      "value": 26396614,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multipurpose Cash cluster; shared-cluster view US$27.6M. Incoming flows, pledges excluded."
+    },
+    "ctp_usd": {
+      "value": 48358622,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "All flows tagged 'Cash transfer programming (CTP)', inside or outside the MPC cluster."
+    },
+    "sectoral_cva_usd": {
+      "value": 21962008,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Flows whose FTS modality field is 'Cash transfer programming (CTP)' and whose destination cluster is not multi-purpose cash: 56 flows. The CTP tag is set by the reporting donor or agency and is not applied consistently, so this is a floor, not a measure of sectoral cash. Largest: Protection US$8.6M, Health US$4.4M, Refugees and Migrants Multisector US$3.4M.",
+      "by_cluster": {
+        "Protection": 8634602,
+        "Health": 4382043,
+        "Refugees and Migrants Multisector": 3386966,
+        "Food Security and Agriculture": 2698243,
+        "Camp Coordination & Camp Management": 1746825,
+        "Shelter and NFI": 768735,
+        "Education": 231752,
+        "Nutrition": 107348,
+        "WASH, Sanitation and Hygiene": 5494
+      },
+      "flow_count": 56
+    },
+    "cva_usd": {
+      "value": 48358622,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Union of the MPC cluster and the CTP tag. Widest defensible FTS cash figure; still a floor because untagged sectoral cash is invisible."
+    },
+    "cva_pct_of_total": {
+      "value": 9.7,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "cva_usd as a share of total plan funding."
+    },
+    "sectoral_cva_pct_of_total": {
+      "value": 4.4,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "sectoral_cva_usd as a share of total plan funding."
+    },
+    "mpc_pct_of_total": {
+      "value": 5.3,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "MPC cluster funding as a share of total plan funding (single-cluster view)."
+    },
+    "cbpf_internal": {
+      "flow_count": 288,
+      "total": 35294948,
+      "mpc": 3008516,
+      "ctp": 15344531,
+      "cva": 15344531,
+      "mpc_pct": 8.5,
+      "cva_pct": 43.5,
+      "local_actor": 23968766,
+      "local_actor_pct": 67.9,
+      "local_actor_cva": 11662872,
+      "local_actor_pct_of_cva": 76.0
+    },
+    "caveat": "FTS records funding, not transfers to people, and only to first-level recipients. Sectoral cash depends on a modality tag that reporters apply unevenly."
+  },
+  "coordination": {
+    "label": "OCHA",
+    "ocha_plan": "Yemen Humanitarian Needs and Response Plan 2026 (HNRP)",
+    "unhcr_plan": "none found",
+    "note": "HNRP (OCHA); refugee/migrant CVA is reported within the OCHA CVA snapshot (RMMS multi-sector), not a separate UNHCR plan.",
+    "source_ids": [
+      "v2s3"
+    ]
+  },
+  "cwg_reliefweb": {
+    "page_url": "https://response.reliefweb.int/yemen/cash-and-market",
+    "page_title": "Yemen: Cash and Market",
+    "page_last_updated": "2026-04-15",
+    "last_update_basis": "latest infographic posted in the page's ReliefWeb feed: Cash and Voucher Assistance (CVA) (January - December 2025)",
+    "page_fresh_3m": false,
+    "dashboard_url": "",
+    "dashboard_name": "Yemen Cash and Voucher Assistance Snapshot (OCHA infographics)",
+    "dashboard_last_updated": "",
+    "dashboard_period": "Jan-Dec 2025 (infographic listed; undated)",
+    "dashboard_fresh_3m": false,
+    "meeting_minutes_latest": "",
+    "co_chairs": [
+      {
+        "organisation": "OCHA",
+        "actor_type": "UN",
+        "role": "cash coordination officer"
+      }
+    ],
+    "local_cochair": "unknown",
+    "contacts_basis": "CWG page contacts tab lists an OCHA coordination officer only, 6 Nov 2026",
+    "note": "CMWG described as a technical advisory group. No chair/co-chair organisations or minutes shown; snapshot infographic has no dashboard link.",
+    "source_ids": [
+      "rw1",
+      "v2s1",
+      "v2s2"
+    ],
+    "checked": "2026-11-06"
+  },
+  "cash_volumes": {
+    "mpc_funding_fts_usd": {
+      "value": 26396614,
+      "available": "yes",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS single-cluster view of the Multipurpose Cash cluster; shared-cluster view US$27.6M. Incoming flows, pledges excluded."
+    },
+    "sectoral_cva_best_usd": {
+      "value": 21962008,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "FTS CTP-tagged sectoral CVA funding; no in-country sectoral figure found to compare.",
+      "source": "FTS"
+    },
+    "cva_delivered_usd": {
+      "value": 48570000,
+      "available": "yes",
+      "as_of": "2025-06",
+      "source_ids": [
+        "v2s4"
+      ],
+      "note": "US$48.57M by 58 partners; a Jan-Dec 2025 infographic exists but its figures were not readable.",
+      "period": "Jan-Jun 2025",
+      "source_type": "OCHA CVA snapshot"
+    },
+    "mpc_delivered_usd": {
+      "value": 16310000,
+      "available": "yes",
+      "as_of": "2025-06",
+      "source_ids": [
+        "v2s4"
+      ],
+      "note": "MPC US$16.31M benefiting 274,000 people.",
+      "period": "Jan-Jun 2025",
+      "source_type": "OCHA CVA snapshot"
+    },
+    "sectoral_cva_delivered_usd": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "v2s4"
+      ],
+      "note": "Sectoral CVA (food security, protection, shelter) named but no amount stated; multisectoral CVA via RRM and RMMS.",
+      "period": "Jan-Jun 2025",
+      "source_type": "OCHA CVA snapshot"
+    },
+    "caveat": "Funding (FTS) and delivered value (CWG dashboards) are different quantities with different periods and coverage. Do not add them, and compare them only with the notes in view."
+  },
+  "fsps": [
+    {
+      "name": "YCash (National Cash Transfer Co.)",
+      "type": "fintech / e-wallet",
+      "used_by": [
+        "ICRC"
+      ],
+      "evidence": "FinDev Gateway (2021) says YCash delivers ICRC cash transfers; licensed humanitarian transfers company.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s5",
+        "v2s6"
+      ]
+    },
+    {
+      "name": "Yemen Post (Posts and Postal Services Corporation)",
+      "type": "post office",
+      "used_by": [
+        "WFP"
+      ],
+      "evidence": "WFP release reports cash transfers via the Yemeni postal corporation in Taiz and Ibb (undated, early programme).",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s7"
+      ]
+    },
+    {
+      "name": "Yemen Mobile, Aden Net, YOU",
+      "type": "mobile money",
+      "used_by": [],
+      "evidence": "REACH FSP findings (Apr 2025) name these three MNOs as partnering with FSPs to activate mobile money; no humanitarian user named; communities mainly use exchange offices.",
+      "website": "",
+      "logo_url": "",
+      "logo_source": "",
+      "source_ids": [
+        "v2s8"
+      ]
+    }
+  ],
+  "localisation": {
+    "framework": "IASC MPC scaling plan, objective 4 (local leadership and co-implementation)",
+    "local_cochair": {
+      "value": null,
+      "available": "no",
+      "as_of": "",
+      "source_ids": [
+        "rw1",
+        "v2s1",
+        "v2s2"
+      ],
+      "note": "Chairs found: OCHA (UN)"
+    },
+    "cva_to_local_pct": {
+      "value": 0.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Indicator 4.2 proxy. Share of FTS cash funding (MPC cluster or CTP tag, US$48.4M) whose first-level recipient is a local or national NGO/CSO or a national government body. FTS does not see sub-grants, so this understates money that reaches local actors through international intermediaries.",
+      "usd": 0
+    },
+    "all_funding_to_local_pct": {
+      "value": 4.5,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all plan funding whose first-level recipient is a local or national actor (US$22.5M). Same first-level caveat.",
+      "usd": 22512960
+    },
+    "cbpf_cva_to_local_pct": {
+      "value": 76.0,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Second-level view: share of the pooled fund's cash grants (US$15.3M) that went to local or national actors. Pooled-fund grants are the one onward layer FTS records.",
+      "usd": 11662872
+    },
+    "cbpf_all_to_local_pct": {
+      "value": 67.9,
+      "available": "partial",
+      "as_of": "2026-11-04",
+      "source_ids": [
+        "fts1"
+      ],
+      "note": "Share of all pooled-fund grants inside the plan (US$35.3M) to local or national actors.",
+      "usd": 23968766
+    },
+    "caveat": "FTS sees first-level recipients only; indicator 4.2 as defined (direct donor allocation to local partners) is therefore a floor. Chair roles come from public CWG pages and may be out of date."
+  }
 }
