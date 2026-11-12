@@ -141,6 +141,7 @@ small { font-size: 13px; }
 .methodfull { max-width: 1180px; } .methodfull > * + * { margin-top: 48px; }
 .methodfull h3 { font-size: 20px; font-weight: 700; color: var(--blue); margin-bottom: 14px; }
 .methodfull h4 { font-size: 15px; font-weight: 700; margin: 20px 0 6px; }
+#m-volumes h4 { font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--blue); margin: 28px 0 10px; }
 .methodfull p, .methodfull li { font-size: 14.5px; line-height: 1.6; color: var(--ink2); max-width: 90ch; }
 .methodfull ul { padding-left: 18px; } .methodfull li + li { margin-top: 6px; }
 .methodfull code { font-family: Roboto, Arial, sans-serif; font-weight: 500; background: var(--ground); padding: 0 4px; }
@@ -425,6 +426,10 @@ td.cn a:hover { color: var(--blue); }
 .scell .src { font-size: 13.5px; }
 .scell .x { font-size: 13.5px; color: var(--ink2); line-height: 1.45; }
 .scell .cnote { font-size: 14px; color: var(--muted); line-height: 1.5; margin-top: 6px; }
+.subhead { margin-top: 28px; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--blue); }
+.subhead + .cells, .subhead + .caveat { margin-top: 14px; }
+.caveat + .cells, .caveat + .tbl-wrap, .caveat + div[role=img] { margin-top: 20px; }
+.subhead .n { display: block; margin-top: 4px; font-size: 13px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--muted); max-width: 70ch; }
 .gline { margin-top: 20px; font-size: 14.5px; color: var(--ink2); max-width: 80ch; }
 .gline b { font-weight: 500; color: var(--ink); }
 .ctab .repgrid { margin-top: 24px; }
@@ -599,7 +604,7 @@ var REP_LIST_URL = 'https://calpnetworkorg.sharepoint.com/sites/CALP/Lists/Cash%
 // ============================================================
 const CASH_SIGNAL = {
  "generated": "2026-11-06",
- "built": "2026-11-06",
+ "built": "2026-11-12",
  "countries": [
   {
    "id": "afghanistan",
@@ -703,37 +708,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No MPC-specific cost-efficiency metric found."
+     "value": 62.6,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 16 records, 2020-2025.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": 55,
-     "available": "partial",
-     "as_of": "2026",
+     "value": 75.3,
+     "available": "yes",
+     "as_of": "2026-01-16",
      "source_ids": [
-      "s1"
+      "eff1"
      ],
-     "note": "FSAC cash cost per beneficiary, 2026 planning figure (down from $77 in 2025). ES/NFI rose from $165 to $182.",
-     "unit": "USD per beneficiary (FSAC cash, planning)"
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 12 records, 2023-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Not found.",
-     "unit": ""
+     "value": 81.0,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2023-2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No in-kind comparator found.",
-     "unit": ""
+     "value": 63.7,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 4 records, 2023-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -1090,6 +1102,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-afghanistan",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -1559,36 +1579,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Searched CALP, WFP and general sources for Chad cost-efficiency studies; none found.",
-     "unit": ""
+     "value": 33.2,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2015-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Searched CALP, WFP and general sources for Chad cost-efficiency studies; none found.",
-     "unit": ""
+     "value": 65.9,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 15 records, 2022-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Searched CALP, WFP and general sources for Chad cost-efficiency studies; none found.",
-     "unit": ""
+     "value": 50.1,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 1 records, 2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Searched CALP, WFP and general sources for Chad cost-efficiency studies; none found.",
-     "unit": ""
+     "value": 44.2,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2023-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -1983,6 +2011,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-chad",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -2479,36 +2515,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Searched CALP, ALNAP and general sources for DRC cost-efficiency studies; none found with a comparable metric.",
-     "unit": ""
+     "value": 58.3,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 16 records, 2021-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Searched CALP, ALNAP and general sources for DRC cost-efficiency studies; none found with a comparable metric.",
-     "unit": ""
+     "value": 63.4,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 18 records, 2022-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Searched CALP, ALNAP and general sources for DRC cost-efficiency studies; none found with a comparable metric.",
-     "unit": ""
+     "value": 54.0,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 5 records, 2022-2023.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Searched CALP, ALNAP and general sources for DRC cost-efficiency studies; none found with a comparable metric.",
-     "unit": ""
+     "value": 48.9,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 23 records, 2022-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -2886,6 +2930,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-democratic-republic-of-the-congo",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -3481,11 +3533,14 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Looked in Flash Appeal, CWG and WFP reports; no ratio published."
+     "value": 68.8,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 10 records, 2021-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
      "value": null,
@@ -3495,18 +3550,24 @@ const CASH_SIGNAL = {
      "note": "Not found."
     },
     "vouchers": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Not found."
+     "value": 80.9,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 1 records, 2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Not found."
+     "value": 69.2,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -3877,6 +3938,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-state-of-palestine",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -4403,11 +4472,14 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Looked in CWG sitrep and LRP CWG strategy; cash is called cost-effective but no ratio is published."
+     "value": 84.0,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 13 records, 2015-2025.",
+     "unit": "percent"
     },
     "sectoral_cash": {
      "value": null,
@@ -4417,18 +4489,24 @@ const CASH_SIGNAL = {
      "note": "Not found."
     },
     "vouchers": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Not found."
+     "value": 83.5,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 1 records, 2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Not found."
+     "value": 71.7,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2023-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -4822,6 +4900,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-lebanon",
      "date": "2026-10-18",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -5298,36 +5384,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 72.1,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2016-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 65.2,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 12 records, 2022-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 63.4,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 14 records, 2022-2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 47.2,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 5 records, 2022-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -5662,6 +5756,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-mali",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -6175,36 +6277,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Mozambique-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
-     "unit": ""
+     "value": 53.2,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2022.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Mozambique-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
-     "unit": ""
+     "value": 68.6,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 4 records, 2020-2023.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Mozambique-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
-     "unit": ""
+     "value": 68.5,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 6 records, 2022-2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Mozambique-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
-     "unit": ""
+     "value": 47.6,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2022-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -6515,6 +6625,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-mozambique",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -6922,20 +7040,24 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "gDCF analysis cites $28 per person (down from $43) but the HNRP section fetched states no cost per person; unverified.",
-     "unit": ""
+     "value": 57.3,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 10 records, 2022-2025.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "Not found.",
-     "unit": ""
+     "value": 79.2,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 7 records, 2022-2024.",
+     "unit": "percent"
     },
     "vouchers": {
      "value": null,
@@ -6946,12 +7068,14 @@ const CASH_SIGNAL = {
      "unit": ""
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No in-kind comparator found.",
-     "unit": ""
+     "value": 66.6,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2023-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -7290,6 +7414,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-myanmar",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -7727,36 +7859,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 42.7,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2015-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 71.5,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2023-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 52.0,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 1 records, 2023.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 60.8,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 7 records, 2021-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -8086,6 +8226,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-niger",
      "date": "2026-11-05",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -8517,36 +8665,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 58.2,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 7 records, 2023-2025.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 77.9,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 10 records, 2020-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 70.8,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 11 records, 2023-2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study located; no targeted search run beyond plan, FTS and CWG sources."
+     "value": 58.9,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2023.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -8903,6 +9059,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-nigeria",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -9337,28 +9501,34 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Somalia-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
-     "unit": ""
+     "value": 71.7,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 24 records, 2019-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Somalia-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
-     "unit": ""
+     "value": 71.4,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 28 records, 2020-2025.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Somalia-specific cost-efficiency figure found in searches of WFP, CWG and CALP sources.",
-     "unit": ""
+     "value": 77.1,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 7 records, 2022-2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
      "value": null,
@@ -9760,6 +9930,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-somalia",
      "date": "2026-10-19",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -10213,20 +10391,24 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No South Sudan cost-efficiency figure found.",
-     "unit": ""
+     "value": 66.9,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 13 records, 2022-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No South Sudan cost-efficiency figure found.",
-     "unit": ""
+     "value": 70.1,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 9 records, 2020-2024.",
+     "unit": "percent"
     },
     "vouchers": {
      "value": null,
@@ -10237,12 +10419,14 @@ const CASH_SIGNAL = {
      "unit": ""
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No South Sudan cost-efficiency figure found.",
-     "unit": ""
+     "value": 24.8,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 5 records, 2023-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -10633,6 +10817,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-south-sudan",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -11150,36 +11342,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Sudan cost-efficiency figure found in HNRP, CWG paper or landscape review.",
-     "unit": ""
+     "value": 68.3,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 16 records, 2021-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Sudan cost-efficiency figure found in HNRP, CWG paper or landscape review.",
-     "unit": ""
+     "value": 63.0,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 12 records, 2021-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Sudan cost-efficiency figure found in HNRP, CWG paper or landscape review.",
-     "unit": ""
+     "value": 59.5,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 5 records, 2023-2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No Sudan cost-efficiency figure found in HNRP, CWG paper or landscape review.",
-     "unit": ""
+     "value": 55.0,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2021-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -11641,6 +11841,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-sudan",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -12150,36 +12358,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+     "value": 69.7,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 52 records, 2016-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+     "value": 56.7,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 14 records, 2023-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+     "value": 62.9,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 19 records, 2023-2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+     "value": 61.4,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 20 records, 2023-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -12538,6 +12754,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-syrian-arab-republic",
      "date": "2026-11-04",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -12962,36 +13186,44 @@ const CASH_SIGNAL = {
    },
    "cost_efficiency": {
     "mpc": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+     "value": 74.9,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 12 records, 2018-2024.",
+     "unit": "percent"
     },
     "sectoral_cash": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+     "value": 65.8,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 11 records, 2020-2024.",
+     "unit": "percent"
     },
     "vouchers": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+     "value": 52.0,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2023-2024.",
+     "unit": "percent"
     },
     "in_kind_food": {
-     "value": null,
-     "unit": "",
-     "available": "no",
-     "as_of": "",
-     "source_ids": [],
-     "note": "No cost-efficiency study found in sources checked (FTS, HNRP, CWG pages)."
+     "value": 53.0,
+     "available": "yes",
+     "as_of": "2026-01-16",
+     "source_ids": [
+      "eff1"
+     ],
+     "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2023-2024.",
+     "unit": "percent"
     }
    },
    "hnrp_requirements": {
@@ -13346,6 +13578,14 @@ const CASH_SIGNAL = {
      "url": "https://data.humdata.org/dataset/wfp-food-prices-for-yemen",
      "date": "2026-11-05",
      "accessed": "2026-11-06"
+    },
+    {
+     "id": "eff1",
+     "title": "CALP cost-efficiency dataset (agency-level data not published)",
+     "publisher": "CALP",
+     "url": "",
+     "date": "2026-01-16",
+     "accessed": "2026-11-12"
     }
    ],
    "fts_cva": {
@@ -13713,7 +13953,8 @@ const CASH_SIGNAL = {
     }
    }
   }
- ]
+ ],
+ "volumes_sources": {}
 };
 // ============================================================
 // END OF DATA BLOCK: everything below is rendering code.
@@ -13810,7 +14051,8 @@ var GROUPS = [
     P('vl_mpc', 'MPC funding (FTS)', 'cash_volumes.mpc_funding_fts_usd', { kind: 'usd' }),
     P('vl_sect', 'Sectoral CVA, best available', 'cash_volumes.sectoral_cva_best_usd', { kind: 'usd' }),
     P('vl_cva', 'Total CVA funding (FTS)', 'fts_cva.cva_usd', { kind: 'usd' }),
-    P('vl_deliv', 'CVA delivered (in-country dashboard)', 'cash_volumes.cva_delivered_usd', { kind: 'usd' }) ] },
+    P('vl_deliv', 'CVA delivered (in-country dashboard)', 'cash_volumes.cva_delivered_usd', { kind: 'usd' }),
+    P('vl_est', 'CALP estimate of CVA, 2025', 'cash_volumes.calp_estimate_usd', { kind: 'usd' }) ] },
   { id: 'local', title: 'Local leadership (IASC MPC scaling plan, objective 4)', short: 'Local leadership', rows: [
     P('lo_chair', 'Local or national co-chair of the CWG (4.1)', 'localisation.local_cochair', { kind: 'yesno' }),
     P('lo_cva', 'CVA funding to local/national actors (4.2 proxy)', 'localisation.cva_to_local_pct'),
@@ -13836,7 +14078,7 @@ function model(c, sp) {
     m.main = d.value === 'yes' ? 'Yes' : d.value === 'no' ? 'No' : 'Unknown';
     m.state = d.value === 'yes' ? 'g' : d.value === 'no' ? 'r' : 'n';
   }
-  else if (sp.kind === 'cost') { m.main = fmtNum(d.value); m.unit = d.unit || ''; }
+  else if (sp.kind === 'cost') { var pc = d.unit === 'percent'; m.main = fmtNum(d.value) + (pc ? '%' : ''); m.unit = pc ? 'of total cost reaches people as transfers' : (d.unit || ''); }
   return m;
 }
 function sysModel(c, fn) {
@@ -13906,6 +14148,8 @@ var CAV = {
   over: 'MPC funding above 100% of its requirement is reported as found. It can reflect FTS tagging, multi-year money or carry-over.',
   mfi: 'The MFI is a WFP trader survey in markets WFP chose to assess, mostly where it runs or plans cash. It describes those markets, not the whole country. Only WFP’s latest public release (H1 2026, 16 countries) is used; earlier and unpublished rounds should come with Data Bridges API access.',
   prices: 'Year-on-year food price change is the unweighted median across every market and food item with a WFP retail price in both months. It is not a CPI or an MEB cost. The local-currency figure mixes inflation and exchange-rate moves; the US$ figure uses WFP’s conversion rate.',
+  cost: 'Transfer share is transfer value divided by total modality cost, cost-weighted, from CALP’s cost-efficiency dataset with all years pooled. Some cells rest on a handful of records (the count is in each note), and nothing is adjusted for programme scale, year or context, so differences between modalities and countries are indicative, not like-for-like.',
+  est: 'The 2025 estimate is a composite, not a count: WFP’s own country figure plus other agencies’ FTS-identified cash scaled up to what they reported to CALP’s volumes survey. It assumes each agency’s cash is spread across countries the way its FTS-visible cash is, and some survey entries are estimates. It is for 2025; the FTS figures beside it are 2026 plan funding and are known to understate cash.',
   cbpf_proxy: 'Pooled-fund shares marked partial are a proxy from FTS internal flows inside the 2026 plan, not from the fund’s own allocation reports.'
 };
 
@@ -13999,6 +14243,7 @@ function volAcrossHTML() {
   var mx = Math.max.apply(null, rows.map(function (r) { return r.cva; })) || 1;
   var h = '<section class="panel vbars"><div class="panel-h"><h3>CVA funding by plan, US$</h3><p class="sub">Stacked: multi-purpose cash cluster (teal) and sectoral cash tagged “Cash transfer programming” outside it (blue). The percentage is the pair as a share of all plan funding. Open the country tab for the cluster split.</p></div>';
   h += '<div class="legend"><span><i class="sw teal"></i>MPC cluster (single view)</span><span><i class="sw blue"></i>Sectoral CVA (CTP tag)</span></div>';
+  h += caveat([CAV.fts_sect, CAV.fts_fund]);
   h += '<div role="img" aria-label="Stacked bars of MPC and sectoral CVA funding for ' + rows.length + ' plans. Values are printed.">';
   rows.forEach(function (r) {
     var w1 = r.mpc / mx * 100, w2 = r.sect / mx * 100;
@@ -14007,8 +14252,23 @@ function volAcrossHTML() {
       (r.sect ? '<span class="fill" style="left:' + w1.toFixed(2) + '%;width:' + w2.toFixed(2) + '%"></span>' : '') + '</div>' +
       '<div class="bv"><b>' + fmtUsdM(r.cva) + '</b><small>' + fmtPct(r.pct) + ' of ' + fmtUsdM(r.tot) + '</small>' + (r.mpc ? '' : ' <span class="tagp partial">no MPC cluster</span>') + '</div></div>';
   });
-  h += '</div>' + caveat([CAV.fts_sect, CAV.fts_fund]);
-  return h + '</section>';
+  h += '</div>';
+  h += '</section>';
+  var est = countries.filter(function (c) { return has((c.cash_volumes || {}).calp_estimate_usd); }).map(function (c) { return { c: c, e: c.cash_volumes.calp_estimate_usd }; }).sort(function (a, b) { return b.e.value - a.e.value; });
+  if (est.length) {
+    var emx = est[0].e.value || 1, R = 'style="text-align:right;font-variant-numeric:tabular-nums"';
+    h += '<section class="panel"><div class="panel-h"><h3>CALP estimate of CVA, 2025</h3><p class="sub">All agencies, programming cost. The largest defensible figure for each country, set against the cash FTS shows for the same year and for the 2026 plan.</p></div>';
+    h += caveat([CAV.est]);
+    h += '<div class="tbl-wrap"><table class="mtable"><thead><tr><th>Country</th><th style="text-align:right">CALP estimate 2025</th><th style="width:28%"></th><th style="text-align:right">On FTS 2025</th><th style="text-align:right">Estimate ÷ FTS</th><th style="text-align:right">On FTS 2026 plan</th></tr></thead><tbody>';
+    est.forEach(function (r) {
+      var f = r.c.fts_cva || {}, f26 = has(f.cva_usd) ? fmtUsdM(f.cva_usd.value) : 'n/a';
+      h += '<tr title="' + esc(r.e.note) + '"><td class="k">' + cLink(r.c) + '</td><td ' + R + '><b>' + fmtUsdM(r.e.value) + '</b></td>' +
+        '<td><div class="bt" style="margin:6px 0"><span class="fill teal" style="width:' + (r.e.value / emx * 100).toFixed(1) + '%"></span>' + (r.e.fts_identified_usd ? '<span class="fill" style="width:' + (r.e.fts_identified_usd / emx * 100).toFixed(1) + '%"></span>' : '') + '</div></td>' +
+        '<td ' + R + '>' + (r.e.fts_identified_usd ? fmtUsdM(r.e.fts_identified_usd) : 'n/a') + '</td><td ' + R + '>' + (r.e.uplift_vs_fts ? esc(String(r.e.uplift_vs_fts)) + '×' : 'n/a') + '</td><td ' + R + '>' + f26 + '</td></tr>';
+    });
+    h += '</tbody></table></div><div class="legend" style="margin-top:10px"><span><i class="sw teal"></i>CALP estimate 2025</span><span><i class="sw blue"></i>Visible on FTS 2025</span></div></section>';
+  }
+  return h;
 }
 function fspAcrossHTML() {
   var h = '<section class="panel"><div class="panel-h"><h3>Financial service providers by country</h3><p class="sub">Banks, mobile money operators, money transfer operators, post offices and hawala named as delivery channels. Each chip opens the country tab, where the evidence and sources are listed.</p></div>';
@@ -14169,13 +14429,20 @@ function costHTML() {
   h += '<section class="panel"><div class="panel-h"><h3>Cost efficiency</h3></div>';
   h += '<p style="font-size:22px;font-weight:700;line-height:1.35;max-width:34em">' + (mpcCount === 0 ? 'No country has a sourced cost-efficiency figure for multi-purpose cash.' : mpcCount + ' of ' + N + ' countries have a sourced cost-efficiency figure for multi-purpose cash.') + '</p>';
   if (found.length) {
-    h += '<p class="sub" style="margin-top:16px">What does exist is partial and not comparable:</p><ul style="margin-top:12px">';
-    found.forEach(function (f) {
-      h += '<li style="padding-block:10px;border-top:1px solid var(--line);font-size:15px"><b style="font-weight:500">' + cLink(f.c) + ' · ' + esc(f.sp.label) + ':</b> ' + esc(f.m.main) + ' ' + esc(f.m.unit || '') + ' <span class="tagp partial">' + esc(f.m.avail === 'partial' ? 'partial' : 'found') + '</span> <span class="muted">' + esc(clip(f.m.note, 140)) + '</span></li>';
+    var keys = ['ce_mpc', 'ce_sect', 'ce_vouch', 'ce_food'];
+    h += '<p class="sub" style="margin-top:16px">Share of total cost that reaches people as transfer value, by modality. Higher is more efficient. ' + found.length + ' of ' + (N * keys.length) + ' cells have a figure.</p>';
+    h += caveat([CAV.cost]);
+    h += '<div class="tbl-wrap" style="margin-top:12px"><table class="mtable"><thead><tr><th>Country</th>' + keys.map(function (k) { return '<th style="text-align:right">' + esc(spec[k].label) + '</th>'; }).join('') + '</tr></thead><tbody>';
+    countries.forEach(function (c) {
+      h += '<tr><td class="k">' + cLink(c) + '</td>' + keys.map(function (k) {
+        var m = model(c, spec[k]);
+        return m.avail === 'no' ? '<td style="text-align:right" class="muted" title="' + esc(m.note) + '">n/a</td>'
+          : '<td style="text-align:right;font-variant-numeric:tabular-nums" title="' + esc(m.note) + '">' + esc(m.main) + (m.d.unit === 'percent' ? '' : ' ' + esc(m.unit || '')) + '</td>';
+      }).join('') + '</tr>';
     });
-    h += '</ul>';
+    h += '</tbody></table></div>';
   }
-  h += '<p class="sub" style="margin-top:20px">CALP looked in each plan, cash working group output and agency report for a cost-transfer ratio, cost per beneficiary or similar for MPC, sectoral cash, vouchers and in-kind food. The notes on each country page record what was searched.</p></section>';
+  h += '<p class="sub" style="margin-top:20px">Figures come from CALP’s cost-efficiency dataset, aggregated by country and modality; agency-level data is not published. Where the dataset has nothing, the notes on each country page record what else was searched.</p></section>';
   return h;
 }
 
@@ -14197,12 +14464,12 @@ function systemsHTML() {
 /* ================= COUNTRY TABS (v3) ================= */
 var GROUP_SUB = {
   modality: 'What affected people say they want. The strongest argument for cash is that people ask for it.',
-  cost: 'What each modality costs to deliver. Without a sourced figure, the efficiency case for cash rests on assertion.',
+  cost: 'How much of each modality’s total cost reaches people as transfer value. Without a sourced figure, the efficiency case for cash rests on assertion.',
   req: 'How much of the plan is budgeted as cash or vouchers. This is intent, before any money arrives.',
   fund: 'How much of the money received reached cash and vouchers. Set against requirements, it shows whether the intent was funded.',
   cbpf: 'How much of the OCHA country-based pooled fund went to cash. These funds are flexible money that donors can steer.',
   sys: 'The structures that let cash scale: a feasibility study, market monitoring, a working group and a place in next year’s plan. A gap here slows every programme.',
-  vol: 'How much cash money is visible: funding on FTS (multi-purpose and tagged sectoral) and, where a CWG publishes one, the value actually delivered. The sectoral line takes the higher of FTS and the in-country figure and names the source.',
+  vol: 'How much cash money is visible: funding on FTS (multi-purpose and tagged sectoral), the value delivered where a CWG publishes one, and CALP’s own estimate for 2025, which takes the largest defensible figure. The sectoral line takes the higher of FTS and the in-country figure and names the source.',
   local: 'Whether national and local actors lead and receive. Indicator 4.1 (local co-chair) is read from the CWG page; indicator 4.2 (direct CVA funding to local partners) is approximated from FTS first-level recipients, which understates it.'
 };
 var CELLS = {
@@ -14216,7 +14483,7 @@ var CELLS = {
   pf_alloc: ['Allocations', 'to the pooled fund'], pf_mpc: ['MPC', 'of allocations'],
   pf_sect: ['Sectoral cash', 'of allocations'], pf_vouch: ['Vouchers', 'of allocations'],
   vl_mpc: ['MPC funding', 'FTS, single-cluster view'], vl_sect: ['Sectoral CVA', 'higher of FTS tag and in-country figure'],
-  vl_cva: ['Total CVA funding', 'FTS: MPC cluster or CTP tag'], vl_deliv: ['CVA delivered', 'in-country dashboard or snapshot'],
+  vl_cva: ['Total CVA funding', 'FTS: MPC cluster or CTP tag'], vl_deliv: ['CVA delivered', 'in-country dashboard or snapshot'], vl_est: ['CALP estimate, 2025', 'all agencies, programming cost'],
   lo_chair: ['Local co-chair (4.1)', 'national or local actor chairs or co-chairs the CWG'], lo_cva: ['CVA to local actors (4.2)', 'of FTS cash funding, first-level recipients'],
   lo_all: ['All funding to local actors', 'of all plan funding, first-level recipients'], lo_cbpf: ['Pooled-fund cash to local actors', 'of the pooled fund’s cash grants']
 };
@@ -14262,10 +14529,49 @@ function groupSection(c, g) {
     }
     h += '<p class="gline"><b>Fund:</b> ' + esc((c.pooled_funds && c.pooled_funds.cbpf_name) || 'name not recorded') + '</p>';
   }
-  h += '<div class="cells">' + cells + '</div>';
+  if (g.id === 'vol') {
+    var live = ['vl_mpc', 'vl_sect', 'vl_cva'], est = ['vl_deliv', 'vl_est'];
+    var pick = function (keys) { return g.rows.filter(function (sp) { return keys.indexOf(sp.key) > -1; }).map(function (sp) { return cellHTML(c, sp); }).join(''); };
+    h += '<p class="subhead">Funding for the 2026 plan · live from FTS<span class="n">Money reported to FTS against this year’s plan. Updated on every build; a floor, because cash outside the MPC cluster is only visible where someone applied the CTP tag.</span></p>';
+    h += volCaveats(c, 'live') + '<div class="cells">' + pick(live) + '</div>';
+    h += '<p class="subhead">Cash delivered in 2025 · reported and estimated<span class="n">A different year and a different quantity: value delivered to people, not funding received. CALP’s estimate is a composite built from the volumes survey, agencies’ own country figures and FTS. Do not add these to the figures above.</span></p>';
+    h += volCaveats(c, 'est') + '<div class="cells">' + pick(est) + '</div>';
+  } else h += groupCaveats(c, g) + '<div class="cells">' + cells + '</div>';
   if (g.id === 'modality' && c.modality_preference.survey_note) h += '<p class="gline"><b>Survey:</b> ' + esc(c.modality_preference.survey_note) + '</p>';
   if (g.id === 'cost' && g.rows.every(function (sp) { return model(c, sp).avail === 'no'; })) h += '<p class="gline">No cost-efficiency figure was found for this response.</p>';
-  h += groupCaveats(c, g);
+  return h + '</section>';
+}
+function volCaveats(c, half) {
+  var items = [];
+  if (half === 'live') {
+    items.push(CAV.fts_fund, CAV.fts_sect);
+    var bc = (c.fts_cva || {}).sectoral_cva_usd;
+    if (bc && bc.by_cluster && Object.keys(bc.by_cluster).length) items.push('FTS sectoral CVA by cluster: ' + Object.keys(bc.by_cluster).slice(0, 5).map(function (k) { return esc(k) + ' ' + fmtUsdM(bc.by_cluster[k]); }).join(', ') + (Object.keys(bc.by_cluster).length > 5 ? ', …' : '') + '.');
+  } else {
+    if (model(c, spec.vl_est).avail !== 'no') items.push(CAV.est);
+    items.push(CAV.vol_mix);
+  }
+  return caveat(items);
+}
+function volumesSourcesHTML() {
+  var v = D.volumes_sources || {}, list = v.sources || [];
+  if (!list.length) return '';
+  var TAG = { in_use: ['In use', 'yes'], exploring: ['To explore', 'partial'], not_used: ['Not used', 'no'] };
+  var h = '<section class="panel" id="m-volumes"><h3>Cash volumes: sources considered</h3>' +
+    '<p class="sub">' + esc(v.lede || '') + (v.updated ? ' Last reviewed ' + esc(fmtDate(v.updated)) + '.' : '') + '</p>';
+  ['in_use', 'exploring', 'not_used'].forEach(function (st) {
+    var rows = list.filter(function (x) { return x.status === st; });
+    if (!rows.length) return;
+    h += '<h4>' + esc(TAG[st][0]) + ' <span class="muted" style="font-weight:400">· ' + rows.length + '</span></h4>' +
+      '<div class="tbl-wrap"><table class="mtable"><thead><tr><th style="width:22%">Source</th><th style="width:28%">What it gives</th><th>Why it is ' +
+      (st === 'in_use' ? 'used' : st === 'exploring' ? 'not used yet' : 'not used') + '</th></tr></thead><tbody>';
+    rows.forEach(function (x) {
+      var u = safeUrl(x.url);
+      h += '<tr><td class="k">' + (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(x.name) + '</a>' : esc(x.name)) +
+        (u ? '' : ' <span class="muted" style="font-weight:400">(not public)</span>') + '</td><td>' + esc(x.gives || '') + '</td><td>' + esc(x.note || '') + '</td></tr>';
+    });
+    h += '</tbody></table></div>';
+  });
   return h + '</section>';
 }
 function groupCaveats(c, g) {
@@ -14273,8 +14579,9 @@ function groupCaveats(c, g) {
   if (g.id === 'modality' && g.rows.some(function (sp) { return model(c, sp).avail !== 'no'; })) items.push(CAV.pref);
   if (g.id === 'fund') { items.push(CAV.fts_fund); if (model(c, spec.fd_mpcreq).over) items.push(CAV.over); if (model(c, spec.fd_sect).avail === 'partial') items.push(CAV.fts_sect); }
   if (g.id === 'cbpf' && g.rows.some(function (sp) { return model(c, sp).avail === 'partial'; })) items.push(CAV.cbpf_proxy);
-  if (g.id === 'vol') { items.push(CAV.vol_mix, CAV.fts_sect); var bc = (c.fts_cva || {}).sectoral_cva_usd; if (bc && bc.by_cluster && Object.keys(bc.by_cluster).length) items.push('FTS sectoral CVA by cluster: ' + Object.keys(bc.by_cluster).slice(0, 5).map(function (k) { return esc(k) + ' ' + fmtUsdM(bc.by_cluster[k]); }).join(', ') + (Object.keys(bc.by_cluster).length > 5 ? ', …' : '') + '.'); }
+  if (g.id === 'vol') return '';   /* shown above each half of the group instead */
   if (g.id === 'local') items.push(CAV.fts_first, CAV.chairs);
+  if (g.id === 'cost' && g.rows.some(function (sp) { return model(c, sp).avail !== 'no' && model(c, sp).d.unit === 'percent'; })) items.push(CAV.cost);
   return caveat(items);
 }
 function glanceCell(label, value, note, na) {
@@ -14301,7 +14608,7 @@ function countryTabHTML(c, idx) {
 
   /* at a glance */
   var rq = pl.requirements_usd, fp = pl.funded_pct, mr = c.hnrp_requirements.mpc_pct, mf = c.overall_funding.mpc_funded_pct_of_mpc_req, pf = c.modality_preference.cash_pct;
-  var fc = c.fts_cva || {}, fs = fc.sectoral_cva_usd, fv = fc.cva_usd, dv = (c.cash_volumes || {}).cva_delivered_usd;
+  var fc = c.fts_cva || {}, fs = fc.sectoral_cva_usd, fv = fc.cva_usd, dv = (c.cash_volumes || {}).cva_delivered_usd, ev = (c.cash_volumes || {}).calp_estimate_usd;
   h += '<section aria-label="At a glance">' + secHead('At a glance') + '<div class="glance">' +
     glanceCell('Plan requirements', has(rq) ? fmtUsdM(rq.value) : 'n/a', has(rq) ? (has(fp) ? fmtPct(fp.value) + ' funded' + (fp.as_of ? ', as of ' + esc(fmtDate(fp.as_of)) : '') : 'Funded share not found') : 'Plan requirements not found', !has(rq)) +
     glanceCell('MPC % of requirements', has(mr) ? fmtPct(mr.value) : 'n/a', has(mr) ? 'as of ' + esc(fmtDate(mr.as_of)) : 'No MPC line found in the plan', !has(mr)) +
@@ -14309,6 +14616,7 @@ function countryTabHTML(c, idx) {
     glanceCell('Preference for cash', has(pf) ? fmtPct(pf.value) : 'n/a', has(pf) ? esc(fmtDate(pf.as_of)) + (pf.available === 'partial' ? ' <span class="tagp partial">partial</span>' : '') : 'No quantified preference found', !has(pf)) +
     glanceCell('Sectoral CVA funded (FTS)', has(fs) ? fmtUsdM(fs.value) : 'n/a', has(fs) ? (has(fc.sectoral_cva_pct_of_total) ? fmtPct(fc.sectoral_cva_pct_of_total.value) + ' of plan funding, ' : '') + 'CTP-tagged flows outside MPC <span class="tagp partial">floor</span>' : 'Not seen on FTS', !has(fs)) +
     glanceCell('Total CVA funded (FTS)', has(fv) ? fmtUsdM(fv.value) : 'n/a', has(fv) ? (has(fc.cva_pct_of_total) ? fmtPct(fc.cva_pct_of_total.value) + ' of plan funding, ' : '') + 'MPC cluster plus CTP tag, as of ' + esc(fmtDate(fv.as_of)) : 'Not seen on FTS', !has(fv)) +
+    (has(ev) ? glanceCell('CVA estimate, 2025 (CALP)', fmtUsdM(ev.value), (ev.uplift_vs_fts ? esc(String(ev.uplift_vs_fts)) + '× the cash FTS shows for 2025, ' : '') + 'all agencies', false) : '') +
     glanceCell('CVA delivered (in-country)', has(dv) ? fmtUsdM(dv.value) : 'n/a', has(dv) ? esc(dv.period || fmtDate(dv.as_of)) + (dv.source_type ? ', ' + esc(dv.source_type) : '') + (dv.available === 'partial' ? ' <span class="tagp partial">partial</span>' : '') : 'No delivered figure published', !has(dv)) +
     glanceCell('Coordination', (c.coordination || {}).label === 'Unknown' ? 'n/a' : (c.coordination || {}).label || 'n/a', esc((c.coordination || {}).note || 'Not researched'), !(c.coordination && c.coordination.label && c.coordination.label !== 'Unknown')) +
     '</div></section>';
@@ -14691,7 +14999,7 @@ function methodHTML() {
   var noFsp = affected(function (c) { return !(c.fsps || []).length; });
   var h = secHead('Method', 'Everything on this page is traceable: what was counted, where it came from, what it cannot tell you, and how to keep it current.') +
     '<div class="methodfull">' +
-    '<nav class="toc" aria-label="Method sections"><a href="#m-scope" data-anchor="m-scope">Scope</a><a href="#m-sources" data-anchor="m-sources">Data sources</a><a href="#m-defs" data-anchor="m-defs">Indicator definitions</a><a href="#m-issues" data-anchor="m-issues">Known data-quality issues</a><a href="#m-ai" data-anchor="m-ai">AI collection and review</a><a href="#m-update" data-anchor="m-update">How to update</a><a href="#m-log" data-anchor="m-log">Change log</a></nav>';
+    '<nav class="toc" aria-label="Method sections"><a href="#m-scope" data-anchor="m-scope">Scope</a><a href="#m-sources" data-anchor="m-sources">Data sources</a><a href="#m-defs" data-anchor="m-defs">Indicator definitions</a><a href="#m-volumes" data-anchor="m-volumes">Cash volumes: sources</a><a href="#m-issues" data-anchor="m-issues">Known data-quality issues</a><a href="#m-ai" data-anchor="m-ai">AI collection and review</a><a href="#m-update" data-anchor="m-update">How to update</a><a href="#m-log" data-anchor="m-log">Change log</a></nav>';
 
   h += '<section class="panel" id="m-scope"><h3>Scope</h3>' +
     '<p>' + N + ' humanitarian responses chosen by CALP (Afghanistan, Myanmar, Sudan, South Sudan, Mozambique, Somalia, DRC, Lebanon, Gaza/oPt, Yemen, Syria, Chad, Niger, Nigeria, Mali). ' + TOTAL_SPECS + ' indicators per country in ' + GROUPS.length + ' groups: ' + esc(groupsList) + '. ' + got + ' of ' + (N * TOTAL_SPECS) + ' indicator slots are filled (' + Math.round(got / (N * TOTAL_SPECS) * 100) + '%); every empty slot carries a note on what was searched.</p>' +
@@ -14713,17 +15021,18 @@ function methodHTML() {
 
   h += '<section class="panel" id="m-defs"><h3>Indicator definitions</h3>' +
     '<h4>Modality preference</h4><p>Share of surveyed people naming each modality, recorded exactly as the survey reports it, with survey, year and wording in the note. Not re-based to 100%.</p>' +
-    '<h4>Cost efficiency</h4><p>Any sourced cost-efficiency metric for MPC, sectoral cash, vouchers or in-kind food, in the unit the source uses (cost-transfer ratio, Omega value, USD per beneficiary). Nothing was found for any country in this round.</p>' +
+    '<h4>Cost efficiency</h4><p>Any sourced cost-efficiency metric for MPC, sectoral cash, vouchers or in-kind food, in the unit the source uses (cost-transfer ratio, Omega value, USD per beneficiary). From 12 Nov 2026 the cells are filled from CALP’s cost-efficiency dataset: transfer value as a share of total modality cost, cost-weighted and aggregated by country and modality.</p>' +
     '<h4>Plan requirements</h4><p>MPC, sectoral cash, vouchers and total CVA requirements as a share of the plan’s total revised requirements, from the plan document or the FTS plan record.</p>' +
     '<h4>Overall funding</h4><p>MPC funding = FTS flows whose destination cluster is the plan’s multi-purpose cash cluster, single-cluster view, as a share of all funding received. MPC funded vs requirement divides that by the MPC requirement; values over 100% are reported as found. Sectoral cash, where marked partial, is the FTS CTP-tag proxy below.</p>' +
     '<h4>OCHA pooled funds</h4><p>Share of the country-based pooled fund’s allocations that is MPC, sectoral cash or vouchers, from the fund’s own reporting. Where absent, the proxy is the fund’s onward grants recorded as internal flows inside the 2026 plan on FTS, marked partial.</p>' +
     '<h4>Systems</h4><p>Cash feasibility study (exists / none / unknown), market monitoring (functional / partial / none, with system and frequency), cash working group (exists, leads, CashCap support), 2027 plan status.</p>' +
-    '<h4>Cash volumes</h4><p><b>MPC funding (FTS)</b> as above. <b>Sectoral CVA, best available</b> = the higher of (a) FTS flows tagged “Cash transfer programming (CTP)” whose destination cluster is not MPC and (b) a sectoral figure from an in-country dashboard, with the source named in the cell. <b>Total CVA funding (FTS)</b> = union of the MPC cluster and the CTP tag. <b>CVA delivered</b> = the latest US$ figure published by the CWG or OCHA for cash and vouchers delivered, with its period.</p>' +
+    '<h4>Cash volumes</h4><p><b>MPC funding (FTS)</b> as above. <b>Sectoral CVA, best available</b> = the higher of (a) FTS flows tagged “Cash transfer programming (CTP)” whose destination cluster is not MPC and (b) a sectoral figure from an in-country dashboard, with the source named in the cell. <b>Total CVA funding (FTS)</b> = union of the MPC cluster and the CTP tag. <b>CVA delivered</b> = the latest US$ figure published by the CWG or OCHA for cash and vouchers delivered, with its period. <b>CALP estimate of CVA, 2025</b> = the largest eligible of: cash identified on FTS by CALP’s CVA tracking pipeline; WFP’s CASHboard country figure plus other agencies’ FTS-identified cash; WFP’s figure plus other agencies scaled to their totals in CALP’s volumes survey (no agency’s FTS footprint multiplied more than tenfold); and an in-country figure whose period falls in 2025. A larger figure that was not used is named in the cell note with the reason. Only country totals are published.</p>' +
     '<h4>Local leadership (IASC objective 4)</h4><p><b>4.1 Local co-chair</b>: yes when a national or local NGO/CSO, a national government body or the national Red Cross/Red Crescent society holds a chair, co-chair or co-lead role on the CWG’s public page or minutes; no when chairs are published and none is local; unknown when nothing is published. <b>4.2 proxy</b>: share of FTS cash funding (MPC cluster or CTP tag) whose first-level recipient organisation is tagged by FTS as a local or national non-state actor or a national government of the response country. Two companion lines give the same share for all funding and for the pooled fund’s cash grants (the one onward layer FTS records).</p>' +
     '<h4>CWG pulse (trial)</h4><p>From the group’s public page: date of the latest visible item (and what that item is), in-country dashboard with its update date and period, latest minutes, chair organisations by actor type. “Within 3 months” compares the date with the day the page was checked.</p>' +
     '<h4>Market functionality</h4><p><b>MFI score</b>: median WFP Market Functionality Index (0 to 10) across markets in the public release, taking each market’s latest assessment. <b>Markets at high risk</b>: share rated high or very high risk. <b>Dimensions</b>: median per dimension (assortment, availability, price, supply-chain resilience, competition, infrastructure, services, food quality, access and protection). <b>Food prices, year on year</b>: for every market × food item × unit with a WFP retail price in the latest complete month and the same month a year earlier, the change in price; the cell shows the unweighted median across those series, in local currency and in US$ at WFP’s rate. Marked partial when fewer than 30 series match or the latest month is more than 3 months old. <b>WFP price monitoring</b>: markets with a retail food price in the latest complete month. This block is kept out of the source-quality count so that v2 scores stay comparable.</p>' +
     '<h4>Coordination</h4><p>OCHA when an HNRP, HRP or Flash Appeal covers 2026; UNHCR when a UNHCR-led plan has an in-country chapter (country RRP, regional RRP chapter, 3RP); both when both; neither when no such plan was found.</p></section>';
 
+  h += volumesSourcesHTML();
   h += '<section class="panel" id="m-issues"><h3>Known data-quality issues</h3><div class="tbl-wrap"><table class="mtable"><thead><tr><th>Issue</th><th>Effect</th><th>Where it bites</th><th>Shown as</th></tr></thead><tbody>' +
     tr(['FTS sees first-level recipients only', 'Local-actor shares understate money that reaches local partners through intermediaries', 'All countries; every localisation figure', 'partial, with a callout on the Local leadership group']) +
     tr(['CTP modality tag applied unevenly', 'Sectoral CVA on FTS is a floor; a country can deliver sectoral cash that appears as “traditional aid”', 'All countries; largest relative effect where the tag is rarely used', 'partial / floor tags, callouts on Funding and Cash volumes']) +
@@ -14736,6 +15045,8 @@ function methodHTML() {
     tr(['CWG page dates as an activity proxy', 'A quiet page can hide an active group and vice versa', 'No page found for ' + noPage, 'fresh / stale / no-date tags, callout']) +
     tr(['Chair information stale or unpublished', 'Indicator 4.1 is unknown where nothing is published', unkChair, 'Unknown, callout']) +
     tr(['Delivered-CVA figures unavailable', 'No in-country total for the latest period', noVol, 'n/a with note']) +
+    tr(['Cost-efficiency cells rest on few records', 'A transfer share can reflect one programme, not the response; years are pooled and nothing is adjusted for scale or context', 'All countries with a figure', 'record count in each note, callout on Cost efficiency']) +
+    tr(['CALP 2025 estimate is modelled', 'Agency totals are placed in countries by FTS footprint; the FTS side only updates when the tracking pipeline is rerun', 'All countries; least reliable where few agencies are scaled by a large factor', 'callout on Cash volumes, candidates in data/cva_estimate']) +
     tr(['FSP lists non-exhaustive', 'Only providers named in public sources; no volumes or contract status', 'None found for ' + noFsp, 'callout under each FSP section']) +
     tr(['MFI published for few countries', 'The MFI columns are empty where WFP has not published a round, which says nothing about how markets function there', affected(function (c) { return !has((c.markets || {}).mfi_score); }), 'n/a, “not published”, callout on the Market functionality section']) +
     tr(['MFI CSV mangled by a spreadsheet', 'Scores like 7.5 or 8.75 stored as French dates; read naively they are lost', 'MFI file on HDX (all countries in it)', 'decoded by script; count of decoded cells kept in data/wfp']) +
@@ -14758,6 +15069,7 @@ function methodHTML() {
     '<li>Add a country by adding a JSON file; nothing in the page is written per country.</li></ul></section>';
 
   h += '<section class="panel" id="m-log"><h3>Change log</h3><ul>' +
+    '<li><b>12 Nov 2026, v2.2.</b> Cost efficiency filled from CALP’s cost-efficiency dataset: transfer share of total cost by country and modality, overlaid at build time from <code>data/efficiency/efficiency.json</code>. Only aggregates are in the repository. CALP estimate of CVA for 2025 added to Cash volumes and At a glance, overlaid from <code>data/cva_estimate/cva_estimate.json</code>.</li>' +
     '<li><b>6 Nov 2026, v2.1.</b> Market functionality section on every country tab and a Markets theme tab: WFP Market Functionality Index from the public HDX release (four countries), WFP food-price coverage and year-on-year change for all fifteen, the existing joint-monitoring entry, and a placeholder for what the Data Bridges API will add.</li>' +
     '<li><b>6 Nov 2026, v2.</b> Country search and draggable tab strip. Sectoral and total CVA from FTS in the at-a-glance strip. Cash volumes group (FTS funding beside in-country delivered value; sectoral line takes the higher of FTS and the CWG figure and names the source). Coordination label (OCHA / UNHCR / both / neither). CWG pulse trial from public pages. Financial service providers with logos. Local leadership group for IASC indicators 4.1 and 4.2. Pooled-fund and sectoral-cash cells filled from FTS where v1 found nothing, marked partial. Caveat callouts on every visual that rests on uneven data. This methodology page.</li>' +
     '<li><b>5 Nov 2026, v1.</b> First build: 24 indicators from CALP’s cash advocacy data points, 15 countries, AI country summaries, by-country and by-theme tabs, independent spot-check.</li></ul></section>';
