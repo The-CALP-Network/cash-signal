@@ -1,0 +1,684 @@
+{
+  "generated": "2026-11-12",
+  "source": {
+    "id": "calp_efficiency_dataset_2026",
+    "title": "CALP cost-efficiency dataset (agency-level data not published)",
+    "dataset_date": "2026-01-16"
+  },
+  "method": {
+    "measure": "Cost-weighted transfer percentage = sum(transfer value) / sum(total modality cost)",
+    "years": "all years in dataset"
+  },
+  "countries": {
+    "AFG": {
+      "name": "Afghanistan",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 62.6,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 16 records, 2020-2025.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 75.3,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 12 records, 2023-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 81.0,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2023-2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 63.7,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 4 records, 2023-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "MMR": {
+      "name": "Myanmar",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 57.3,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 10 records, 2022-2025.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 79.2,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 7 records, 2022-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": null,
+          "available": "no",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "No records for this response in the dataset."
+        },
+        "in_kind_food": {
+          "value": 66.6,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2023-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "SDN": {
+      "name": "Sudan",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 68.3,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 16 records, 2021-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 63.0,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 12 records, 2021-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 59.5,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 5 records, 2023-2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 55.0,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2021-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "SSD": {
+      "name": "South Sudan",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 66.9,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 13 records, 2022-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 70.1,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 9 records, 2020-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": null,
+          "available": "no",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "No records for this response in the dataset."
+        },
+        "in_kind_food": {
+          "value": 24.8,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 5 records, 2023-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "MOZ": {
+      "name": "Mozambique",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 53.2,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2022.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 68.6,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 4 records, 2020-2023.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 68.5,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 6 records, 2022-2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 47.6,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2022-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "SOM": {
+      "name": "Somalia",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 71.7,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 24 records, 2019-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 71.4,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 28 records, 2020-2025.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 77.1,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 7 records, 2022-2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": null,
+          "available": "no",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "No records for this response in the dataset."
+        }
+      }
+    },
+    "COD": {
+      "name": "DRC",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 58.3,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 16 records, 2021-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 63.4,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 18 records, 2022-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 54.0,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 5 records, 2022-2023.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 48.9,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 23 records, 2022-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "LBN": {
+      "name": "Lebanon",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 84.0,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 13 records, 2015-2025.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": null,
+          "available": "no",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "No records for this response in the dataset."
+        },
+        "vouchers": {
+          "value": 83.5,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 1 records, 2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 71.7,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2023-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "PSE": {
+      "name": "Gaza/oPt",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 68.8,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 10 records, 2021-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": null,
+          "available": "no",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "No records for this response in the dataset."
+        },
+        "vouchers": {
+          "value": 80.9,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 1 records, 2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 69.2,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "YEM": {
+      "name": "Yemen",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 74.9,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 12 records, 2018-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 65.8,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 11 records, 2020-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 52.0,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 2 records, 2023-2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 53.0,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2023-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "SYR": {
+      "name": "Syria",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 69.7,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 52 records, 2016-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 56.7,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 14 records, 2023-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 62.9,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 19 records, 2023-2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 61.4,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 20 records, 2023-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "TCD": {
+      "name": "Chad",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 33.2,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2015-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 65.9,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 15 records, 2022-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 50.1,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 1 records, 2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 44.2,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2023-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "NER": {
+      "name": "Niger",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 42.7,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2015-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 71.5,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 8 records, 2023-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 52.0,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 1 records, 2023.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 60.8,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 7 records, 2021-2024.",
+          "unit": "percent"
+        }
+      }
+    },
+    "NGA": {
+      "name": "Nigeria",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 58.2,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 7 records, 2023-2025.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 77.9,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 10 records, 2020-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 70.8,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 11 records, 2023-2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 58.9,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2023.",
+          "unit": "percent"
+        }
+      }
+    },
+    "MLI": {
+      "name": "Mali",
+      "cost_efficiency": {
+        "mpc": {
+          "value": 72.1,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 3 records, 2016-2024.",
+          "unit": "percent"
+        },
+        "sectoral_cash": {
+          "value": 65.2,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 12 records, 2022-2024.",
+          "unit": "percent"
+        },
+        "vouchers": {
+          "value": 63.4,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 14 records, 2022-2024.",
+          "unit": "percent"
+        },
+        "in_kind_food": {
+          "value": 47.2,
+          "available": "yes",
+          "as_of": "2026-01-16",
+          "source_ids": [
+            "calp_efficiency_dataset_2026"
+          ],
+          "note": "Cost-weighted transfer share (transfer value / total modality cost). 5 records, 2022-2024.",
+          "unit": "percent"
+        }
+      }
+    }
+  }
+}

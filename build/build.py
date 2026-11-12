@@ -16,6 +16,15 @@ TOKEN = "__CASH_SIGNAL_OBJECT__"
 # (see sharepoint/README.md). Overlaid on each country's rep_notes at build time; never merged
 # into data/<country>.json, so the human layer stays separate from the researched layer.
 REP_NOTES = os.path.join(DATA_DIR, "rep", "rep_notes.json")
+# Cost-efficiency aggregates (country x modality), written by a script kept outside the repo.
+# Only the aggregate file is committed; the agency-level dataset never is.
+EFFICIENCY = os.path.join(DATA_DIR, "efficiency", "efficiency.json")
+EFF_SOURCE_ID = "eff1"
+# CALP's composite estimate of CVA per country (country totals only), written by a script kept
+# outside the repo from the volumes survey, the CVA tracking pipeline and WFP's CASHboard.
+ESTIMATE = os.path.join(DATA_DIR, "cva_estimate", "cva_estimate.json")
+# Every source considered for cash volumes, with whether it is used: shown on the Method tab.
+VOLUMES_SOURCES = os.path.join(DATA_DIR, "method", "volumes_sources.json")
 REP_FIELDS = ("key_messages", "barriers", "cwg_maturity", "leadership_buy_in",
               "calp_priority", "reviewed_by", "reviewed_date")
 
@@ -51,8 +60,77 @@ def load_rep_notes():
     return out
 
 
+def load_efficiency():
+    """Aggregated cost-efficiency figures written by the private aggregation script, or {}."""
+    if not os.path.exists(EFFICIENCY):
+        return {}
+    with open(EFFICIENCY, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def apply_efficiency(c, eff):
+    """Overlay the aggregate onto a country's cost_efficiency cells. Cells the dataset
+    cannot fill keep whatever the researched layer recorded."""
+    cells = ((eff.get("countries") or {}).get(c.get("iso3")) or {}).get("cost_efficiency") or {}
+    filled = 0
+    for key, d in cells.items():
+        if d.get("available") in ("yes", "partial") and d.get("value") is not None:
+            c.setdefault("cost_efficiency", {})[key] = dict(d, source_ids=[EFF_SOURCE_ID])
+            filled += 1
+    if filled:
+        src = eff.get("source") or {}
+        c.setdefault("sources", []).append({
+            "id": EFF_SOURCE_ID,
+            "title": src.get("title") or "CALP cost-efficiency dataset",
+            "publisher": "CALP",
+            "url": "",
+            "date": src.get("dataset_date", ""),
+            "accessed": eff.get("generated", ""),
+        })
+    return filled
+
+
+def load_json(path):
+    if not os.path.exists(path):
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def usd_m(v):
+    return "US$%sM" % format(round(v / 1e6), ",")
+
+
+def apply_estimate(c, est):
+    """Add CALP's composite CVA estimate as one cash_volumes cell. Country totals only."""
+    e = (est.get("countries") or {}).get(c.get("iso3"))
+    if not e or not e.get("headline_usd"):
+        return 0
+    year = est.get("year")
+    labels = {x["id"]: x["label"] for x in e.get("candidates", [])}
+    note = "Largest eligible figure for %s: %s." % (year, labels.get(e.get("headline_candidate"), "composite"))
+    if e.get("fts_identified_usd"):
+        note += " FTS shows %s for the same year." % usd_m(e["fts_identified_usd"])
+    if e.get("transfer_value_usd"):
+        note += " About %s of it is transfer value." % usd_m(e["transfer_value_usd"])
+    if e.get("flags"):
+        note += " " + " ".join(e["flags"])
+    ids = [s["id"] for s in est.get("sources", [])]
+    c.setdefault("cash_volumes", {})["calp_estimate_usd"] = {
+        "value": e["headline_usd"], "available": "partial", "as_of": est.get("generated", ""),
+        "source_ids": ids, "note": note, "period": str(year), "source_type": "CALP composite",
+        "fts_identified_usd": e.get("fts_identified_usd"), "uplift_vs_fts": e.get("uplift_vs_fts"),
+    }
+    have = {s.get("id") for s in c.get("sources", [])}
+    c.setdefault("sources", []).extend(s for s in est.get("sources", []) if s["id"] not in have)
+    return 1
+
+
 def main():
     rep = load_rep_notes()
+    eff = load_efficiency()
+    est = load_json(ESTIMATE)
+    eff_cells = est_cells = 0
     countries = []
     for name in sorted(os.listdir(DATA_DIR)):
         if name.endswith(".json"):
@@ -60,11 +138,14 @@ def main():
                 c = strip_comments(json.load(f))
             if c.get("id") in rep:
                 c["rep_notes"] = dict(c.get("rep_notes") or {}, **rep[c["id"]])
+            eff_cells += apply_efficiency(c, eff)
+            est_cells += apply_estimate(c, est)
             countries.append(c)
     countries.sort(key=lambda c: c["name"])
     # "generated" is the data-collection date shown on the page: the latest last_researched across countries
     generated = max(c.get("last_researched", "") for c in countries) or datetime.date.today().isoformat()
-    obj = {"generated": generated, "built": datetime.date.today().isoformat(), "countries": countries}
+    obj = {"generated": generated, "built": datetime.date.today().isoformat(), "countries": countries,
+           "volumes_sources": load_json(VOLUMES_SOURCES)}
     js = json.dumps(obj, ensure_ascii=False, indent=1)
     # keep the data safe inside a <script> element
     js = (js.replace("</", "<\\/").replace("<!--", "<\\!--")
@@ -76,7 +157,9 @@ def main():
     html = html.replace(TOKEN, "const CASH_SIGNAL = " + js + ";")
     with open(OUT, "w", encoding="utf-8") as f:
         f.write(html)
-    print("wrote %s (%d countries, %.0f KB; rep notes for %d)" % (OUT, len(countries), len(html) / 1024, len(rep)))
+    print("wrote %s (%d countries, %.0f KB; rep notes for %d; %d cost-efficiency cells; %d CVA estimates; %d volume sources)"
+          % (OUT, len(countries), len(html) / 1024, len(rep), eff_cells, est_cells,
+             len((obj["volumes_sources"] or {}).get("sources", []))))
 
 
 if __name__ == "__main__":
